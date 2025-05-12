@@ -12,3 +12,17 @@ D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm
 D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\FisaMedicalaForm.exe.config
 D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaM.C29CB7BC.Up2Date
 D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.ClinicaMedicalaForm.resources
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\ClinicaMedicalaForm.exe.config
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\ClinicaMedicalaForm.exe
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\ClinicaMedicalaForm.pdb
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\FisaMedicalaForm.exe
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\FisaMedicalaForm.pdb
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\FisaMedicalaForm.exe.config
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.csproj.AssemblyReference.cache
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.ClinicaMedicalaForm.resources
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.Properties.Resources.resources
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.csproj.GenerateResource.cache
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.csproj.CoreCompileInputs.cache
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaM.C29CB7BC.Up2Date
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.exe
+D:\Facultate\IP\Proiect\GitHub\proiect-ip\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.pdb

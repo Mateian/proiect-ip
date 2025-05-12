@@ -8,15 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaMedicalaForm.components.Model.Interfaces;
+using ClinicaMedicalaForm.components.Presenter;
+using ClinicaMedicalaForm.components.Presenter.Interfaces;
+using ClinicaMedicalaForm.components.View.Interfaces;
 using static FisaMedicalaForm.FisaMedicalaForm;
 
 namespace ClinicaMedicalaForm
 {
-    public partial class ClinicaMedicalaForm : Form
+    public partial class ClinicaMedicalaForm : Form, IView
     {
+        private IPresenter _presenter;
+        private IModel _model;
         public ClinicaMedicalaForm()
         {
             InitializeComponent();
+            InitForm();
+        }
+
+        public void InitForm()
+        {
+            // in caz de e nevoie de facut ceva cand se creeaza Form
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,6 +84,16 @@ namespace ClinicaMedicalaForm
             groupBoxAdministrator.Visible = false;
             labelWelcomeText.Visible = false;
             tabControlUser.Visible = false;
+        }
+
+        public void SetModel(IModel model)
+        {
+            _model = model;
+        }
+
+        public void SetPresenter(IPresenter presenter)
+        {
+            _presenter = presenter;
         }
     }
 }
