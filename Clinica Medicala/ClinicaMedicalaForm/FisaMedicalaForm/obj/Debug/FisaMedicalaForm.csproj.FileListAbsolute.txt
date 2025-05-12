@@ -1,0 +1,10 @@
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\bin\Debug\FisaMedicalaForm.exe.config
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\bin\Debug\FisaMedicalaForm.exe
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\bin\Debug\FisaMedicalaForm.pdb
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.csproj.AssemblyReference.cache
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.Properties.Resources.resources
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.csproj.GenerateResource.cache
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.csproj.CoreCompileInputs.cache
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.exe
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.pdb
+D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.FisaMedicalaForm.resources
