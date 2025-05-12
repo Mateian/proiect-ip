@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClinicaMedicalaForm.components.Model.Medical
 {
-    internal class Programare
+    public class Programare
     {
     }
 }

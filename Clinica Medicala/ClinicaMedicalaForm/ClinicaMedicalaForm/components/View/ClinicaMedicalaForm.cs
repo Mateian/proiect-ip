@@ -29,6 +29,7 @@ namespace ClinicaMedicalaForm
         public void InitForm()
         {
             // in caz de e nevoie de facut ceva cand se creeaza Form
+            _presenter.CitireUtilizatori();
         }
 
         private void button2_Click(object sender, EventArgs e)

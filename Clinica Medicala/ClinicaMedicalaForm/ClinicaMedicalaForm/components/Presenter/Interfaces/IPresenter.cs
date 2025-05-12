@@ -8,6 +8,7 @@ using ClinicaMedicalaForm.components.Model.Interfaces;
 namespace ClinicaMedicalaForm.components.Presenter.Interfaces
 {
     public interface IPresenter
-    { 
+    {
+        void citireUtilizatori();
     }
 }

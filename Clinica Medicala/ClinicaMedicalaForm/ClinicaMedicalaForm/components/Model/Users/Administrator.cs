@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClinicaMedicalaForm.components.Model.Users
 {
-    internal class Administrator
+    public class Administrator : IUser
     {
+        private string _nume, _prenume, _email, _username, _parola;
+        public string Rol => "Administrator";
+        public int ID { get; }
+
+        override public string ToString()
+        {
+            return $"{ID} {_nume} {_prenume} {_email}";
+        }
     }
 }

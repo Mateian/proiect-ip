@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicaMedicalaForm.components.Model.Interfaces
+namespace ClinicaMedicalaForm.components.Model.Factory
 {
-    public interface IModel
+    public class UserFactory
     {
-        void CitireUtilizatori();
     }
 }

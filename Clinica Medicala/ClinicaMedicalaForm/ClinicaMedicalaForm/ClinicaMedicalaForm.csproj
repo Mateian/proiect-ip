@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="components\Model\Factory\UserFactory.cs" />
     <Compile Include="components\Model\Interfaces\IModel.cs" />
     <Compile Include="components\Model\Medical\Medicament.cs" />
     <Compile Include="components\Model\Medical\Programare.cs" />
@@ -54,7 +55,7 @@
     <Compile Include="components\Model\Users\Administrator.cs" />
     <Compile Include="components\Model\Users\Asistent.cs" />
     <Compile Include="components\Model\Users\Doctor.cs" />
-    <Compile Include="components\Model\Interfaces\IUsers.cs" />
+    <Compile Include="components\Model\Interfaces\IUser.cs" />
     <Compile Include="components\Model\Users\Pacient.cs" />
     <Compile Include="components\Presenter\Interfaces\IPresenter.cs" />
     <Compile Include="components\Presenter\Presenter.cs" />

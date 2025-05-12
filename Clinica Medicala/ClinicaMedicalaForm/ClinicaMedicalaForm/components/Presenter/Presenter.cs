@@ -11,13 +11,18 @@ namespace ClinicaMedicalaForm.components.Presenter
 {
     public class Presenter : IPresenter
     {
-        private IView view;
-        private IModel model;
+        private IView _view;
+        private IModel _model;
 
         public Presenter(IView view, IModel model)
         {
-            this.view = view;
-            this.model = model;
+            this._view = view;
+            this._model = model;
+        }
+
+        public void citireUtilizatori()
+        {
+            _model.CitireUtilizatori();
         }
     }
 }

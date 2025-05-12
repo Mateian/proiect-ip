@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClinicaMedicalaForm.components.Model
 {
-    public interface IUsers
+    public interface IUser
     {
+        int ID { get; }
+
+        string ToString();
     }
 }
