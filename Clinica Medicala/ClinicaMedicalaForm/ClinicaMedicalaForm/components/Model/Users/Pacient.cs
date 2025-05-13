@@ -15,6 +15,10 @@ namespace ClinicaMedicalaForm.components.Model
         public int ID { get; }
         public string Rol => "Pacient";
 
+        public string Username => _username;
+
+        public string Parola => _parola;
+
         override public string ToString()
         {
             return $"{ID} {_nume} {_prenume} ({_username}) {Rol} {_email} {_dataNastere}";

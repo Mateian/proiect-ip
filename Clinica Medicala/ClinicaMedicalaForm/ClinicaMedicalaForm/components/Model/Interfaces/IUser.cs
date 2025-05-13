@@ -9,7 +9,8 @@ namespace ClinicaMedicalaForm.components.Model
     public interface IUser
     {
         int ID { get; }
-
+        string Username { get; }
+        string Parola { get; }
         string ToString();
     }
 }

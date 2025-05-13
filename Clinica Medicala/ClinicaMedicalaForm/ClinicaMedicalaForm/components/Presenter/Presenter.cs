@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClinicaMedicalaForm.components.Model;
 using ClinicaMedicalaForm.components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
@@ -18,11 +19,15 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             this._view = view;
             this._model = model;
+            Init();
         }
-
-        public void citireUtilizatori()
+        public void Init()
         {
             _model.CitireUtilizatori();
+        }
+        public bool VerificaAutentificare(string username, string parola)
+        {
+            return _model.VerificaAutentificare(username, parola);
         }
     }
 }

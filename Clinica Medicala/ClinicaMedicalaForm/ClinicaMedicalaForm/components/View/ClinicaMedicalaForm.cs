@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaMedicalaForm.components.Model;
 using ClinicaMedicalaForm.components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Presenter;
 using ClinicaMedicalaForm.components.Presenter.Interfaces;
@@ -29,7 +30,6 @@ namespace ClinicaMedicalaForm
         public void InitForm()
         {
             // in caz de e nevoie de facut ceva cand se creeaza Form
-            _presenter.CitireUtilizatori();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,28 +55,11 @@ namespace ClinicaMedicalaForm
 
         private void buttonAutentificare_Click(object sender, EventArgs e)
         {
-            StreamReader userFile = new StreamReader(Path.Combine("..\\..\\data\\users.txt"));
-            string user = userFile.ReadToEnd();
-            string[] usersArray = user.Split('\n');
-            string aux;
-            List<string> date = new List<string>();
-            foreach(string data in usersArray)
-            {
-                aux = data.Replace("\r", "");
-                date.Add(aux);
-            }
             string username = textBoxNumeUtilizator.Text;
             string parola = textBoxParola.Text;
-            foreach(string data in date)
+            if (_presenter.VerificaAutentificare(username, parola))
             {
-                if(data.Split(' ')[0] ==  username && data.Split(' ')[1] == parola)
-                {
-                    labelWelcomeText.Text = "Bine ai venit, " + username + "!";
-                    groupBoxAdministrator.Visible = true;
-                    tabControlUser.Visible = true;
-                    labelWelcomeText.Visible = true;
-                    break;
-                }
+                tabControlUser.Visible = true;
             }
         }
 

@@ -8,6 +8,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
 {
     public interface IModel
     {
-        void CitireUtilizatori();
+        List<IUser> CitireUtilizatori();
+        bool VerificaAutentificare(string username, string parola);
     }
 }

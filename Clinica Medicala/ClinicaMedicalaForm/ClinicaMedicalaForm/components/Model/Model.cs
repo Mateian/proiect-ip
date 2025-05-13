@@ -12,9 +12,11 @@ namespace ClinicaMedicalaForm.components.Model
     public class Model : IModel
     {
         private UserFactory _userFactory;
-        public void CitireUtilizatori()
+        private List<IUser> _users;
+        public List<IUser> CitireUtilizatori()
         {
-            StreamReader streamReader = new StreamReader("\\data\\users.txt");
+            _users = new List<IUser>();
+            StreamReader streamReader = new StreamReader(Directory.GetCurrentDirectory() + "\\..\\..\\data\\users.txt");
             string line = "";
             while((line = streamReader.ReadLine()) != null)
             {
@@ -22,16 +24,25 @@ namespace ClinicaMedicalaForm.components.Model
                 string[] infoArray = line.Split(' ');
                 
                 // Data din Array
-                int.TryParse(infoArray[0], out int ID);
-                string rol = infoArray[1];
-                string username = infoArray[2];
-                string parola = infoArray[3];
-                string nume = infoArray[4];
-                string prenume = infoArray[5];
+                
 
                 // user factory ... trebuie verificat rolul, creat o clasa "UserFactory" in care dupa rolul citit, se va crea
                 // un utilizator de tipul rol. Se va face intr-un switch
+                _userFactory = new UserFactory();
+                _users.Add(_userFactory.CreateUser(infoArray));
             }
+            return _users;
+        }
+        public bool VerificaAutentificare(string username, string parola)
+        {
+            foreach(IUser user in _users)
+            {
+                if(user.Username == username && user.Parola == parola)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
