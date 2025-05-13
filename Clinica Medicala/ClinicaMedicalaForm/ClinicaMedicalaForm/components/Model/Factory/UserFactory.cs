@@ -22,6 +22,8 @@ namespace ClinicaMedicalaForm.components.Model.Factory
             {
                 case "Administrator":
                     return new Administrator(ID, username, parola, nume, prenume);
+                case "Pacient":
+                    return new Pacient(ID, username, parola, nume, prenume);
             }
             return null;
         }

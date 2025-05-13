@@ -57,5 +57,10 @@ namespace FisaMedicalaForm
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void textBoxMotiv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

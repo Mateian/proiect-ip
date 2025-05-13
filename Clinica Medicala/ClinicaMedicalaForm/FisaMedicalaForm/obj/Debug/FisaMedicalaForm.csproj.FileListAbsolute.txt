@@ -8,3 +8,13 @@ D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\ob
 D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.exe
 D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.pdb
 D:\Facultate\IP\Proiect\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.FisaMedicalaForm.resources
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\bin\Debug\FisaMedicalaForm.exe.config
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\bin\Debug\FisaMedicalaForm.exe
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\bin\Debug\FisaMedicalaForm.pdb
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.csproj.AssemblyReference.cache
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.FisaMedicalaForm.resources
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.Properties.Resources.resources
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.csproj.GenerateResource.cache
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.csproj.CoreCompileInputs.cache
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.exe
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\FisaMedicalaForm\obj\Debug\FisaMedicalaForm.pdb

@@ -25,7 +25,7 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             _model.CitireUtilizatori();
         }
-        public bool VerificaAutentificare(string username, string parola)
+        public int VerificaAutentificare(string username, string parola)
         {
             return _model.VerificaAutentificare(username, parola);
         }

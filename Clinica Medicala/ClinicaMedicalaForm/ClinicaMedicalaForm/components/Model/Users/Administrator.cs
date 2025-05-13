@@ -22,7 +22,7 @@ namespace ClinicaMedicalaForm.components.Model.Users
             this._username = username;
             this._parola = parola;
             this._nume = nume;
-            this._email = prenume;
+            this._prenume = prenume;
         }
         override public string ToString()
         {

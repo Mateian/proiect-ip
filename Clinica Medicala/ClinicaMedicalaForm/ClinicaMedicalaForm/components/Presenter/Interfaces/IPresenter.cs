@@ -9,6 +9,6 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
 {
     public interface IPresenter
     {
-        bool VerificaAutentificare(string username, string parola);
+        int VerificaAutentificare(string username, string parola);
     }
 }
