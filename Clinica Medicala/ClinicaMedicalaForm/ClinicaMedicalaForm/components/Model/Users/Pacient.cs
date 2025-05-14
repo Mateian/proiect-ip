@@ -15,6 +15,7 @@ namespace ClinicaMedicalaForm.components.Model
         private List<Programare> _programari;
         private DateTime _dataNastere;
         public int ID => _id;
+        public Doctor Doctor {  get; set; }
         public string Rol => "Pacient";
         public string Username => _username;
         public string Parola => _parola;

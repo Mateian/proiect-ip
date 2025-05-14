@@ -11,5 +11,6 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
     public interface IPresenter
     {
         IUser VerificaAutentificare(string username, string parola);
+        List<IUser> GetPacienti(int doctorID);
     }
 }

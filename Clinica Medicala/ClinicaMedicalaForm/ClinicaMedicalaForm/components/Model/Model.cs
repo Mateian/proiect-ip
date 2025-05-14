@@ -17,12 +17,17 @@ namespace ClinicaMedicalaForm.components.Model
 {
     public class Model : IModel
     {
-        private UserFactory _userFactory;
-        private List<IUser> _users;
+        private UserFactory _userFactory;    
         private SQLiteConnection _connection;
         private List<Programare> _programari;    
-        private List<IUser> _pacienti;    
         private DatabaseManager _databaseManager;
+        private List<IUser> _users;
+        private List<IUser> _pacienti;
+        private List<IUser> _doctori;
+        public List<Programare> Programari => _programari;
+        public List<IUser> Doctori => _doctori;
+        public List<IUser> Pacienti => _pacienti;
+
         public Model()
         {
             string location=Directory.GetCurrentDirectory()+ "\\..\\..\\components\\Resources\\ClinicaMedicala-DB.db";
@@ -65,15 +70,61 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _users;
         }
-        public List<Programare> Programari => _programari;
-        public List<IUser> Pacienti => _pacienti;
         public List<Programare> CitireProgramari()
         {
-            throw new NotImplementedException();
+            return null;
+            //;throw new NotImplementedException();
         }
-        public List<Programare> CitirePacienti()
+        public void CitireDoctori()
         {
-            throw new NotImplementedException();
+            _doctori = new List<IUser>();
+            foreach(IUser user in _users)
+            {
+                if(user.Rol == "Doctor")
+                {
+                    _doctori.Add(user);
+                }
+            }
+        }
+        public void CitirePacienti()
+        {
+            _pacienti = new List<IUser>();
+
+            string tableName = "Pacienti";
+            string query = $"SELECT * FROM {tableName};";
+            var reader = _databaseManager.ExecuteSelectQuery(query);
+
+            try
+            {
+                while(reader.Read())
+                {
+                    int ID = reader.GetInt32(0);
+                    int doctorID = reader.GetInt32(1);
+                    int pacientID = reader.GetInt32(2);
+
+                    var pacientUser = _users.FirstOrDefault(u => u.ID == pacientID && u.Rol == "Pacient");
+                    var doctorUser = _doctori.FirstOrDefault(d => d.ID == doctorID);
+
+                    if(pacientUser != null && doctorUser != null)
+                    {
+                        Pacient pacient = pacientUser as Pacient;
+                        Doctor doctor = doctorUser as Doctor;
+
+                        if(pacient != null && doctor != null)
+                        {
+                            pacient.Doctor = doctor;
+                            _pacienti.Add(pacient);
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                if (reader != null && !reader.IsClosed)
+                {
+                    reader.Close();
+                }
+            }
         }
 
         public IUser VerificaAutentificare(string username, string parola)

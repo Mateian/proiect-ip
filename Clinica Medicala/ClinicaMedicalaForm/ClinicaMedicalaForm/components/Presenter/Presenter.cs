@@ -25,6 +25,7 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             _model.CitireUtilizatori();
             _model.CitireProgramari();
+            _model.CitireDoctori();
             _model.CitirePacienti();
         }
         public IUser VerificaAutentificare(string username, string parola)
@@ -32,7 +33,25 @@ namespace ClinicaMedicalaForm.components.Presenter
             return _model.VerificaAutentificare(username, parola);
         }
 
-        //List<> GetPacienti(int doctotID);
+        public List<IUser> GetPacienti(int doctorID)
+        {
+            List<IUser> pacientiDoctor = new List<IUser>();
+
+            List<IUser> totiPacientii = _model.Pacienti;
+            if (totiPacientii == null) return pacientiDoctor;
+
+            foreach(var user in totiPacientii)
+            {
+                Pacient pacient = user as Pacient;
+                
+                if(pacient != null && pacient.Doctor != null && pacient.Doctor.ID == doctorID)
+                {
+                    pacientiDoctor.Add(pacient);
+                }
+            }
+
+            return pacientiDoctor;
+        }
         //List<> GetProgramari(int doctotID);
     }
 }
