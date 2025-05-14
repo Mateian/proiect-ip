@@ -74,25 +74,21 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _users;
         }
-        public int VerificaAutentificare(string username, string parola)
+        public IUser VerificaAutentificare(string username, string parola)
         {
             foreach (IUser user in _users)
             {
                 if (user.Username == username && user.Parola == parola)
                 {
-                    if (user is Pacient)
-                        return 0;
-                    else if (user is Administrator)
-                        return -1;
-                    else if (user is Doctor)
-                        return 1;
+                    return user;
                 }
             }
-            return -100;
+            return null;
         }
 
         public List<string> GetProgramariIstoric()
         {
+
             return null;
             //TO DO;
         }

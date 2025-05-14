@@ -10,7 +10,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
     public interface IModel
     {
         List<IUser> CitireUtilizatori();
-        int VerificaAutentificare(string username, string parola);
+        IUser VerificaAutentificare(string username, string parola);
         List<string> GetProgramariIstoric();
         List<Form> GetIstoric();
         List<string> GetCurrentProgramari();

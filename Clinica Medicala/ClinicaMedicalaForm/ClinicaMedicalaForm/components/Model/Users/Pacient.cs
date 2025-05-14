@@ -18,6 +18,11 @@ namespace ClinicaMedicalaForm.components.Model
         public string Rol => "Pacient";
         public string Username => _username;
         public string Parola => _parola;
+
+        public string Nume => _nume;
+
+        public string Prenume => _prenume;
+
         public Pacient(int ID, string username, string parola, string nume, string prenume)
         {
             this._id = ID;
