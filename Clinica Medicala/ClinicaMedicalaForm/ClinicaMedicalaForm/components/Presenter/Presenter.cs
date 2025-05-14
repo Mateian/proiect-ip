@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClinicaMedicalaForm.components.Model;
 using ClinicaMedicalaForm.components.Model.Interfaces;
+using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
 
@@ -33,6 +34,7 @@ namespace ClinicaMedicalaForm.components.Presenter
             return _model.VerificaAutentificare(username, parola);
         }
 
+<<<<<<< HEAD
         public List<IUser> GetPacienti(int doctorID)
         {
             List<IUser> pacientiDoctor = new List<IUser>();
@@ -53,5 +55,20 @@ namespace ClinicaMedicalaForm.components.Presenter
             return pacientiDoctor;
         }
         //List<> GetProgramari(int doctotID);
+=======
+        //List<> GetPacienti(int doctotID);
+        public List<Programare> GetProgramari(int doctotID)
+        {
+            List<Programare> l = new List<Programare>();
+            foreach (Programare p in _model.Programari)
+            {
+                if(p.DoctorID == doctotID && !p.EsteInTrecut)
+                {
+                    l.Add(p);
+                }
+            }
+            return l;
+        }
+>>>>>>> main
     }
 }

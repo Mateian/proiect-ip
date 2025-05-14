@@ -17,8 +17,13 @@ namespace ClinicaMedicalaForm.components.Model
 {
     public class Model : IModel
     {
+<<<<<<< HEAD
         private UserFactory _userFactory;    
         private SQLiteConnection _connection;
+=======
+        private UserFactory _userFactory;
+        private List<IUser> _users;
+>>>>>>> main
         private List<Programare> _programari;    
         private DatabaseManager _databaseManager;
         private List<IUser> _users;
@@ -42,7 +47,6 @@ namespace ClinicaMedicalaForm.components.Model
             string tableName = "Users";
             string query = $"SELECT * FROM {tableName};";
             var reader = _databaseManager.ExecuteSelectQuery(query);
-
             try
             {
                 while(reader.Read())
@@ -70,6 +74,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _users;
         }
+<<<<<<< HEAD
         public List<Programare> CitireProgramari()
         {
             return null;
@@ -125,6 +130,54 @@ namespace ClinicaMedicalaForm.components.Model
                     reader.Close();
                 }
             }
+=======
+        public List<Programare> Programari => _programari;
+        public List<IUser> Pacienti => _pacienti;
+        public void CitireProgramari()
+        {
+            string tableName = "Programari";
+            _programari = new List<Programare>();
+            var reader = _databaseManager.ExecuteSelectQuery($"SELECT * FROM {tableName};");
+            try
+            {
+                while (reader.Read())
+                {
+                    int k = 0;
+
+                    // trebuie pusa exceptie aici la new string[6] (daca nu sunt 6, ce face?)
+                    string[] infoArray = new string[6];
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        object value = reader.GetValue(i);
+                        infoArray[k++] = value.ToString();
+                    }
+                    int pacID,docID;
+                    bool ok;
+                    int.TryParse(infoArray[1], out pacID);
+                    int.TryParse(infoArray[2], out docID);
+                    if (infoArray[5] == "Valabila")
+                    {
+                        ok = false;
+                    }
+                    else
+                    {
+                        ok = true;
+                    }
+                    _programari.Add(new Programare(pacID, docID, ok, infoArray[4], infoArray[3]));
+                }
+            }
+            finally
+            {
+                if (reader != null && !reader.IsClosed)
+                {
+                    reader.Close();
+                }
+            }
+        }
+        public void CitirePacienti()
+        {
+            //throw new NotImplementedException();
+>>>>>>> main
         }
 
         public IUser VerificaAutentificare(string username, string parola)
