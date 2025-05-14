@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaMedicalaForm.components.Model.Medical;
 
 namespace ClinicaMedicalaForm.components.Model.Interfaces
 {
@@ -14,5 +15,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         List<string> GetProgramariIstoric();
         List<Form> GetIstoric();
         List<string> GetCurrentProgramari();
+        List<Programare> CitireProgramari();
+        List<Programare> CitirePacienti();
     }
 }

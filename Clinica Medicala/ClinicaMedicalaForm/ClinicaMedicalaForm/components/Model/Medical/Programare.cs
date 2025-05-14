@@ -8,5 +8,6 @@ namespace ClinicaMedicalaForm.components.Model.Medical
 {
     public class Programare
     {
+
     }
 }

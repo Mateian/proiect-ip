@@ -24,10 +24,15 @@ namespace ClinicaMedicalaForm.components.Presenter
         public void Init()
         {
             _model.CitireUtilizatori();
+            _model.CitireProgramari();
+            _model.CitirePacienti();
         }
         public IUser VerificaAutentificare(string username, string parola)
         {
             return _model.VerificaAutentificare(username, parola);
         }
+
+        //List<> GetPacienti(int doctotID);
+        //List<> GetProgramari(int doctotID);
     }
 }

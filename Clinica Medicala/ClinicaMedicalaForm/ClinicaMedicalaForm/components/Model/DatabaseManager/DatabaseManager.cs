@@ -26,7 +26,7 @@ namespace ClinicaMedicalaForm.components.Model
 
         public SQLiteDataReader ExecuteSelectQuery(string query)
         {
-            _connection.Open();
+            OpenConnection();
 
             var command = new SQLiteCommand(query, _connection);
             var reader = command.ExecuteReader();
@@ -36,18 +36,26 @@ namespace ClinicaMedicalaForm.components.Model
 
         public void ExecuteNonQuery(string query)
         {
-            _connection.Open();
+            OpenConnection();
 
             var command = new SQLiteCommand(query, _connection);
             command.ExecuteNonQuery();
 
-            _connection.Close();
+            CloseConnection();
         }
-        public void CloseConnection()
+        private void CloseConnection()
         {
             if (_connection.State == System.Data.ConnectionState.Open)
             {
                 _connection.Close();
+            }
+        }
+
+        private void OpenConnection()
+        {
+            if (_connection.State == System.Data.ConnectionState.Closed)
+            {
+                _connection.Open();
             }
         }
     }

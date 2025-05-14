@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClinicaMedicalaForm.components.Model.Factory;
 using ClinicaMedicalaForm.components.Model.Interfaces;
+using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.Model.Users;
 using FisaMedicalaForm;
 
@@ -18,8 +19,9 @@ namespace ClinicaMedicalaForm.components.Model
     {
         private UserFactory _userFactory;
         private List<IUser> _users;
-        private string _userName;
         private SQLiteConnection _connection;
+        private List<Programare> _programari;    
+        private List<IUser> _pacienti;    
         private DatabaseManager _databaseManager;
         public Model()
         {
@@ -60,11 +62,20 @@ namespace ClinicaMedicalaForm.components.Model
                 {
                     reader.Close();
                 }
-
-                _databaseManager.CloseConnection();
             }
             return _users;
         }
+        public List<Programare> Programari => _programari;
+        public List<IUser> Pacienti => _pacienti;
+        public List<Programare> CitireProgramari()
+        {
+            throw new NotImplementedException();
+        }
+        public List<Programare> CitirePacienti()
+        {
+            throw new NotImplementedException();
+        }
+
         public IUser VerificaAutentificare(string username, string parola)
         {
             foreach (IUser user in _users)
