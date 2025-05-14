@@ -40,3 +40,11 @@ C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala
 C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaM.C29CB7BC.Up2Date
 C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.exe
 C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\obj\Debug\ClinicaMedicalaForm.pdb
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\EntityFramework.dll
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\System.Data.SQLite.dll
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\EntityFramework.xml
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Boghiuuu\Documents\Visual Studio 2022\IP\PROJECT!1!!!1\Clinica Medicala\ClinicaMedicalaForm\ClinicaMedicalaForm\bin\Debug\System.Data.SQLite.xml
