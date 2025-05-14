@@ -34,7 +34,6 @@ namespace ClinicaMedicalaForm.components.Presenter
             return _model.VerificaAutentificare(username, parola);
         }
 
-<<<<<<< HEAD
         public List<IUser> GetPacienti(int doctorID)
         {
             List<IUser> pacientiDoctor = new List<IUser>();
@@ -55,7 +54,6 @@ namespace ClinicaMedicalaForm.components.Presenter
             return pacientiDoctor;
         }
         //List<> GetProgramari(int doctotID);
-=======
         //List<> GetPacienti(int doctotID);
         public List<Programare> GetProgramari(int doctotID)
         {
@@ -69,6 +67,5 @@ namespace ClinicaMedicalaForm.components.Presenter
             }
             return l;
         }
->>>>>>> main
     }
 }

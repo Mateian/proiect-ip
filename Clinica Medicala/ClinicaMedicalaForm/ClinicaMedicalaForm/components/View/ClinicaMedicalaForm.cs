@@ -81,7 +81,6 @@ namespace ClinicaMedicalaForm
                 }
                 else if(_user.Rol == "Doctor")
                 {
-<<<<<<< HEAD
                     labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     listBoxDoctorPacienti.Items.Clear();
@@ -91,9 +90,8 @@ namespace ClinicaMedicalaForm
                     {
                         listBoxDoctorPacienti.Items.Add(pacient.ToString());
                     }
-=======
-                    labelWelcomeText.Text += "Dr. " + user.Nume + " " + user.Prenume + ".";
-                    List <Programare> l=_presenter.GetProgramari(user.ID);
+                    labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
+                    List <Programare> l=_presenter.GetProgramari(_user.ID);
                     richTextBoxProgramari.Clear();
                     foreach (Programare p in l)
                     {
@@ -102,7 +100,6 @@ namespace ClinicaMedicalaForm
                     }
                     tabControlUser.Visible = true;
                     tabControlUser.SelectTab("tabPageDoctor");
->>>>>>> main
                 }
                 else if(_user.Rol == "Administrator")
                 {

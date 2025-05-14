@@ -17,13 +17,8 @@ namespace ClinicaMedicalaForm.components.Model
 {
     public class Model : IModel
     {
-<<<<<<< HEAD
         private UserFactory _userFactory;    
         private SQLiteConnection _connection;
-=======
-        private UserFactory _userFactory;
-        private List<IUser> _users;
->>>>>>> main
         private List<Programare> _programari;    
         private DatabaseManager _databaseManager;
         private List<IUser> _users;
@@ -74,12 +69,6 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _users;
         }
-<<<<<<< HEAD
-        public List<Programare> CitireProgramari()
-        {
-            return null;
-            //;throw new NotImplementedException();
-        }
         public void CitireDoctori()
         {
             _doctori = new List<IUser>();
@@ -101,7 +90,7 @@ namespace ClinicaMedicalaForm.components.Model
 
             try
             {
-                while(reader.Read())
+                while (reader.Read())
                 {
                     int ID = reader.GetInt32(0);
                     int doctorID = reader.GetInt32(1);
@@ -110,12 +99,12 @@ namespace ClinicaMedicalaForm.components.Model
                     var pacientUser = _users.FirstOrDefault(u => u.ID == pacientID && u.Rol == "Pacient");
                     var doctorUser = _doctori.FirstOrDefault(d => d.ID == doctorID);
 
-                    if(pacientUser != null && doctorUser != null)
+                    if (pacientUser != null && doctorUser != null)
                     {
                         Pacient pacient = pacientUser as Pacient;
                         Doctor doctor = doctorUser as Doctor;
 
-                        if(pacient != null && doctor != null)
+                        if (pacient != null && doctor != null)
                         {
                             pacient.Doctor = doctor;
                             _pacienti.Add(pacient);
@@ -130,9 +119,7 @@ namespace ClinicaMedicalaForm.components.Model
                     reader.Close();
                 }
             }
-=======
-        public List<Programare> Programari => _programari;
-        public List<IUser> Pacienti => _pacienti;
+        }
         public void CitireProgramari()
         {
             string tableName = "Programari";
@@ -173,11 +160,6 @@ namespace ClinicaMedicalaForm.components.Model
                     reader.Close();
                 }
             }
-        }
-        public void CitirePacienti()
-        {
-            //throw new NotImplementedException();
->>>>>>> main
         }
 
         public IUser VerificaAutentificare(string username, string parola)
