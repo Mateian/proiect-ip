@@ -16,6 +16,7 @@ using ClinicaMedicalaForm.components.View.Interfaces;
 using FisaMedicalaForm;
 using System.Data.SQLite;
 using static FisaMedicalaForm.FisaMedicalaForm;
+using ClinicaMedicalaForm.components.Model.Medical;
 
 namespace ClinicaMedicalaForm
 {
@@ -34,6 +35,7 @@ namespace ClinicaMedicalaForm
         {
             // in caz de e nevoie de facut ceva cand se creeaza Form
             textBoxParola.UseSystemPasswordChar = true;
+            richTextBoxProgramari.ReadOnly = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -70,16 +72,25 @@ namespace ClinicaMedicalaForm
                 {
                     labelWelcomeText.Text += user.Nume + " " + user.Prenume + ".";
                     tabControlUser.Visible = true;
-                    loadPrograms(_model.GetProgramariIstoric());
-                    loadIstoric(_model.GetIstoric());
-                    loadProgramari(_model.GetCurrentProgramari());
+                    //loadPrograms(_model.GetProgramariIstoric());
+                    //loadIstoric(_model.GetIstoric());
+                    //loadProgramari(_model.GetCurrentProgramari());
                     tabPagePacient.Visible = true;
                     tabPageDoctor.Visible = false;
+                    tabControlUser.SelectTab("tabPagePacient");
                 }
                 else if(user.Rol == "Doctor")
                 {
                     labelWelcomeText.Text += "Dr. " + user.Nume + " " + user.Prenume + ".";
+                    List <Programare> l=_presenter.GetProgramari(user.ID);
+                    richTextBoxProgramari.Clear();
+                    foreach (Programare p in l)
+                    {
+                        string s=p.Data.ToString()+", Pacientul: "+p.PacientID+", Specialitatea: "+p.Specializare+"\n";
+                        richTextBoxProgramari.AppendText(s);
+                    }
                     tabControlUser.Visible = true;
+                    tabControlUser.SelectTab("tabPageDoctor");
                 }
                 else if(user.Rol == "Administrator")
                 {
@@ -101,35 +112,6 @@ namespace ClinicaMedicalaForm
                 MessageBox.Show("No user that matches these credentials found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void loadPrograms(List<string> programs)
-        {
-            if (programs != null)
-            {
-                listBoxPacientProgramari.Items.Clear();
-                listBoxPacientProgramari.DataSource = programs;
-            }
-        }
-
-        private void loadIstoric(List<Form> istoric)
-        {
-            if (istoric != null)
-            {
-                foreach (Form form in istoric)
-                {
-                    listBoxIstoricMedical.Items.Add(form);
-                }
-            }
-        }
-        private void loadProgramari(List<string> programs)
-        {
-            if (programs != null)
-            {
-                listBoxProgramari.Items.Clear();
-                listBoxProgramari.DataSource = programs;
-            }
-        }
-
         private void buttonDeconectare_Click(object sender, EventArgs e)
         {
             groupBoxAdministrator.Visible = false;
@@ -173,6 +155,11 @@ namespace ClinicaMedicalaForm
         }
 
         private void buttonProgramare_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdaugareProgramare_Click(object sender, EventArgs e)
         {
 
         }

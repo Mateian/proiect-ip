@@ -99,9 +99,9 @@
             this.groupBoxAutentificare.Controls.Add(this.label1);
             this.groupBoxAutentificare.Controls.Add(this.textBoxNumeUtilizator);
             this.groupBoxAutentificare.Location = new System.Drawing.Point(9, 33);
-            this.groupBoxAutentificare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAutentificare.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAutentificare.Name = "groupBoxAutentificare";
-            this.groupBoxAutentificare.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAutentificare.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxAutentificare.Size = new System.Drawing.Size(334, 140);
             this.groupBoxAutentificare.TabIndex = 0;
             this.groupBoxAutentificare.TabStop = false;
@@ -110,7 +110,7 @@
             // buttonAutentificare
             // 
             this.buttonAutentificare.Location = new System.Drawing.Point(56, 93);
-            this.buttonAutentificare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAutentificare.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAutentificare.Name = "buttonAutentificare";
             this.buttonAutentificare.Size = new System.Drawing.Size(197, 29);
             this.buttonAutentificare.TabIndex = 1;
@@ -131,7 +131,7 @@
             // textBoxParola
             // 
             this.textBoxParola.Location = new System.Drawing.Point(56, 70);
-            this.textBoxParola.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxParola.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxParola.Name = "textBoxParola";
             this.textBoxParola.Size = new System.Drawing.Size(198, 20);
             this.textBoxParola.TabIndex = 2;
@@ -149,7 +149,7 @@
             // textBoxNumeUtilizator
             // 
             this.textBoxNumeUtilizator.Location = new System.Drawing.Point(56, 34);
-            this.textBoxNumeUtilizator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNumeUtilizator.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNumeUtilizator.Name = "textBoxNumeUtilizator";
             this.textBoxNumeUtilizator.Size = new System.Drawing.Size(198, 20);
             this.textBoxNumeUtilizator.TabIndex = 0;
@@ -160,7 +160,7 @@
             this.tabControlUser.Controls.Add(this.tabPageDoctor);
             this.tabControlUser.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabControlUser.Location = new System.Drawing.Point(350, 55);
-            this.tabControlUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlUser.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlUser.Name = "tabControlUser";
             this.tabControlUser.SelectedIndex = 0;
             this.tabControlUser.Size = new System.Drawing.Size(712, 507);
@@ -172,7 +172,7 @@
             // 
             this.tabPagePacient.Controls.Add(this.groupBox9);
             this.tabPagePacient.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePacient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePacient.Margin = new System.Windows.Forms.Padding(2);
             this.tabPagePacient.Name = "tabPagePacient";
             this.tabPagePacient.Size = new System.Drawing.Size(704, 481);
             this.tabPagePacient.TabIndex = 0;
@@ -185,9 +185,9 @@
             this.groupBox9.Controls.Add(this.groupBox11);
             this.groupBox9.Controls.Add(this.groupBox10);
             this.groupBox9.Location = new System.Drawing.Point(2, 13);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox9.Size = new System.Drawing.Size(693, 208);
             this.groupBox9.TabIndex = 3;
             this.groupBox9.TabStop = false;
@@ -199,9 +199,9 @@
             this.groupBox12.Controls.Add(this.label3);
             this.groupBox12.Controls.Add(this.buttonProgramare);
             this.groupBox12.Location = new System.Drawing.Point(440, 17);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox12.Size = new System.Drawing.Size(248, 184);
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
@@ -211,7 +211,7 @@
             // 
             this.listBoxProgramari.FormattingEnabled = true;
             this.listBoxProgramari.Location = new System.Drawing.Point(4, 17);
-            this.listBoxProgramari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxProgramari.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxProgramari.Name = "listBoxProgramari";
             this.listBoxProgramari.Size = new System.Drawing.Size(238, 134);
             this.listBoxProgramari.TabIndex = 4;
@@ -229,7 +229,7 @@
             // buttonProgramare
             // 
             this.buttonProgramare.Location = new System.Drawing.Point(129, 157);
-            this.buttonProgramare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonProgramare.Margin = new System.Windows.Forms.Padding(2);
             this.buttonProgramare.Name = "buttonProgramare";
             this.buttonProgramare.Size = new System.Drawing.Size(115, 19);
             this.buttonProgramare.TabIndex = 0;
@@ -241,9 +241,9 @@
             // 
             this.groupBox11.Controls.Add(this.listBoxIstoricMedical);
             this.groupBox11.Location = new System.Drawing.Point(218, 17);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox11.Size = new System.Drawing.Size(215, 184);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
@@ -253,7 +253,7 @@
             // 
             this.listBoxIstoricMedical.FormattingEnabled = true;
             this.listBoxIstoricMedical.Location = new System.Drawing.Point(4, 18);
-            this.listBoxIstoricMedical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxIstoricMedical.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxIstoricMedical.Name = "listBoxIstoricMedical";
             this.listBoxIstoricMedical.Size = new System.Drawing.Size(199, 160);
             this.listBoxIstoricMedical.TabIndex = 0;
@@ -263,9 +263,9 @@
             // 
             this.groupBox10.Controls.Add(this.listBoxPacientProgramari);
             this.groupBox10.Location = new System.Drawing.Point(4, 17);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(209, 184);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
@@ -275,7 +275,7 @@
             // 
             this.listBoxPacientProgramari.FormattingEnabled = true;
             this.listBoxPacientProgramari.Location = new System.Drawing.Point(4, 17);
-            this.listBoxPacientProgramari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxPacientProgramari.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxPacientProgramari.Name = "listBoxPacientProgramari";
             this.listBoxPacientProgramari.Size = new System.Drawing.Size(198, 160);
             this.listBoxPacientProgramari.TabIndex = 4;
@@ -284,7 +284,7 @@
             // 
             this.tabPageDoctor.Controls.Add(this.groupBox2);
             this.tabPageDoctor.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageDoctor.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageDoctor.Name = "tabPageDoctor";
             this.tabPageDoctor.Size = new System.Drawing.Size(704, 481);
             this.tabPageDoctor.TabIndex = 0;
@@ -297,9 +297,9 @@
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Location = new System.Drawing.Point(0, 13);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(704, 465);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -310,9 +310,9 @@
             this.groupBox5.Controls.Add(this.buttonCreareFisaMedicala);
             this.groupBox5.Controls.Add(this.richTextBoxPreviewFisa);
             this.groupBox5.Location = new System.Drawing.Point(4, 244);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(695, 211);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
@@ -321,7 +321,7 @@
             // buttonCreareFisaMedicala
             // 
             this.buttonCreareFisaMedicala.Location = new System.Drawing.Point(4, 20);
-            this.buttonCreareFisaMedicala.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCreareFisaMedicala.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCreareFisaMedicala.Name = "buttonCreareFisaMedicala";
             this.buttonCreareFisaMedicala.Size = new System.Drawing.Size(686, 26);
             this.buttonCreareFisaMedicala.TabIndex = 3;
@@ -333,7 +333,7 @@
             // 
             this.richTextBoxPreviewFisa.Enabled = false;
             this.richTextBoxPreviewFisa.Location = new System.Drawing.Point(4, 51);
-            this.richTextBoxPreviewFisa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxPreviewFisa.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxPreviewFisa.Name = "richTextBoxPreviewFisa";
             this.richTextBoxPreviewFisa.Size = new System.Drawing.Size(687, 147);
             this.richTextBoxPreviewFisa.TabIndex = 2;
@@ -343,9 +343,9 @@
             // 
             this.groupBox4.Controls.Add(this.richTextBoxProgramari);
             this.groupBox4.Location = new System.Drawing.Point(291, 26);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(409, 213);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
@@ -353,8 +353,9 @@
             // 
             // richTextBoxProgramari
             // 
+            this.richTextBoxProgramari.BackColor = System.Drawing.Color.White;
             this.richTextBoxProgramari.Location = new System.Drawing.Point(4, 23);
-            this.richTextBoxProgramari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBoxProgramari.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxProgramari.Name = "richTextBoxProgramari";
             this.richTextBoxProgramari.Size = new System.Drawing.Size(401, 186);
             this.richTextBoxProgramari.TabIndex = 2;
@@ -365,9 +366,9 @@
             this.groupBox3.Controls.Add(this.buttonAdaugareProgramare);
             this.groupBox3.Controls.Add(this.listBoxDoctorPacienti);
             this.groupBox3.Location = new System.Drawing.Point(4, 26);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(282, 213);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
@@ -376,18 +377,19 @@
             // buttonAdaugareProgramare
             // 
             this.buttonAdaugareProgramare.Location = new System.Drawing.Point(4, 184);
-            this.buttonAdaugareProgramare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAdaugareProgramare.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAdaugareProgramare.Name = "buttonAdaugareProgramare";
             this.buttonAdaugareProgramare.Size = new System.Drawing.Size(273, 24);
             this.buttonAdaugareProgramare.TabIndex = 1;
             this.buttonAdaugareProgramare.Text = "Adauga programare";
             this.buttonAdaugareProgramare.UseVisualStyleBackColor = true;
+            this.buttonAdaugareProgramare.Click += new System.EventHandler(this.buttonAdaugareProgramare_Click);
             // 
             // listBoxDoctorPacienti
             // 
             this.listBoxDoctorPacienti.FormattingEnabled = true;
             this.listBoxDoctorPacienti.Location = new System.Drawing.Point(4, 23);
-            this.listBoxDoctorPacienti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxDoctorPacienti.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxDoctorPacienti.Name = "listBoxDoctorPacienti";
             this.listBoxDoctorPacienti.Size = new System.Drawing.Size(274, 160);
             this.listBoxDoctorPacienti.TabIndex = 0;
@@ -397,9 +399,9 @@
             this.groupBoxAdministrator.Controls.Add(this.groupBoxInstrumente);
             this.groupBoxAdministrator.Controls.Add(this.groupBox7);
             this.groupBoxAdministrator.Location = new System.Drawing.Point(12, 178);
-            this.groupBoxAdministrator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdministrator.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdministrator.Name = "groupBoxAdministrator";
-            this.groupBoxAdministrator.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdministrator.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxAdministrator.Size = new System.Drawing.Size(334, 384);
             this.groupBoxAdministrator.TabIndex = 2;
             this.groupBoxAdministrator.TabStop = false;
@@ -410,9 +412,9 @@
             // 
             this.groupBoxInstrumente.Controls.Add(this.buttonStatistica);
             this.groupBoxInstrumente.Location = new System.Drawing.Point(9, 272);
-            this.groupBoxInstrumente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxInstrumente.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxInstrumente.Name = "groupBoxInstrumente";
-            this.groupBoxInstrumente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxInstrumente.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxInstrumente.Size = new System.Drawing.Size(316, 93);
             this.groupBoxInstrumente.TabIndex = 3;
             this.groupBoxInstrumente.TabStop = false;
@@ -421,7 +423,7 @@
             // buttonStatistica
             // 
             this.buttonStatistica.Location = new System.Drawing.Point(4, 17);
-            this.buttonStatistica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonStatistica.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStatistica.Name = "buttonStatistica";
             this.buttonStatistica.Size = new System.Drawing.Size(307, 63);
             this.buttonStatistica.TabIndex = 3;
@@ -434,9 +436,9 @@
             this.groupBox7.Controls.Add(this.buttonGestioneazaPacienti);
             this.groupBox7.Controls.Add(this.buttonGestioneazaDoctori);
             this.groupBox7.Location = new System.Drawing.Point(4, 39);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(325, 197);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
@@ -446,7 +448,7 @@
             // 
             this.listBoxAdminPacienti.FormattingEnabled = true;
             this.listBoxAdminPacienti.Location = new System.Drawing.Point(4, 69);
-            this.listBoxAdminPacienti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxAdminPacienti.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxAdminPacienti.Name = "listBoxAdminPacienti";
             this.listBoxAdminPacienti.ScrollAlwaysVisible = true;
             this.listBoxAdminPacienti.Size = new System.Drawing.Size(317, 121);
@@ -455,7 +457,7 @@
             // buttonGestioneazaPacienti
             // 
             this.buttonGestioneazaPacienti.Location = new System.Drawing.Point(4, 43);
-            this.buttonGestioneazaPacienti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGestioneazaPacienti.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestioneazaPacienti.Name = "buttonGestioneazaPacienti";
             this.buttonGestioneazaPacienti.Size = new System.Drawing.Size(316, 21);
             this.buttonGestioneazaPacienti.TabIndex = 1;
@@ -465,7 +467,7 @@
             // buttonGestioneazaDoctori
             // 
             this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(4, 17);
-            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGestioneazaDoctori.Name = "buttonGestioneazaDoctori";
             this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(316, 21);
             this.buttonGestioneazaDoctori.TabIndex = 0;
@@ -478,9 +480,9 @@
             this.groupBox13.Controls.Add(this.label6);
             this.groupBox13.Controls.Add(this.label5);
             this.groupBox13.Location = new System.Drawing.Point(12, 577);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox13.Size = new System.Drawing.Size(1051, 65);
             this.groupBox13.TabIndex = 5;
             this.groupBox13.TabStop = false;
@@ -566,7 +568,7 @@
             // 
             this.buttonDeconectare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDeconectare.Location = new System.Drawing.Point(941, 23);
-            this.buttonDeconectare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDeconectare.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDeconectare.Name = "buttonDeconectare";
             this.buttonDeconectare.Size = new System.Drawing.Size(104, 28);
             this.buttonDeconectare.TabIndex = 8;
@@ -588,7 +590,7 @@
             this.Controls.Add(this.groupBoxAutentificare);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClinicaMedicalaForm";
             this.Text = "Clinica Medicala - ourClinic";
             this.groupBoxAutentificare.ResumeLayout(false);
