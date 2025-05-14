@@ -7,31 +7,43 @@
       "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\view\\clinicamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6166B46A-4ADC-469A-8F3A-2917750CCB50}|FisaMedicalaForm\\FisaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\fisamedicalaform\\fisamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6166B46A-4ADC-469A-8F3A-2917750CCB50}|FisaMedicalaForm\\FisaMedicalaForm.csproj|solutionrelative:fisamedicalaform\\fisamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\model\\users\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\users\\administrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\model\\users\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\users\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\model\\users\\asistent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\users\\asistent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\model\\users\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\users\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\presenter\\interfaces\\ipresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\presenter\\interfaces\\ipresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\view\\clinicamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\view\\clinicamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\model\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\model\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\interfaces\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\presenter\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\presenter\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\presenter\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\presenter\\interfaces\\ipresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\presenter\\interfaces\\ipresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\model\\users\\asistent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\users\\asistent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\model\\users\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\users\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|d:\\facultate\\ip\\proiect\\github\\proiect-ip\\clinica medicala\\clinicamedicalaform\\clinicamedicalaform\\components\\model\\factory\\userfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\model\\factory\\userfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\factory\\userfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -41,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\components\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|solutionrelative:clinicamedicalaform\\components\\model\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6166B46A-4ADC-469A-8F3A-2917750CCB50}|FisaMedicalaForm\\FisaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\fisamedicalaform\\fisamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6166B46A-4ADC-469A-8F3A-2917750CCB50}|FisaMedicalaForm\\FisaMedicalaForm.csproj|solutionrelative:fisamedicalaform\\fisamedicalaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3035944A-8FFC-454C-9910-1C49BE36B68C}|ClinicaMedicalaForm\\ClinicaMedicalaForm.csproj|D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\clinicamedicalaform\\data\\users.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -62,24 +70,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Administrator.cs",
+              "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Administrator.cs",
+              "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Users\\Administrator.cs",
+              "ToolTip": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Administrator.cs",
+              "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Users\\Administrator.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:42:04.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Pacient.cs",
+              "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Pacient.cs",
+              "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Users\\Pacient.cs",
+              "ToolTip": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Pacient.cs",
+              "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Users\\Pacient.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:41:05.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "IUser.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Interfaces\\IUser.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Interfaces\\IUser.cs",
               "ToolTip": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Interfaces\\IUser.cs",
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Interfaces\\IUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T17:31:14.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "IPresenter.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Presenter\\Interfaces\\IPresenter.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Presenter\\Interfaces\\IPresenter.cs",
@@ -92,33 +126,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Asistent.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Asistent.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Users\\Asistent.cs",
               "ToolTip": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Asistent.cs",
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Users\\Asistent.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T17:03:10.027Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Doctor.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Doctor.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Users\\Doctor.cs",
               "ToolTip": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Users\\Doctor.cs",
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Users\\Doctor.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBwAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T16:56:20.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "UserFactory.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Factory\\UserFactory.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Factory\\UserFactory.cs",
@@ -126,12 +160,11 @@
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Factory\\UserFactory.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAcwB0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T16:53:46.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T16:53:46.18Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Presenter.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Presenter\\Presenter.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Presenter\\Presenter.cs",
@@ -139,12 +172,11 @@
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Presenter\\Presenter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T16:43:27.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T16:43:27.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "FisaMedicalaForm.cs [Design]",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\FisaMedicalaForm\\FisaMedicalaForm.cs",
               "RelativeDocumentMoniker": "FisaMedicalaForm\\FisaMedicalaForm.cs",
@@ -156,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "IModel.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Interfaces\\IModel.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Interfaces\\IModel.cs",
@@ -164,12 +196,11 @@
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Interfaces\\IModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T20:27:44.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T20:27:44.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "users.txt",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\data\\users.txt",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\data\\users.txt",
@@ -177,12 +208,11 @@
               "RelativeToolTip": "ClinicaMedicalaForm\\data\\users.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-12T22:46:52.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T22:46:52.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Model.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\Model\\Model.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\Model\\Model.cs",
@@ -190,8 +220,7 @@
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\Model\\Model.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAYwCkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T22:45:45.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T22:45:45.287Z"
             },
             {
               "$type": "Document",
@@ -201,14 +230,14 @@
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\View\\ClinicaMedicalaForm.cs",
               "ToolTip": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\View\\ClinicaMedicalaForm.cs",
               "RelativeToolTip": "ClinicaMedicalaForm\\components\\View\\ClinicaMedicalaForm.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAkwIEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T21:30:12.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ClinicaMedicalaForm.cs [Design]",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\components\\View\\ClinicaMedicalaForm.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\components\\View\\ClinicaMedicalaForm.cs",
@@ -220,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Facultate\\IP\\Proiect\\GitHub\\proiect-ip\\Clinica Medicala\\ClinicaMedicalaForm\\ClinicaMedicalaForm\\Program.cs",
               "RelativeDocumentMoniker": "ClinicaMedicalaForm\\Program.cs",

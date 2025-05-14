@@ -61,10 +61,13 @@ namespace ClinicaMedicalaForm
             string username = textBoxNumeUtilizator.Text;
             string parola = textBoxParola.Text;
             user = _presenter.VerificaAutentificare(username, parola);
+            labelWelcomeText.Text = "Bine ai venit, ";
+            labelWelcomeText.Visible = true;
             if (user != null)//val cat mai mica sa nu incurce cu nimica
             {
                 if (user.Rol == "Pacient")//user
                 {
+                    labelWelcomeText.Text += user.Nume + " " + user.Prenume + ".";
                     tabControlUser.Visible = true;
                     loadPrograms(_model.GetProgramariIstoric());
                     loadIstoric(_model.GetIstoric());
@@ -74,12 +77,18 @@ namespace ClinicaMedicalaForm
                 }
                 else if(user.Rol == "Doctor")
                 {
+                    labelWelcomeText.Text += "Dr. " + user.Nume + " " + user.Prenume + ".";
                     tabControlUser.Visible = true;
                 }
                 else if(user.Rol == "Administrator")
                 {
+                    labelWelcomeText.Text += "Adm. " + user.Nume + " " + user.Prenume + ".";
                     tabControlUser.Visible = true;
                     groupBoxAdministrator.Visible = true;
+                }
+                else if(user.Rol == "Asistent")
+                {
+                    labelWelcomeText.Text += "Asist. " + user.Nume + " " + user.Prenume + ".";
                 }
             }
             else

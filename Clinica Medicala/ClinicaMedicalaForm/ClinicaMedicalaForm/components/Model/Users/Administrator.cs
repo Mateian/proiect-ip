@@ -11,6 +11,8 @@ namespace ClinicaMedicalaForm.components.Model.Users
     {
         private string _nume, _prenume, _email, _username, _parola;
         private int _id;
+        public string Prenume => _prenume;
+        public string Nume => _nume;
         public string Rol => "Administrator";
         public int ID => _id;
         public string Username => _username;

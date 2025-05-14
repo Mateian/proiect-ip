@@ -14,6 +14,8 @@ namespace ClinicaMedicalaForm.components.Model
         public int ID { get; }
         public string Rol => "Asistent";
         public string Specializare { get; set; }
+        public string Prenume => _prenume;
+        public string Nume => _nume;
         public Doctor Doctor { get; set; }
         public string Username => _username;
         public string Parola => _parola;
