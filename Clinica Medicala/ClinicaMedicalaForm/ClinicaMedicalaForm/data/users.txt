@@ -1,2 +1,4 @@
 1 Administrator admin admin admin admin
 2 Pacient user user user user
+3 Asistent asistent asistent Constantin Ilie
+4 Doctor doctor doctor Doctoras Doctorel

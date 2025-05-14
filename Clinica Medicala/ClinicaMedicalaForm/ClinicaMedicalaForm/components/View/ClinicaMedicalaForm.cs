@@ -22,7 +22,7 @@ namespace ClinicaMedicalaForm
     {
         private IPresenter _presenter;
         private IModel _model;
-        private int user;
+        private IUser user;
         public ClinicaMedicalaForm()
         {
             InitializeComponent();
@@ -61,9 +61,9 @@ namespace ClinicaMedicalaForm
             string username = textBoxNumeUtilizator.Text;
             string parola = textBoxParola.Text;
             user = _presenter.VerificaAutentificare(username, parola);
-            if (user != -100)//val cat mai mica sa nu incurce cu nimica
+            if (user != null)//val cat mai mica sa nu incurce cu nimica
             {
-                if (user == 0)//user
+                if (user.Rol == "Pacient")//user
                 {
                     tabControlUser.Visible = true;
                     loadPrograms(_model.GetProgramariIstoric());
@@ -72,11 +72,11 @@ namespace ClinicaMedicalaForm
                     tabPagePacient.Visible = true;
                     tabPageDoctor.Visible = false;
                 }
-                else if(user == 1)
+                else if(user.Rol == "Doctor")
                 {
                     tabControlUser.Visible = true;
                 }
-                else if(user == -1)
+                else if(user.Rol == "Administrator")
                 {
                     tabControlUser.Visible = true;
                     groupBoxAdministrator.Visible = true;
@@ -127,7 +127,7 @@ namespace ClinicaMedicalaForm
             tabControlUser.Visible = false;
             textBoxNumeUtilizator.Clear();
             textBoxParola.Clear();
-            user = -100;
+            user = null;
         }
         
         public void SetModel(IModel model)
@@ -142,11 +142,11 @@ namespace ClinicaMedicalaForm
 
         private void tabControlUser_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (user == 0 && e.TabPage.Name=="tabPageDoctor")
+            if (user.Rol == "Pacient" && e.TabPage.Name=="tabPageDoctor")
             {
                 e.Cancel = true;
             }
-            if (user == 1 && e.TabPage.Name == "tabPagePacient")
+            if (user.Rol == "Doctor" && e.TabPage.Name == "tabPagePacient")
             {
                 e.Cancel = true;
             }

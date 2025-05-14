@@ -24,6 +24,10 @@ namespace ClinicaMedicalaForm.components.Model.Factory
                     return new Administrator(ID, username, parola, nume, prenume);
                 case "Pacient":
                     return new Pacient(ID, username, parola, nume, prenume);
+                case "Doctor":
+                    return new Doctor(ID, username, parola, nume, prenume);
+                case "Asistent":
+                    return new Asistent(ID, username, parola, nume, prenume);
             }
             return null;
         }

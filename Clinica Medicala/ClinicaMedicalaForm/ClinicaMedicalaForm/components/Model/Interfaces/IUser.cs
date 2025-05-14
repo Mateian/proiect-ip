@@ -10,6 +10,7 @@ namespace ClinicaMedicalaForm.components.Model
     {
         int ID { get; }
         string Username { get; }
+        string Rol { get; }
         string Parola { get; }
         string ToString();
     }
