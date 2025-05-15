@@ -35,7 +35,6 @@ namespace ClinicaMedicalaForm
         {
             // in caz de e nevoie de facut ceva cand se creeaza Form
             textBoxParola.UseSystemPasswordChar = true;
-            richTextBoxProgramari.ReadOnly = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,10 +63,11 @@ namespace ClinicaMedicalaForm
             string username = textBoxNumeUtilizator.Text;
             string parola = textBoxParola.Text;
             _user = _presenter.VerificaAutentificare(username, parola);
-            labelWelcomeText.Text = "Bine ai venit, ";
-            labelWelcomeText.Visible = true;
+            
             if (_user != null)//val cat mai mica sa nu incurce cu nimica
             {
+                labelWelcomeText.Text = "Bine ai venit, ";
+                labelWelcomeText.Visible = true;
                 if (_user.Rol == "Pacient")//_user
                 {
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
@@ -84,19 +84,18 @@ namespace ClinicaMedicalaForm
                     labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     listBoxDoctorPacienti.Items.Clear();
+                    listBoxListaProgramari.Items.Clear();
 
                     List<IUser> pacientiDoctor = _presenter.GetPacienti(_user.ID);
                     foreach(var pacient in pacientiDoctor)
                     {
                         listBoxDoctorPacienti.Items.Add(pacient.ToString());
                     }
-                    labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
                     List <Programare> l=_presenter.GetProgramari(_user.ID);
-                    richTextBoxProgramari.Clear();
                     foreach (Programare p in l)
                     {
                         string s=p.Data.ToString()+", Pacientul: "+p.PacientID+", Specialitatea: "+p.Specializare+"\n";
-                        richTextBoxProgramari.AppendText(s);
+                        listBoxListaProgramari.Items.Add(s);
                     }
                     tabControlUser.Visible = true;
                     tabControlUser.SelectTab("tabPageDoctor");
