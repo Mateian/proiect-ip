@@ -145,12 +145,16 @@ namespace ClinicaMedicalaForm.components.Model
                     if (infoArray[5] == "Valabila")
                     {
                         ok = false;
+                        _programari.Add(new Programare(pacID, docID, ok, infoArray[4], infoArray[3]));
                     }
-                    else
+                    else if (infoArray[5] == "Nevalabila")
                     {
                         ok = true;
                     }
-                    _programari.Add(new Programare(pacID, docID, ok, infoArray[4], infoArray[3]));
+                    else if (infoArray[5] == "In curs de validare")
+                    {
+
+                    }
                 }
             }
             finally
