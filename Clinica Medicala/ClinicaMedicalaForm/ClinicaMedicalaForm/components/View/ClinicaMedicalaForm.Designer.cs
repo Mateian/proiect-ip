@@ -38,7 +38,7 @@
             this.tabPagePacient = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.listBoxProgramari = new System.Windows.Forms.ListBox();
+            this.listBoxProgramariViitoare = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonProgramare = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -193,7 +193,7 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.listBoxProgramari);
+            this.groupBox12.Controls.Add(this.listBoxProgramariViitoare);
             this.groupBox12.Controls.Add(this.label3);
             this.groupBox12.Controls.Add(this.buttonProgramare);
             this.groupBox12.Location = new System.Drawing.Point(587, 21);
@@ -205,16 +205,16 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Programari Viitoare";
             // 
-            // listBoxProgramari
+            // listBoxProgramariViitoare
             // 
-            this.listBoxProgramari.FormattingEnabled = true;
-            this.listBoxProgramari.ItemHeight = 16;
-            this.listBoxProgramari.Location = new System.Drawing.Point(5, 21);
-            this.listBoxProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxProgramari.Name = "listBoxProgramari";
-            this.listBoxProgramari.Size = new System.Drawing.Size(316, 164);
-            this.listBoxProgramari.TabIndex = 4;
-            this.listBoxProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramari_SelectedIndexChanged);
+            this.listBoxProgramariViitoare.FormattingEnabled = true;
+            this.listBoxProgramariViitoare.ItemHeight = 16;
+            this.listBoxProgramariViitoare.Location = new System.Drawing.Point(5, 21);
+            this.listBoxProgramariViitoare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxProgramariViitoare.Name = "listBoxProgramariViitoare";
+            this.listBoxProgramariViitoare.Size = new System.Drawing.Size(316, 164);
+            this.listBoxProgramariViitoare.TabIndex = 4;
+            this.listBoxProgramariViitoare.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramari_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -651,7 +651,7 @@
         private System.Windows.Forms.Button buttonProgramare;
         private System.Windows.Forms.ListBox listBoxIstoricMedical;
         private System.Windows.Forms.ListBox listBoxPacientIstoricProgramari;
-        private System.Windows.Forms.ListBox listBoxProgramari;
+        private System.Windows.Forms.ListBox listBoxProgramariViitoare;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;

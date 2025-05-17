@@ -164,7 +164,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return null;
         }
-        public void CereProgramare(Programare programare)
+        public void AdaugaProgramareViitoare(Programare programare)
         {
             Programari.Add(programare);
             string tableName = "Programari";
@@ -172,33 +172,14 @@ namespace ClinicaMedicalaForm.components.Model
                "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
 
             var parameters = new Dictionary<string, object>
-{
-            { "@PacientID", programare.PacientID },
-            { "@DoctorID", programare.DoctorID },
-            { "@Date", programare.Data },  // Asumând că este DateTime
-            { "@Specializare", programare.Specializare },
-            { "@Valabilitate", programare.Valabilitate }
-};
-
+            {
+                { "@PacientID", programare.PacientID },
+                { "@DoctorID", programare.DoctorID },
+                { "@Date", programare.Data },  // Asumând că este DateTime
+                { "@Specializare", programare.Specializare },
+                { "@Valabilitate", programare.Valabilitate }
+            };
             _databaseManager.ExecuteNonQuery(query, parameters);
-
-        }
-        public List<string> GetProgramariIstoric()
-        {
-
-            return null;
-            //TO DO;
-        }
-
-        public List<Form> GetIstoric()
-        {
-            return null;
-            //TO DO;
-        }
-        public List<string> GetCurrentProgramari()
-        {
-            return null;
-            //TO DO;
         }
         public void AdaugaProgramare()
         {

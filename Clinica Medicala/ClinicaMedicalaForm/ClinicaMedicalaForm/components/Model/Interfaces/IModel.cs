@@ -14,12 +14,9 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         List<Programare> Programari { get; }
         List<IUser> CitireUtilizatori();
         IUser VerificaAutentificare(string username, string parola);
-        List<string> GetProgramariIstoric();
-        List<Form> GetIstoric();
-        List<string> GetCurrentProgramari();
         void CitireProgramari();
         void CitirePacienti();
         void CitireDoctori();
-        void CereProgramare(Programare programare);
+        void AdaugaProgramareViitoare(Programare programare);
     }
 }

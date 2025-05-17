@@ -67,21 +67,33 @@ namespace ClinicaMedicalaForm.components.Presenter
             }
             return l;
         }
-        public List<Programare> GetProgramariPacient(int pacientID)
+        public List<Programare> GetProgramariIstoric(int pacientID)
         {
             List<Programare> l = new List<Programare>();
             foreach (Programare p in _model.Programari)
             {
-                if (p.PacientID == pacientID)
+                if (p.PacientID == pacientID && p.Valabilitate == "Valabila")
                 {
                     l.Add(p);
                 }
             }
             return l;
         }
-        public void AdaugaProgramare(Programare programare)
+        public List<Programare> GetCereriProgramari(int pacientID)
         {
-            _model.CereProgramare(programare);
+            List<Programare> cereri = new List<Programare>();
+            foreach(Programare programare in _model.Programari)
+            {
+                if(programare.PacientID == pacientID && programare.Valabilitate == "In curs de verificare")
+                {
+                    cereri.Add(programare);
+                }
+            }
+            return cereri;
+        }
+        public void AdaugaProgramareViitoare(Programare programare)
+        {
+            _model.AdaugaProgramareViitoare(programare);
         }
     }
 }

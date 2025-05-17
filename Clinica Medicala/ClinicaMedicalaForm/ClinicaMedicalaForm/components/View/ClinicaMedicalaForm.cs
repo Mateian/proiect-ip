@@ -75,6 +75,7 @@ namespace ClinicaMedicalaForm
                 if (_user.Rol == "Pacient")//_user
                 {
                     listBoxPacientIstoricProgramari.Items.Clear();
+                    listBoxProgramariViitoare.Items.Clear();
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     //loadPrograms(_model.GetProgramariIstoric());
@@ -84,10 +85,16 @@ namespace ClinicaMedicalaForm
                     tabPageDoctor.Visible = false;
                     tabControlUser.SelectTab("tabPagePacient");
 
-                    List<Programare> programariIstoric = _presenter.GetProgramariPacient(_user.ID);
+                    List<Programare> programariIstoric = _presenter.GetProgramariIstoric(_user.ID);
                     foreach(Programare programare in programariIstoric)
                     {
                         listBoxPacientIstoricProgramari.Items.Add(programare.ToString());
+                    }
+
+                    List<Programare> cereriProgramare = _presenter.GetCereriProgramari(_user.ID);
+                    foreach (Programare programare in cereriProgramare)
+                    {
+                        listBoxProgramariViitoare.Items.Add(programare.ToString());
                     }
                 }
                 else if(_user.Rol == "Doctor")
@@ -181,10 +188,10 @@ namespace ClinicaMedicalaForm
             if(programareForm.ShowDialog() == DialogResult.OK)
             {
                 Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
-                listBoxProgramari.Items.Add(nouaProgramare.ToString());
+                listBoxProgramariViitoare.Items.Add(nouaProgramare.ToString());
                 listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
                 // trebuie inserata si in baza de date
-                _presenter.AdaugaProgramare(nouaProgramare);
+                _presenter.AdaugaProgramareViitoare(nouaProgramare);
             }
         }
 
