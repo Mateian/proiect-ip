@@ -19,5 +19,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         void CitireDoctori();
         void AdaugaProgramareViitoare(Programare programare);
         void AdaugareFisaMedicala(List<string> datePacient);
+        List<FisaMedicala> PreluareIstoricMedical(int userID);
+        string PreviewIstoric(int nrFisa);
     }
 }

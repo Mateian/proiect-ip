@@ -68,6 +68,7 @@
     <Compile Include="components\Model\DatabaseManager\DatabaseManager.cs" />
     <Compile Include="components\Model\Factory\UserFactory.cs" />
     <Compile Include="components\Model\Interfaces\IModel.cs" />
+    <Compile Include="components\Model\Medical\FisaMedicala.cs" />
     <Compile Include="components\Model\Medical\Medicament.cs" />
     <Compile Include="components\Model\Medical\Programare.cs" />
     <Compile Include="components\Model\Medical\Reteta.cs" />

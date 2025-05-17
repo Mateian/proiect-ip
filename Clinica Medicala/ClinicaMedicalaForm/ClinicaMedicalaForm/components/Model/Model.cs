@@ -19,7 +19,8 @@ namespace ClinicaMedicalaForm.components.Model
     {
         private UserFactory _userFactory;    
         private SQLiteConnection _connection;
-        private List<Programare> _programari;    
+        private List<Programare> _programari;
+        private List<FisaMedicala> _fiseMedicale;
         private DatabaseManager _databaseManager;
         private List<IUser> _users;
         private List<IUser> _pacienti;
@@ -189,6 +190,52 @@ namespace ClinicaMedicalaForm.components.Model
         {
 
         }
-        //public void 
+        public List<FisaMedicala> PreluareIstoricMedical(int userID)
+        {
+            _fiseMedicale = new List<FisaMedicala>();
+            string query = $"SELECT Nume, Prenume FROM Users WHERE ID = {userID}";
+            string nume = "";
+            string prenume = "";
+            string numeComplet="";
+            using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza persoana dupa ID din tabelul Users
+            {
+                if (reader.Read())
+                {
+                    nume = reader["Nume"].ToString();
+                    prenume = reader["Prenume"].ToString();
+                    numeComplet = $"{nume} {prenume}";
+                }
+            }
+            if(!string.IsNullOrEmpty(numeComplet))
+            {
+                query = $"SELECT DataConsult, NumeMedic,ExamenClinic,DiagnosticPrezumtiv,Recomandari,InvestigatiiRecomandate,TratamentPrescris,Motiv FROM FisaMedicalaDB WHERE NumePacient = '{numeComplet}'";
+                using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza toate fisele cu numele persoanei din tabelul FisaMedicalaDB
+                {
+                    while (reader.Read())
+                    {
+                        FisaMedicala fisa = new FisaMedicala(
+                            nume, 
+                            prenume, 
+                            reader["DataConsult"].ToString(), 
+                            reader["Motiv"].ToString(), 
+                            reader["DiagnosticPrezumtiv"].ToString(), 
+                            reader["TratamentPrescris"].ToString(),
+                            reader["NumeMedic"].ToString(),
+                            reader["ExamenClinic"].ToString(),
+                            reader["Recomandari"].ToString(),
+                            reader["InvestigatiiRecomandate"].ToString()
+                        );
+                        _fiseMedicale.Add(fisa);
+                    }
+                }
+            }
+            return _fiseMedicale;
+        }
+        public string PreviewIstoric(int nrFisa)
+        {
+            //Se selecteaza fisa cu nrFisa corespunzator si se apeleaza functia de generare a textului
+            FisaMedicala fisa = _fiseMedicale[nrFisa];
+            return fisa.GeneratePreview();
+        }
     }
 }
