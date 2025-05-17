@@ -117,5 +117,10 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             _model.AdaugaPacient(doctorID, pacient);
         }
+
+        public void ValidareProgramare(Programare programare)
+        {
+            _model.ValidareProgramare(programare);
+        }
     }
 }

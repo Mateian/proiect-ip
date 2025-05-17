@@ -20,5 +20,6 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         List<Programare> GetCereriProgramari(int pacientID);
         void AdaugaPacient(int id, Pacient pacient);
         Pacient DeletePacient(string v);
+        void ValidareProgramare(Programare newProgramare);
     }
 }

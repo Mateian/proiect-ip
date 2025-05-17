@@ -26,5 +26,6 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         string PreviewIstoric(int nrFisa);
         void DeletePacient(int id);
         void AdaugaPacient(int id, Pacient pacient);
+        void ValidareProgramare(Programare programare);
     }
 }

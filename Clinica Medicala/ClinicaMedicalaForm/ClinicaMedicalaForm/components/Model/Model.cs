@@ -187,9 +187,22 @@ namespace ClinicaMedicalaForm.components.Model
             };
             _databaseManager.ExecuteNonQuery(query, parameters);
         }
-        public void AdaugaProgramare()
+        public void AdaugaProgramare(Programare programare)
         {
+            Programari.Add(programare);
+            string tableName = "Programari";
+            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
 
+            var parameters = new Dictionary<string, object>
+            {
+                { "@PacientID", programare.PacientID },
+                { "@DoctorID", programare.DoctorID },
+                { "@Date", programare.Data },
+                { "@Specializare", programare.Specializare },
+                { "@Valabilitate", programare.Valabilitate }
+            };
+            _databaseManager.ExecuteNonQuery(query, parameters);
         }
         public List<FisaMedicala> PreluareIstoricMedical(int userID)
         {
@@ -242,6 +255,11 @@ namespace ClinicaMedicalaForm.components.Model
         {
             Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
             _pacienti.Remove(pacient);
+            List<Programare> programariPacientDeSters = _programari.FindAll(p => p.PacientID == pacient.ID);
+            foreach(var aux  in programariPacientDeSters)
+            {
+                _programari.Remove(aux);
+            }
             string tableName = "Pacienti";
             string query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
             var parameters = new Dictionary<string, object>
@@ -269,6 +287,37 @@ namespace ClinicaMedicalaForm.components.Model
                 { "@PacientID", pacient.ID }
             };
             _databaseManager.ExecuteNonQuery (query, parameters);
+        }
+
+        public void ValidareProgramare(Programare programare)
+        {
+            Programare newProg = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
+            Programari.Add(newProg);
+            Programari.Remove(programare);
+            string tableName = "Programari";
+            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
+
+            var parameters = new Dictionary<string, object>
+            {
+                { "@PacientID", newProg.PacientID },
+                { "@DoctorID", newProg.DoctorID },
+                { "@Date", newProg.Data },
+                { "@Specializare", newProg.Specializare },
+                { "@Valabilitate", newProg.Valabilitate }
+            };
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+            tableName = "Programari";
+            query = $"DELETE FROM {tableName} WHERE PacientID = @PacientID AND DoctorID = @DoctorID and Date = @Data AND Valabilitate = @Valabilitate";
+            parameters = new Dictionary<string, object>
+            {
+                { "@PacientID", programare.PacientID },
+                { "@DoctorID", programare.DoctorID },
+                { "@Data", programare.Data },
+                { "@Valabilitate", programare.Valabilitate }
+            };
+            _databaseManager.ExecuteNonQuery(query, parameters);
         }
     }
 }

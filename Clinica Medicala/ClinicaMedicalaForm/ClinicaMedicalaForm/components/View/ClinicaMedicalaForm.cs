@@ -203,7 +203,25 @@ namespace ClinicaMedicalaForm
 
         private void buttonAdaugareProgramare_Click(object sender, EventArgs e)
         {
+            if(listBoxListaProgramari.SelectedItem != null)
+            {
+                string stringProgramare = listBoxListaProgramari.SelectedItem.ToString();
+                Programare programare = _model.Programari.FirstOrDefault(p => p.ToString() == stringProgramare);
+                if(programare.Valabilitate == "In curs de validare")
+                {
+                    Programare newProgramare = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
+                    _presenter.ValidareProgramare(programare);
+                    _model.Programari.Remove(programare);
+                    _model.Programari.Add(newProgramare);
 
+                    listBoxListaProgramari.Items.Remove(stringProgramare);
+                    listBoxListaProgramari.Items.Add(newProgramare.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Este deja valabila.");
+                }
+            }
         }
 
         private void listBoxPacientProgramari_SelectedIndexChanged(object sender, EventArgs e)
@@ -224,6 +242,13 @@ namespace ClinicaMedicalaForm
                 {
                     Pacient id = _presenter.DeletePacient(listBoxDoctorPacienti.SelectedItem.ToString());
                     listBoxDoctorPacienti.Items.Remove(listBoxDoctorPacienti.SelectedItem);
+
+                    listBoxListaProgramari.Items.Clear();
+
+                    foreach(var programareDoctor in _presenter.GetProgramariDoctor(_user.ID))
+                    {
+                        listBoxListaProgramari.Items.Add(programareDoctor.ToString());
+                    }
                 }
             }
         }
