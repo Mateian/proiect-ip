@@ -13,6 +13,7 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
     {
         IUser VerificaAutentificare(string username, string parola);
         List<IUser> GetPacienti(int doctorID);
+        List<IUser> GetDoctori();
         List<Programare> GetProgramariDoctor(int id);
         List<Programare> GetProgramariIstoric(int pacientID);
         void AdaugaProgramareViitoare(Programare programare);
