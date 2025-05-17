@@ -51,6 +51,7 @@
             this.buttonCreareFisaMedicala = new System.Windows.Forms.Button();
             this.richTextBoxPreviewFisa = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.listBoxListaProgramari = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.buttonAdaugareProgramare = new System.Windows.Forms.Button();
             this.listBoxDoctorPacienti = new System.Windows.Forms.ListBox();
@@ -71,7 +72,6 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
-            this.listBoxListaProgramari = new System.Windows.Forms.ListBox();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -203,7 +203,7 @@
             this.groupBox12.Size = new System.Drawing.Size(331, 226);
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Programare";
+            this.groupBox12.Text = "Programari Viitoare";
             // 
             // listBoxProgramari
             // 
@@ -268,7 +268,7 @@
             this.groupBox10.Size = new System.Drawing.Size(279, 226);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Programarile mele";
+            this.groupBox10.Text = "Istoric Programari";
             // 
             // listBoxPacientProgramari
             // 
@@ -350,6 +350,16 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Programari";
+            // 
+            // listBoxListaProgramari
+            // 
+            this.listBoxListaProgramari.FormattingEnabled = true;
+            this.listBoxListaProgramari.ItemHeight = 16;
+            this.listBoxListaProgramari.Location = new System.Drawing.Point(6, 28);
+            this.listBoxListaProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxListaProgramari.Name = "listBoxListaProgramari";
+            this.listBoxListaProgramari.Size = new System.Drawing.Size(531, 228);
+            this.listBoxListaProgramari.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -563,16 +573,6 @@
             this.buttonDeconectare.Text = "Deconectare";
             this.buttonDeconectare.UseVisualStyleBackColor = true;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
-            // 
-            // listBoxListaProgramari
-            // 
-            this.listBoxListaProgramari.FormattingEnabled = true;
-            this.listBoxListaProgramari.ItemHeight = 16;
-            this.listBoxListaProgramari.Location = new System.Drawing.Point(6, 28);
-            this.listBoxListaProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxListaProgramari.Name = "listBoxListaProgramari";
-            this.listBoxListaProgramari.Size = new System.Drawing.Size(531, 228);
-            this.listBoxListaProgramari.TabIndex = 3;
             // 
             // ClinicaMedicalaForm
             // 
