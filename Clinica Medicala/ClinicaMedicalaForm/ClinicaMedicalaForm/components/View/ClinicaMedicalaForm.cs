@@ -120,6 +120,16 @@ namespace ClinicaMedicalaForm
                     labelWelcomeText.Text += "Adm. " + _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     groupBoxAdministrator.Visible = true;
+                    List<IUser> doctori = _presenter.GetDoctori();
+                    foreach (var dr in doctori)
+                    {
+                        listBoxAdminPacienti.Items.Add(dr.ToString());
+                        List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
+                        foreach (var pacient in pacientiDoctor)
+                        {
+                            listBoxAdminPacienti.Items.Add("--"+pacient.ToString());
+                        }
+                    }
                 }
                 else if(_user.Rol == "Asistent")
                 {

@@ -67,6 +67,16 @@ namespace ClinicaMedicalaForm.components.Presenter
             }
             return l;
         }
+
+        public List<IUser> GetDoctori()
+        {
+            List<IUser> totiDoctorii = new List<IUser>();
+            foreach (IUser d in _model.Doctori)
+            {
+                totiDoctorii.Add(d);
+            }
+            return totiDoctorii;
+        }
         public List<Programare> GetProgramariIstoric(int pacientID)
         {
             List<Programare> l = new List<Programare>();

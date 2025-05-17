@@ -11,6 +11,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
     public interface IModel
     {
         List<IUser> Pacienti { get; }
+        List<IUser> Doctori { get; }
         List<Programare> Programari { get; }
         List<IUser> Utilizatori {  get; }
 
