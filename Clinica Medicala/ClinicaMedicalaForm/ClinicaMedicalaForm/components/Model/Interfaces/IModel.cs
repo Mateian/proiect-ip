@@ -12,6 +12,8 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
     {
         List<IUser> Pacienti { get; }
         List<Programare> Programari { get; }
+        List<IUser> Utilizatori {  get; }
+
         List<IUser> CitireUtilizatori();
         IUser VerificaAutentificare(string username, string parola);
         void CitireProgramari();
@@ -21,5 +23,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         void AdaugareFisaMedicala(List<string> datePacient);
         List<FisaMedicala> PreluareIstoricMedical(int userID);
         string PreviewIstoric(int nrFisa);
+        void DeletePacient(int id);
+        void AdaugaPacient(int id, Pacient pacient);
     }
 }

@@ -25,6 +25,7 @@ namespace ClinicaMedicalaForm.components.Model
         private List<IUser> _users;
         private List<IUser> _pacienti;
         private List<IUser> _doctori;
+        public List<IUser> Utilizatori => _users;
         public List<Programare> Programari => _programari;
         public List<IUser> Doctori => _doctori;
         public List<IUser> Pacienti => _pacienti;
@@ -236,6 +237,38 @@ namespace ClinicaMedicalaForm.components.Model
             //Se selecteaza fisa cu nrFisa corespunzator si se apeleaza functia de generare a textului
             FisaMedicala fisa = _fiseMedicale[nrFisa];
             return fisa.GeneratePreview();
+        }
+        public void DeletePacient(int id)
+        {
+            Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
+            _pacienti.Remove(pacient);
+            string tableName = "Pacienti";
+            string query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@ID", id }
+            };
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+            tableName = "Programari";
+            query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
+            _databaseManager.ExecuteNonQuery(query, parameters);
+        }
+
+        public void AdaugaPacient(int doctorID, Pacient pacient)
+        {
+            Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
+            pacient.Doctor = doctor;
+            Pacienti.Add(pacient);
+
+            string tableName = "Pacienti";
+            string query = $"INSERT INTO {tableName}(DoctorID, PacientID) VALUES(@DoctorID, @PacientID);";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@DoctorID", doctorID },
+                { "@PacientID", pacient.ID }
+            };
+            _databaseManager.ExecuteNonQuery (query, parameters);
         }
     }
 }

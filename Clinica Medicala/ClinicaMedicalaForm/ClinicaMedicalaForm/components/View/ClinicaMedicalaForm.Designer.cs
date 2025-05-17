@@ -45,6 +45,8 @@
             this.listBoxIstoricMedical = new System.Windows.Forms.ListBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.listBoxPacientIstoricProgramari = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxPreviewFiles = new System.Windows.Forms.TextBox();
             this.tabPageDoctor = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -53,6 +55,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listBoxListaProgramari = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonAdaugaPacient = new System.Windows.Forms.Button();
             this.buttonAdaugareProgramare = new System.Windows.Forms.Button();
             this.listBoxDoctorPacienti = new System.Windows.Forms.ListBox();
             this.groupBoxAdministrator = new System.Windows.Forms.GroupBox();
@@ -72,9 +75,6 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBoxPreviewFiles = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -82,6 +82,7 @@
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPageDoctor.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -92,7 +93,6 @@
             this.groupBox7.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxAutentificare
@@ -287,13 +287,33 @@
             this.listBoxPacientIstoricProgramari.TabIndex = 4;
             this.listBoxPacientIstoricProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxPacientProgramari_SelectedIndexChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxPreviewFiles);
+            this.groupBox1.Location = new System.Drawing.Point(9, 292);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(918, 300);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vizualizare";
+            // 
+            // textBoxPreviewFiles
+            // 
+            this.textBoxPreviewFiles.Location = new System.Drawing.Point(4, 21);
+            this.textBoxPreviewFiles.Multiline = true;
+            this.textBoxPreviewFiles.Name = "textBoxPreviewFiles";
+            this.textBoxPreviewFiles.ReadOnly = true;
+            this.textBoxPreviewFiles.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxPreviewFiles.Size = new System.Drawing.Size(898, 274);
+            this.textBoxPreviewFiles.TabIndex = 4;
+            // 
             // tabPageDoctor
             // 
             this.tabPageDoctor.Controls.Add(this.groupBox2);
             this.tabPageDoctor.Location = new System.Drawing.Point(4, 25);
             this.tabPageDoctor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageDoctor.Name = "tabPageDoctor";
-            this.tabPageDoctor.Size = new System.Drawing.Size(941, 595);
+            this.tabPageDoctor.Size = new System.Drawing.Size(941, 609);
             this.tabPageDoctor.TabIndex = 0;
             this.tabPageDoctor.Text = "Doctor";
             this.tabPageDoctor.UseVisualStyleBackColor = true;
@@ -370,7 +390,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.buttonAdaugaPacient);
             this.groupBox3.Controls.Add(this.buttonAdaugareProgramare);
             this.groupBox3.Controls.Add(this.listBoxDoctorPacienti);
             this.groupBox3.Location = new System.Drawing.Point(5, 32);
@@ -381,6 +401,16 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pacientii mei";
+            // 
+            // buttonAdaugaPacient
+            // 
+            this.buttonAdaugaPacient.Location = new System.Drawing.Point(6, 233);
+            this.buttonAdaugaPacient.Name = "buttonAdaugaPacient";
+            this.buttonAdaugaPacient.Size = new System.Drawing.Size(359, 23);
+            this.buttonAdaugaPacient.TabIndex = 2;
+            this.buttonAdaugaPacient.Text = "+";
+            this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
+            this.buttonAdaugaPacient.Click += new System.EventHandler(this.buttonAdaugaPacient_Click);
             // 
             // buttonAdaugareProgramare
             // 
@@ -402,6 +432,7 @@
             this.listBoxDoctorPacienti.Name = "listBoxDoctorPacienti";
             this.listBoxDoctorPacienti.Size = new System.Drawing.Size(364, 164);
             this.listBoxDoctorPacienti.TabIndex = 0;
+            this.listBoxDoctorPacienti.DoubleClick += new System.EventHandler(this.listBoxDoctorPacienti_DoubleClick);
             // 
             // groupBoxAdministrator
             // 
@@ -583,35 +614,6 @@
             this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(359, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPreviewFiles
-            // 
-            this.textBoxPreviewFiles.Location = new System.Drawing.Point(4, 21);
-            this.textBoxPreviewFiles.Multiline = true;
-            this.textBoxPreviewFiles.Name = "textBoxPreviewFiles";
-            this.textBoxPreviewFiles.ReadOnly = true;
-            this.textBoxPreviewFiles.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxPreviewFiles.Size = new System.Drawing.Size(898, 274);
-            this.textBoxPreviewFiles.TabIndex = 4;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBoxPreviewFiles);
-            this.groupBox1.Location = new System.Drawing.Point(9, 292);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(918, 300);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vizualizare";
-            // 
             // ClinicaMedicalaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -638,6 +640,8 @@
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPageDoctor.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -650,8 +654,6 @@
             this.groupBox13.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,7 +705,7 @@
         private System.Windows.Forms.Label labelWelcomeText;
         private System.Windows.Forms.Button buttonDeconectare;
         private System.Windows.Forms.ListBox listBoxListaProgramari;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAdaugaPacient;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxPreviewFiles;
     }

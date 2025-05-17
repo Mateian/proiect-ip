@@ -110,6 +110,7 @@ namespace ClinicaMedicalaForm
             Data = textBoxData.Text;
             Specializare = textBoxSpecializare.Text;
             this.DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

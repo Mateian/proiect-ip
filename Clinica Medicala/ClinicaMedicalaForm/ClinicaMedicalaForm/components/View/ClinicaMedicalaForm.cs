@@ -17,6 +17,7 @@ using FisaMedicalaForm;
 using System.Data.SQLite;
 using static FisaMedicalaForm.FisaMedicalaForm;
 using ClinicaMedicalaForm.components.Model.Medical;
+using ClinicaMedicalaForm.components.View;
 
 namespace ClinicaMedicalaForm
 {
@@ -66,6 +67,7 @@ namespace ClinicaMedicalaForm
                 {
                     listBoxPacientIstoricProgramari.Items.Clear();
                     listBoxProgramariViitoare.Items.Clear();
+                    listBoxIstoricMedical.Items.Clear();
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     //loadPrograms(_model.GetProgramariIstoric());
@@ -202,6 +204,32 @@ namespace ClinicaMedicalaForm
         private void listBoxProgramari_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBoxDoctorPacienti_DoubleClick(object sender, EventArgs e)
+        {
+            if(listBoxDoctorPacienti.SelectedItem != null)
+            {
+                if (MessageBox.Show("Sunteti sigur ca vreti sa stergeti acest pacient?", "Stergere pacient", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Pacient id = _presenter.DeletePacient(listBoxDoctorPacienti.SelectedItem.ToString());
+                    listBoxDoctorPacienti.Items.Remove(listBoxDoctorPacienti.SelectedItem);
+                }
+            }
+        }
+
+        private void buttonAdaugaPacient_Click(object sender, EventArgs e)
+        {
+            AdaugaPacientForm form = new AdaugaPacientForm(_model.Utilizatori);
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                Pacient pacient = (Pacient)form.Pacient;
+                if (pacient != null)
+                {
+                    _presenter.AdaugaPacient(_user.ID, pacient);
+                    listBoxDoctorPacienti.Items.Add(pacient.ToString());
+                }
+            }
         }
     }
 }
