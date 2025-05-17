@@ -38,11 +38,6 @@ namespace ClinicaMedicalaForm
             _model = new Model();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonCreareFisaMedicala_Click(object sender, EventArgs e)
         {
             FisaMedicalaForm.FisaMedicalaForm fisaMedicala = new FisaMedicalaForm.FisaMedicalaForm();
@@ -90,6 +85,12 @@ namespace ClinicaMedicalaForm
                     foreach (Programare programare in cereriProgramare)
                     {
                         listBoxProgramariViitoare.Items.Add(programare.ToString());
+                    }
+
+                    List<FisaMedicala> fisaMedicalaIstoric = _model.PreluareIstoricMedical(_user.ID);
+                    foreach (FisaMedicala fisa in fisaMedicalaIstoric)
+                    {
+                        listBoxIstoricMedical.Items.Add(fisa.ToString());
                     }
                 }
                 else if(_user.Rol == "Doctor")
@@ -168,11 +169,9 @@ namespace ClinicaMedicalaForm
 
         private void listBoxIstoricMedical_Click(object sender, EventArgs e)
         {
-            if(listBoxIstoricMedical.SelectedItem!=null)
+            if(listBoxIstoricMedical.SelectedItem!=null)//in functie de ce fisa este selectata va afisa in casuta detaliile
             {
-                Form f;
-                f=(FisaMedicalaForm.FisaMedicalaForm)listBoxIstoricMedical.SelectedItem;
-                f.Show();
+                textBoxPreviewFiles.Text = _model.PreviewIstoric(listBoxIstoricMedical.SelectedIndex);
             }
         }
 

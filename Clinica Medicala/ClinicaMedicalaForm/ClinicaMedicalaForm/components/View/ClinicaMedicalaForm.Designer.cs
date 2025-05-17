@@ -72,6 +72,8 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
+            this.textBoxPreviewFiles = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -89,6 +91,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxAutentificare
@@ -161,7 +164,7 @@
             this.tabControlUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControlUser.Name = "tabControlUser";
             this.tabControlUser.SelectedIndex = 0;
-            this.tabControlUser.Size = new System.Drawing.Size(949, 624);
+            this.tabControlUser.Size = new System.Drawing.Size(949, 638);
             this.tabControlUser.TabIndex = 0;
             this.tabControlUser.Visible = false;
             this.tabControlUser.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlUser_Selecting);
@@ -169,10 +172,11 @@
             // tabPagePacient
             // 
             this.tabPagePacient.Controls.Add(this.groupBox9);
+            this.tabPagePacient.Controls.Add(this.groupBox1);
             this.tabPagePacient.Location = new System.Drawing.Point(4, 25);
             this.tabPagePacient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPagePacient.Name = "tabPagePacient";
-            this.tabPagePacient.Size = new System.Drawing.Size(941, 595);
+            this.tabPagePacient.Size = new System.Drawing.Size(941, 609);
             this.tabPagePacient.TabIndex = 0;
             this.tabPagePacient.Text = "Pacient";
             this.tabPagePacient.UseVisualStyleBackColor = true;
@@ -405,7 +409,7 @@
             this.groupBoxAdministrator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxAdministrator.Name = "groupBoxAdministrator";
             this.groupBoxAdministrator.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxAdministrator.Size = new System.Drawing.Size(445, 473);
+            this.groupBoxAdministrator.Size = new System.Drawing.Size(445, 487);
             this.groupBoxAdministrator.TabIndex = 2;
             this.groupBoxAdministrator.TabStop = false;
             this.groupBoxAdministrator.Text = "Administrator";
@@ -577,6 +581,26 @@
             this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
+            // textBoxPreviewFiles
+            // 
+            this.textBoxPreviewFiles.Location = new System.Drawing.Point(4, 21);
+            this.textBoxPreviewFiles.Multiline = true;
+            this.textBoxPreviewFiles.Name = "textBoxPreviewFiles";
+            this.textBoxPreviewFiles.ReadOnly = true;
+            this.textBoxPreviewFiles.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxPreviewFiles.Size = new System.Drawing.Size(898, 274);
+            this.textBoxPreviewFiles.TabIndex = 4;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBoxPreviewFiles);
+            this.groupBox1.Location = new System.Drawing.Point(9, 292);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(918, 300);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vizualizare";
+            // 
             // ClinicaMedicalaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -615,6 +639,8 @@
             this.groupBox13.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,6 +692,8 @@
         private System.Windows.Forms.Label labelWelcomeText;
         private System.Windows.Forms.Button buttonDeconectare;
         private System.Windows.Forms.ListBox listBoxListaProgramari;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxPreviewFiles;
     }
 }
 
