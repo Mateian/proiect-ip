@@ -35,6 +35,7 @@ namespace ClinicaMedicalaForm
         {
             // in caz de e nevoie de facut ceva cand se creeaza Form
             textBoxParola.UseSystemPasswordChar = true;
+            _model = new Model();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,13 +49,7 @@ namespace ClinicaMedicalaForm
             if (fisaMedicala.ShowDialog() == DialogResult.OK)
             {
                 List<string> dateFisaMedicala = fisaMedicala.datePacient;
-                string date = "";
-                foreach(string data in  dateFisaMedicala)
-                {
-                    date += data + " ";
-                }
-                // trebuie facut ceva cu datele astea
-                MessageBox.Show(date);
+                _model.AdaugareFisaMedicala(dateFisaMedicala);
             }
         }
 
