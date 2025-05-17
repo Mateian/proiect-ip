@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,8 @@ namespace FisaMedicalaForm
             try
             {
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBox1.Image = Image.FromFile("images\\logo.png");
+                var path = Directory.GetCurrentDirectory() + "\\..\\..\\images\\logo.png";
+                pictureBox1.Image = Image.FromFile(path);
             }
             catch (Exception ex)
             {
