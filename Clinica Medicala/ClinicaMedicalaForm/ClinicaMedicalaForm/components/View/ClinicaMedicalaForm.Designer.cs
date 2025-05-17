@@ -44,7 +44,7 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.listBoxIstoricMedical = new System.Windows.Forms.ListBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.listBoxPacientProgramari = new System.Windows.Forms.ListBox();
+            this.listBoxPacientIstoricProgramari = new System.Windows.Forms.ListBox();
             this.tabPageDoctor = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -203,7 +203,7 @@
             this.groupBox12.Size = new System.Drawing.Size(331, 226);
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Programare";
+            this.groupBox12.Text = "Programari Viitoare";
             // 
             // listBoxProgramari
             // 
@@ -214,6 +214,7 @@
             this.listBoxProgramari.Name = "listBoxProgramari";
             this.listBoxProgramari.Size = new System.Drawing.Size(316, 164);
             this.listBoxProgramari.TabIndex = 4;
+            this.listBoxProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramari_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -260,7 +261,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.listBoxPacientProgramari);
+            this.groupBox10.Controls.Add(this.listBoxPacientIstoricProgramari);
             this.groupBox10.Location = new System.Drawing.Point(5, 21);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox10.Name = "groupBox10";
@@ -268,17 +269,18 @@
             this.groupBox10.Size = new System.Drawing.Size(279, 226);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Programarile mele";
+            this.groupBox10.Text = "Istoric Programari";
             // 
-            // listBoxPacientProgramari
+            // listBoxPacientIstoricProgramari
             // 
-            this.listBoxPacientProgramari.FormattingEnabled = true;
-            this.listBoxPacientProgramari.ItemHeight = 16;
-            this.listBoxPacientProgramari.Location = new System.Drawing.Point(5, 21);
-            this.listBoxPacientProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxPacientProgramari.Name = "listBoxPacientProgramari";
-            this.listBoxPacientProgramari.Size = new System.Drawing.Size(263, 196);
-            this.listBoxPacientProgramari.TabIndex = 4;
+            this.listBoxPacientIstoricProgramari.FormattingEnabled = true;
+            this.listBoxPacientIstoricProgramari.ItemHeight = 16;
+            this.listBoxPacientIstoricProgramari.Location = new System.Drawing.Point(5, 21);
+            this.listBoxPacientIstoricProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxPacientIstoricProgramari.Name = "listBoxPacientIstoricProgramari";
+            this.listBoxPacientIstoricProgramari.Size = new System.Drawing.Size(263, 196);
+            this.listBoxPacientIstoricProgramari.TabIndex = 4;
+            this.listBoxPacientIstoricProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxPacientProgramari_SelectedIndexChanged);
             // 
             // tabPageDoctor
             // 
@@ -557,9 +559,9 @@
             this.labelWelcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcomeText.Location = new System.Drawing.Point(739, 32);
             this.labelWelcomeText.Name = "labelWelcomeText";
-            this.labelWelcomeText.Size = new System.Drawing.Size(165, 25);
+            this.labelWelcomeText.Size = new System.Drawing.Size(269, 25);
             this.labelWelcomeText.TabIndex = 7;
-            this.labelWelcomeText.Text = "Bine ai venit, frate";
+            this.labelWelcomeText.Text = "Bine ai venit, Nume Prenume!";
             this.labelWelcomeText.Visible = false;
             // 
             // buttonDeconectare
@@ -572,6 +574,7 @@
             this.buttonDeconectare.TabIndex = 8;
             this.buttonDeconectare.Text = "Deconectare";
             this.buttonDeconectare.UseVisualStyleBackColor = true;
+            this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
             // ClinicaMedicalaForm
@@ -647,7 +650,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonProgramare;
         private System.Windows.Forms.ListBox listBoxIstoricMedical;
-        private System.Windows.Forms.ListBox listBoxPacientProgramari;
+        private System.Windows.Forms.ListBox listBoxPacientIstoricProgramari;
         private System.Windows.Forms.ListBox listBoxProgramari;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label7;

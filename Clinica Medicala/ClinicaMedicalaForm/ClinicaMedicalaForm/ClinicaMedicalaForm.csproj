@@ -86,10 +86,16 @@
       <DependentUpon>ClinicaMedicalaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="components\View\Interfaces\IView.cs" />
+    <Compile Include="components\View\ProgramareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="components\View\ClinicaMedicalaForm.resx">
       <DependentUpon>ClinicaMedicalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\View\ProgramareForm.resx">
+      <DependentUpon>ProgramareForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -143,22 +143,9 @@ namespace ClinicaMedicalaForm.components.Model
                         infoArray[k++] = value.ToString();
                     }
                     int pacID,docID;
-                    bool ok;
                     int.TryParse(infoArray[1], out pacID);
                     int.TryParse(infoArray[2], out docID);
-                    if (infoArray[5] == "Valabila")
-                    {
-                        ok = false;
-                        _programari.Add(new Programare(pacID, docID, ok, infoArray[4], infoArray[3]));
-                    }
-                    else if (infoArray[5] == "Nevalabila")
-                    {
-                        ok = true;
-                    }
-                    else if (infoArray[5] == "In curs de validare")
-                    {
-
-                    }
+                    _programari.Add(new Programare(pacID, docID, infoArray[3], infoArray[4], infoArray[5]));
                 }
             }
             finally
@@ -181,7 +168,25 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return null;
         }
+        public void CereProgramare(Programare programare)
+        {
+            Programari.Add(programare);
+            string tableName = "Programari";
+            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
 
+            var parameters = new Dictionary<string, object>
+{
+            { "@PacientID", programare.PacientID },
+            { "@DoctorID", programare.DoctorID },
+            { "@Date", programare.Data },  // Asumând că este DateTime
+            { "@Specializare", programare.Specializare },
+            { "@Valabilitate", programare.Valabilitate }
+};
+
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+        }
         public List<string> GetProgramariIstoric()
         {
 
@@ -198,6 +203,10 @@ namespace ClinicaMedicalaForm.components.Model
         {
             return null;
             //TO DO;
+        }
+        public void AdaugaProgramare()
+        {
+
         }
     }
 }
