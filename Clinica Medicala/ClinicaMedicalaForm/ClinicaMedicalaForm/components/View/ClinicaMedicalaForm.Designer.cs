@@ -72,6 +72,7 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -365,6 +366,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.buttonAdaugareProgramare);
             this.groupBox3.Controls.Add(this.listBoxDoctorPacienti);
             this.groupBox3.Location = new System.Drawing.Point(5, 32);
@@ -378,10 +380,10 @@
             // 
             // buttonAdaugareProgramare
             // 
-            this.buttonAdaugareProgramare.Location = new System.Drawing.Point(5, 226);
+            this.buttonAdaugareProgramare.Location = new System.Drawing.Point(6, 197);
             this.buttonAdaugareProgramare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdaugareProgramare.Name = "buttonAdaugareProgramare";
-            this.buttonAdaugareProgramare.Size = new System.Drawing.Size(364, 30);
+            this.buttonAdaugareProgramare.Size = new System.Drawing.Size(359, 31);
             this.buttonAdaugareProgramare.TabIndex = 1;
             this.buttonAdaugareProgramare.Text = "Adauga programare";
             this.buttonAdaugareProgramare.UseVisualStyleBackColor = true;
@@ -394,7 +396,7 @@
             this.listBoxDoctorPacienti.Location = new System.Drawing.Point(5, 28);
             this.listBoxDoctorPacienti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxDoctorPacienti.Name = "listBoxDoctorPacienti";
-            this.listBoxDoctorPacienti.Size = new System.Drawing.Size(364, 196);
+            this.listBoxDoctorPacienti.Size = new System.Drawing.Size(364, 164);
             this.listBoxDoctorPacienti.TabIndex = 0;
             // 
             // groupBoxAdministrator
@@ -577,6 +579,15 @@
             this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 233);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(359, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ClinicaMedicalaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -666,6 +677,7 @@
         private System.Windows.Forms.Label labelWelcomeText;
         private System.Windows.Forms.Button buttonDeconectare;
         private System.Windows.Forms.ListBox listBoxListaProgramari;
+        private System.Windows.Forms.Button button1;
     }
 }
 

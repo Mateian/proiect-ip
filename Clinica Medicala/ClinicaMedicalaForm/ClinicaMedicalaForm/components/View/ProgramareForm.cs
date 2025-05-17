@@ -91,6 +91,7 @@ namespace ClinicaMedicalaForm
             // 
             // ProgramareForm
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(209, 321);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

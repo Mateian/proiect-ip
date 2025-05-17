@@ -179,7 +179,7 @@ namespace ClinicaMedicalaForm.components.Model
             {
                 { "@PacientID", programare.PacientID },
                 { "@DoctorID", programare.DoctorID },
-                { "@Date", programare.Data },  // Asumând că este DateTime
+                { "@Date", programare.Data },
                 { "@Specializare", programare.Specializare },
                 { "@Valabilitate", programare.Valabilitate }
             };
