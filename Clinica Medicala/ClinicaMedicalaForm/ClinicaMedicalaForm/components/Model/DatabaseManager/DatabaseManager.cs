@@ -63,5 +63,38 @@ namespace ClinicaMedicalaForm.components.Model
                 _connection.Open();
             }
         }
+        public void InsertCommand(List<string> data)
+        {
+            OpenConnection();
+
+            var query = @"INSERT INTO FisaMedicalaDB (
+            NUMEPACIENT, DATANASTERII, ADRESA, DATACONSULT, CNP, TELEFON, SEX, NUMEMEDIC,
+            EXAMENCLINIC, DIAGNOSTICPREZUMTIV, RECOMANDARI, INVESTIGATIIRECOMANDATE,
+            TRATAMENTPRESCRIS, MOTIV) 
+            VALUES (
+            @NUMEPACIENT, @DATANASTERII, @ADRESA, @DATACONSULT, @CNP, @TELEFON, @SEX, @NUMEMEDIC,
+            @EXAMENCLINIC, @DIAGNOSTICPREZUMTIV, @RECOMANDARI, @INVESTIGATIIRECOMANDATE,
+            @TRATAMENTPRESCRIS, @MOTIV
+            )";
+            using (var command = new SQLiteCommand(query, _connection))
+            {
+                command.Parameters.AddWithValue("@NUMEPACIENT", data[0]);
+                command.Parameters.AddWithValue("@DATANASTERII", data[2]);
+                command.Parameters.AddWithValue("@ADRESA", data[4]);
+                command.Parameters.AddWithValue("@DATACONSULT", data[6]);
+                command.Parameters.AddWithValue("@CNP", data[1]);
+                command.Parameters.AddWithValue("@TELEFON", data[3]);
+                command.Parameters.AddWithValue("@SEX", data[5]);
+                command.Parameters.AddWithValue("@NUMEMEDIC", data[7]);
+                command.Parameters.AddWithValue("@EXAMENCLINIC", data[8]);
+                command.Parameters.AddWithValue("@DIAGNOSTICPREZUMTIV", data[10]);
+                command.Parameters.AddWithValue("@RECOMANDARI", data[12]);
+                command.Parameters.AddWithValue("@INVESTIGATIIRECOMANDATE", data[9]);
+                command.Parameters.AddWithValue("@TRATAMENTPRESCRIS", data[11]);
+                command.Parameters.AddWithValue("@MOTIV", data[13]);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }

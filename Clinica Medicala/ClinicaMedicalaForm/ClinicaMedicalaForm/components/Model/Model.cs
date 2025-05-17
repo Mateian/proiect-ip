@@ -30,10 +30,14 @@ namespace ClinicaMedicalaForm.components.Model
 
         public Model()
         {
-            string location=Directory.GetCurrentDirectory()+ "\\..\\..\\components\\Resources\\ClinicaMedicala-DB.db";
+            string location=Directory.GetCurrentDirectory()+ "\\..\\..\\components\\Resources\\ClinicaMedicalaDB.db";
             string dataSource = "Data Source="+location+";Version=3;";
 
             _databaseManager = new DatabaseManager(dataSource);
+        }
+        public void AdaugareFisaMedicala(List<string> dateFisaMedicala)
+        {
+            _databaseManager.InsertCommand(dateFisaMedicala);
         }
         public List<IUser> CitireUtilizatori()
         {

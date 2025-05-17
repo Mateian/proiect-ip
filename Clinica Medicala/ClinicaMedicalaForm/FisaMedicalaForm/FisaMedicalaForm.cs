@@ -40,7 +40,8 @@ namespace FisaMedicalaForm
             datePacient.Add(textBoxDataNastere.Text);
             datePacient.Add(textBoxTelefon.Text);
             datePacient.Add(textBoxAdresa.Text);
-            if (radioButtonBarbat.Checked) {
+            if (radioButtonBarbat.Checked)
+            {
                 datePacient.Add(radioButtonBarbat.Text);
             }
             if (radioButtonFemeie.Checked)
@@ -54,13 +55,28 @@ namespace FisaMedicalaForm
             datePacient.Add(textBoxDiagnostic.Text);
             datePacient.Add(textBoxTratament.Text);
             datePacient.Add(textBoxRecomandari.Text);
+            if (comboBoxMotiv.TabIndex == 0)
+            {
+                datePacient.Add(textBoxMotiv.Text);
+            }
+            else
+            {
+                datePacient.Add(comboBoxMotiv.Text);
+            }
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        private void textBoxMotiv_TextChanged(object sender, EventArgs e)
+        private void comboBoxMotiv_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if(comboBoxMotiv.SelectedIndex == 0)
+            {
+                textBoxMotiv.Enabled = true;
+            }
+            else
+            {
+                textBoxMotiv.Enabled = false;
+            }
         }
     }
-}
+    }
