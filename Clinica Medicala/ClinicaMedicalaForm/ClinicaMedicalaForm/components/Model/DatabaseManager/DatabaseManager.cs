@@ -34,11 +34,16 @@ namespace ClinicaMedicalaForm.components.Model
             return reader;
         }
 
-        public void ExecuteNonQuery(string query)
+        public void ExecuteNonQuery(string query, Dictionary<string, object> parameters)
         {
             OpenConnection();
 
             var command = new SQLiteCommand(query, _connection);
+            foreach (var param in parameters)
+            {
+                command.Parameters.AddWithValue(param.Key, param.Value ?? DBNull.Value);
+            }
+
             command.ExecuteNonQuery();
 
             CloseConnection();

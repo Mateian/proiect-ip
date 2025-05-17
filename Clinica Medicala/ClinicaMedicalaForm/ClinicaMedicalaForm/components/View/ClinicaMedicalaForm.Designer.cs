@@ -557,9 +557,9 @@
             this.labelWelcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcomeText.Location = new System.Drawing.Point(739, 32);
             this.labelWelcomeText.Name = "labelWelcomeText";
-            this.labelWelcomeText.Size = new System.Drawing.Size(165, 25);
+            this.labelWelcomeText.Size = new System.Drawing.Size(269, 25);
             this.labelWelcomeText.TabIndex = 7;
-            this.labelWelcomeText.Text = "Bine ai venit, frate";
+            this.labelWelcomeText.Text = "Bine ai venit, Nume Prenume!";
             this.labelWelcomeText.Visible = false;
             // 
             // buttonDeconectare
@@ -572,6 +572,7 @@
             this.buttonDeconectare.TabIndex = 8;
             this.buttonDeconectare.Text = "Deconectare";
             this.buttonDeconectare.UseVisualStyleBackColor = true;
+            this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
             // ClinicaMedicalaForm

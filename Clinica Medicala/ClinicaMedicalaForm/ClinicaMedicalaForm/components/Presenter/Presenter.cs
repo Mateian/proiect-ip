@@ -81,7 +81,7 @@ namespace ClinicaMedicalaForm.components.Presenter
         }
         public void AdaugaProgramare(Programare programare)
         {
-            _model.AdaugaProgramare();
+            _model.CereProgramare(programare);
         }
     }
 }

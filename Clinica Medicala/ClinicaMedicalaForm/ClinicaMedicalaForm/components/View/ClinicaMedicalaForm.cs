@@ -181,11 +181,10 @@ namespace ClinicaMedicalaForm
             if(programareForm.ShowDialog() == DialogResult.OK)
             {
                 Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, false, programareForm.Specializare, programareForm.Data);
-                _model.Programari.Add(nouaProgramare);
                 listBoxProgramari.Items.Add(nouaProgramare);
                 listBoxPacientProgramari.Items.Add(nouaProgramare);
                 // trebuie inserata si in baza de date
-                //_presenter.AddProgramare();
+                _presenter.AdaugaProgramare(nouaProgramare);
             }
         }
 

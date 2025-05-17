@@ -177,7 +177,25 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return null;
         }
+        public void CereProgramare(Programare programare)
+        {
+            Programari.Add(programare);
+            string tableName = "Programari";
+            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
 
+            var parameters = new Dictionary<string, object>
+{
+            { "@PacientID", programare.PacientID },
+            { "@DoctorID", programare.DoctorID },
+            { "@Date", programare.Data },  // Asumând că este DateTime
+            { "@Specializare", programare.Specializare },
+            { "@Valabilitate", "In curs de verificare" }
+};
+
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+        }
         public List<string> GetProgramariIstoric()
         {
 

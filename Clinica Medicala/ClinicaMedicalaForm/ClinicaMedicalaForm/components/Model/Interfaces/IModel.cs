@@ -20,6 +20,6 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         void CitireProgramari();
         void CitirePacienti();
         void CitireDoctori();
-        void AdaugaProgramare();
+        void CereProgramare(Programare programare);
     }
 }

@@ -15,5 +15,6 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         List<IUser> GetPacienti(int doctorID);
         List<Programare> GetProgramariDoctor(int id);
         List<Programare> GetProgramariPacient(int pacientID);
+        void AdaugaProgramare(Programare programare);
     }
 }
