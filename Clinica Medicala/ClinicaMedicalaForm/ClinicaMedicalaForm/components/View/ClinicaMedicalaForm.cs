@@ -64,16 +64,17 @@ namespace ClinicaMedicalaForm
             string parola = textBoxParola.Text;
             _user = _presenter.VerificaAutentificare(username, parola);
 
-            buttonDeconectare.Visible = true;
-            groupBoxAutentificare.Enabled = false;
+            
             
             if (_user != null)//val cat mai mica sa nu incurce cu nimica
             {
+                buttonDeconectare.Visible = true;
+                groupBoxAutentificare.Enabled = false;
                 labelWelcomeText.Text = "Bine ai venit, ";
                 labelWelcomeText.Visible = true;
                 if (_user.Rol == "Pacient")//_user
                 {
-                    listBoxPacientProgramari.Items.Clear();
+                    listBoxPacientIstoricProgramari.Items.Clear();
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     //loadPrograms(_model.GetProgramariIstoric());
@@ -86,7 +87,7 @@ namespace ClinicaMedicalaForm
                     List<Programare> programariIstoric = _presenter.GetProgramariPacient(_user.ID);
                     foreach(Programare programare in programariIstoric)
                     {
-                        listBoxPacientProgramari.Items.Add(programare);
+                        listBoxPacientIstoricProgramari.Items.Add(programare.ToString());
                     }
                 }
                 else if(_user.Rol == "Doctor")
@@ -104,8 +105,7 @@ namespace ClinicaMedicalaForm
                     List <Programare> l=_presenter.GetProgramariDoctor(_user.ID);
                     foreach (Programare p in l)
                     {
-                        string s=p.Data.ToString()+", Pacientul: "+p.PacientID+", Specialitatea: "+p.Specializare+"\n";
-                        listBoxListaProgramari.Items.Add(s);
+                        listBoxListaProgramari.Items.Add(p.ToString());
                     }
                     tabControlUser.Visible = true;
                     tabControlUser.SelectTab("tabPageDoctor");
@@ -180,15 +180,25 @@ namespace ClinicaMedicalaForm
             ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
             if(programareForm.ShowDialog() == DialogResult.OK)
             {
-                Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, false, programareForm.Specializare, programareForm.Data);
-                listBoxProgramari.Items.Add(nouaProgramare);
-                listBoxPacientProgramari.Items.Add(nouaProgramare);
+                Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
+                listBoxProgramari.Items.Add(nouaProgramare.ToString());
+                listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
                 // trebuie inserata si in baza de date
                 _presenter.AdaugaProgramare(nouaProgramare);
             }
         }
 
         private void buttonAdaugareProgramare_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxPacientProgramari_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxProgramari_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

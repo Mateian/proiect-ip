@@ -8,23 +8,25 @@ namespace ClinicaMedicalaForm.components.Model.Medical
 {
     public class Programare
     {
-        private int pacientID,doctorID;
-        private bool executata;
-        private string specializare;
-        private string data;
+        private int _pacientID, _doctorID;
+        private string _specializare, _data, _valabilitate;
 
-        public int PacientID => pacientID;
-        public int DoctorID => doctorID;
-        public bool EsteInTrecut => executata;
-        public string Specializare => specializare;
-        public string Data => data;
-        public Programare(int pacientID,int doctorID,bool exec,string spec,string date)
+        public int PacientID => _pacientID;
+        public int DoctorID => _doctorID;
+        public string Specializare => _specializare;
+        public string Data => _data;
+        public string Valabilitate => _valabilitate;
+        public Programare(int pacientID, int doctorID, string date, string spec, string valabilitate)
         {
-            this.pacientID = pacientID;
-            this.doctorID = doctorID;
-            this.executata = exec;
-            this.specializare = spec;
-            this.data = date;
+            this._pacientID = pacientID;
+            this._doctorID = doctorID;
+            this._specializare = spec;
+            this._data = date;
+            this._valabilitate = valabilitate;
+        }
+        public override string ToString()
+        {
+            return Data.ToString() + ", Pacientul: " + PacientID + ", Specialitatea: " + Specializare + ", Valabilitatea: " + Valabilitate  + "\n";
         }
     }
 }

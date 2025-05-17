@@ -139,22 +139,9 @@ namespace ClinicaMedicalaForm.components.Model
                         infoArray[k++] = value.ToString();
                     }
                     int pacID,docID;
-                    bool ok;
                     int.TryParse(infoArray[1], out pacID);
                     int.TryParse(infoArray[2], out docID);
-                    if (infoArray[5] == "Valabila")
-                    {
-                        ok = false;
-                        _programari.Add(new Programare(pacID, docID, ok, infoArray[4], infoArray[3]));
-                    }
-                    else if (infoArray[5] == "Nevalabila")
-                    {
-                        ok = true;
-                    }
-                    else if (infoArray[5] == "In curs de validare")
-                    {
-
-                    }
+                    _programari.Add(new Programare(pacID, docID, infoArray[3], infoArray[4], infoArray[5]));
                 }
             }
             finally
@@ -190,7 +177,7 @@ namespace ClinicaMedicalaForm.components.Model
             { "@DoctorID", programare.DoctorID },
             { "@Date", programare.Data },  // Asumând că este DateTime
             { "@Specializare", programare.Specializare },
-            { "@Valabilitate", "In curs de verificare" }
+            { "@Valabilitate", programare.Valabilitate }
 };
 
             _databaseManager.ExecuteNonQuery(query, parameters);

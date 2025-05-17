@@ -60,7 +60,7 @@ namespace ClinicaMedicalaForm.components.Presenter
             List<Programare> l = new List<Programare>();
             foreach (Programare p in _model.Programari)
             {
-                if(p.DoctorID == doctorID && !p.EsteInTrecut)
+                if(p.DoctorID == doctorID)
                 {
                     l.Add(p);
                 }

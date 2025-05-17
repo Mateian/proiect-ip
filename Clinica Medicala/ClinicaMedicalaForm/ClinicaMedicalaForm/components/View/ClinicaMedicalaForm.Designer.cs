@@ -44,7 +44,7 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.listBoxIstoricMedical = new System.Windows.Forms.ListBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.listBoxPacientProgramari = new System.Windows.Forms.ListBox();
+            this.listBoxPacientIstoricProgramari = new System.Windows.Forms.ListBox();
             this.tabPageDoctor = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -214,6 +214,7 @@
             this.listBoxProgramari.Name = "listBoxProgramari";
             this.listBoxProgramari.Size = new System.Drawing.Size(316, 164);
             this.listBoxProgramari.TabIndex = 4;
+            this.listBoxProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramari_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -260,7 +261,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.listBoxPacientProgramari);
+            this.groupBox10.Controls.Add(this.listBoxPacientIstoricProgramari);
             this.groupBox10.Location = new System.Drawing.Point(5, 21);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox10.Name = "groupBox10";
@@ -270,15 +271,16 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Istoric Programari";
             // 
-            // listBoxPacientProgramari
+            // listBoxPacientIstoricProgramari
             // 
-            this.listBoxPacientProgramari.FormattingEnabled = true;
-            this.listBoxPacientProgramari.ItemHeight = 16;
-            this.listBoxPacientProgramari.Location = new System.Drawing.Point(5, 21);
-            this.listBoxPacientProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxPacientProgramari.Name = "listBoxPacientProgramari";
-            this.listBoxPacientProgramari.Size = new System.Drawing.Size(263, 196);
-            this.listBoxPacientProgramari.TabIndex = 4;
+            this.listBoxPacientIstoricProgramari.FormattingEnabled = true;
+            this.listBoxPacientIstoricProgramari.ItemHeight = 16;
+            this.listBoxPacientIstoricProgramari.Location = new System.Drawing.Point(5, 21);
+            this.listBoxPacientIstoricProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxPacientIstoricProgramari.Name = "listBoxPacientIstoricProgramari";
+            this.listBoxPacientIstoricProgramari.Size = new System.Drawing.Size(263, 196);
+            this.listBoxPacientIstoricProgramari.TabIndex = 4;
+            this.listBoxPacientIstoricProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxPacientProgramari_SelectedIndexChanged);
             // 
             // tabPageDoctor
             // 
@@ -648,7 +650,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonProgramare;
         private System.Windows.Forms.ListBox listBoxIstoricMedical;
-        private System.Windows.Forms.ListBox listBoxPacientProgramari;
+        private System.Windows.Forms.ListBox listBoxPacientIstoricProgramari;
         private System.Windows.Forms.ListBox listBoxProgramari;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label label7;
