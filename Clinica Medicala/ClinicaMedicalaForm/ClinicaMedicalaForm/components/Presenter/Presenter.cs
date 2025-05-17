@@ -55,17 +55,33 @@ namespace ClinicaMedicalaForm.components.Presenter
         }
         //List<> GetProgramari(int doctotID);
         //List<> GetPacienti(int doctotID);
-        public List<Programare> GetProgramari(int doctotID)
+        public List<Programare> GetProgramariDoctor(int doctorID)
         {
             List<Programare> l = new List<Programare>();
             foreach (Programare p in _model.Programari)
             {
-                if(p.DoctorID == doctotID && !p.EsteInTrecut)
+                if(p.DoctorID == doctorID && !p.EsteInTrecut)
                 {
                     l.Add(p);
                 }
             }
             return l;
+        }
+        public List<Programare> GetProgramariPacient(int pacientID)
+        {
+            List<Programare> l = new List<Programare>();
+            foreach (Programare p in _model.Programari)
+            {
+                if (p.PacientID == pacientID)
+                {
+                    l.Add(p);
+                }
+            }
+            return l;
+        }
+        public void AdaugaProgramare(Programare programare)
+        {
+            _model.AdaugaProgramare();
         }
     }
 }

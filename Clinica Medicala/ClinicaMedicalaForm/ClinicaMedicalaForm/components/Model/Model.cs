@@ -195,5 +195,9 @@ namespace ClinicaMedicalaForm.components.Model
             return null;
             //TO DO;
         }
+        public void AdaugaProgramare()
+        {
+
+        }
     }
 }
