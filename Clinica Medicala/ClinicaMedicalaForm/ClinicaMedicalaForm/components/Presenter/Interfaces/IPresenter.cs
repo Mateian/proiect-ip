@@ -21,5 +21,8 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         void AdaugaPacient(int id, Pacient pacient);
         Pacient DeletePacient(string v);
         void ValidareProgramare(Programare newProgramare);
+        bool CheckUserExists(List<string> data);
+        IUser InsertUserCommand(List<string> data);
+        void AdaugareFisaMedicala(List<string> dateFisaMedicala);
     }
 }
