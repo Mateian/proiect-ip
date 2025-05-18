@@ -75,6 +75,12 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
+            this.tabPageAdmin = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.listBoxComenzi = new System.Windows.Forms.ListBox();
+            this.richTextBoxStatistica = new System.Windows.Forms.RichTextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBoxCreateAcc = new System.Windows.Forms.GroupBox();
             this.buttonCreateSubmit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -107,6 +113,10 @@
             this.groupBox7.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tabPageAdmin.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.groupBoxCreateAcc.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,6 +186,7 @@
             // 
             this.tabControlUser.Controls.Add(this.tabPagePacient);
             this.tabControlUser.Controls.Add(this.tabPageDoctor);
+            this.tabControlUser.Controls.Add(this.tabPageAdmin);
             this.tabControlUser.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabControlUser.Location = new System.Drawing.Point(467, 68);
             this.tabControlUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -630,6 +641,68 @@
             this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
+            // tabPageAdmin
+            // 
+            this.tabPageAdmin.Controls.Add(this.groupBox6);
+            this.tabPageAdmin.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAdmin.Name = "tabPageAdmin";
+            this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAdmin.Size = new System.Drawing.Size(941, 609);
+            this.tabPageAdmin.TabIndex = 1;
+            this.tabPageAdmin.Text = "Admin";
+            this.tabPageAdmin.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.groupBox14);
+            this.groupBox6.Controls.Add(this.groupBox8);
+            this.groupBox6.Location = new System.Drawing.Point(3, 14);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(937, 594);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Admin";
+            // 
+            // listBoxComenzi
+            // 
+            this.listBoxComenzi.FormattingEnabled = true;
+            this.listBoxComenzi.ItemHeight = 16;
+            this.listBoxComenzi.Location = new System.Drawing.Point(6, 20);
+            this.listBoxComenzi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxComenzi.Name = "listBoxComenzi";
+            this.listBoxComenzi.ScrollAlwaysVisible = true;
+            this.listBoxComenzi.Size = new System.Drawing.Size(904, 244);
+            this.listBoxComenzi.TabIndex = 4;
+            // 
+            // richTextBoxStatistica
+            // 
+            this.richTextBoxStatistica.Location = new System.Drawing.Point(6, 18);
+            this.richTextBoxStatistica.Name = "richTextBoxStatistica";
+            this.richTextBoxStatistica.ReadOnly = true;
+            this.richTextBoxStatistica.Size = new System.Drawing.Size(904, 242);
+            this.richTextBoxStatistica.TabIndex = 5;
+            this.richTextBoxStatistica.Text = "";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.listBoxComenzi);
+            this.groupBox8.Location = new System.Drawing.Point(6, 23);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(913, 269);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Comenzile facute";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.richTextBoxStatistica);
+            this.groupBox14.Location = new System.Drawing.Point(6, 298);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(913, 266);
+            this.groupBox14.TabIndex = 7;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Statistica";
+            // 
             // groupBoxCreateAcc
             // 
             this.groupBoxCreateAcc.Controls.Add(this.buttonCreateB2Login);
@@ -815,6 +888,10 @@
             this.groupBox13.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabPageAdmin.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
             this.groupBoxCreateAcc.ResumeLayout(false);
             this.groupBoxCreateAcc.PerformLayout();
             this.ResumeLayout(false);
@@ -871,6 +948,12 @@
         private System.Windows.Forms.Button buttonAdaugaPacient;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxPreviewFiles;
+        private System.Windows.Forms.TabPage tabPageAdmin;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.RichTextBox richTextBoxStatistica;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ListBox listBoxComenzi;
         private System.Windows.Forms.GroupBox groupBoxCreateAcc;
         private System.Windows.Forms.Button buttonCreateSubmit;
         private System.Windows.Forms.Label label4;

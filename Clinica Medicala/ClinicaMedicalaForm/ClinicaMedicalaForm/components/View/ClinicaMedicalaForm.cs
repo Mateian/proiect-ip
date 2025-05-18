@@ -64,13 +64,22 @@ namespace ClinicaMedicalaForm
                 groupBoxAutentificare.Enabled = false;
                 labelWelcomeText.Text = "Bine ai venit, ";
                 labelWelcomeText.Visible = true;
+                tabControlUser.TabPages.Clear();
                 if (_user.Rol == "Pacient")//_user
                 {
+                    tabControlUser.TabPages.Add(tabPagePacient);
+                    tabControlUser.SelectTab("tabPagePacient");
                     listBoxPacientIstoricProgramari.Items.Clear();
                     listBoxProgramariViitoare.Items.Clear();
                     listBoxIstoricMedical.Items.Clear();
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
+                    //loadPrograms(_model.GetProgramariIstoric());
+                    //loadIstoric(_model.GetIstoric());
+                    //loadProgramari(_model.GetCurrentProgramari());
+                    tabPagePacient.Visible = true;
+                    tabPageDoctor.Visible = false;
+                    tabControlUser.SelectTab("tabPagePacient");
                     tabPagePacient.Visible = true;
                     tabPageDoctor.Visible = false;
                     tabControlUser.SelectTab("tabPagePacient");
@@ -95,6 +104,8 @@ namespace ClinicaMedicalaForm
                 }
                 else if(_user.Rol == "Doctor")
                 {
+                    tabControlUser.TabPages.Add(tabPageDoctor);
+                    tabControlUser.SelectTab("tabPageDoctor");
                     labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
                     listBoxDoctorPacienti.Items.Clear();
@@ -110,14 +121,17 @@ namespace ClinicaMedicalaForm
                     {
                         listBoxListaProgramari.Items.Add(p.ToString());
                     }
-                    tabControlUser.Visible = true;
-                    tabControlUser.SelectTab("tabPageDoctor");
                 }
                 else if(_user.Rol == "Administrator")
                 {
+                    tabControlUser.TabPages.Add(tabPageAdmin);
+                    tabControlUser.SelectTab("tabPageAdmin");
+                    listBoxAdminPacienti.Items.Clear();
                     labelWelcomeText.Text += "Adm. " + _user.Nume + " " + _user.Prenume + ".";
+
                     tabControlUser.Visible = true;
                     groupBoxAdministrator.Visible = true;
+
                     List<IUser> doctori = _presenter.GetDoctori();
                     foreach (var dr in doctori)
                     {
@@ -139,6 +153,7 @@ namespace ClinicaMedicalaForm
                 tabControlUser.Visible = false;
                 tabPagePacient.Visible = false;
                 tabPageDoctor.Visible = false;
+                tabPageAdmin.Visible = false;
                 groupBoxAdministrator.Visible = false;
                 MessageBox.Show("No _user that matches these credentials found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -167,14 +182,14 @@ namespace ClinicaMedicalaForm
 
         private void tabControlUser_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (_user.Rol == "Pacient" && e.TabPage.Name=="tabPageDoctor")
+            /*if (_user.Rol == "Pacient" && e.TabPage.Name=="tabPageDoctor")
             {
                 e.Cancel = true;
             }
             if (_user.Rol == "Doctor" && e.TabPage.Name == "tabPagePacient")
             {
                 e.Cancel = true;
-            }
+            }*/
         }
 
         private void listBoxIstoricMedical_Click(object sender, EventArgs e)
