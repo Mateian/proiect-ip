@@ -122,5 +122,17 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             _model.ValidareProgramare(programare);
         }
+        public bool CheckUserExists(List<string> data)
+        {
+            return _model.CheckUserExists(data);
+        }
+        public IUser InsertUserCommand(List<string> data)
+        {
+            return _model.InsertUserCommand(data);
+        }
+        public void AdaugareFisaMedicala(List<string> dateFisaMedicala)
+        {
+            _model.AdaugareFisaMedicala(dateFisaMedicala);
+        }
     }
 }

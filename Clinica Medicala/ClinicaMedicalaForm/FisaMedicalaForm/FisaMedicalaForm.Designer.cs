@@ -173,7 +173,7 @@
             this.textBoxNumePacient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumePacient.Name = "textBoxNumePacient";
             this.textBoxNumePacient.Size = new System.Drawing.Size(188, 22);
-            this.textBoxNumePacient.TabIndex = 9;
+            this.textBoxNumePacient.TabIndex = 0;
             // 
             // textBoxDataConsultatie
             // 
@@ -181,7 +181,7 @@
             this.textBoxDataConsultatie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDataConsultatie.Name = "textBoxDataConsultatie";
             this.textBoxDataConsultatie.Size = new System.Drawing.Size(188, 22);
-            this.textBoxDataConsultatie.TabIndex = 15;
+            this.textBoxDataConsultatie.TabIndex = 3;
             // 
             // textBoxNumeMedic
             // 
@@ -189,7 +189,7 @@
             this.textBoxNumeMedic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumeMedic.Name = "textBoxNumeMedic";
             this.textBoxNumeMedic.Size = new System.Drawing.Size(141, 22);
-            this.textBoxNumeMedic.TabIndex = 17;
+            this.textBoxNumeMedic.TabIndex = 6;
             // 
             // textBoxExamenClinic
             // 
@@ -198,7 +198,7 @@
             this.textBoxExamenClinic.Multiline = true;
             this.textBoxExamenClinic.Name = "textBoxExamenClinic";
             this.textBoxExamenClinic.Size = new System.Drawing.Size(273, 37);
-            this.textBoxExamenClinic.TabIndex = 18;
+            this.textBoxExamenClinic.TabIndex = 7;
             // 
             // textBoxInvestigatii
             // 
@@ -207,7 +207,7 @@
             this.textBoxInvestigatii.Multiline = true;
             this.textBoxInvestigatii.Name = "textBoxInvestigatii";
             this.textBoxInvestigatii.Size = new System.Drawing.Size(220, 37);
-            this.textBoxInvestigatii.TabIndex = 19;
+            this.textBoxInvestigatii.TabIndex = 10;
             // 
             // textBoxDiagnostic
             // 
@@ -216,7 +216,7 @@
             this.textBoxDiagnostic.Multiline = true;
             this.textBoxDiagnostic.Name = "textBoxDiagnostic";
             this.textBoxDiagnostic.Size = new System.Drawing.Size(273, 37);
-            this.textBoxDiagnostic.TabIndex = 20;
+            this.textBoxDiagnostic.TabIndex = 8;
             // 
             // textBoxRecomandari
             // 
@@ -225,7 +225,7 @@
             this.textBoxRecomandari.Multiline = true;
             this.textBoxRecomandari.Name = "textBoxRecomandari";
             this.textBoxRecomandari.Size = new System.Drawing.Size(273, 37);
-            this.textBoxRecomandari.TabIndex = 21;
+            this.textBoxRecomandari.TabIndex = 9;
             // 
             // textBoxTratament
             // 
@@ -234,7 +234,7 @@
             this.textBoxTratament.Multiline = true;
             this.textBoxTratament.Name = "textBoxTratament";
             this.textBoxTratament.Size = new System.Drawing.Size(220, 37);
-            this.textBoxTratament.TabIndex = 22;
+            this.textBoxTratament.TabIndex = 11;
             // 
             // textBoxCNP
             // 
@@ -242,7 +242,7 @@
             this.textBoxCNP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCNP.Name = "textBoxCNP";
             this.textBoxCNP.Size = new System.Drawing.Size(139, 22);
-            this.textBoxCNP.TabIndex = 10;
+            this.textBoxCNP.TabIndex = 4;
             // 
             // textBoxTelefon
             // 
@@ -250,7 +250,7 @@
             this.textBoxTelefon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTelefon.Name = "textBoxTelefon";
             this.textBoxTelefon.Size = new System.Drawing.Size(139, 22);
-            this.textBoxTelefon.TabIndex = 14;
+            this.textBoxTelefon.TabIndex = 5;
             // 
             // textBoxDataNastere
             // 
@@ -258,15 +258,15 @@
             this.textBoxDataNastere.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxDataNastere.Name = "textBoxDataNastere";
             this.textBoxDataNastere.Size = new System.Drawing.Size(188, 22);
-            this.textBoxDataNastere.TabIndex = 11;
+            this.textBoxDataNastere.TabIndex = 1;
             // 
             // textBoxAdresa
             // 
-            this.textBoxAdresa.Location = new System.Drawing.Point(171, 71);
+            this.textBoxAdresa.Location = new System.Drawing.Point(171, 78);
             this.textBoxAdresa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAdresa.Name = "textBoxAdresa";
             this.textBoxAdresa.Size = new System.Drawing.Size(188, 22);
-            this.textBoxAdresa.TabIndex = 13;
+            this.textBoxAdresa.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -314,7 +314,7 @@
             this.buttonSemnare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSemnare.Name = "buttonSemnare";
             this.buttonSemnare.Size = new System.Drawing.Size(129, 34);
-            this.buttonSemnare.TabIndex = 44;
+            this.buttonSemnare.TabIndex = 12;
             this.buttonSemnare.Text = "Semnati";
             this.buttonSemnare.UseVisualStyleBackColor = true;
             this.buttonSemnare.Click += new System.EventHandler(this.buttonSemnare_Click);
@@ -445,7 +445,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(33, 78);
+            this.label8.Location = new System.Drawing.Point(33, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 16);
             this.label8.TabIndex = 27;
