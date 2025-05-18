@@ -17,7 +17,7 @@ namespace ClinicaMedicalaForm.components.Model
 {
     public class Model : IModel
     {
-        private UserFactory _userFactory;    
+        private UserFactory _userFactory;
         private SQLiteConnection _connection;
         private List<Programare> _programari;
         private List<FisaMedicala> _fiseMedicale;
@@ -32,8 +32,8 @@ namespace ClinicaMedicalaForm.components.Model
 
         public Model()
         {
-            string location=Directory.GetCurrentDirectory()+ "\\..\\..\\components\\Resources\\ClinicaMedicalaDB.db";
-            string dataSource = "Data Source="+location+";Version=3;";
+            string location = Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ClinicaMedicalaDB.db";
+            string dataSource = "Data Source=" + location + ";Version=3;";
 
             _databaseManager = new DatabaseManager(dataSource);
         }
@@ -50,13 +50,13 @@ namespace ClinicaMedicalaForm.components.Model
             var reader = _databaseManager.ExecuteSelectQuery(query);
             try
             {
-                while(reader.Read())
+                while (reader.Read())
                 {
                     int k = 0;
 
                     // trebuie pusa exceptie aici la new string[6] (daca nu sunt 6, ce face?)
                     string[] infoArray = new string[6];
-                    for(int i = 0; i < reader.FieldCount; i++)
+                    for (int i = 0; i < reader.FieldCount; i++)
                     {
                         string columnName = reader.GetName(i);
                         object value = reader.GetValue(i);
@@ -78,9 +78,9 @@ namespace ClinicaMedicalaForm.components.Model
         public void CitireDoctori()
         {
             _doctori = new List<IUser>();
-            foreach(IUser user in _users)
+            foreach (IUser user in _users)
             {
-                if(user.Rol == "Doctor")
+                if (user.Rol == "Doctor")
                 {
                     _doctori.Add(user);
                 }
@@ -144,7 +144,7 @@ namespace ClinicaMedicalaForm.components.Model
                         object value = reader.GetValue(i);
                         infoArray[k++] = value.ToString();
                     }
-                    int pacID,docID;
+                    int pacID, docID;
                     int.TryParse(infoArray[1], out pacID);
                     int.TryParse(infoArray[2], out docID);
                     _programari.Add(new Programare(pacID, docID, infoArray[3], infoArray[4], infoArray[5]));
@@ -210,7 +210,7 @@ namespace ClinicaMedicalaForm.components.Model
             string query = $"SELECT Nume, Prenume FROM Users WHERE ID = {userID}";
             string nume = "";
             string prenume = "";
-            string numeComplet="";
+            string numeComplet = "";
             using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza persoana dupa ID din tabelul Users
             {
                 if (reader.Read())
@@ -220,7 +220,7 @@ namespace ClinicaMedicalaForm.components.Model
                     numeComplet = $"{nume} {prenume}";
                 }
             }
-            if(!string.IsNullOrEmpty(numeComplet))
+            if (!string.IsNullOrEmpty(numeComplet))
             {
                 query = $"SELECT DataConsult, NumeMedic,ExamenClinic,DiagnosticPrezumtiv,Recomandari,InvestigatiiRecomandate,TratamentPrescris,Motiv FROM FisaMedicalaDB WHERE NumePacient = '{numeComplet}'";
                 using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza toate fisele cu numele persoanei din tabelul FisaMedicalaDB
@@ -228,11 +228,11 @@ namespace ClinicaMedicalaForm.components.Model
                     while (reader.Read())
                     {
                         FisaMedicala fisa = new FisaMedicala(
-                            nume, 
-                            prenume, 
-                            reader["DataConsult"].ToString(), 
-                            reader["Motiv"].ToString(), 
-                            reader["DiagnosticPrezumtiv"].ToString(), 
+                            nume,
+                            prenume,
+                            reader["DataConsult"].ToString(),
+                            reader["Motiv"].ToString(),
+                            reader["DiagnosticPrezumtiv"].ToString(),
                             reader["TratamentPrescris"].ToString(),
                             reader["NumeMedic"].ToString(),
                             reader["ExamenClinic"].ToString(),
@@ -256,7 +256,7 @@ namespace ClinicaMedicalaForm.components.Model
             Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
             _pacienti.Remove(pacient);
             List<Programare> programariPacientDeSters = _programari.FindAll(p => p.PacientID == pacient.ID);
-            foreach(var aux  in programariPacientDeSters)
+            foreach (var aux in programariPacientDeSters)
             {
                 _programari.Remove(aux);
             }
@@ -286,7 +286,7 @@ namespace ClinicaMedicalaForm.components.Model
                 { "@DoctorID", doctorID },
                 { "@PacientID", pacient.ID }
             };
-            _databaseManager.ExecuteNonQuery (query, parameters);
+            _databaseManager.ExecuteNonQuery(query, parameters);
         }
 
         public void ValidareProgramare(Programare programare)
@@ -318,6 +318,25 @@ namespace ClinicaMedicalaForm.components.Model
                 { "@Valabilitate", programare.Valabilitate }
             };
             _databaseManager.ExecuteNonQuery(query, parameters);
+        }
+        public bool CheckUserExists(List<string> data)
+        {
+            return _databaseManager.CheckUserExists(data);
+        }
+        public IUser InsertUserCommand(List<string> data)
+        {
+            int id = _databaseManager.InsertUserCommand(data);
+            if (id < 0)
+            {
+                throw new Exception("Eroare user!");
+            }
+            else
+            {
+                Pacient pacient = new Pacient(id, data[0], data[1], data[2], data[3]);
+                _users.Add(pacient);
+                _pacienti.Add(pacient);
+                return pacient;
+            }
         }
     }
 }

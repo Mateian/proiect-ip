@@ -96,5 +96,56 @@ namespace ClinicaMedicalaForm.components.Model
                 command.ExecuteNonQuery();
             }
         }
+        public int InsertUserCommand(List<string> data)
+        {
+            OpenConnection();
+            var query = @"INSERT INTO Users (
+            Role, Username, HashPassword, Nume, Prenume ) 
+            VALUES (
+            @Role, @Username, @Password, @Nume, @Prenume
+            )";
+            using (var command = new SQLiteCommand(query, _connection))
+            {
+                command.Parameters.AddWithValue("@Role", "Pacient");
+                command.Parameters.AddWithValue("@Username", data[0]);
+                command.Parameters.AddWithValue("@Password", data[1]);
+                command.Parameters.AddWithValue("@Nume", data[2]);
+                command.Parameters.AddWithValue("@Prenume", data[3]);
+
+                command.ExecuteNonQuery();
+            }
+            query = @"SELECT ID FROM Users WHERE Username = @Username AND HashPassword = @Password";
+            using (var command = new SQLiteCommand(query, _connection))
+            {
+                command.Parameters.AddWithValue("@Username", data[0]);
+                command.Parameters.AddWithValue("@Password", data[1]);
+                var reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    int id = reader.GetInt32(0);
+                    return id;
+                }
+            }
+            return -1;
+        }
+        public bool CheckUserExists(List<string> data)
+        {
+            OpenConnection();
+            var query = @"SELECT COUNT(*) FROM Users WHERE Username = @Username AND HashPassword = @Password";
+            using (var command = new SQLiteCommand(query, _connection))
+            {
+                command.Parameters.AddWithValue("@Username", data[0]);
+                command.Parameters.AddWithValue("@Password", data[1]);
+                var count = (long)command.ExecuteScalar();
+                if(count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

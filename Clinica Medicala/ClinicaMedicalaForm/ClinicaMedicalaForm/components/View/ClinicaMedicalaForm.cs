@@ -71,9 +71,6 @@ namespace ClinicaMedicalaForm
                     listBoxIstoricMedical.Items.Clear();
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
-                    //loadPrograms(_model.GetProgramariIstoric());
-                    //loadIstoric(_model.GetIstoric());
-                    //loadProgramari(_model.GetCurrentProgramari());
                     tabPagePacient.Visible = true;
                     tabPageDoctor.Visible = false;
                     tabControlUser.SelectTab("tabPagePacient");
@@ -265,6 +262,98 @@ namespace ClinicaMedicalaForm
                     _presenter.AdaugaPacient(_user.ID, pacient);
                     listBoxDoctorPacienti.Items.Add(pacient.ToString());
                 }
+            }
+        }
+
+        private void buttonToCreateAcc_Click(object sender, EventArgs e)
+        {
+            groupBoxAutentificare.Visible = false;
+            groupBoxCreateAcc.Visible = true;
+            textBoxNumeUtilizator.Clear();
+            textBoxParola.Clear();
+        }
+
+        private void buttonCreateB2Login_Click(object sender, EventArgs e)
+        {
+            groupBoxCreateAcc.Visible = false;
+            groupBoxAutentificare.Visible = true;
+            textBoxCreateUser.Clear();
+            textBoxCreatePassword.Clear();
+            textBoxCreateCheckPassword.Clear();
+            textBoxCreateFirstName.Clear();
+            textBoxCreateLastName.Clear();
+        }
+
+        private void buttonCreateSubmit_Click(object sender, EventArgs e)
+        {
+            if(textBoxCreatePassword.Text != textBoxCreateCheckPassword.Text)
+            {
+                MessageBox.Show("Parolele nu sunt identice!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                List<string> date = new List<string>();
+                date.Add(textBoxCreateUser.Text);
+                date.Add(textBoxCreatePassword.Text);
+                date.Add(textBoxCreateLastName.Text);
+                date.Add(textBoxCreateFirstName.Text);
+                if (_model.CheckUserExists(date))
+                {
+                    MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    try
+                    {
+                        _user = _model.InsertUserCommand(date);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+            }
+            buttonDeconectare.Visible = true;
+            groupBoxCreateAcc.Visible = false;
+            groupBoxAutentificare.Visible = true;
+            groupBoxAutentificare.Enabled = false;
+            textBoxNumeUtilizator.Text = textBoxCreateUser.Text;
+            textBoxParola.Text = textBoxCreatePassword.Text;
+            textBoxCreateUser.Clear();
+            textBoxCreatePassword.Clear();
+            textBoxCreateCheckPassword.Clear();
+            textBoxCreateFirstName.Clear();
+            textBoxCreateLastName.Clear();
+            labelWelcomeText.Text = "Bine ai venit, ";
+            labelWelcomeText.Visible = true;
+            listBoxPacientIstoricProgramari.Items.Clear();
+            listBoxProgramariViitoare.Items.Clear();
+            listBoxIstoricMedical.Items.Clear();
+            labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
+            tabControlUser.Visible = true;
+            tabPagePacient.Visible = true;
+            tabPageDoctor.Visible = false;
+            tabControlUser.SelectTab("tabPagePacient");
+
+            List<Programare> programariIstoric = _presenter.GetProgramariIstoric(_user.ID);
+            foreach (Programare programare in programariIstoric)
+            {
+                listBoxPacientIstoricProgramari.Items.Add(programare.ToString());
+            }
+
+            List<Programare> cereriProgramare = _presenter.GetCereriProgramari(_user.ID);
+            foreach (Programare programare in cereriProgramare)
+            {
+                listBoxProgramariViitoare.Items.Add(programare.ToString());
+            }
+
+            List<FisaMedicala> fisaMedicalaIstoric = _model.PreluareIstoricMedical(_user.ID);
+            foreach (FisaMedicala fisa in fisaMedicalaIstoric)
+            {
+                listBoxIstoricMedical.Items.Add(fisa.ToString());
             }
         }
     }

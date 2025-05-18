@@ -75,6 +75,20 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
+            this.groupBoxCreateAcc = new System.Windows.Forms.GroupBox();
+            this.buttonCreateSubmit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxCreateUser = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxCreateLastName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxCreateFirstName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxCreateCheckPassword = new System.Windows.Forms.TextBox();
+            this.buttonCreateB2Login = new System.Windows.Forms.Button();
+            this.buttonToCreateAcc = new System.Windows.Forms.Button();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -93,10 +107,12 @@
             this.groupBox7.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBoxCreateAcc.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxAutentificare
             // 
+            this.groupBoxAutentificare.Controls.Add(this.buttonToCreateAcc);
             this.groupBoxAutentificare.Controls.Add(this.buttonAutentificare);
             this.groupBoxAutentificare.Controls.Add(this.label2);
             this.groupBoxAutentificare.Controls.Add(this.textBoxParola);
@@ -106,7 +122,7 @@
             this.groupBoxAutentificare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxAutentificare.Name = "groupBoxAutentificare";
             this.groupBoxAutentificare.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxAutentificare.Size = new System.Drawing.Size(445, 172);
+            this.groupBoxAutentificare.Size = new System.Drawing.Size(445, 202);
             this.groupBoxAutentificare.TabIndex = 0;
             this.groupBoxAutentificare.TabStop = false;
             this.groupBoxAutentificare.Text = "Autentificare";
@@ -438,11 +454,11 @@
             // 
             this.groupBoxAdministrator.Controls.Add(this.groupBoxInstrumente);
             this.groupBoxAdministrator.Controls.Add(this.groupBox7);
-            this.groupBoxAdministrator.Location = new System.Drawing.Point(16, 219);
+            this.groupBoxAdministrator.Location = new System.Drawing.Point(16, 251);
             this.groupBoxAdministrator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxAdministrator.Name = "groupBoxAdministrator";
             this.groupBoxAdministrator.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxAdministrator.Size = new System.Drawing.Size(445, 487);
+            this.groupBoxAdministrator.Size = new System.Drawing.Size(445, 455);
             this.groupBoxAdministrator.TabIndex = 2;
             this.groupBoxAdministrator.TabStop = false;
             this.groupBoxAdministrator.Text = "Administrator";
@@ -451,7 +467,7 @@
             // groupBoxInstrumente
             // 
             this.groupBoxInstrumente.Controls.Add(this.buttonStatistica);
-            this.groupBoxInstrumente.Location = new System.Drawing.Point(12, 335);
+            this.groupBoxInstrumente.Location = new System.Drawing.Point(11, 320);
             this.groupBoxInstrumente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBoxInstrumente.Name = "groupBoxInstrumente";
             this.groupBoxInstrumente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -475,7 +491,7 @@
             this.groupBox7.Controls.Add(this.listBoxAdminPacienti);
             this.groupBox7.Controls.Add(this.buttonGestioneazaPacienti);
             this.groupBox7.Controls.Add(this.buttonGestioneazaDoctori);
-            this.groupBox7.Location = new System.Drawing.Point(5, 48);
+            this.groupBox7.Location = new System.Drawing.Point(6, 29);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -614,6 +630,150 @@
             this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
+            // groupBoxCreateAcc
+            // 
+            this.groupBoxCreateAcc.Controls.Add(this.buttonCreateB2Login);
+            this.groupBoxCreateAcc.Controls.Add(this.label11);
+            this.groupBoxCreateAcc.Controls.Add(this.textBoxCreateCheckPassword);
+            this.groupBoxCreateAcc.Controls.Add(this.label10);
+            this.groupBoxCreateAcc.Controls.Add(this.textBoxCreateFirstName);
+            this.groupBoxCreateAcc.Controls.Add(this.label9);
+            this.groupBoxCreateAcc.Controls.Add(this.textBoxCreateLastName);
+            this.groupBoxCreateAcc.Controls.Add(this.buttonCreateSubmit);
+            this.groupBoxCreateAcc.Controls.Add(this.label4);
+            this.groupBoxCreateAcc.Controls.Add(this.textBoxCreatePassword);
+            this.groupBoxCreateAcc.Controls.Add(this.label8);
+            this.groupBoxCreateAcc.Controls.Add(this.textBoxCreateUser);
+            this.groupBoxCreateAcc.Location = new System.Drawing.Point(12, 41);
+            this.groupBoxCreateAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxCreateAcc.Name = "groupBoxCreateAcc";
+            this.groupBoxCreateAcc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxCreateAcc.Size = new System.Drawing.Size(445, 441);
+            this.groupBoxCreateAcc.TabIndex = 9;
+            this.groupBoxCreateAcc.TabStop = false;
+            this.groupBoxCreateAcc.Text = "Creare cont";
+            this.groupBoxCreateAcc.Visible = false;
+            // 
+            // buttonCreateSubmit
+            // 
+            this.buttonCreateSubmit.Location = new System.Drawing.Point(75, 312);
+            this.buttonCreateSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateSubmit.Name = "buttonCreateSubmit";
+            this.buttonCreateSubmit.Size = new System.Drawing.Size(263, 36);
+            this.buttonCreateSubmit.TabIndex = 5;
+            this.buttonCreateSubmit.Text = "Creeaza";
+            this.buttonCreateSubmit.UseVisualStyleBackColor = true;
+            this.buttonCreateSubmit.Click += new System.EventHandler(this.buttonCreateSubmit_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(72, 192);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Parola:";
+            // 
+            // textBoxCreatePassword
+            // 
+            this.textBoxCreatePassword.Location = new System.Drawing.Point(75, 210);
+            this.textBoxCreatePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreatePassword.Name = "textBoxCreatePassword";
+            this.textBoxCreatePassword.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreatePassword.TabIndex = 3;
+            this.textBoxCreatePassword.UseSystemPasswordChar = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(72, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 16);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Nume utilizator:";
+            // 
+            // textBoxCreateUser
+            // 
+            this.textBoxCreateUser.Location = new System.Drawing.Point(75, 42);
+            this.textBoxCreateUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateUser.Name = "textBoxCreateUser";
+            this.textBoxCreateUser.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateUser.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 16);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Nume:";
+            // 
+            // textBoxCreateLastName
+            // 
+            this.textBoxCreateLastName.Location = new System.Drawing.Point(75, 98);
+            this.textBoxCreateLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateLastName.Name = "textBoxCreateLastName";
+            this.textBoxCreateLastName.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateLastName.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(72, 136);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Prenume:";
+            // 
+            // textBoxCreateFirstName
+            // 
+            this.textBoxCreateFirstName.Location = new System.Drawing.Point(75, 154);
+            this.textBoxCreateFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateFirstName.Name = "textBoxCreateFirstName";
+            this.textBoxCreateFirstName.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateFirstName.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(72, 248);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 16);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Reintroduceti parola:";
+            // 
+            // textBoxCreateCheckPassword
+            // 
+            this.textBoxCreateCheckPassword.Location = new System.Drawing.Point(75, 266);
+            this.textBoxCreateCheckPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateCheckPassword.Name = "textBoxCreateCheckPassword";
+            this.textBoxCreateCheckPassword.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateCheckPassword.TabIndex = 4;
+            this.textBoxCreateCheckPassword.UseSystemPasswordChar = true;
+            // 
+            // buttonCreateB2Login
+            // 
+            this.buttonCreateB2Login.Location = new System.Drawing.Point(131, 368);
+            this.buttonCreateB2Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateB2Login.Name = "buttonCreateB2Login";
+            this.buttonCreateB2Login.Size = new System.Drawing.Size(150, 30);
+            this.buttonCreateB2Login.TabIndex = 6;
+            this.buttonCreateB2Login.Text = "Ai cont? autentifica";
+            this.buttonCreateB2Login.UseVisualStyleBackColor = true;
+            this.buttonCreateB2Login.Click += new System.EventHandler(this.buttonCreateB2Login_Click);
+            // 
+            // buttonToCreateAcc
+            // 
+            this.buttonToCreateAcc.Location = new System.Drawing.Point(120, 162);
+            this.buttonToCreateAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonToCreateAcc.Name = "buttonToCreateAcc";
+            this.buttonToCreateAcc.Size = new System.Drawing.Size(162, 24);
+            this.buttonToCreateAcc.TabIndex = 3;
+            this.buttonToCreateAcc.Text = "Nu ai cont?Creeaza";
+            this.buttonToCreateAcc.UseVisualStyleBackColor = true;
+            this.buttonToCreateAcc.Click += new System.EventHandler(this.buttonToCreateAcc_Click);
+            // 
             // ClinicaMedicalaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -627,6 +787,7 @@
             this.Controls.Add(this.groupBoxAdministrator);
             this.Controls.Add(this.groupBoxAutentificare);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.groupBoxCreateAcc);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClinicaMedicalaForm";
@@ -654,6 +815,8 @@
             this.groupBox13.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBoxCreateAcc.ResumeLayout(false);
+            this.groupBoxCreateAcc.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -708,6 +871,20 @@
         private System.Windows.Forms.Button buttonAdaugaPacient;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxPreviewFiles;
+        private System.Windows.Forms.GroupBox groupBoxCreateAcc;
+        private System.Windows.Forms.Button buttonCreateSubmit;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxCreatePassword;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxCreateUser;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxCreateCheckPassword;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxCreateFirstName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxCreateLastName;
+        private System.Windows.Forms.Button buttonCreateB2Login;
+        private System.Windows.Forms.Button buttonToCreateAcc;
     }
 }
 
