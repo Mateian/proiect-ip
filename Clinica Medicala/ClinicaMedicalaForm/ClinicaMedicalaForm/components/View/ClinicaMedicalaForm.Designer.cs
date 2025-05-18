@@ -770,7 +770,7 @@
             this.buttonToCreateAcc.Name = "buttonToCreateAcc";
             this.buttonToCreateAcc.Size = new System.Drawing.Size(162, 24);
             this.buttonToCreateAcc.TabIndex = 3;
-            this.buttonToCreateAcc.Text = "Nu ai cont?Creeaza";
+            this.buttonToCreateAcc.Text = "Nu ai cont ? Creeaza";
             this.buttonToCreateAcc.UseVisualStyleBackColor = true;
             this.buttonToCreateAcc.Click += new System.EventHandler(this.buttonToCreateAcc_Click);
             // 

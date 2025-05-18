@@ -46,7 +46,7 @@ namespace ClinicaMedicalaForm
             if (fisaMedicala.ShowDialog() == DialogResult.OK)
             {
                 List<string> dateFisaMedicala = fisaMedicala.datePacient;
-                _model.AdaugareFisaMedicala(dateFisaMedicala);
+                _presenter.AdaugareFisaMedicala(dateFisaMedicala);
             }
         }
 
@@ -298,7 +298,7 @@ namespace ClinicaMedicalaForm
                 date.Add(textBoxCreatePassword.Text);
                 date.Add(textBoxCreateLastName.Text);
                 date.Add(textBoxCreateFirstName.Text);
-                if (_model.CheckUserExists(date))
+                if (_presenter.CheckUserExists(date))
                 {
                     MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -307,7 +307,7 @@ namespace ClinicaMedicalaForm
                 {
                     try
                     {
-                        _user = _model.InsertUserCommand(date);
+                        _user = _presenter.InsertUserCommand(date);
                     }
                     catch (Exception ex)
                     {
