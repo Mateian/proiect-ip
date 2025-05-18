@@ -65,18 +65,18 @@ namespace ClinicaMedicalaForm
                 labelWelcomeText.Text = "Bine ai venit, ";
                 labelWelcomeText.Visible = true;
                 tabControlUser.TabPages.Clear();
+
                 if (_user.Rol == "Pacient")//_user
                 {
                     tabControlUser.TabPages.Add(tabPagePacient);
                     tabControlUser.SelectTab("tabPagePacient");
+                    tabControlUser.Visible = true;
+
                     listBoxPacientIstoricProgramari.Items.Clear();
                     listBoxProgramariViitoare.Items.Clear();
                     listBoxIstoricMedical.Items.Clear();
+
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
-                    tabControlUser.Visible = true;
-                    //loadPrograms(_model.GetProgramariIstoric());
-                    //loadIstoric(_model.GetIstoric());
-                    //loadProgramari(_model.GetCurrentProgramari());
 
                     List<Programare> programariIstoric = _presenter.GetProgramariIstoric(_user.ID);
                     foreach(Programare programare in programariIstoric)
@@ -100,10 +100,12 @@ namespace ClinicaMedicalaForm
                 {
                     tabControlUser.TabPages.Add(tabPageDoctor);
                     tabControlUser.SelectTab("tabPageDoctor");
-                    labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
                     tabControlUser.Visible = true;
+
                     listBoxDoctorPacienti.Items.Clear();
                     listBoxListaProgramari.Items.Clear();
+
+                    labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
 
                     List<IUser> pacientiDoctor = _presenter.GetPacienti(_user.ID);
                     foreach(var pacient in pacientiDoctor)
@@ -120,11 +122,12 @@ namespace ClinicaMedicalaForm
                 {
                     tabControlUser.TabPages.Add(tabPageAdmin);
                     tabControlUser.SelectTab("tabPageAdmin");
-                    listBoxAdminPacienti.Items.Clear();
-                    labelWelcomeText.Text += "Adm. " + _user.Nume + " " + _user.Prenume + ".";
-
                     tabControlUser.Visible = true;
                     groupBoxAdministrator.Visible = true;
+
+                    listBoxAdminPacienti.Items.Clear();
+
+                    labelWelcomeText.Text += "Adm. " + _user.Nume + " " + _user.Prenume + ".";
 
                     List<IUser> doctori = _presenter.GetDoctori();
                     foreach (var dr in doctori)
@@ -144,10 +147,6 @@ namespace ClinicaMedicalaForm
             }
             else
             {
-                tabControlUser.Visible = false;
-                tabPagePacient.Visible = false;
-                tabPageDoctor.Visible = false;
-                tabPageAdmin.Visible = false;
                 groupBoxAdministrator.Visible = false;
                 MessageBox.Show("No _user that matches these credentials found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
