@@ -117,7 +117,7 @@
             this.buttonAutentificare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAutentificare.Name = "buttonAutentificare";
             this.buttonAutentificare.Size = new System.Drawing.Size(263, 36);
-            this.buttonAutentificare.TabIndex = 1;
+            this.buttonAutentificare.TabIndex = 2;
             this.buttonAutentificare.Text = "Autentificare";
             this.buttonAutentificare.UseVisualStyleBackColor = true;
             this.buttonAutentificare.Click += new System.EventHandler(this.buttonAutentificare_Click);
@@ -137,7 +137,7 @@
             this.textBoxParola.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxParola.Name = "textBoxParola";
             this.textBoxParola.Size = new System.Drawing.Size(263, 22);
-            this.textBoxParola.TabIndex = 2;
+            this.textBoxParola.TabIndex = 1;
             // 
             // label1
             // 
@@ -566,7 +566,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1435, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1435, 30);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -575,7 +575,7 @@
             this.appToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.appToolStripMenuItem.Name = "appToolStripMenuItem";
-            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 26);
             this.appToolStripMenuItem.Text = "App";
             // 
             // exitToolStripMenuItem
@@ -587,7 +587,7 @@
             // helpToolStripMenuItemHelp
             // 
             this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
-            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItemHelp.Text = "Help";
             // 
             // labelWelcomeText

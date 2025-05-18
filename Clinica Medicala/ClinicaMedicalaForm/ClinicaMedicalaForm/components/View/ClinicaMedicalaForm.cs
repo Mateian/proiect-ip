@@ -30,6 +30,7 @@ namespace ClinicaMedicalaForm
         {
             InitializeComponent();
             InitForm();
+            this.AcceptButton = buttonAutentificare;
         }
 
         public void InitForm()
