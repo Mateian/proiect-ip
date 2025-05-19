@@ -24,6 +24,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         void AdaugareFisaMedicala(List<string> datePacient);
         List<FisaMedicala> PreluareIstoricMedical(int userID);
         string PreviewIstoric(int nrFisa);
+        void AdaugaDoctor(Doctor doctor);
         void DeletePacient(int id);
         void StergeUser(int id);
         void AdaugaPacient(int id, Pacient pacient);

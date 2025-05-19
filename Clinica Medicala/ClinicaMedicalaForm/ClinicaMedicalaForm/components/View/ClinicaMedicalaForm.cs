@@ -283,7 +283,11 @@ namespace ClinicaMedicalaForm
                 {
                     _presenter.StergeUser(doctorSters.ID);
                 }
-
+                Doctor doctorNou = form.DoctorNou;
+                if (doctorNou != null)
+                {
+                    _presenter.AdaugaDoctor(doctorNou);
+                }
 
                 // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
                 listBoxAdminPacienti.Items.Clear();

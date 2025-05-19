@@ -17,6 +17,7 @@ namespace ClinicaMedicalaForm.components.View
 
         private List<IUser> _doctori;
         public IUser SelectedDoctorId { get; private set; }
+        public Doctor DoctorNou { get; private set; }
         public GestioneazaDoctorForm(List<IUser> doctori)
         {
             _doctori = doctori;
@@ -93,7 +94,13 @@ namespace ClinicaMedicalaForm.components.View
 
         private void buttonAdaugaDoctor_Click(object sender, EventArgs e)
         {
-
+            DoctorForm form = new DoctorForm();
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                DoctorNou = form.DoctorNou;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void buttonStergeDoctor_Click(object sender, EventArgs e)

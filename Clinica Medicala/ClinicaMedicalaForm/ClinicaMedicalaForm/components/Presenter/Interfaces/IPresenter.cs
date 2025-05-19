@@ -20,6 +20,7 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         List<Programare> GetCereriProgramari(int pacientID);
         void AdaugaPacient(int id, Pacient pacient);
         Pacient DeletePacient(string v);
+        void AdaugaDoctor(Doctor doctor);
         void StergeUser(int id);
         void ValidareProgramare(Programare newProgramare);
         bool CheckUserExists(List<string> data);

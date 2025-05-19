@@ -331,6 +331,35 @@ namespace ClinicaMedicalaForm.components.Model
             _databaseManager.ExecuteNonQuery(query, parameters);
         }
 
+        public void AdaugaDoctor(Doctor doctor)
+        {
+            string tableName = "Users";
+            string query = $"INSERT INTO {tableName}(Role, Username, HashPassword, Nume, Prenume) VALUES(@Role, @Username, @HashPassword, @Nume, @Prenume);";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@Role", doctor.Rol},
+                { "@Username", doctor.Username },
+                { "@HashPassword", doctor.Parola},
+                { "@Nume", doctor.Nume },
+                { "@Prenume", doctor.Prenume}
+            };
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+            tableName = "Users";
+            query = $"SELECT ID FROM {tableName} WHERE Role = '{doctor.Rol}' AND Username = '{doctor.Username}' AND HashPassword = '{doctor.Parola}' AND Nume = '{doctor.Nume}' AND Prenume = '{doctor.Prenume}';";
+            using (var reader = _databaseManager.ExecuteSelectQuery(query))
+            {
+                while (reader.Read())
+                {
+                    string id = reader["ID"].ToString();
+                    Doctor doctorNou = new Doctor(int.Parse(id), doctor.Username, doctor.Parola, doctor.Nume, doctor.Prenume);
+                    Doctori.Add(doctorNou);
+                    Utilizatori.Add(doctorNou);
+                }
+            }
+            
+       }
+
         public void ValidareProgramare(Programare programare)
         {
             Programare newProg = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
