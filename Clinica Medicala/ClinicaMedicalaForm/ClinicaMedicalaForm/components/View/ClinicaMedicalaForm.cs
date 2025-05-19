@@ -281,7 +281,7 @@ namespace ClinicaMedicalaForm
                 IUser doctorSters = form.SelectedDoctorId;
                 if (doctorSters != null)
                 {
-                    MessageBox.Show($"Doctorul cu ID-ul {doctorSters.ID} a fost sters.");
+                    _presenter.StergeUser(doctorSters.ID);
                 }
 
 

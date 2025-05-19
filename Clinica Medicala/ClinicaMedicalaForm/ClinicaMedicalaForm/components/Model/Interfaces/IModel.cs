@@ -25,6 +25,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         List<FisaMedicala> PreluareIstoricMedical(int userID);
         string PreviewIstoric(int nrFisa);
         void DeletePacient(int id);
+        void StergeUser(int id);
         void AdaugaPacient(int id, Pacient pacient);
         void ValidareProgramare(Programare programare);
         bool CheckUserExists(List<string> data);

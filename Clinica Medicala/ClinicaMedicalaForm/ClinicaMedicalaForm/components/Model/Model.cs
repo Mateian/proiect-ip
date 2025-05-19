@@ -271,8 +271,50 @@ namespace ClinicaMedicalaForm.components.Model
             tableName = "Programari";
             query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
             _databaseManager.ExecuteNonQuery(query, parameters);
-        }
 
+            tableName = "Users";
+            query = $"DELETE FROM {tableName} WHERE ID = @ID";
+            _databaseManager.ExecuteNonQuery(query, parameters);
+        }
+        public void DeleteDoctor(int id)
+        {
+            Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == id);
+            _doctori.Remove(doctor);
+            List<Programare> programariPacientDeSters = _programari.FindAll(p => p.DoctorID ==  doctor.ID);
+            foreach (var aux in programariPacientDeSters)
+            {
+                _programari.Remove(aux);
+            }
+            string tableName = "Pacienti";
+            string query = $"DELETE FROM {tableName} WHERE DoctorID = @ID";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@ID", id }
+            };
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+            tableName = "Programari";
+            query = $"DELETE FROM {tableName} WHERE DoctorID = @ID";
+            _databaseManager.ExecuteNonQuery(query, parameters);
+
+            tableName = "Users";
+            query = $"DELETE FROM {tableName} WHERE ID = @ID";
+            _databaseManager.ExecuteNonQuery(query, parameters);
+        }
+        public void StergeUser(int id)
+        {
+            foreach(IUser user in _users)
+            {
+                if(user.ID == id && user.Rol == "Pacient")
+                {
+                    DeletePacient(user.ID);
+                }
+                if(user.ID == id && user.Rol == "Doctor")
+                {
+                    DeleteDoctor(user.ID);
+                }
+            }
+        }
         public void AdaugaPacient(int doctorID, Pacient pacient)
         {
             Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
