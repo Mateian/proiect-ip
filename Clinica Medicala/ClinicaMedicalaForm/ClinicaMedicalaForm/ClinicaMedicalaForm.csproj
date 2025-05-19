@@ -89,6 +89,9 @@
     <Compile Include="components\View\ClinicaMedicalaForm.Designer.cs">
       <DependentUpon>ClinicaMedicalaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="components\View\GestioneazaDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="components\View\Interfaces\IView.cs" />
     <Compile Include="components\View\ProgramareForm.cs">
       <SubType>Form</SubType>
@@ -100,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="components\View\ClinicaMedicalaForm.resx">
       <DependentUpon>ClinicaMedicalaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\View\GestioneazaDoctorForm.resx">
+      <DependentUpon>GestioneazaDoctorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\View\ProgramareForm.resx">
       <DependentUpon>ProgramareForm.cs</DependentUpon>

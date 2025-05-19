@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxAutentificare = new System.Windows.Forms.GroupBox();
+            this.buttonToCreateAcc = new System.Windows.Forms.Button();
             this.buttonAutentificare = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxParola = new System.Windows.Forms.TextBox();
@@ -58,13 +59,18 @@
             this.buttonAdaugaPacient = new System.Windows.Forms.Button();
             this.buttonAdaugareProgramare = new System.Windows.Forms.Button();
             this.listBoxDoctorPacienti = new System.Windows.Forms.ListBox();
+            this.tabPageAdmin = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.richTextBoxStatistica = new System.Windows.Forms.RichTextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.listBoxComenzi = new System.Windows.Forms.ListBox();
             this.groupBoxAdministrator = new System.Windows.Forms.GroupBox();
             this.groupBoxInstrumente = new System.Windows.Forms.GroupBox();
             this.buttonStatistica = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listBoxAdminPacienti = new System.Windows.Forms.ListBox();
             this.buttonGestioneazaPacienti = new System.Windows.Forms.Button();
-            this.buttonGestioneazaDoctori = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,26 +81,20 @@
             this.helpToolStripMenuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
             this.buttonDeconectare = new System.Windows.Forms.Button();
-            this.tabPageAdmin = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.listBoxComenzi = new System.Windows.Forms.ListBox();
-            this.richTextBoxStatistica = new System.Windows.Forms.RichTextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBoxCreateAcc = new System.Windows.Forms.GroupBox();
+            this.buttonCreateB2Login = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxCreateCheckPassword = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxCreateFirstName = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxCreateLastName = new System.Windows.Forms.TextBox();
             this.buttonCreateSubmit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxCreateUser = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBoxCreateLastName = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxCreateFirstName = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxCreateCheckPassword = new System.Windows.Forms.TextBox();
-            this.buttonCreateB2Login = new System.Windows.Forms.Button();
-            this.buttonToCreateAcc = new System.Windows.Forms.Button();
+            this.buttonGestioneazaDoctori = new System.Windows.Forms.Button();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -108,15 +108,15 @@
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPageAdmin.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBoxAdministrator.SuspendLayout();
             this.groupBoxInstrumente.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.tabPageAdmin.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox14.SuspendLayout();
             this.groupBoxCreateAcc.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,6 +136,17 @@
             this.groupBoxAutentificare.TabIndex = 0;
             this.groupBoxAutentificare.TabStop = false;
             this.groupBoxAutentificare.Text = "Autentificare";
+            // 
+            // buttonToCreateAcc
+            // 
+            this.buttonToCreateAcc.Location = new System.Drawing.Point(120, 162);
+            this.buttonToCreateAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonToCreateAcc.Name = "buttonToCreateAcc";
+            this.buttonToCreateAcc.Size = new System.Drawing.Size(162, 24);
+            this.buttonToCreateAcc.TabIndex = 3;
+            this.buttonToCreateAcc.Text = "Nu ai cont ? Creeaza";
+            this.buttonToCreateAcc.UseVisualStyleBackColor = true;
+            this.buttonToCreateAcc.Click += new System.EventHandler(this.buttonToCreateAcc_Click);
             // 
             // buttonAutentificare
             // 
@@ -461,6 +472,68 @@
             this.listBoxDoctorPacienti.TabIndex = 0;
             this.listBoxDoctorPacienti.DoubleClick += new System.EventHandler(this.listBoxDoctorPacienti_DoubleClick);
             // 
+            // tabPageAdmin
+            // 
+            this.tabPageAdmin.Controls.Add(this.groupBox6);
+            this.tabPageAdmin.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAdmin.Name = "tabPageAdmin";
+            this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAdmin.Size = new System.Drawing.Size(941, 609);
+            this.tabPageAdmin.TabIndex = 1;
+            this.tabPageAdmin.Text = "Admin";
+            this.tabPageAdmin.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.groupBox14);
+            this.groupBox6.Controls.Add(this.groupBox8);
+            this.groupBox6.Location = new System.Drawing.Point(3, 14);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(937, 594);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Admin";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.richTextBoxStatistica);
+            this.groupBox14.Location = new System.Drawing.Point(6, 298);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(913, 266);
+            this.groupBox14.TabIndex = 7;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Statistica";
+            // 
+            // richTextBoxStatistica
+            // 
+            this.richTextBoxStatistica.Location = new System.Drawing.Point(6, 18);
+            this.richTextBoxStatistica.Name = "richTextBoxStatistica";
+            this.richTextBoxStatistica.ReadOnly = true;
+            this.richTextBoxStatistica.Size = new System.Drawing.Size(904, 242);
+            this.richTextBoxStatistica.TabIndex = 5;
+            this.richTextBoxStatistica.Text = "";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.listBoxComenzi);
+            this.groupBox8.Location = new System.Drawing.Point(6, 23);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(913, 269);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Comenzile facute";
+            // 
+            // listBoxComenzi
+            // 
+            this.listBoxComenzi.FormattingEnabled = true;
+            this.listBoxComenzi.ItemHeight = 16;
+            this.listBoxComenzi.Location = new System.Drawing.Point(6, 20);
+            this.listBoxComenzi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxComenzi.Name = "listBoxComenzi";
+            this.listBoxComenzi.ScrollAlwaysVisible = true;
+            this.listBoxComenzi.Size = new System.Drawing.Size(904, 244);
+            this.listBoxComenzi.TabIndex = 4;
+            // 
             // groupBoxAdministrator
             // 
             this.groupBoxAdministrator.Controls.Add(this.groupBoxInstrumente);
@@ -532,16 +605,6 @@
             this.buttonGestioneazaPacienti.Text = "Gestioneaza pacienti";
             this.buttonGestioneazaPacienti.UseVisualStyleBackColor = true;
             // 
-            // buttonGestioneazaDoctori
-            // 
-            this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(5, 21);
-            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonGestioneazaDoctori.Name = "buttonGestioneazaDoctori";
-            this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(421, 26);
-            this.buttonGestioneazaDoctori.TabIndex = 0;
-            this.buttonGestioneazaDoctori.Text = "Gestioneaza doctori";
-            this.buttonGestioneazaDoctori.UseVisualStyleBackColor = true;
-            // 
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.label7);
@@ -593,7 +656,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1435, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1435, 28);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -602,7 +665,7 @@
             this.appToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.appToolStripMenuItem.Name = "appToolStripMenuItem";
-            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 26);
+            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.appToolStripMenuItem.Text = "App";
             // 
             // exitToolStripMenuItem
@@ -614,7 +677,7 @@
             // helpToolStripMenuItemHelp
             // 
             this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
-            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItemHelp.Text = "Help";
             // 
             // labelWelcomeText
@@ -641,68 +704,6 @@
             this.buttonDeconectare.Visible = false;
             this.buttonDeconectare.Click += new System.EventHandler(this.buttonDeconectare_Click);
             // 
-            // tabPageAdmin
-            // 
-            this.tabPageAdmin.Controls.Add(this.groupBox6);
-            this.tabPageAdmin.Location = new System.Drawing.Point(4, 25);
-            this.tabPageAdmin.Name = "tabPageAdmin";
-            this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAdmin.Size = new System.Drawing.Size(941, 609);
-            this.tabPageAdmin.TabIndex = 1;
-            this.tabPageAdmin.Text = "Admin";
-            this.tabPageAdmin.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.groupBox14);
-            this.groupBox6.Controls.Add(this.groupBox8);
-            this.groupBox6.Location = new System.Drawing.Point(3, 14);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(937, 594);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Admin";
-            // 
-            // listBoxComenzi
-            // 
-            this.listBoxComenzi.FormattingEnabled = true;
-            this.listBoxComenzi.ItemHeight = 16;
-            this.listBoxComenzi.Location = new System.Drawing.Point(6, 20);
-            this.listBoxComenzi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBoxComenzi.Name = "listBoxComenzi";
-            this.listBoxComenzi.ScrollAlwaysVisible = true;
-            this.listBoxComenzi.Size = new System.Drawing.Size(904, 244);
-            this.listBoxComenzi.TabIndex = 4;
-            // 
-            // richTextBoxStatistica
-            // 
-            this.richTextBoxStatistica.Location = new System.Drawing.Point(6, 18);
-            this.richTextBoxStatistica.Name = "richTextBoxStatistica";
-            this.richTextBoxStatistica.ReadOnly = true;
-            this.richTextBoxStatistica.Size = new System.Drawing.Size(904, 242);
-            this.richTextBoxStatistica.TabIndex = 5;
-            this.richTextBoxStatistica.Text = "";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.listBoxComenzi);
-            this.groupBox8.Location = new System.Drawing.Point(6, 23);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(913, 269);
-            this.groupBox8.TabIndex = 6;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Comenzile facute";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.richTextBoxStatistica);
-            this.groupBox14.Location = new System.Drawing.Point(6, 298);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(913, 266);
-            this.groupBox14.TabIndex = 7;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Statistica";
-            // 
             // groupBoxCreateAcc
             // 
             this.groupBoxCreateAcc.Controls.Add(this.buttonCreateB2Login);
@@ -726,6 +727,69 @@
             this.groupBoxCreateAcc.TabStop = false;
             this.groupBoxCreateAcc.Text = "Creare cont";
             this.groupBoxCreateAcc.Visible = false;
+            // 
+            // buttonCreateB2Login
+            // 
+            this.buttonCreateB2Login.Location = new System.Drawing.Point(131, 368);
+            this.buttonCreateB2Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateB2Login.Name = "buttonCreateB2Login";
+            this.buttonCreateB2Login.Size = new System.Drawing.Size(150, 30);
+            this.buttonCreateB2Login.TabIndex = 6;
+            this.buttonCreateB2Login.Text = "Ai cont? autentifica";
+            this.buttonCreateB2Login.UseVisualStyleBackColor = true;
+            this.buttonCreateB2Login.Click += new System.EventHandler(this.buttonCreateB2Login_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(72, 248);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 16);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Reintroduceti parola:";
+            // 
+            // textBoxCreateCheckPassword
+            // 
+            this.textBoxCreateCheckPassword.Location = new System.Drawing.Point(75, 266);
+            this.textBoxCreateCheckPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateCheckPassword.Name = "textBoxCreateCheckPassword";
+            this.textBoxCreateCheckPassword.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateCheckPassword.TabIndex = 4;
+            this.textBoxCreateCheckPassword.UseSystemPasswordChar = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(72, 136);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Prenume:";
+            // 
+            // textBoxCreateFirstName
+            // 
+            this.textBoxCreateFirstName.Location = new System.Drawing.Point(75, 154);
+            this.textBoxCreateFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateFirstName.Name = "textBoxCreateFirstName";
+            this.textBoxCreateFirstName.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateFirstName.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 79);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 16);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Nume:";
+            // 
+            // textBoxCreateLastName
+            // 
+            this.textBoxCreateLastName.Location = new System.Drawing.Point(75, 98);
+            this.textBoxCreateLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateLastName.Name = "textBoxCreateLastName";
+            this.textBoxCreateLastName.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateLastName.TabIndex = 1;
             // 
             // buttonCreateSubmit
             // 
@@ -773,79 +837,16 @@
             this.textBoxCreateUser.Size = new System.Drawing.Size(263, 22);
             this.textBoxCreateUser.TabIndex = 0;
             // 
-            // label9
+            // buttonGestioneazaDoctori
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(72, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 16);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Nume:";
-            // 
-            // textBoxCreateLastName
-            // 
-            this.textBoxCreateLastName.Location = new System.Drawing.Point(75, 98);
-            this.textBoxCreateLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCreateLastName.Name = "textBoxCreateLastName";
-            this.textBoxCreateLastName.Size = new System.Drawing.Size(263, 22);
-            this.textBoxCreateLastName.TabIndex = 1;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(72, 136);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 16);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Prenume:";
-            // 
-            // textBoxCreateFirstName
-            // 
-            this.textBoxCreateFirstName.Location = new System.Drawing.Point(75, 154);
-            this.textBoxCreateFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCreateFirstName.Name = "textBoxCreateFirstName";
-            this.textBoxCreateFirstName.Size = new System.Drawing.Size(263, 22);
-            this.textBoxCreateFirstName.TabIndex = 2;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(72, 248);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 16);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Reintroduceti parola:";
-            // 
-            // textBoxCreateCheckPassword
-            // 
-            this.textBoxCreateCheckPassword.Location = new System.Drawing.Point(75, 266);
-            this.textBoxCreateCheckPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxCreateCheckPassword.Name = "textBoxCreateCheckPassword";
-            this.textBoxCreateCheckPassword.Size = new System.Drawing.Size(263, 22);
-            this.textBoxCreateCheckPassword.TabIndex = 4;
-            this.textBoxCreateCheckPassword.UseSystemPasswordChar = true;
-            // 
-            // buttonCreateB2Login
-            // 
-            this.buttonCreateB2Login.Location = new System.Drawing.Point(131, 368);
-            this.buttonCreateB2Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonCreateB2Login.Name = "buttonCreateB2Login";
-            this.buttonCreateB2Login.Size = new System.Drawing.Size(150, 30);
-            this.buttonCreateB2Login.TabIndex = 6;
-            this.buttonCreateB2Login.Text = "Ai cont? autentifica";
-            this.buttonCreateB2Login.UseVisualStyleBackColor = true;
-            this.buttonCreateB2Login.Click += new System.EventHandler(this.buttonCreateB2Login_Click);
-            // 
-            // buttonToCreateAcc
-            // 
-            this.buttonToCreateAcc.Location = new System.Drawing.Point(120, 162);
-            this.buttonToCreateAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonToCreateAcc.Name = "buttonToCreateAcc";
-            this.buttonToCreateAcc.Size = new System.Drawing.Size(162, 24);
-            this.buttonToCreateAcc.TabIndex = 3;
-            this.buttonToCreateAcc.Text = "Nu ai cont ? Creeaza";
-            this.buttonToCreateAcc.UseVisualStyleBackColor = true;
-            this.buttonToCreateAcc.Click += new System.EventHandler(this.buttonToCreateAcc_Click);
+            this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(5, 21);
+            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonGestioneazaDoctori.Name = "buttonGestioneazaDoctori";
+            this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(421, 26);
+            this.buttonGestioneazaDoctori.TabIndex = 0;
+            this.buttonGestioneazaDoctori.Text = "Gestioneaza doctori";
+            this.buttonGestioneazaDoctori.UseVisualStyleBackColor = true;
+            this.buttonGestioneazaDoctori.Click += new System.EventHandler(this.buttonGestioneazaDoctori_Click);
             // 
             // ClinicaMedicalaForm
             // 
@@ -881,6 +882,10 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.tabPageAdmin.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
             this.groupBoxAdministrator.ResumeLayout(false);
             this.groupBoxInstrumente.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
@@ -888,10 +893,6 @@
             this.groupBox13.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPageAdmin.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
             this.groupBoxCreateAcc.ResumeLayout(false);
             this.groupBoxCreateAcc.PerformLayout();
             this.ResumeLayout(false);
@@ -918,7 +919,6 @@
         private System.Windows.Forms.GroupBox groupBoxAdministrator;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button buttonGestioneazaPacienti;
-        private System.Windows.Forms.Button buttonGestioneazaDoctori;
         private System.Windows.Forms.ListBox listBoxAdminPacienti;
         private System.Windows.Forms.GroupBox groupBoxInstrumente;
         private System.Windows.Forms.Button buttonStatistica;
@@ -968,6 +968,7 @@
         private System.Windows.Forms.TextBox textBoxCreateLastName;
         private System.Windows.Forms.Button buttonCreateB2Login;
         private System.Windows.Forms.Button buttonToCreateAcc;
+        private System.Windows.Forms.Button buttonGestioneazaDoctori;
     }
 }
 

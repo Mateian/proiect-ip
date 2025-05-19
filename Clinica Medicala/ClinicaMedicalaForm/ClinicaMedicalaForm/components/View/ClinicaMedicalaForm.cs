@@ -273,6 +273,33 @@ namespace ClinicaMedicalaForm
             }
         }
 
+        private void buttonGestioneazaDoctori_Click(object sender, EventArgs e)
+        {
+            GestioneazaDoctorForm form = new GestioneazaDoctorForm(_presenter.GetDoctori());
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                IUser doctorSters = form.SelectedDoctorId;
+                if (doctorSters != null)
+                {
+                    MessageBox.Show($"Doctorul cu ID-ul {doctorSters.ID} a fost sters.");
+                }
+
+
+                // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
+                listBoxAdminPacienti.Items.Clear();
+                List<IUser> doctori = _presenter.GetDoctori();
+                foreach (var dr in doctori)
+                {
+                    listBoxAdminPacienti.Items.Add(dr.ToString());
+                    List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
+                    foreach (var pacient in pacientiDoctor)
+                    {
+                        listBoxAdminPacienti.Items.Add("--"+pacient.ToString());
+                    }
+                }
+            }
+        }
+
         private void buttonToCreateAcc_Click(object sender, EventArgs e)
         {
             groupBoxAutentificare.Visible = false;
@@ -364,5 +391,6 @@ namespace ClinicaMedicalaForm
                 listBoxIstoricMedical.Items.Add(fisa.ToString());
             }
         }
+
     }
 }

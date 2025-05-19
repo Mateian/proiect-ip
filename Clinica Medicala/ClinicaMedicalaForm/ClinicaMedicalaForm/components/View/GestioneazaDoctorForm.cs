@@ -1,0 +1,118 @@
+﻿using ClinicaMedicalaForm.components.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ClinicaMedicalaForm.components.View
+{
+    class GestioneazaDoctorForm : Form
+    {
+        private ListBox listBoxGestionareDoctor;
+        private Button buttonStergeDoctor;
+        private Button buttonAdaugaDoctor;
+        private GroupBox groupBox1;
+
+        private List<IUser> _doctori;
+        public IUser SelectedDoctorId { get; private set; }
+        public GestioneazaDoctorForm(List<IUser> doctori)
+        {
+            _doctori = doctori;
+            InitializeComponent();
+            InitForm();
+        }
+        private void InitForm()
+        {
+            listBoxGestionareDoctor.Items.Clear();
+            foreach (var dr in _doctori)
+            {
+                listBoxGestionareDoctor.Items.Add(dr.ToString());
+            }
+        }
+        private void InitializeComponent()
+        {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxGestionareDoctor = new System.Windows.Forms.ListBox();
+            this.buttonAdaugaDoctor = new System.Windows.Forms.Button();
+            this.buttonStergeDoctor = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonStergeDoctor);
+            this.groupBox1.Controls.Add(this.buttonAdaugaDoctor);
+            this.groupBox1.Controls.Add(this.listBoxGestionareDoctor);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(470, 353);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Gestionarea Doctorilor";
+            // 
+            // listBoxGestionareDoctor
+            // 
+            this.listBoxGestionareDoctor.FormattingEnabled = true;
+            this.listBoxGestionareDoctor.ItemHeight = 16;
+            this.listBoxGestionareDoctor.Location = new System.Drawing.Point(6, 21);
+            this.listBoxGestionareDoctor.Name = "listBoxGestionareDoctor";
+            this.listBoxGestionareDoctor.Size = new System.Drawing.Size(458, 292);
+            this.listBoxGestionareDoctor.TabIndex = 0;
+            // 
+            // buttonAdaugaDoctor
+            // 
+            this.buttonAdaugaDoctor.Location = new System.Drawing.Point(6, 312);
+            this.buttonAdaugaDoctor.Name = "buttonAdaugaDoctor";
+            this.buttonAdaugaDoctor.Size = new System.Drawing.Size(225, 35);
+            this.buttonAdaugaDoctor.TabIndex = 1;
+            this.buttonAdaugaDoctor.Text = "Adauga Doctor";
+            this.buttonAdaugaDoctor.UseVisualStyleBackColor = true;
+            this.buttonAdaugaDoctor.Click += new System.EventHandler(this.buttonAdaugaDoctor_Click);
+            // 
+            // buttonStergeDoctor
+            // 
+            this.buttonStergeDoctor.Location = new System.Drawing.Point(237, 312);
+            this.buttonStergeDoctor.Name = "buttonStergeDoctor";
+            this.buttonStergeDoctor.Size = new System.Drawing.Size(225, 35);
+            this.buttonStergeDoctor.TabIndex = 2;
+            this.buttonStergeDoctor.Text = "Sterge Doctor";
+            this.buttonStergeDoctor.UseVisualStyleBackColor = true;
+            this.buttonStergeDoctor.Click += new System.EventHandler(this.buttonStergeDoctor_Click);
+            // 
+            // GestioneazaDoctorForm
+            // 
+            this.ClientSize = new System.Drawing.Size(494, 377);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "GestioneazaDoctorForm";
+            this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        private void buttonAdaugaDoctor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonStergeDoctor_Click(object sender, EventArgs e)
+        {
+            int index = listBoxGestionareDoctor.SelectedIndex;
+
+            if (index >= 0)
+            {
+                IUser selectedDoctor = _doctori[index];
+                SelectedDoctorId = selectedDoctor;
+
+                // Trimite catre formul principal
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Selectează un doctor pentru a-l șterge.");
+            }
+        }
+    }
+}
