@@ -569,6 +569,7 @@
             this.buttonStatistica.TabIndex = 3;
             this.buttonStatistica.Text = "Statistica";
             this.buttonStatistica.UseVisualStyleBackColor = true;
+            this.buttonStatistica.Click += new System.EventHandler(this.buttonStatistica_Click);
             // 
             // groupBox7
             // 

@@ -456,5 +456,52 @@ namespace ClinicaMedicalaForm
                 listBoxIstoricMedical.Items.Add(fisa.ToString());
             }
         }
+
+        private void buttonStatistica_Click(object sender, EventArgs e)
+        {
+            int admini = 0, asisteni = 0, doctori = 0, pacienti = 0; 
+            richTextBoxStatistica.Text = "";
+            List<IUser> users = _model.Utilizatori;
+            richTextBoxStatistica.AppendText("Administratorii:\n");
+            foreach(IUser user in users)
+            {
+                if(user.Rol == "Administrator") 
+                { 
+                    richTextBoxStatistica.AppendText(user.ToString() + "\n");
+                    admini++;
+                }
+            }
+            richTextBoxStatistica.AppendText("\nAsistentii:\n");
+            foreach (IUser user in users)
+            {
+                if (user.Rol == "Asistent")
+                {
+                    richTextBoxStatistica.AppendText(user.ToString() + "\n");
+                    asisteni++;
+                }
+            }
+            richTextBoxStatistica.AppendText("\nDoctorii:\n");
+            foreach (IUser user in users)
+            {
+                if (user.Rol == "Doctor")
+                {
+                    richTextBoxStatistica.AppendText(user.ToString() + "\n");
+                    doctori++;
+                }
+            }
+            richTextBoxStatistica.AppendText("\nPacientii:\n");
+            foreach (IUser user in users)
+            {
+                if (user.Rol == "Pacient")
+                {
+                    richTextBoxStatistica.AppendText(user.ToString() + "\n");
+                    pacienti++;
+                }
+            }
+            string final = $"\nInformatii finale:\nIn total sunt {admini+asisteni+doctori} angajati in spital.\n" +
+                           $"Acestia au grija de {pacienti} pacienti.\n" +
+                           $"Un doctor are in medie grija de {pacienti/doctori} pacienti.";
+            richTextBoxStatistica.AppendText(final);
+        }
     }
 }
