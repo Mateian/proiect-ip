@@ -47,6 +47,7 @@ namespace ClinicaMedicalaForm
             {
                 List<string> dateFisaMedicala = fisaMedicala.datePacient;
                 _presenter.AdaugareFisaMedicala(dateFisaMedicala);
+                listBoxComenzi.Items.Add($"Creare fisa medicala.");
             }
         }
 
@@ -204,6 +205,7 @@ namespace ClinicaMedicalaForm
                 listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
                 // trebuie inserata si in baza de date
                 _presenter.AdaugaProgramareViitoare(nouaProgramare);
+                listBoxComenzi.Items.Add($"Cerere programare pentru [{pacient.ToString()}].");
             }
         }
 
@@ -222,6 +224,7 @@ namespace ClinicaMedicalaForm
 
                     listBoxListaProgramari.Items.Remove(stringProgramare);
                     listBoxListaProgramari.Items.Add(newProgramare.ToString());
+                    listBoxComenzi.Items.Add($"Adaugare programare [{programare.ToString()}].");
                 }
                 else
                 {
@@ -269,6 +272,7 @@ namespace ClinicaMedicalaForm
                 {
                     _presenter.AdaugaPacient(_user.ID, pacient);
                     listBoxDoctorPacienti.Items.Add(pacient.ToString());
+                    listBoxComenzi.Items.Add($"Adaugare pacient [{pacient.ToString()}].");
                 }
             }
         }
@@ -281,6 +285,7 @@ namespace ClinicaMedicalaForm
                 IUser doctorSters = form.SelectedDoctorId;
                 if (doctorSters != null)
                 {
+                    listBoxComenzi.Items.Add($"Stergere doctor [{doctorSters.ToString()}].");
                     _presenter.StergeUser(doctorSters.ID);
                 }
                 Doctor doctorNou = form.DoctorNou;
@@ -297,6 +302,7 @@ namespace ClinicaMedicalaForm
                         return;
                     }
                     _presenter.AdaugaDoctor(doctorNou);
+                    listBoxComenzi.Items.Add($"Adaugare doctor [{doctorNou.ToString()}].");
                 }
 
                 // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
@@ -321,6 +327,7 @@ namespace ClinicaMedicalaForm
                 IUser pacientSters = form.Pacient;
                 if (pacientSters != null)
                 {
+                    listBoxComenzi.Items.Add($"Stergere pacient [{pacientSters.ToString()}].");
                     _presenter.StergeUser(pacientSters.ID);
                 }
                 Pacient pacientNou = form.PacientNou;
@@ -340,7 +347,8 @@ namespace ClinicaMedicalaForm
                     {
                         try
                         {
-                            _user = _presenter.InsertUserCommand(date);
+                            _ = _presenter.InsertUserCommand(date);
+                            listBoxComenzi.Items.Add($"Adaugare pacient [{pacientNou.Nume + " " + pacientNou.Prenume}].");
                         }
                         catch (Exception ex)
                         {
@@ -407,7 +415,8 @@ namespace ClinicaMedicalaForm
                 {
                     try
                     {
-                        _ = _presenter.InsertUserCommand(date);
+                        _user = _presenter.InsertUserCommand(date);
+                        listBoxComenzi.Items.Add($"Creare user nou [{textBoxCreateLastName.Text + " " + textBoxCreateFirstName.Text}].");
                     }
                     catch (Exception ex)
                     {
@@ -459,6 +468,7 @@ namespace ClinicaMedicalaForm
 
         private void buttonStatistica_Click(object sender, EventArgs e)
         {
+            listBoxComenzi.Items.Add($"Verificare statistica.");
             int admini = 0, asisteni = 0, doctori = 0, pacienti = 0; 
             richTextBoxStatistica.Text = "";
             List<IUser> users = _model.Utilizatori;
