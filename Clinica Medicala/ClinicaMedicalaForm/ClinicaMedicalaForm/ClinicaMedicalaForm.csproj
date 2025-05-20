@@ -99,6 +99,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="components\View\Interfaces\IView.cs" />
+    <Compile Include="components\View\PacientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="components\View\ProgramareForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="components\View\GestioneazaPacientiForm.resx">
       <DependentUpon>GestioneazaPacientiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\View\PacientForm.resx">
+      <DependentUpon>PacientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="components\View\ProgramareForm.resx">
       <DependentUpon>ProgramareForm.cs</DependentUpon>

@@ -281,6 +281,7 @@ namespace ClinicaMedicalaForm.components.Model
         {
             Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == id);
             _doctori.Remove(doctor);
+            _users.Remove(doctor);
             List<Programare> programariPacientDeSters = _programari.FindAll(p => p.DoctorID ==  doctor.ID);
             foreach (var aux in programariPacientDeSters)
             {

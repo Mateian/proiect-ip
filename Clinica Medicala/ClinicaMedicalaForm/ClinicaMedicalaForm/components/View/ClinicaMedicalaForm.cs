@@ -286,6 +286,16 @@ namespace ClinicaMedicalaForm
                 Doctor doctorNou = form.DoctorNou;
                 if (doctorNou != null)
                 {
+                    List<string> date = new List<string>();
+                    date.Add(doctorNou.Username);
+                    date.Add(doctorNou.Parola);
+                    date.Add(doctorNou.Nume);
+                    date.Add(doctorNou.Prenume);
+                    if (_presenter.CheckUserExists(date))
+                    {
+                        MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     _presenter.AdaugaDoctor(doctorNou);
                 }
 
@@ -306,25 +316,51 @@ namespace ClinicaMedicalaForm
         private void buttonGestioneazaPacienti_Click(object sender, EventArgs e)
         {
             GestioneazaPacientiForm form = new GestioneazaPacientiForm(_model.Utilizatori);
-            if(form.ShowDialog() == DialogResult.OK)
+            if (form.ShowDialog() == DialogResult.OK)
             {
                 IUser pacientSters = form.Pacient;
                 if (pacientSters != null)
                 {
                     _presenter.StergeUser(pacientSters.ID);
                 }
-            }
-
-            // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
-            listBoxAdminPacienti.Items.Clear();
-            List<IUser> doctori = _presenter.GetDoctori();
-            foreach (var dr in doctori)
-            {
-                listBoxAdminPacienti.Items.Add(dr.ToString());
-                List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
-                foreach (var pacient in pacientiDoctor)
+                Pacient pacientNou = form.PacientNou;
+                if (pacientNou != null)
                 {
-                    listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
+                    List<string> date = new List<string>();
+                    date.Add(pacientNou.Username);
+                    date.Add(pacientNou.Parola);
+                    date.Add(pacientNou.Nume);
+                    date.Add(pacientNou.Prenume);
+                    if (_presenter.CheckUserExists(date))
+                    {
+                        MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            _user = _presenter.InsertUserCommand(date);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
+
+                // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
+                listBoxAdminPacienti.Items.Clear();
+                List<IUser> doctori = _presenter.GetDoctori();
+                foreach (var dr in doctori)
+                {
+                    listBoxAdminPacienti.Items.Add(dr.ToString());
+                    List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
+                    foreach (var pacient in pacientiDoctor)
+                    {
+                        listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
+                    }
                 }
             }
         }
@@ -371,7 +407,7 @@ namespace ClinicaMedicalaForm
                 {
                     try
                     {
-                        _user = _presenter.InsertUserCommand(date);
+                        _ = _presenter.InsertUserCommand(date);
                     }
                     catch (Exception ex)
                     {

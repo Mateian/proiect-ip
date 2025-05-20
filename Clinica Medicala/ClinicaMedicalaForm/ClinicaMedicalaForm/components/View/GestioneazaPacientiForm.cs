@@ -19,7 +19,7 @@ namespace ClinicaMedicalaForm.components.View
         private List<IUser> _pacienti;
        
         public IUser Pacient { get; private set; }
-
+        public Pacient PacientNou { get; private set; }
         public GestioneazaPacientiForm(List<IUser> pacienti)
         {
             _users = pacienti;
@@ -101,7 +101,13 @@ namespace ClinicaMedicalaForm.components.View
 
         private void buttonAdauga_Click(object sender, EventArgs e)
         {
-
+            PacientForm form = new PacientForm();
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                PacientNou = form.PacientNou;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void buttonSterge_Click(object sender, EventArgs e)
