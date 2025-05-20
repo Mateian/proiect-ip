@@ -255,6 +255,7 @@ namespace ClinicaMedicalaForm.components.Model
         {
             Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
             _pacienti.Remove(pacient);
+            _users.Remove(pacient);
             List<Programare> programariPacientDeSters = _programari.FindAll(p => p.PacientID == pacient.ID);
             foreach (var aux in programariPacientDeSters)
             {
@@ -308,10 +309,12 @@ namespace ClinicaMedicalaForm.components.Model
                 if(user.ID == id && user.Rol == "Pacient")
                 {
                     DeletePacient(user.ID);
+                    return;
                 }
                 if(user.ID == id && user.Rol == "Doctor")
                 {
                     DeleteDoctor(user.ID);
+                    return;
                 }
             }
         }

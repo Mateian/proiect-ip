@@ -35,9 +35,9 @@ namespace ClinicaMedicalaForm.components.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBoxGestionareDoctor = new System.Windows.Forms.ListBox();
-            this.buttonAdaugaDoctor = new System.Windows.Forms.Button();
             this.buttonStergeDoctor = new System.Windows.Forms.Button();
+            this.buttonAdaugaDoctor = new System.Windows.Forms.Button();
+            this.listBoxGestionareDoctor = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,26 +51,7 @@ namespace ClinicaMedicalaForm.components.View
             this.groupBox1.Size = new System.Drawing.Size(470, 353);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Gestionarea Doctorilor";
-            // 
-            // listBoxGestionareDoctor
-            // 
-            this.listBoxGestionareDoctor.FormattingEnabled = true;
-            this.listBoxGestionareDoctor.ItemHeight = 16;
-            this.listBoxGestionareDoctor.Location = new System.Drawing.Point(6, 21);
-            this.listBoxGestionareDoctor.Name = "listBoxGestionareDoctor";
-            this.listBoxGestionareDoctor.Size = new System.Drawing.Size(458, 292);
-            this.listBoxGestionareDoctor.TabIndex = 0;
-            // 
-            // buttonAdaugaDoctor
-            // 
-            this.buttonAdaugaDoctor.Location = new System.Drawing.Point(6, 312);
-            this.buttonAdaugaDoctor.Name = "buttonAdaugaDoctor";
-            this.buttonAdaugaDoctor.Size = new System.Drawing.Size(225, 35);
-            this.buttonAdaugaDoctor.TabIndex = 1;
-            this.buttonAdaugaDoctor.Text = "Adauga Doctor";
-            this.buttonAdaugaDoctor.UseVisualStyleBackColor = true;
-            this.buttonAdaugaDoctor.Click += new System.EventHandler(this.buttonAdaugaDoctor_Click);
+            this.groupBox1.Text = "Gestionarea doctorilor";
             // 
             // buttonStergeDoctor
             // 
@@ -82,11 +63,31 @@ namespace ClinicaMedicalaForm.components.View
             this.buttonStergeDoctor.UseVisualStyleBackColor = true;
             this.buttonStergeDoctor.Click += new System.EventHandler(this.buttonStergeDoctor_Click);
             // 
+            // buttonAdaugaDoctor
+            // 
+            this.buttonAdaugaDoctor.Location = new System.Drawing.Point(6, 312);
+            this.buttonAdaugaDoctor.Name = "buttonAdaugaDoctor";
+            this.buttonAdaugaDoctor.Size = new System.Drawing.Size(225, 35);
+            this.buttonAdaugaDoctor.TabIndex = 1;
+            this.buttonAdaugaDoctor.Text = "Adauga Doctor";
+            this.buttonAdaugaDoctor.UseVisualStyleBackColor = true;
+            this.buttonAdaugaDoctor.Click += new System.EventHandler(this.buttonAdaugaDoctor_Click);
+            // 
+            // listBoxGestionareDoctor
+            // 
+            this.listBoxGestionareDoctor.FormattingEnabled = true;
+            this.listBoxGestionareDoctor.ItemHeight = 16;
+            this.listBoxGestionareDoctor.Location = new System.Drawing.Point(6, 21);
+            this.listBoxGestionareDoctor.Name = "listBoxGestionareDoctor";
+            this.listBoxGestionareDoctor.Size = new System.Drawing.Size(458, 292);
+            this.listBoxGestionareDoctor.TabIndex = 0;
+            // 
             // GestioneazaDoctorForm
             // 
             this.ClientSize = new System.Drawing.Size(494, 377);
             this.Controls.Add(this.groupBox1);
             this.Name = "GestioneazaDoctorForm";
+            this.Text = "Gestionare";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

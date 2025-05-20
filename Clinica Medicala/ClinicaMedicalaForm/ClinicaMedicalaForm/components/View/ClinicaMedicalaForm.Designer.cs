@@ -71,6 +71,7 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listBoxAdminPacienti = new System.Windows.Forms.ListBox();
             this.buttonGestioneazaPacienti = new System.Windows.Forms.Button();
+            this.buttonGestioneazaDoctori = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -94,7 +95,6 @@
             this.textBoxCreatePassword = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxCreateUser = new System.Windows.Forms.TextBox();
-            this.buttonGestioneazaDoctori = new System.Windows.Forms.Button();
             this.groupBoxAutentificare.SuspendLayout();
             this.tabControlUser.SuspendLayout();
             this.tabPagePacient.SuspendLayout();
@@ -604,6 +604,18 @@
             this.buttonGestioneazaPacienti.TabIndex = 1;
             this.buttonGestioneazaPacienti.Text = "Gestioneaza pacienti";
             this.buttonGestioneazaPacienti.UseVisualStyleBackColor = true;
+            this.buttonGestioneazaPacienti.Click += new System.EventHandler(this.buttonGestioneazaPacienti_Click);
+            // 
+            // buttonGestioneazaDoctori
+            // 
+            this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(5, 21);
+            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonGestioneazaDoctori.Name = "buttonGestioneazaDoctori";
+            this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(421, 26);
+            this.buttonGestioneazaDoctori.TabIndex = 0;
+            this.buttonGestioneazaDoctori.Text = "Gestioneaza doctori";
+            this.buttonGestioneazaDoctori.UseVisualStyleBackColor = true;
+            this.buttonGestioneazaDoctori.Click += new System.EventHandler(this.buttonGestioneazaDoctori_Click);
             // 
             // groupBox13
             // 
@@ -836,17 +848,6 @@
             this.textBoxCreateUser.Name = "textBoxCreateUser";
             this.textBoxCreateUser.Size = new System.Drawing.Size(263, 22);
             this.textBoxCreateUser.TabIndex = 0;
-            // 
-            // buttonGestioneazaDoctori
-            // 
-            this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(5, 21);
-            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonGestioneazaDoctori.Name = "buttonGestioneazaDoctori";
-            this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(421, 26);
-            this.buttonGestioneazaDoctori.TabIndex = 0;
-            this.buttonGestioneazaDoctori.Text = "Gestioneaza doctori";
-            this.buttonGestioneazaDoctori.UseVisualStyleBackColor = true;
-            this.buttonGestioneazaDoctori.Click += new System.EventHandler(this.buttonGestioneazaDoctori_Click);
             // 
             // ClinicaMedicalaForm
             // 
