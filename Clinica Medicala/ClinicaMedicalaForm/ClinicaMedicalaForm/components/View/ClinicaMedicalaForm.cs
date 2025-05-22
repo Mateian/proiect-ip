@@ -245,8 +245,8 @@ namespace ClinicaMedicalaForm
                     _presenter.ValidareProgramare(programare);
                     _model.Programari.Remove(programare);
                     _model.Programari.Add(newProgramare);
-
-                    listBoxListaProgramari.Items.Remove(stringProgramare);
+                    
+                        listBoxListaProgramari.Items.Remove(stringProgramare);
                     listBoxListaProgramari.Items.Add(newProgramare.ToString());
                     listBoxComenzi.Items.Add($"Adaugare programare [{programare.ToString()}].");
                 }

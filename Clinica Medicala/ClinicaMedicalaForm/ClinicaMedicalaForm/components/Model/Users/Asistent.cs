@@ -30,7 +30,7 @@ namespace ClinicaMedicalaForm.components.Model
         }
         override public string ToString()
         {
-            return $"{ID} {_nume} {_prenume} ({_username}) {Rol} {_email} {Specializare}";
+            return $"{_id} {_nume} {_prenume} ({_username}) {Rol} {_email} {Specializare}";
         }
         public void SetProgramare(Programare programare)
         {

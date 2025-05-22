@@ -272,7 +272,7 @@
             this.buttonProgramare.Location = new System.Drawing.Point(172, 193);
             this.buttonProgramare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonProgramare.Name = "buttonProgramare";
-            this.buttonProgramare.Size = new System.Drawing.Size(153, 23);
+            this.buttonProgramare.Size = new System.Drawing.Size(153, 26);
             this.buttonProgramare.TabIndex = 0;
             this.buttonProgramare.Text = "Programare";
             this.buttonProgramare.UseVisualStyleBackColor = true;
@@ -434,7 +434,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(376, 262);
+            this.groupBox3.Size = new System.Drawing.Size(376, 264);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pacientii mei";
@@ -443,9 +443,9 @@
             // 
             this.buttonAdaugaPacient.Location = new System.Drawing.Point(6, 233);
             this.buttonAdaugaPacient.Name = "buttonAdaugaPacient";
-            this.buttonAdaugaPacient.Size = new System.Drawing.Size(359, 23);
+            this.buttonAdaugaPacient.Size = new System.Drawing.Size(359, 26);
             this.buttonAdaugaPacient.TabIndex = 2;
-            this.buttonAdaugaPacient.Text = "+";
+            this.buttonAdaugaPacient.Text = "Adauga pacient";
             this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
             this.buttonAdaugaPacient.Click += new System.EventHandler(this.buttonAdaugaPacient_Click);
             // 
