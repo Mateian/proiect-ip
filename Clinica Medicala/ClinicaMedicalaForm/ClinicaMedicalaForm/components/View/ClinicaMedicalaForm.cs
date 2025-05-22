@@ -36,6 +36,7 @@ using System.Data.SQLite;
 using static FisaMedicalaForm.FisaMedicalaForm;
 using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.View;
+using ClinicaMedicalaForm.components.Model.Exceptions;
 
 namespace ClinicaMedicalaForm
 {
@@ -240,7 +241,7 @@ namespace ClinicaMedicalaForm
             {
                 if(pacient.Doctor == null)
                 {
-                    throw new NoDoctorExeption("Nu aveti doctor!");
+                    throw new MasterExceptionHandler();
                 }
                 ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
                 if (programareForm.ShowDialog() == DialogResult.OK)
@@ -253,7 +254,7 @@ namespace ClinicaMedicalaForm
                     listBoxComenzi.Items.Add($"Cerere programare pentru [{pacient.ToString()}].");
                 }
             }
-            catch (NoDoctorExeption ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Nu sunteți înscris la niciun doctor.\nVă rog să vă prezentați la cabinet pentru a discuta și a vă înscrie la un doctor!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
