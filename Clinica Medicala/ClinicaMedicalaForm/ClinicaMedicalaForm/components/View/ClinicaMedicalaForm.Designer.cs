@@ -257,6 +257,7 @@
             this.listBoxProgramariViitoare.Name = "listBoxProgramariViitoare";
             this.listBoxProgramariViitoare.Size = new System.Drawing.Size(316, 164);
             this.listBoxProgramariViitoare.TabIndex = 4;
+            this.listBoxProgramariViitoare.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramariViitoare_SelectedIndexChanged);
             // 
             // label3
             // 

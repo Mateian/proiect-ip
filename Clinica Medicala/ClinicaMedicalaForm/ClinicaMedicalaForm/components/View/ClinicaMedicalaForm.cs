@@ -95,6 +95,11 @@ namespace ClinicaMedicalaForm
                     foreach (Programare programare in cereriProgramare)
                     {
                         listBoxProgramariViitoare.Items.Add(programare.ToString());
+                        IUser user = _presenter.GetUser(_user.ID);
+                        if (user != null)
+                        {
+                            user.SetProgramare(programare);
+                        }
                     }
 
                     List<FisaMedicala> fisaMedicalaIstoric = _model.PreluareIstoricMedical(_user.ID);
@@ -223,7 +228,7 @@ namespace ClinicaMedicalaForm
                     listBoxProgramariViitoare.Items.Add(nouaProgramare.ToString());
                     listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
                     // trebuie inserata si in baza de date
-                    _presenter.AdaugaProgramareViitoare(nouaProgramare);
+                    _presenter.AdaugaProgramareViitoare(_user.ID, nouaProgramare);
                     listBoxComenzi.Items.Add($"Cerere programare pentru [{pacient.ToString()}].");
                 }
             }
@@ -526,6 +531,14 @@ namespace ClinicaMedicalaForm
                            $"Acestia au grija de {pacienti} pacienti.\n" +
                            $"Un doctor are in medie grija de {pacienti/doctori} pacienti.";
             richTextBoxStatistica.AppendText(final);
+        }
+
+        private void listBoxProgramariViitoare_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxProgramariViitoare.SelectedItem != null)
+            {
+                textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedIndex, _user.ID);
+            }
         }
     }
 }
