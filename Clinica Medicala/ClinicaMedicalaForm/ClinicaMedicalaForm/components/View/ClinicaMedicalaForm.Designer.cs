@@ -257,6 +257,7 @@
             this.listBoxProgramariViitoare.Name = "listBoxProgramariViitoare";
             this.listBoxProgramariViitoare.Size = new System.Drawing.Size(316, 164);
             this.listBoxProgramariViitoare.TabIndex = 4;
+            this.listBoxProgramariViitoare.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramariViitoare_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -683,8 +684,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItemHelp
             // 

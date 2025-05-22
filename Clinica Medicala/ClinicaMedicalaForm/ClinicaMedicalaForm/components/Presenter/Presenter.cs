@@ -94,16 +94,16 @@ namespace ClinicaMedicalaForm.components.Presenter
             List<Programare> cereri = new List<Programare>();
             foreach (Programare programare in _model.Programari)
             {
-                if (programare.PacientID == pacientID && programare.Valabilitate == "In curs de validare")
+                if (programare.PacientID == pacientID && (programare.Valabilitate == "In curs de validare" || programare.Valabilitate == "Valabila"))
                 {
                     cereri.Add(programare);
                 }
             }
             return cereri;
         }
-        public void AdaugaProgramareViitoare(Programare programare)
+        public void AdaugaProgramareViitoare(int ID, Programare programare)
         {
-            _model.AdaugaProgramareViitoare(programare);
+            _model.AdaugaProgramareViitoare(ID, programare);
         }
         public Pacient DeletePacient(string pacientString)
         {
@@ -151,6 +151,10 @@ namespace ClinicaMedicalaForm.components.Presenter
         public string PreviewIstoricProgramari(int nrProgramare,int userID)
         {
             return _model.PreviewIstoricProgramari(nrProgramare, userID);
+        }
+        public string PreviewCereriProgramari(int nrProgramare, int userID)
+        {
+            return _model.PreviewCereriProgramari(nrProgramare, userID);
         }
         public IUser GetUser(int userID)
         {
