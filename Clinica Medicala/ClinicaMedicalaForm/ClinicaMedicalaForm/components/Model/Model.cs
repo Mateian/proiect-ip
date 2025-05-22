@@ -1,4 +1,21 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Model.cs                                                 *
+ *  Copyright:   (c) 2025, ourClinic                                      *
+ *  E-mail:      ourClinic@medic.ro                                       *
+ *  Description: MVP (Model-View-Presenter), Model - reprezinta datele    *
+ *               aplicatiei si logica business asociata cu aceste date.   *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
@@ -210,9 +227,6 @@ namespace ClinicaMedicalaForm.components.Model
             pacient.SetProgramare(programare);
             _users.Add(pacient);
             Programari.Add(programare);
-            string tableName = "Programari";
-            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
-               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
 
                 var parameters = new Dictionary<string, object>
                 {
