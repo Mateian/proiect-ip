@@ -1,10 +1,9 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        UserFactory.cs                                           *
+ *  File:        MasterExceptionHandler.cs                                *
  *  Copyright:   (c) 2025, ourClinic                                      *
  *  E-mail:      ourClinic@medic.ro                                       *
- *  Description: Ajuta la creare unui nou utilizator in functie de        *
- *               datele primite.                                          *
+ *  Description: Gestioneaza toate exceptiile din program.                *
  *                                                                        *
  *  This program is free software; you can redistribute it and/or modify  *
  *  it under the terms of the GNU General Public License as published by  *
@@ -20,33 +19,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClinicaMedicalaForm.components.Model.Users;
 
-namespace ClinicaMedicalaForm.components.Model.Factory
+namespace ClinicaMedicalaForm.components.Model.Exceptions
 {
-    public class UserFactory
+    public class MasterExceptionHandler : Exception
     {
-        public IUser CreateUser(string[] infoArray)
+        public MasterExceptionHandler() { }
+        public MasterExceptionHandler(string message, int err_code, Exception inner) 
         {
-            int.TryParse(infoArray[0], out int ID);
-            string rol = infoArray[1];
-            string username = infoArray[2];
-            string parola = infoArray[3];
-            string nume = infoArray[4];
-            string prenume = infoArray[5];
 
-            switch(rol)
+            switch (err_code)
             {
-                case "Administrator":
-                    return new Administrator(ID, username, parola, nume, prenume);
-                case "Pacient":
-                    return new Pacient(ID, username, parola, nume, prenume);
-                case "Doctor":
-                    return new Doctor(ID, username, parola, nume, prenume);
-                case "Asistent":
-                    return new Asistent(ID, username, parola, nume, prenume);
+                case 100:
+                case 101:
+                case 102:
+                    SQLExceptionHandle(message, inner);
+                    break;
+                case 200:
+                case 201:
+                    ObjectNullHandle(message, inner);
+                    break;
+                case 300:
+                    UserIDHandle(message, inner);
+                    break;
             }
-            return null;
+        }
+        private void UserIDHandle(string message, Exception inner)
+        {
+
+        }
+        private void ObjectNullHandle(string message, Exception inner)
+        {
+
+        }
+        private void SQLExceptionHandle(string message, Exception inner)
+        {
+
         }
     }
 }
