@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.View.Interfaces;
 
 namespace ClinicaMedicalaForm
@@ -24,7 +25,7 @@ namespace ClinicaMedicalaForm
         {
             if(doctorNume == null || doctorPrenume == null)
             {
-                throw new NoDoctorExeption("Doctorul nu este disponibil!");
+                throw new MasterExceptionHandler("Doctorul nu este disponibil!",402,null);
             }
             _doctorNume = doctorNume;
             _doctorPrenume = doctorPrenume;

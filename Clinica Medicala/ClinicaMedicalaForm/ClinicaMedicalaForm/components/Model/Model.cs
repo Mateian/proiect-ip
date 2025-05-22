@@ -205,15 +205,11 @@ namespace ClinicaMedicalaForm.components.Model
                 string tableName = "Programari";
                 string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
                    "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-            Pacient pacient = _users.FirstOrDefault(p => p.ID == id) as Pacient;
-            _users.Remove(pacient);
-            pacient.SetProgramare(programare);
-            _users.Add(pacient);
-            Programari.Add(programare);
-            string tableName = "Programari";
-            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
-               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-
+                Pacient pacient = _users.FirstOrDefault(p => p.ID == id) as Pacient;
+                _users.Remove(pacient);
+                pacient.SetProgramare(programare);
+                _users.Add(pacient);
+                Programari.Add(programare);
                 var parameters = new Dictionary<string, object>
                 {
                     { "@PacientID", programare.PacientID },
@@ -419,19 +415,21 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public void AdaugaPacient(int doctorID, Pacient pacient)
         {
+            Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
+            if (pacient.Doctor != null)
+                throw new MasterExceptionHandler("Eroare, pacientul are deja un doctor asignat", 400, null);
+            pacient.Doctor = doctor;
+            Pacienti.Add(pacient);
+
+            string tableName = "Pacienti";
+            string query = $"INSERT INTO {tableName}(DoctorID, PacientID) VALUES(@DoctorID, @PacientID);";
+            var parameters = new Dictionary<string, object>
+            {
+                { "@DoctorID", doctorID },
+                { "@PacientID", pacient.ID }
+            };
             try
             {
-                Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
-                pacient.Doctor = doctor;
-                Pacienti.Add(pacient);
-
-                string tableName = "Pacienti";
-                string query = $"INSERT INTO {tableName}(DoctorID, PacientID) VALUES(@DoctorID, @PacientID);";
-                var parameters = new Dictionary<string, object>
-                {
-                    { "@DoctorID", doctorID },
-                    { "@PacientID", pacient.ID }
-                };
                 _databaseManager.ExecuteNonQuery(query, parameters);
             }
             catch (Exception ex)

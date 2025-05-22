@@ -128,21 +128,21 @@
             this.groupBoxAutentificare.Controls.Add(this.textBoxParola);
             this.groupBoxAutentificare.Controls.Add(this.label1);
             this.groupBoxAutentificare.Controls.Add(this.textBoxNumeUtilizator);
-            this.groupBoxAutentificare.Location = new System.Drawing.Point(12, 41);
-            this.groupBoxAutentificare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxAutentificare.Location = new System.Drawing.Point(9, 33);
+            this.groupBoxAutentificare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxAutentificare.Name = "groupBoxAutentificare";
-            this.groupBoxAutentificare.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxAutentificare.Size = new System.Drawing.Size(445, 202);
+            this.groupBoxAutentificare.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAutentificare.Size = new System.Drawing.Size(334, 164);
             this.groupBoxAutentificare.TabIndex = 0;
             this.groupBoxAutentificare.TabStop = false;
             this.groupBoxAutentificare.Text = "Autentificare";
             // 
             // buttonToCreateAcc
             // 
-            this.buttonToCreateAcc.Location = new System.Drawing.Point(120, 162);
-            this.buttonToCreateAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonToCreateAcc.Location = new System.Drawing.Point(90, 132);
+            this.buttonToCreateAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonToCreateAcc.Name = "buttonToCreateAcc";
-            this.buttonToCreateAcc.Size = new System.Drawing.Size(162, 24);
+            this.buttonToCreateAcc.Size = new System.Drawing.Size(122, 20);
             this.buttonToCreateAcc.TabIndex = 3;
             this.buttonToCreateAcc.Text = "Nu ai cont ? Creeaza";
             this.buttonToCreateAcc.UseVisualStyleBackColor = true;
@@ -150,10 +150,10 @@
             // 
             // buttonAutentificare
             // 
-            this.buttonAutentificare.Location = new System.Drawing.Point(75, 114);
-            this.buttonAutentificare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAutentificare.Location = new System.Drawing.Point(56, 93);
+            this.buttonAutentificare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAutentificare.Name = "buttonAutentificare";
-            this.buttonAutentificare.Size = new System.Drawing.Size(263, 36);
+            this.buttonAutentificare.Size = new System.Drawing.Size(197, 29);
             this.buttonAutentificare.TabIndex = 2;
             this.buttonAutentificare.Text = "Autentificare";
             this.buttonAutentificare.UseVisualStyleBackColor = true;
@@ -162,35 +162,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 66);
+            this.label2.Location = new System.Drawing.Point(54, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Parola:";
             // 
             // textBoxParola
             // 
-            this.textBoxParola.Location = new System.Drawing.Point(75, 86);
-            this.textBoxParola.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxParola.Location = new System.Drawing.Point(56, 70);
+            this.textBoxParola.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxParola.Name = "textBoxParola";
-            this.textBoxParola.Size = new System.Drawing.Size(263, 22);
+            this.textBoxParola.Size = new System.Drawing.Size(198, 20);
             this.textBoxParola.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 23);
+            this.label1.Location = new System.Drawing.Point(54, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 16);
+            this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nume utilizator:";
             // 
             // textBoxNumeUtilizator
             // 
-            this.textBoxNumeUtilizator.Location = new System.Drawing.Point(75, 42);
-            this.textBoxNumeUtilizator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNumeUtilizator.Location = new System.Drawing.Point(56, 34);
+            this.textBoxNumeUtilizator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNumeUtilizator.Name = "textBoxNumeUtilizator";
-            this.textBoxNumeUtilizator.Size = new System.Drawing.Size(263, 22);
+            this.textBoxNumeUtilizator.Size = new System.Drawing.Size(198, 20);
             this.textBoxNumeUtilizator.TabIndex = 0;
             // 
             // tabControlUser
@@ -199,11 +201,11 @@
             this.tabControlUser.Controls.Add(this.tabPageDoctor);
             this.tabControlUser.Controls.Add(this.tabPageAdmin);
             this.tabControlUser.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.tabControlUser.Location = new System.Drawing.Point(467, 68);
-            this.tabControlUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControlUser.Location = new System.Drawing.Point(350, 55);
+            this.tabControlUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControlUser.Name = "tabControlUser";
             this.tabControlUser.SelectedIndex = 0;
-            this.tabControlUser.Size = new System.Drawing.Size(949, 638);
+            this.tabControlUser.Size = new System.Drawing.Size(712, 518);
             this.tabControlUser.TabIndex = 0;
             this.tabControlUser.Visible = false;
             this.tabControlUser.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlUser_Selecting);
@@ -212,10 +214,10 @@
             // 
             this.tabPagePacient.Controls.Add(this.groupBox9);
             this.tabPagePacient.Controls.Add(this.groupBox1);
-            this.tabPagePacient.Location = new System.Drawing.Point(4, 25);
-            this.tabPagePacient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPagePacient.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePacient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPagePacient.Name = "tabPagePacient";
-            this.tabPagePacient.Size = new System.Drawing.Size(941, 609);
+            this.tabPagePacient.Size = new System.Drawing.Size(704, 492);
             this.tabPagePacient.TabIndex = 0;
             this.tabPagePacient.Text = "Pacient";
             this.tabPagePacient.UseVisualStyleBackColor = true;
@@ -225,11 +227,11 @@
             this.groupBox9.Controls.Add(this.groupBox12);
             this.groupBox9.Controls.Add(this.groupBox11);
             this.groupBox9.Controls.Add(this.groupBox10);
-            this.groupBox9.Location = new System.Drawing.Point(3, 16);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox9.Location = new System.Drawing.Point(2, 13);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox9.Size = new System.Drawing.Size(924, 256);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox9.Size = new System.Drawing.Size(693, 208);
             this.groupBox9.TabIndex = 3;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Pacient";
@@ -239,11 +241,11 @@
             this.groupBox12.Controls.Add(this.listBoxProgramariViitoare);
             this.groupBox12.Controls.Add(this.label3);
             this.groupBox12.Controls.Add(this.buttonProgramare);
-            this.groupBox12.Location = new System.Drawing.Point(587, 21);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox12.Location = new System.Drawing.Point(440, 17);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox12.Size = new System.Drawing.Size(331, 226);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox12.Size = new System.Drawing.Size(248, 184);
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Programari Viitoare";
@@ -251,29 +253,29 @@
             // listBoxProgramariViitoare
             // 
             this.listBoxProgramariViitoare.FormattingEnabled = true;
-            this.listBoxProgramariViitoare.ItemHeight = 16;
-            this.listBoxProgramariViitoare.Location = new System.Drawing.Point(5, 21);
-            this.listBoxProgramariViitoare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxProgramariViitoare.Location = new System.Drawing.Point(4, 17);
+            this.listBoxProgramariViitoare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxProgramariViitoare.Name = "listBoxProgramariViitoare";
-            this.listBoxProgramariViitoare.Size = new System.Drawing.Size(316, 164);
+            this.listBoxProgramariViitoare.Size = new System.Drawing.Size(238, 134);
             this.listBoxProgramariViitoare.TabIndex = 4;
             this.listBoxProgramariViitoare.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramariViitoare_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 196);
+            this.label3.Location = new System.Drawing.Point(4, 159);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 16);
+            this.label3.Size = new System.Drawing.Size(112, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Realizati o programare";
             // 
             // buttonProgramare
             // 
-            this.buttonProgramare.Location = new System.Drawing.Point(172, 193);
-            this.buttonProgramare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonProgramare.Location = new System.Drawing.Point(129, 157);
+            this.buttonProgramare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonProgramare.Name = "buttonProgramare";
-            this.buttonProgramare.Size = new System.Drawing.Size(153, 23);
+            this.buttonProgramare.Size = new System.Drawing.Size(115, 19);
             this.buttonProgramare.TabIndex = 0;
             this.buttonProgramare.Text = "Programare";
             this.buttonProgramare.UseVisualStyleBackColor = true;
@@ -282,11 +284,11 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.listBoxIstoricMedical);
-            this.groupBox11.Location = new System.Drawing.Point(291, 21);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox11.Location = new System.Drawing.Point(218, 17);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox11.Size = new System.Drawing.Size(287, 226);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Size = new System.Drawing.Size(215, 184);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Istoric medical";
@@ -294,22 +296,21 @@
             // listBoxIstoricMedical
             // 
             this.listBoxIstoricMedical.FormattingEnabled = true;
-            this.listBoxIstoricMedical.ItemHeight = 16;
-            this.listBoxIstoricMedical.Location = new System.Drawing.Point(5, 22);
-            this.listBoxIstoricMedical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxIstoricMedical.Location = new System.Drawing.Point(4, 18);
+            this.listBoxIstoricMedical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxIstoricMedical.Name = "listBoxIstoricMedical";
-            this.listBoxIstoricMedical.Size = new System.Drawing.Size(264, 196);
+            this.listBoxIstoricMedical.Size = new System.Drawing.Size(199, 160);
             this.listBoxIstoricMedical.TabIndex = 0;
             this.listBoxIstoricMedical.Click += new System.EventHandler(this.listBoxIstoricMedical_Click);
             // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.listBoxPacientIstoricProgramari);
-            this.groupBox10.Location = new System.Drawing.Point(5, 21);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox10.Location = new System.Drawing.Point(4, 17);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox10.Size = new System.Drawing.Size(279, 226);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Size = new System.Drawing.Size(209, 184);
             this.groupBox10.TabIndex = 0;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Istoric Programari";
@@ -317,41 +318,43 @@
             // listBoxPacientIstoricProgramari
             // 
             this.listBoxPacientIstoricProgramari.FormattingEnabled = true;
-            this.listBoxPacientIstoricProgramari.ItemHeight = 16;
-            this.listBoxPacientIstoricProgramari.Location = new System.Drawing.Point(5, 21);
-            this.listBoxPacientIstoricProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxPacientIstoricProgramari.Location = new System.Drawing.Point(4, 17);
+            this.listBoxPacientIstoricProgramari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxPacientIstoricProgramari.Name = "listBoxPacientIstoricProgramari";
-            this.listBoxPacientIstoricProgramari.Size = new System.Drawing.Size(263, 196);
+            this.listBoxPacientIstoricProgramari.Size = new System.Drawing.Size(198, 160);
             this.listBoxPacientIstoricProgramari.TabIndex = 4;
             this.listBoxPacientIstoricProgramari.Click += new System.EventHandler(this.listBoxPacientIstoricProgramari_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBoxPreviewFiles);
-            this.groupBox1.Location = new System.Drawing.Point(9, 292);
+            this.groupBox1.Location = new System.Drawing.Point(7, 237);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(918, 300);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(688, 244);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vizualizare";
             // 
             // textBoxPreviewFiles
             // 
-            this.textBoxPreviewFiles.Location = new System.Drawing.Point(4, 21);
+            this.textBoxPreviewFiles.Location = new System.Drawing.Point(3, 17);
+            this.textBoxPreviewFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPreviewFiles.Multiline = true;
             this.textBoxPreviewFiles.Name = "textBoxPreviewFiles";
             this.textBoxPreviewFiles.ReadOnly = true;
             this.textBoxPreviewFiles.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxPreviewFiles.Size = new System.Drawing.Size(898, 274);
+            this.textBoxPreviewFiles.Size = new System.Drawing.Size(674, 223);
             this.textBoxPreviewFiles.TabIndex = 4;
             // 
             // tabPageDoctor
             // 
             this.tabPageDoctor.Controls.Add(this.groupBox2);
-            this.tabPageDoctor.Location = new System.Drawing.Point(4, 25);
-            this.tabPageDoctor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageDoctor.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageDoctor.Name = "tabPageDoctor";
-            this.tabPageDoctor.Size = new System.Drawing.Size(941, 609);
+            this.tabPageDoctor.Size = new System.Drawing.Size(704, 492);
             this.tabPageDoctor.TabIndex = 0;
             this.tabPageDoctor.Text = "Doctor";
             this.tabPageDoctor.UseVisualStyleBackColor = true;
@@ -361,11 +364,11 @@
             this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Location = new System.Drawing.Point(0, 16);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(0, 13);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(939, 572);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(704, 465);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Doctor";
@@ -374,21 +377,21 @@
             // 
             this.groupBox5.Controls.Add(this.buttonCreareFisaMedicala);
             this.groupBox5.Controls.Add(this.richTextBoxPreviewFisa);
-            this.groupBox5.Location = new System.Drawing.Point(5, 300);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Location = new System.Drawing.Point(4, 244);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(927, 260);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Size = new System.Drawing.Size(695, 211);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fisa medicala";
             // 
             // buttonCreareFisaMedicala
             // 
-            this.buttonCreareFisaMedicala.Location = new System.Drawing.Point(5, 25);
-            this.buttonCreareFisaMedicala.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreareFisaMedicala.Location = new System.Drawing.Point(4, 20);
+            this.buttonCreareFisaMedicala.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCreareFisaMedicala.Name = "buttonCreareFisaMedicala";
-            this.buttonCreareFisaMedicala.Size = new System.Drawing.Size(915, 32);
+            this.buttonCreareFisaMedicala.Size = new System.Drawing.Size(686, 26);
             this.buttonCreareFisaMedicala.TabIndex = 3;
             this.buttonCreareFisaMedicala.Text = "Creeaza o fisa medicala";
             this.buttonCreareFisaMedicala.UseVisualStyleBackColor = true;
@@ -397,21 +400,21 @@
             // richTextBoxPreviewFisa
             // 
             this.richTextBoxPreviewFisa.Enabled = false;
-            this.richTextBoxPreviewFisa.Location = new System.Drawing.Point(5, 63);
-            this.richTextBoxPreviewFisa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxPreviewFisa.Location = new System.Drawing.Point(4, 51);
+            this.richTextBoxPreviewFisa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBoxPreviewFisa.Name = "richTextBoxPreviewFisa";
-            this.richTextBoxPreviewFisa.Size = new System.Drawing.Size(915, 180);
+            this.richTextBoxPreviewFisa.Size = new System.Drawing.Size(687, 147);
             this.richTextBoxPreviewFisa.TabIndex = 2;
             this.richTextBoxPreviewFisa.Text = "";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.listBoxListaProgramari);
-            this.groupBox4.Location = new System.Drawing.Point(388, 32);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Location = new System.Drawing.Point(291, 26);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(545, 262);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Size = new System.Drawing.Size(409, 213);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Programari";
@@ -419,11 +422,10 @@
             // listBoxListaProgramari
             // 
             this.listBoxListaProgramari.FormattingEnabled = true;
-            this.listBoxListaProgramari.ItemHeight = 16;
-            this.listBoxListaProgramari.Location = new System.Drawing.Point(6, 28);
-            this.listBoxListaProgramari.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxListaProgramari.Location = new System.Drawing.Point(4, 23);
+            this.listBoxListaProgramari.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxListaProgramari.Name = "listBoxListaProgramari";
-            this.listBoxListaProgramari.Size = new System.Drawing.Size(531, 228);
+            this.listBoxListaProgramari.Size = new System.Drawing.Size(399, 186);
             this.listBoxListaProgramari.TabIndex = 3;
             // 
             // groupBox3
@@ -431,20 +433,21 @@
             this.groupBox3.Controls.Add(this.buttonAdaugaPacient);
             this.groupBox3.Controls.Add(this.buttonAdaugareProgramare);
             this.groupBox3.Controls.Add(this.listBoxDoctorPacienti);
-            this.groupBox3.Location = new System.Drawing.Point(5, 32);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Location = new System.Drawing.Point(4, 26);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(376, 262);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(282, 213);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pacientii mei";
             // 
             // buttonAdaugaPacient
             // 
-            this.buttonAdaugaPacient.Location = new System.Drawing.Point(6, 233);
+            this.buttonAdaugaPacient.Location = new System.Drawing.Point(4, 189);
+            this.buttonAdaugaPacient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdaugaPacient.Name = "buttonAdaugaPacient";
-            this.buttonAdaugaPacient.Size = new System.Drawing.Size(359, 23);
+            this.buttonAdaugaPacient.Size = new System.Drawing.Size(269, 19);
             this.buttonAdaugaPacient.TabIndex = 2;
             this.buttonAdaugaPacient.Text = "+";
             this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
@@ -452,10 +455,10 @@
             // 
             // buttonAdaugareProgramare
             // 
-            this.buttonAdaugareProgramare.Location = new System.Drawing.Point(6, 197);
-            this.buttonAdaugareProgramare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAdaugareProgramare.Location = new System.Drawing.Point(4, 160);
+            this.buttonAdaugareProgramare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdaugareProgramare.Name = "buttonAdaugareProgramare";
-            this.buttonAdaugareProgramare.Size = new System.Drawing.Size(359, 31);
+            this.buttonAdaugareProgramare.Size = new System.Drawing.Size(269, 25);
             this.buttonAdaugareProgramare.TabIndex = 1;
             this.buttonAdaugareProgramare.Text = "Adauga programare";
             this.buttonAdaugareProgramare.UseVisualStyleBackColor = true;
@@ -464,21 +467,21 @@
             // listBoxDoctorPacienti
             // 
             this.listBoxDoctorPacienti.FormattingEnabled = true;
-            this.listBoxDoctorPacienti.ItemHeight = 16;
-            this.listBoxDoctorPacienti.Location = new System.Drawing.Point(5, 28);
-            this.listBoxDoctorPacienti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxDoctorPacienti.Location = new System.Drawing.Point(4, 23);
+            this.listBoxDoctorPacienti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxDoctorPacienti.Name = "listBoxDoctorPacienti";
-            this.listBoxDoctorPacienti.Size = new System.Drawing.Size(364, 164);
+            this.listBoxDoctorPacienti.Size = new System.Drawing.Size(274, 134);
             this.listBoxDoctorPacienti.TabIndex = 0;
             this.listBoxDoctorPacienti.DoubleClick += new System.EventHandler(this.listBoxDoctorPacienti_DoubleClick);
             // 
             // tabPageAdmin
             // 
             this.tabPageAdmin.Controls.Add(this.groupBox6);
-            this.tabPageAdmin.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAdmin.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageAdmin.Name = "tabPageAdmin";
-            this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAdmin.Size = new System.Drawing.Size(941, 609);
+            this.tabPageAdmin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAdmin.Size = new System.Drawing.Size(704, 492);
             this.tabPageAdmin.TabIndex = 1;
             this.tabPageAdmin.Text = "Admin";
             this.tabPageAdmin.UseVisualStyleBackColor = true;
@@ -487,9 +490,11 @@
             // 
             this.groupBox6.Controls.Add(this.groupBox14);
             this.groupBox6.Controls.Add(this.groupBox8);
-            this.groupBox6.Location = new System.Drawing.Point(3, 14);
+            this.groupBox6.Location = new System.Drawing.Point(2, 11);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(937, 594);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Size = new System.Drawing.Size(703, 483);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Admin";
@@ -497,28 +502,33 @@
             // groupBox14
             // 
             this.groupBox14.Controls.Add(this.richTextBoxStatistica);
-            this.groupBox14.Location = new System.Drawing.Point(6, 298);
+            this.groupBox14.Location = new System.Drawing.Point(4, 242);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(913, 266);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox14.Size = new System.Drawing.Size(685, 216);
             this.groupBox14.TabIndex = 7;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Statistica";
             // 
             // richTextBoxStatistica
             // 
-            this.richTextBoxStatistica.Location = new System.Drawing.Point(6, 18);
+            this.richTextBoxStatistica.Location = new System.Drawing.Point(4, 15);
+            this.richTextBoxStatistica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBoxStatistica.Name = "richTextBoxStatistica";
             this.richTextBoxStatistica.ReadOnly = true;
-            this.richTextBoxStatistica.Size = new System.Drawing.Size(904, 242);
+            this.richTextBoxStatistica.Size = new System.Drawing.Size(679, 197);
             this.richTextBoxStatistica.TabIndex = 5;
             this.richTextBoxStatistica.Text = "";
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.listBoxComenzi);
-            this.groupBox8.Location = new System.Drawing.Point(6, 23);
+            this.groupBox8.Location = new System.Drawing.Point(4, 19);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(913, 269);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Size = new System.Drawing.Size(685, 219);
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Comenzile facute";
@@ -526,23 +536,22 @@
             // listBoxComenzi
             // 
             this.listBoxComenzi.FormattingEnabled = true;
-            this.listBoxComenzi.ItemHeight = 16;
-            this.listBoxComenzi.Location = new System.Drawing.Point(6, 20);
-            this.listBoxComenzi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxComenzi.Location = new System.Drawing.Point(4, 16);
+            this.listBoxComenzi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxComenzi.Name = "listBoxComenzi";
             this.listBoxComenzi.ScrollAlwaysVisible = true;
-            this.listBoxComenzi.Size = new System.Drawing.Size(904, 244);
+            this.listBoxComenzi.Size = new System.Drawing.Size(679, 199);
             this.listBoxComenzi.TabIndex = 4;
             // 
             // groupBoxAdministrator
             // 
             this.groupBoxAdministrator.Controls.Add(this.groupBoxInstrumente);
             this.groupBoxAdministrator.Controls.Add(this.groupBox7);
-            this.groupBoxAdministrator.Location = new System.Drawing.Point(16, 251);
-            this.groupBoxAdministrator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxAdministrator.Location = new System.Drawing.Point(12, 204);
+            this.groupBoxAdministrator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxAdministrator.Name = "groupBoxAdministrator";
-            this.groupBoxAdministrator.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxAdministrator.Size = new System.Drawing.Size(445, 455);
+            this.groupBoxAdministrator.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdministrator.Size = new System.Drawing.Size(334, 370);
             this.groupBoxAdministrator.TabIndex = 2;
             this.groupBoxAdministrator.TabStop = false;
             this.groupBoxAdministrator.Text = "Administrator";
@@ -551,21 +560,21 @@
             // groupBoxInstrumente
             // 
             this.groupBoxInstrumente.Controls.Add(this.buttonStatistica);
-            this.groupBoxInstrumente.Location = new System.Drawing.Point(11, 320);
-            this.groupBoxInstrumente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxInstrumente.Location = new System.Drawing.Point(8, 260);
+            this.groupBoxInstrumente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxInstrumente.Name = "groupBoxInstrumente";
-            this.groupBoxInstrumente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxInstrumente.Size = new System.Drawing.Size(421, 114);
+            this.groupBoxInstrumente.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxInstrumente.Size = new System.Drawing.Size(316, 93);
             this.groupBoxInstrumente.TabIndex = 3;
             this.groupBoxInstrumente.TabStop = false;
             this.groupBoxInstrumente.Text = "Instrumente";
             // 
             // buttonStatistica
             // 
-            this.buttonStatistica.Location = new System.Drawing.Point(5, 21);
-            this.buttonStatistica.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonStatistica.Location = new System.Drawing.Point(4, 17);
+            this.buttonStatistica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonStatistica.Name = "buttonStatistica";
-            this.buttonStatistica.Size = new System.Drawing.Size(409, 78);
+            this.buttonStatistica.Size = new System.Drawing.Size(307, 63);
             this.buttonStatistica.TabIndex = 3;
             this.buttonStatistica.Text = "Statistica";
             this.buttonStatistica.UseVisualStyleBackColor = true;
@@ -576,11 +585,11 @@
             this.groupBox7.Controls.Add(this.listBoxAdminPacienti);
             this.groupBox7.Controls.Add(this.buttonGestioneazaPacienti);
             this.groupBox7.Controls.Add(this.buttonGestioneazaDoctori);
-            this.groupBox7.Location = new System.Drawing.Point(6, 29);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox7.Location = new System.Drawing.Point(4, 24);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox7.Size = new System.Drawing.Size(433, 242);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Size = new System.Drawing.Size(325, 197);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Gestiune utilizatori";
@@ -588,20 +597,19 @@
             // listBoxAdminPacienti
             // 
             this.listBoxAdminPacienti.FormattingEnabled = true;
-            this.listBoxAdminPacienti.ItemHeight = 16;
-            this.listBoxAdminPacienti.Location = new System.Drawing.Point(5, 85);
-            this.listBoxAdminPacienti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBoxAdminPacienti.Location = new System.Drawing.Point(4, 69);
+            this.listBoxAdminPacienti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxAdminPacienti.Name = "listBoxAdminPacienti";
             this.listBoxAdminPacienti.ScrollAlwaysVisible = true;
-            this.listBoxAdminPacienti.Size = new System.Drawing.Size(421, 148);
+            this.listBoxAdminPacienti.Size = new System.Drawing.Size(317, 121);
             this.listBoxAdminPacienti.TabIndex = 3;
             // 
             // buttonGestioneazaPacienti
             // 
-            this.buttonGestioneazaPacienti.Location = new System.Drawing.Point(5, 53);
-            this.buttonGestioneazaPacienti.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonGestioneazaPacienti.Location = new System.Drawing.Point(4, 43);
+            this.buttonGestioneazaPacienti.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGestioneazaPacienti.Name = "buttonGestioneazaPacienti";
-            this.buttonGestioneazaPacienti.Size = new System.Drawing.Size(421, 26);
+            this.buttonGestioneazaPacienti.Size = new System.Drawing.Size(316, 21);
             this.buttonGestioneazaPacienti.TabIndex = 1;
             this.buttonGestioneazaPacienti.Text = "Gestioneaza pacienti";
             this.buttonGestioneazaPacienti.UseVisualStyleBackColor = true;
@@ -609,10 +617,10 @@
             // 
             // buttonGestioneazaDoctori
             // 
-            this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(5, 21);
-            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonGestioneazaDoctori.Location = new System.Drawing.Point(4, 17);
+            this.buttonGestioneazaDoctori.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGestioneazaDoctori.Name = "buttonGestioneazaDoctori";
-            this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(421, 26);
+            this.buttonGestioneazaDoctori.Size = new System.Drawing.Size(316, 21);
             this.buttonGestioneazaDoctori.TabIndex = 0;
             this.buttonGestioneazaDoctori.Text = "Gestioneaza doctori";
             this.buttonGestioneazaDoctori.UseVisualStyleBackColor = true;
@@ -623,11 +631,11 @@
             this.groupBox13.Controls.Add(this.label7);
             this.groupBox13.Controls.Add(this.label6);
             this.groupBox13.Controls.Add(this.label5);
-            this.groupBox13.Location = new System.Drawing.Point(16, 710);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox13.Location = new System.Drawing.Point(12, 577);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox13.Size = new System.Drawing.Size(1401, 80);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox13.Size = new System.Drawing.Size(1051, 65);
             this.groupBox13.TabIndex = 5;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Contact";
@@ -635,27 +643,30 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(679, 50);
+            this.label7.Location = new System.Drawing.Point(509, 41);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 16);
+            this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "ourClinic@medic.ro";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(701, 34);
+            this.label6.Location = new System.Drawing.Point(526, 28);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 16);
+            this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "0232 231 343";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(448, 18);
+            this.label5.Location = new System.Drawing.Point(336, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(619, 16);
+            this.label5.Size = new System.Drawing.Size(499, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Universitatea Tehnică Gheorghe Asachi, Bulevardul Profesor Dr. doc. Dimitrie Mang" +
     "eron 27, Iași 700050";
@@ -668,8 +679,8 @@
             this.helpToolStripMenuItemHelp});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1435, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1076, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -678,29 +689,30 @@
             this.appToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.appToolStripMenuItem.Name = "appToolStripMenuItem";
-            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.appToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.appToolStripMenuItem.Text = "App";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItemHelp
             // 
             this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
-            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItemHelp.Text = "Help";
             // 
             // labelWelcomeText
             // 
             this.labelWelcomeText.AutoSize = true;
             this.labelWelcomeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWelcomeText.Location = new System.Drawing.Point(739, 32);
+            this.labelWelcomeText.Location = new System.Drawing.Point(554, 26);
+            this.labelWelcomeText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelWelcomeText.Name = "labelWelcomeText";
-            this.labelWelcomeText.Size = new System.Drawing.Size(269, 25);
+            this.labelWelcomeText.Size = new System.Drawing.Size(216, 20);
             this.labelWelcomeText.TabIndex = 7;
             this.labelWelcomeText.Text = "Bine ai venit, Nume Prenume!";
             this.labelWelcomeText.Visible = false;
@@ -708,10 +720,10 @@
             // buttonDeconectare
             // 
             this.buttonDeconectare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeconectare.Location = new System.Drawing.Point(1255, 28);
-            this.buttonDeconectare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDeconectare.Location = new System.Drawing.Point(941, 23);
+            this.buttonDeconectare.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeconectare.Name = "buttonDeconectare";
-            this.buttonDeconectare.Size = new System.Drawing.Size(139, 34);
+            this.buttonDeconectare.Size = new System.Drawing.Size(104, 28);
             this.buttonDeconectare.TabIndex = 8;
             this.buttonDeconectare.Text = "Deconectare";
             this.buttonDeconectare.UseVisualStyleBackColor = true;
@@ -732,11 +744,11 @@
             this.groupBoxCreateAcc.Controls.Add(this.textBoxCreatePassword);
             this.groupBoxCreateAcc.Controls.Add(this.label8);
             this.groupBoxCreateAcc.Controls.Add(this.textBoxCreateUser);
-            this.groupBoxCreateAcc.Location = new System.Drawing.Point(12, 41);
-            this.groupBoxCreateAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxCreateAcc.Location = new System.Drawing.Point(9, 33);
+            this.groupBoxCreateAcc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxCreateAcc.Name = "groupBoxCreateAcc";
-            this.groupBoxCreateAcc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxCreateAcc.Size = new System.Drawing.Size(445, 441);
+            this.groupBoxCreateAcc.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxCreateAcc.Size = new System.Drawing.Size(334, 358);
             this.groupBoxCreateAcc.TabIndex = 9;
             this.groupBoxCreateAcc.TabStop = false;
             this.groupBoxCreateAcc.Text = "Creare cont";
@@ -744,10 +756,10 @@
             // 
             // buttonCreateB2Login
             // 
-            this.buttonCreateB2Login.Location = new System.Drawing.Point(131, 368);
-            this.buttonCreateB2Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateB2Login.Location = new System.Drawing.Point(98, 299);
+            this.buttonCreateB2Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCreateB2Login.Name = "buttonCreateB2Login";
-            this.buttonCreateB2Login.Size = new System.Drawing.Size(150, 30);
+            this.buttonCreateB2Login.Size = new System.Drawing.Size(112, 24);
             this.buttonCreateB2Login.TabIndex = 6;
             this.buttonCreateB2Login.Text = "Ai cont? autentifica";
             this.buttonCreateB2Login.UseVisualStyleBackColor = true;
@@ -756,61 +768,64 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(72, 248);
+            this.label11.Location = new System.Drawing.Point(54, 202);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(131, 16);
+            this.label11.Size = new System.Drawing.Size(105, 13);
             this.label11.TabIndex = 9;
             this.label11.Text = "Reintroduceti parola:";
             // 
             // textBoxCreateCheckPassword
             // 
-            this.textBoxCreateCheckPassword.Location = new System.Drawing.Point(75, 266);
-            this.textBoxCreateCheckPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateCheckPassword.Location = new System.Drawing.Point(56, 216);
+            this.textBoxCreateCheckPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCreateCheckPassword.Name = "textBoxCreateCheckPassword";
-            this.textBoxCreateCheckPassword.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateCheckPassword.Size = new System.Drawing.Size(198, 20);
             this.textBoxCreateCheckPassword.TabIndex = 4;
             this.textBoxCreateCheckPassword.UseSystemPasswordChar = true;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(72, 136);
+            this.label10.Location = new System.Drawing.Point(54, 110);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.Size = new System.Drawing.Size(52, 13);
             this.label10.TabIndex = 7;
             this.label10.Text = "Prenume:";
             // 
             // textBoxCreateFirstName
             // 
-            this.textBoxCreateFirstName.Location = new System.Drawing.Point(75, 154);
-            this.textBoxCreateFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateFirstName.Location = new System.Drawing.Point(56, 125);
+            this.textBoxCreateFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCreateFirstName.Name = "textBoxCreateFirstName";
-            this.textBoxCreateFirstName.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateFirstName.Size = new System.Drawing.Size(198, 20);
             this.textBoxCreateFirstName.TabIndex = 2;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(72, 79);
+            this.label9.Location = new System.Drawing.Point(54, 64);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 16);
+            this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 5;
             this.label9.Text = "Nume:";
             // 
             // textBoxCreateLastName
             // 
-            this.textBoxCreateLastName.Location = new System.Drawing.Point(75, 98);
-            this.textBoxCreateLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateLastName.Location = new System.Drawing.Point(56, 80);
+            this.textBoxCreateLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCreateLastName.Name = "textBoxCreateLastName";
-            this.textBoxCreateLastName.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateLastName.Size = new System.Drawing.Size(198, 20);
             this.textBoxCreateLastName.TabIndex = 1;
             // 
             // buttonCreateSubmit
             // 
-            this.buttonCreateSubmit.Location = new System.Drawing.Point(75, 312);
-            this.buttonCreateSubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateSubmit.Location = new System.Drawing.Point(56, 254);
+            this.buttonCreateSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCreateSubmit.Name = "buttonCreateSubmit";
-            this.buttonCreateSubmit.Size = new System.Drawing.Size(263, 36);
+            this.buttonCreateSubmit.Size = new System.Drawing.Size(197, 29);
             this.buttonCreateSubmit.TabIndex = 5;
             this.buttonCreateSubmit.Text = "Creeaza";
             this.buttonCreateSubmit.UseVisualStyleBackColor = true;
@@ -819,44 +834,46 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 192);
+            this.label4.Location = new System.Drawing.Point(54, 156);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Parola:";
             // 
             // textBoxCreatePassword
             // 
-            this.textBoxCreatePassword.Location = new System.Drawing.Point(75, 210);
-            this.textBoxCreatePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreatePassword.Location = new System.Drawing.Point(56, 171);
+            this.textBoxCreatePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCreatePassword.Name = "textBoxCreatePassword";
-            this.textBoxCreatePassword.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreatePassword.Size = new System.Drawing.Size(198, 20);
             this.textBoxCreatePassword.TabIndex = 3;
             this.textBoxCreatePassword.UseSystemPasswordChar = true;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(72, 23);
+            this.label8.Location = new System.Drawing.Point(54, 19);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 16);
+            this.label8.Size = new System.Drawing.Size(79, 13);
             this.label8.TabIndex = 1;
             this.label8.Text = "Nume utilizator:";
             // 
             // textBoxCreateUser
             // 
-            this.textBoxCreateUser.Location = new System.Drawing.Point(75, 42);
-            this.textBoxCreateUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCreateUser.Location = new System.Drawing.Point(56, 34);
+            this.textBoxCreateUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCreateUser.Name = "textBoxCreateUser";
-            this.textBoxCreateUser.Size = new System.Drawing.Size(263, 22);
+            this.textBoxCreateUser.Size = new System.Drawing.Size(198, 20);
             this.textBoxCreateUser.TabIndex = 0;
             // 
             // ClinicaMedicalaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1435, 796);
+            this.ClientSize = new System.Drawing.Size(1076, 647);
             this.Controls.Add(this.buttonDeconectare);
             this.Controls.Add(this.labelWelcomeText);
             this.Controls.Add(this.tabControlUser);
@@ -866,7 +883,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxCreateAcc);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ClinicaMedicalaForm";
             this.Text = "Clinica Medicala - ourClinic";
             this.groupBoxAutentificare.ResumeLayout(false);
