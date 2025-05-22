@@ -109,6 +109,7 @@ namespace ClinicaMedicalaForm
                     tabControlUser.SelectTab("tabPageDoctor");
                     tabControlUser.Visible = true;
 
+
                     listBoxDoctorPacienti.Items.Clear();
                     listBoxListaProgramari.Items.Clear();
 

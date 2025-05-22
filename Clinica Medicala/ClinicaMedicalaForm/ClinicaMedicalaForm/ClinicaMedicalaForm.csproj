@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="components\Model\DatabaseManager\DatabaseManager.cs" />
+    <Compile Include="components\Model\Exceptions\MasterExceptionHandler.cs" />
     <Compile Include="components\Model\Factory\UserFactory.cs" />
     <Compile Include="components\Model\Interfaces\IModel.cs" />
     <Compile Include="components\Model\Medical\FisaMedicala.cs" />

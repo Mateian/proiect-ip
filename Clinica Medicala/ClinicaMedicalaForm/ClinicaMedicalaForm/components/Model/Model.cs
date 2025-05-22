@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Factory;
 using ClinicaMedicalaForm.components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Model.Medical;
@@ -39,7 +40,14 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public void AdaugareFisaMedicala(List<string> dateFisaMedicala)
         {
-            _databaseManager.InsertCommand(dateFisaMedicala);
+            try
+            {
+                _databaseManager.InsertCommand(dateFisaMedicala);
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
         }
         public List<IUser> CitireUtilizatori()
         {
@@ -66,6 +74,10 @@ namespace ClinicaMedicalaForm.components.Model
                     _users.Add(_userFactory.CreateUser(infoArray));
                 }
             }
+            catch(Exception e)
+            {
+                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
+            }
             finally
             {
                 if (reader != null && !reader.IsClosed)
@@ -77,13 +89,20 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public void CitireDoctori()
         {
-            _doctori = new List<IUser>();
-            foreach (IUser user in _users)
+            try
             {
-                if (user.Rol == "Doctor")
+                _doctori = new List<IUser>();
+                foreach (IUser user in _users)
                 {
-                    _doctori.Add(user);
+                    if (user.Rol == "Doctor")
+                    {
+                        _doctori.Add(user);
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                throw new MasterExceptionHandler("Array object null", 200,e);
             }
         }
         public void CitirePacienti()
@@ -118,6 +137,10 @@ namespace ClinicaMedicalaForm.components.Model
                     }
                 }
             }
+            catch (Exception e)
+            {
+                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
+            }
             finally
             {
                 if (reader != null && !reader.IsClosed)
@@ -150,6 +173,10 @@ namespace ClinicaMedicalaForm.components.Model
                     _programari.Add(new Programare(pacID, docID, infoArray[3], infoArray[4], infoArray[5]));
                 }
             }
+            catch (Exception e)
+            {
+                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
+            }
             finally
             {
                 if (reader != null && !reader.IsClosed)
@@ -172,20 +199,28 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public void AdaugaProgramareViitoare(Programare programare)
         {
-            Programari.Add(programare);
-            string tableName = "Programari";
-            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
-               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-
-            var parameters = new Dictionary<string, object>
+            try
             {
-                { "@PacientID", programare.PacientID },
-                { "@DoctorID", programare.DoctorID },
-                { "@Date", programare.Data },
-                { "@Specializare", programare.Specializare },
-                { "@Valabilitate", programare.Valabilitate }
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
+                Programari.Add(programare);
+                string tableName = "Programari";
+                string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+                   "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
+
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@PacientID", programare.PacientID },
+                    { "@DoctorID", programare.DoctorID },
+                    { "@Date", programare.Data },
+                    { "@Specializare", programare.Specializare },
+                    { "@Valabilitate", programare.Valabilitate }
+                };
+
+                _databaseManager.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
         }
         public void AdaugaProgramare(Programare programare)
         {
@@ -202,7 +237,14 @@ namespace ClinicaMedicalaForm.components.Model
                 { "@Specializare", programare.Specializare },
                 { "@Valabilitate", programare.Valabilitate }
             };
-            _databaseManager.ExecuteNonQuery(query, parameters);
+            try
+            {
+                _databaseManager.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
         }
         public List<FisaMedicala> PreluareIstoricMedical(int userID)
         {
@@ -211,37 +253,44 @@ namespace ClinicaMedicalaForm.components.Model
             string nume = "";
             string prenume = "";
             string numeComplet = "";
-            using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza persoana dupa ID din tabelul Users
+            try
             {
-                if (reader.Read())
+                using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza persoana dupa ID din tabelul Users
                 {
-                    nume = reader["Nume"].ToString();
-                    prenume = reader["Prenume"].ToString();
-                    numeComplet = $"{nume} {prenume}";
-                }
-            }
-            if (!string.IsNullOrEmpty(numeComplet))
-            {
-                query = $"SELECT DataConsult, NumeMedic,ExamenClinic,DiagnosticPrezumtiv,Recomandari,InvestigatiiRecomandate,TratamentPrescris,Motiv FROM FisaMedicalaDB WHERE NumePacient = '{numeComplet}'";
-                using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza toate fisele cu numele persoanei din tabelul FisaMedicalaDB
-                {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
-                        FisaMedicala fisa = new FisaMedicala(
-                            nume,
-                            prenume,
-                            reader["DataConsult"].ToString(),
-                            reader["Motiv"].ToString(),
-                            reader["DiagnosticPrezumtiv"].ToString(),
-                            reader["TratamentPrescris"].ToString(),
-                            reader["NumeMedic"].ToString(),
-                            reader["ExamenClinic"].ToString(),
-                            reader["Recomandari"].ToString(),
-                            reader["InvestigatiiRecomandate"].ToString()
-                        );
-                        _fiseMedicale.Add(fisa);
+                        nume = reader["Nume"].ToString();
+                        prenume = reader["Prenume"].ToString();
+                        numeComplet = $"{nume} {prenume}";
                     }
                 }
+                if (!string.IsNullOrEmpty(numeComplet))
+                {
+                    query = $"SELECT DataConsult, NumeMedic,ExamenClinic,DiagnosticPrezumtiv,Recomandari,InvestigatiiRecomandate,TratamentPrescris,Motiv FROM FisaMedicalaDB WHERE NumePacient = '{numeComplet}'";
+                    using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza toate fisele cu numele persoanei din tabelul FisaMedicalaDB
+                    {
+                        while (reader.Read())
+                        {
+                            FisaMedicala fisa = new FisaMedicala(
+                                nume,
+                                prenume,
+                                reader["DataConsult"].ToString(),
+                                reader["Motiv"].ToString(),
+                                reader["DiagnosticPrezumtiv"].ToString(),
+                                reader["TratamentPrescris"].ToString(),
+                                reader["NumeMedic"].ToString(),
+                                reader["ExamenClinic"].ToString(),
+                                reader["Recomandari"].ToString(),
+                                reader["InvestigatiiRecomandate"].ToString()
+                            );
+                            _fiseMedicale.Add(fisa);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, ex);
             }
             return _fiseMedicale;
         }
@@ -253,68 +302,83 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public string PreviewIstoricProgramari(int nrProgramare,int userID)
         {
-            IUser user = GetUser(userID);
-            if (user != null)
+            try
             {
+                IUser user = GetUser(userID);
                 Programare programare = user.GetProgramare(nrProgramare);
-                if (programare != null)
-                {
-                    return programare.GeneratePreview();
-                }
+                return programare.GeneratePreview();
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Object null exception", 201, ex);
             }
             return "";
         }
         public void DeletePacient(int id)
         {
-            Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
-            _pacienti.Remove(pacient);
-            _users.Remove(pacient);
-            List<Programare> programariPacientDeSters = _programari.FindAll(p => p.PacientID == pacient.ID);
-            foreach (var aux in programariPacientDeSters)
+            try
             {
-                _programari.Remove(aux);
+                Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
+                _pacienti.Remove(pacient);
+                _users.Remove(pacient);
+                List<Programare> programariPacientDeSters = _programari.FindAll(p => p.PacientID == pacient.ID);
+                foreach (var aux in programariPacientDeSters)
+                {
+                    _programari.Remove(aux);
+                }
+                string tableName = "Pacienti";
+                string query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@ID", id }
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+
+                tableName = "Programari";
+                query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
+                _databaseManager.ExecuteNonQuery(query, parameters);
+
+                tableName = "Users";
+                query = $"DELETE FROM {tableName} WHERE ID = @ID";
+                _databaseManager.ExecuteNonQuery(query, parameters);
             }
-            string tableName = "Pacienti";
-            string query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
-            var parameters = new Dictionary<string, object>
+            catch (Exception ex)
             {
-                { "@ID", id }
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
-
-            tableName = "Programari";
-            query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
-            _databaseManager.ExecuteNonQuery(query, parameters);
-
-            tableName = "Users";
-            query = $"DELETE FROM {tableName} WHERE ID = @ID";
-            _databaseManager.ExecuteNonQuery(query, parameters);
+                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+            }
         }
         public void DeleteDoctor(int id)
         {
-            Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == id);
-            _doctori.Remove(doctor);
-            _users.Remove(doctor);
-            List<Programare> programariPacientDeSters = _programari.FindAll(p => p.DoctorID ==  doctor.ID);
-            foreach (var aux in programariPacientDeSters)
+            try
             {
-                _programari.Remove(aux);
+                Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == id);
+                _doctori.Remove(doctor);
+                _users.Remove(doctor);
+                List<Programare> programariPacientDeSters = _programari.FindAll(p => p.DoctorID == doctor.ID);
+                foreach (var aux in programariPacientDeSters)
+                {
+                    _programari.Remove(aux);
+                }
+                string tableName = "Pacienti";
+                string query = $"DELETE FROM {tableName} WHERE DoctorID = @ID";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@ID", id }
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+
+                tableName = "Programari";
+                query = $"DELETE FROM {tableName} WHERE DoctorID = @ID";
+                _databaseManager.ExecuteNonQuery(query, parameters);
+
+                tableName = "Users";
+                query = $"DELETE FROM {tableName} WHERE ID = @ID";
+                _databaseManager.ExecuteNonQuery(query, parameters);
             }
-            string tableName = "Pacienti";
-            string query = $"DELETE FROM {tableName} WHERE DoctorID = @ID";
-            var parameters = new Dictionary<string, object>
+            catch (Exception ex)
             {
-                { "@ID", id }
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
-
-            tableName = "Programari";
-            query = $"DELETE FROM {tableName} WHERE DoctorID = @ID";
-            _databaseManager.ExecuteNonQuery(query, parameters);
-
-            tableName = "Users";
-            query = $"DELETE FROM {tableName} WHERE ID = @ID";
-            _databaseManager.ExecuteNonQuery(query, parameters);
+                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+            }
         }
         public void StergeUser(int id)
         {
@@ -334,76 +398,110 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public void AdaugaPacient(int doctorID, Pacient pacient)
         {
-            Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
-            pacient.Doctor = doctor;
-            Pacienti.Add(pacient);
-
-            string tableName = "Pacienti";
-            string query = $"INSERT INTO {tableName}(DoctorID, PacientID) VALUES(@DoctorID, @PacientID);";
-            var parameters = new Dictionary<string, object>
+            try
             {
-                { "@DoctorID", doctorID },
-                { "@PacientID", pacient.ID }
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
+                Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
+                pacient.Doctor = doctor;
+                Pacienti.Add(pacient);
+
+                string tableName = "Pacienti";
+                string query = $"INSERT INTO {tableName}(DoctorID, PacientID) VALUES(@DoctorID, @PacientID);";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@DoctorID", doctorID },
+                    { "@PacientID", pacient.ID }
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
         }
         public void AdaugaDoctor(Doctor doctor)
         {
-            string tableName = "Users";
-            string query = $"INSERT INTO {tableName}(Role, Username, HashPassword, Nume, Prenume) VALUES(@Role, @Username, @HashPassword, @Nume, @Prenume);";
-            var parameters = new Dictionary<string, object>
+            try
             {
-                { "@Role", doctor.Rol},
-                { "@Username", doctor.Username },
-                { "@HashPassword", doctor.Parola},
-                { "@Nume", doctor.Nume },
-                { "@Prenume", doctor.Prenume}
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
-
-            tableName = "Users";
-            query = $"SELECT ID FROM {tableName} WHERE Role = '{doctor.Rol}' AND Username = '{doctor.Username}' AND HashPassword = '{doctor.Parola}' AND Nume = '{doctor.Nume}' AND Prenume = '{doctor.Prenume}';";
-            using (var reader = _databaseManager.ExecuteSelectQuery(query))
-            {
-                while (reader.Read())
+                string tableName = "Users";
+                string query = $"INSERT INTO {tableName}(Role, Username, HashPassword, Nume, Prenume) VALUES(@Role, @Username, @HashPassword, @Nume, @Prenume);";
+                var parameters = new Dictionary<string, object>
                 {
-                    string id = reader["ID"].ToString();
-                    Doctor doctorNou = new Doctor(int.Parse(id), doctor.Username, doctor.Parola, doctor.Nume, doctor.Prenume);
-                    Doctori.Add(doctorNou);
-                    Utilizatori.Add(doctorNou);
+                    { "@Role", doctor.Rol},
+                    { "@Username", doctor.Username },
+                    { "@HashPassword", doctor.Parola},
+                    { "@Nume", doctor.Nume },
+                    { "@Prenume", doctor.Prenume}
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+                try
+                {
+
+                    tableName = "Users";
+                    query = $"SELECT ID FROM {tableName} WHERE Role = '{doctor.Rol}' AND Username = '{doctor.Username}' AND HashPassword = '{doctor.Parola}' AND Nume = '{doctor.Nume}' AND Prenume = '{doctor.Prenume}';";
+                    using (var reader = _databaseManager.ExecuteSelectQuery(query))
+                    {
+                        while (reader.Read())
+                        {
+                            string id = reader["ID"].ToString();
+                            Doctor doctorNou = new Doctor(int.Parse(id), doctor.Username, doctor.Parola, doctor.Nume, doctor.Prenume);
+                            Doctori.Add(doctorNou);
+                            Utilizatori.Add(doctorNou);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, ex);
                 }
             }
-            
-       }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
+
+        }
         public void ValidareProgramare(Programare programare)
         {
-            Programare newProg = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
-            Programari.Add(newProg);
-            Programari.Remove(programare);
-            string tableName = "Programari";
-            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
-               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-
-            var parameters = new Dictionary<string, object>
+            try
             {
-                { "@PacientID", newProg.PacientID },
-                { "@DoctorID", newProg.DoctorID },
-                { "@Date", newProg.Data },
-                { "@Specializare", newProg.Specializare },
-                { "@Valabilitate", newProg.Valabilitate }
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
+                Programare newProg = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
+                Programari.Add(newProg);
+                Programari.Remove(programare);
+                string tableName = "Programari";
+                string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+                   "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
 
-            tableName = "Programari";
-            query = $"DELETE FROM {tableName} WHERE PacientID = @PacientID AND DoctorID = @DoctorID and Date = @Data AND Valabilitate = @Valabilitate";
-            parameters = new Dictionary<string, object>
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@PacientID", newProg.PacientID },
+                    { "@DoctorID", newProg.DoctorID },
+                    { "@Date", newProg.Data },
+                    { "@Specializare", newProg.Specializare },
+                    { "@Valabilitate", newProg.Valabilitate }
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+                try
+                {
+                    tableName = "Programari";
+                    query = $"DELETE FROM {tableName} WHERE PacientID = @PacientID AND DoctorID = @DoctorID and Date = @Data AND Valabilitate = @Valabilitate";
+                    parameters = new Dictionary<string, object>
+                    {
+                        { "@PacientID", programare.PacientID },
+                        { "@DoctorID", programare.DoctorID },
+                        { "@Data", programare.Data },
+                        { "@Valabilitate", programare.Valabilitate }
+                    };
+                    _databaseManager.ExecuteNonQuery(query, parameters);
+                }
+                catch (Exception ex)
+                {
+                    throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                }
+            }
+            catch (Exception ex)
             {
-                { "@PacientID", programare.PacientID },
-                { "@DoctorID", programare.DoctorID },
-                { "@Data", programare.Data },
-                { "@Valabilitate", programare.Valabilitate }
-            };
-            _databaseManager.ExecuteNonQuery(query, parameters);
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
         }
         public bool CheckUserExists(List<string> data)
         {
@@ -411,29 +509,43 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public IUser InsertUserCommand(List<string> data)
         {
-            int id = _databaseManager.InsertUserCommand(data);
-            if (id < 0)
+            try
             {
-                throw new Exception("Eroare user!");
+                int id = _databaseManager.InsertUserCommand(data);
+                if (id < 0)
+                {
+                    throw new MasterExceptionHandler("Eroare user id!", 300, null);
+                }
+                else
+                {
+                    Pacient pacient = new Pacient(id, data[0], data[1], data[2], data[3]);
+                    _users.Add(pacient);
+                    _pacienti.Add(pacient);
+                    return pacient;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Pacient pacient = new Pacient(id, data[0], data[1], data[2], data[3]);
-                _users.Add(pacient);
-                _pacienti.Add(pacient);
-                return pacient;
+                throw new MasterExceptionHandler("Array object null", 200, ex);
             }
         }
         public IUser GetUser(int userID)
         {
-            foreach (IUser user in _users)
+            try
             {
-                if (user.ID == userID)
+                foreach (IUser user in _users)
                 {
-                    return user;
+                    if (user.ID == userID)
+                    {
+                        return user;
+                    }
                 }
+                return null;
             }
-            return null;
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Array object null", 200, ex);
+            }
         }
     }
 }

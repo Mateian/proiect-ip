@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Medical;
 
 namespace ClinicaMedicalaForm.components.Model
@@ -44,11 +45,18 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public Programare GetProgramare(int index)
         {
-            if (_programari != null && index >= 0 && index < _programari.Count)
+            try
             {
-                return _programari[index];
+                if (index >= 0 && index < _programari.Count)
+                {
+                    return _programari[index];
+                }
+                return null;
             }
-            return null;
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Array object null", 200, ex);
+            }
         }
     }
 }
