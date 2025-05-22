@@ -26,7 +26,15 @@ namespace ClinicaMedicalaForm.components.Model.Medical
         }
         public override string ToString()
         {
-            return Data.ToString() + ", Pacientul: " + PacientID + ", Specialitatea: " + Specializare + ", Valabilitatea: " + Valabilitate  + "\n";
+            return Data.ToString() + ", Pacientul: " + PacientID + ", Specialitatea: " + Specializare + ", Valabilitatea: " + Valabilitate + "\n";
+        }
+        public string GeneratePreview()
+        {
+            //Generare preview pentru programare
+            string text = "Data programarii: " + _data + "\r\n" +
+                          "Specializarea: " + _specializare + "\r\n" +
+                          "Valabilitatea: " + _valabilitate + "\r\n\r\n";
+            return text;
         }
     }
 }

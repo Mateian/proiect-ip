@@ -41,11 +41,11 @@ namespace ClinicaMedicalaForm.components.Presenter
             List<IUser> totiPacientii = _model.Pacienti;
             if (totiPacientii == null) return pacientiDoctor;
 
-            foreach(var user in totiPacientii)
+            foreach (var user in totiPacientii)
             {
                 Pacient pacient = user as Pacient;
-                
-                if(pacient != null && pacient.Doctor != null && pacient.Doctor.ID == doctorID)
+
+                if (pacient != null && pacient.Doctor != null && pacient.Doctor.ID == doctorID)
                 {
                     pacientiDoctor.Add(pacient);
                 }
@@ -60,7 +60,7 @@ namespace ClinicaMedicalaForm.components.Presenter
             List<Programare> l = new List<Programare>();
             foreach (Programare p in _model.Programari)
             {
-                if(p.DoctorID == doctorID)
+                if (p.DoctorID == doctorID)
                 {
                     l.Add(p);
                 }
@@ -92,9 +92,9 @@ namespace ClinicaMedicalaForm.components.Presenter
         public List<Programare> GetCereriProgramari(int pacientID)
         {
             List<Programare> cereri = new List<Programare>();
-            foreach(Programare programare in _model.Programari)
+            foreach (Programare programare in _model.Programari)
             {
-                if(programare.PacientID == pacientID && programare.Valabilitate == "In curs de validare")
+                if (programare.PacientID == pacientID && programare.Valabilitate == "In curs de validare")
                 {
                     cereri.Add(programare);
                 }
@@ -122,7 +122,7 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             _model.StergeUser(id);
         }
-        
+
         public void AdaugaDoctor(Doctor doctor)
         {
             _model.AdaugaDoctor(doctor);
@@ -143,6 +143,18 @@ namespace ClinicaMedicalaForm.components.Presenter
         public void AdaugareFisaMedicala(List<string> dateFisaMedicala)
         {
             _model.AdaugareFisaMedicala(dateFisaMedicala);
+        }
+        public string PreviewIstoricMedical(int nrFisa)
+        {
+            return _model.PreviewIstoricMedical(nrFisa);
+        }
+        public string PreviewIstoricProgramari(int nrProgramare,int userID)
+        {
+            return _model.PreviewIstoricProgramari(nrProgramare, userID);
+        }
+        public IUser GetUser(int userID)
+        {
+            return _model.GetUser(userID);
         }
     }
 }

@@ -34,5 +34,23 @@ namespace ClinicaMedicalaForm.components.Model
         {
             return $"{ID} {_nume} {_prenume} ({_username}) {Rol} {_email} {Specializare}";
         }
+
+        public void SetProgramare(Programare programare)
+        {
+            if(_programari == null)
+            {
+                _programari = new List<Programare>();
+            }
+            _programari.Add(programare);
+        }
+
+        public Programare GetProgramare(int index)
+        {
+            if(_programari != null && index >= 0 && index < _programari.Count)
+            {
+                return _programari[index];
+            }
+            return null;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaMedicalaForm.components.Model.Medical;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,7 @@ namespace ClinicaMedicalaForm.components.Model
         string Rol { get; }
         string Parola { get; }
         string ToString();
+        void SetProgramare(Programare programare);
+        Programare GetProgramare(int index);
     }
 }

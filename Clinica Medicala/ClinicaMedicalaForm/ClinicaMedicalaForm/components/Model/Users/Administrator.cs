@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicaMedicalaForm.components.Model.Medical;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,16 @@ namespace ClinicaMedicalaForm.components.Model.Users
         override public string ToString()
         {
             return $"{ID} {_nume} {_prenume} {_email}";
+        }
+
+        public void SetProgramare(Programare programare)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Programare GetProgramare(int index)
+        {
+            throw new NotImplementedException();
         }
     }
 }

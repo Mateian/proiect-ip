@@ -245,11 +245,24 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _fiseMedicale;
         }
-        public string PreviewIstoric(int nrFisa)
+        public string PreviewIstoricMedical(int nrFisa)
         {
             //Se selecteaza fisa cu nrFisa corespunzator si se apeleaza functia de generare a textului
             FisaMedicala fisa = _fiseMedicale[nrFisa];
             return fisa.GeneratePreview();
+        }
+        public string PreviewIstoricProgramari(int nrProgramare,int userID)
+        {
+            IUser user = GetUser(userID);
+            if (user != null)
+            {
+                Programare programare = user.GetProgramare(nrProgramare);
+                if (programare != null)
+                {
+                    return programare.GeneratePreview();
+                }
+            }
+            return "";
         }
         public void DeletePacient(int id)
         {
@@ -334,7 +347,6 @@ namespace ClinicaMedicalaForm.components.Model
             };
             _databaseManager.ExecuteNonQuery(query, parameters);
         }
-
         public void AdaugaDoctor(Doctor doctor)
         {
             string tableName = "Users";
@@ -363,7 +375,6 @@ namespace ClinicaMedicalaForm.components.Model
             }
             
        }
-
         public void ValidareProgramare(Programare programare)
         {
             Programare newProg = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
@@ -412,6 +423,17 @@ namespace ClinicaMedicalaForm.components.Model
                 _pacienti.Add(pacient);
                 return pacient;
             }
+        }
+        public IUser GetUser(int userID)
+        {
+            foreach (IUser user in _users)
+            {
+                if (user.ID == userID)
+                {
+                    return user;
+                }
+            }
+            return null;
         }
     }
 }

@@ -80,9 +80,15 @@ namespace ClinicaMedicalaForm
                     labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
 
                     List<Programare> programariIstoric = _presenter.GetProgramariIstoric(_user.ID);
+
                     foreach(Programare programare in programariIstoric)
                     {
                         listBoxPacientIstoricProgramari.Items.Add(programare.ToString());
+                        IUser user = _presenter.GetUser(_user.ID);
+                        if(user != null)
+                        {
+                            user.SetProgramare(programare);
+                        }
                     }
 
                     List<Programare> cereriProgramare = _presenter.GetCereriProgramari(_user.ID);
@@ -162,6 +168,7 @@ namespace ClinicaMedicalaForm
             _user = null;
             buttonDeconectare.Visible = false;
             groupBoxAutentificare.Enabled = true;
+            textBoxPreviewFiles.Clear();
         }
         
         public void SetModel(IModel model)
@@ -190,10 +197,16 @@ namespace ClinicaMedicalaForm
         {
             if(listBoxIstoricMedical.SelectedItem!=null)//in functie de ce fisa este selectata va afisa in casuta detaliile
             {
-                textBoxPreviewFiles.Text = _model.PreviewIstoric(listBoxIstoricMedical.SelectedIndex);
+                textBoxPreviewFiles.Text = _presenter.PreviewIstoricMedical(listBoxIstoricMedical.SelectedIndex);
             }
         }
-        
+        private void listBoxPacientIstoricProgramari_Click(object sender, EventArgs e)
+        {
+            if (listBoxPacientIstoricProgramari.SelectedItem != null)
+            {
+                textBoxPreviewFiles.Text = _presenter.PreviewIstoricProgramari(listBoxPacientIstoricProgramari.SelectedIndex,_user.ID);
+            }
+        }
         private void buttonProgramare_Click(object sender, EventArgs e)
         {
             Pacient pacient = (Pacient)_user;
@@ -242,16 +255,6 @@ namespace ClinicaMedicalaForm
                     MessageBox.Show("Este deja valabila.");
                 }
             }
-        }
-
-        private void listBoxPacientProgramari_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBoxProgramari_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void listBoxDoctorPacienti_DoubleClick(object sender, EventArgs e)

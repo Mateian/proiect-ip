@@ -26,5 +26,8 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         bool CheckUserExists(List<string> data);
         IUser InsertUserCommand(List<string> data);
         void AdaugareFisaMedicala(List<string> dateFisaMedicala);
+        string PreviewIstoricMedical(int nrFisa);
+        string PreviewIstoricProgramari(int nrProgramare,int userID);
+        IUser GetUser(int userID);
     }
 }

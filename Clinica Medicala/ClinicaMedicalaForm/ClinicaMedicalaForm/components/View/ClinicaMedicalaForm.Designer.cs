@@ -257,7 +257,6 @@
             this.listBoxProgramariViitoare.Name = "listBoxProgramariViitoare";
             this.listBoxProgramariViitoare.Size = new System.Drawing.Size(316, 164);
             this.listBoxProgramariViitoare.TabIndex = 4;
-            this.listBoxProgramariViitoare.SelectedIndexChanged += new System.EventHandler(this.listBoxProgramari_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -323,7 +322,7 @@
             this.listBoxPacientIstoricProgramari.Name = "listBoxPacientIstoricProgramari";
             this.listBoxPacientIstoricProgramari.Size = new System.Drawing.Size(263, 196);
             this.listBoxPacientIstoricProgramari.TabIndex = 4;
-            this.listBoxPacientIstoricProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxPacientProgramari_SelectedIndexChanged);
+            this.listBoxPacientIstoricProgramari.Click += new System.EventHandler(this.listBoxPacientIstoricProgramari_Click);
             // 
             // groupBox1
             // 

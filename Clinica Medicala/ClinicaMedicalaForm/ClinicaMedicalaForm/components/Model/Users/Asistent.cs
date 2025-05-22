@@ -32,5 +32,14 @@ namespace ClinicaMedicalaForm.components.Model
         {
             return $"{ID} {_nume} {_prenume} ({_username}) {Rol} {_email} {Specializare}";
         }
+        public void SetProgramare(Programare programare)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Programare GetProgramare(int index)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
