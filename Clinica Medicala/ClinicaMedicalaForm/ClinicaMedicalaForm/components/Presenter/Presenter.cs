@@ -148,13 +148,13 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             return _model.PreviewIstoricMedical(nrFisa);
         }
-        public string PreviewIstoricProgramari(int nrProgramare,int userID)
+        public string PreviewIstoricProgramari(string programare, int userID)
         {
-            return _model.PreviewIstoricProgramari(nrProgramare, userID);
+            return _model.PreviewIstoricProgramari(programare, userID);
         }
-        public string PreviewCereriProgramari(int nrProgramare, int userID)
+        public string PreviewCereriProgramari(string programare, int userID)
         {
-            return _model.PreviewCereriProgramari(nrProgramare, userID);
+            return _model.PreviewCereriProgramari(programare, userID);
         }
         public IUser GetUser(int userID)
         {

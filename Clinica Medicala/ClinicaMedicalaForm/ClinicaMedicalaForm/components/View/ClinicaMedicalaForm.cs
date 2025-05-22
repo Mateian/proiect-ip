@@ -211,7 +211,7 @@ namespace ClinicaMedicalaForm
         {
             if (listBoxPacientIstoricProgramari.SelectedItem != null)
             {
-                textBoxPreviewFiles.Text = _presenter.PreviewIstoricProgramari(listBoxPacientIstoricProgramari.SelectedIndex,_user.ID);
+                textBoxPreviewFiles.Text = _presenter.PreviewIstoricProgramari(listBoxPacientIstoricProgramari.SelectedItem.ToString(), _user.ID);
             }
         }
         private void buttonProgramare_Click(object sender, EventArgs e)
@@ -229,6 +229,7 @@ namespace ClinicaMedicalaForm
                     Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
                     listBoxProgramariViitoare.Items.Add(nouaProgramare.ToString());
                     listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
+                    _model.CitireProgramari();
                     // trebuie inserata si in baza de date
                     _presenter.AdaugaProgramareViitoare(_user.ID, nouaProgramare);
                     listBoxComenzi.Items.Add($"Cerere programare pentru [{pacient.ToString()}].");
@@ -533,19 +534,19 @@ namespace ClinicaMedicalaForm
                            $"Acestia au grija de {pacienti} pacienti.\n" +
                            $"Un doctor are in medie grija de {pacienti/doctori} pacienti.";
             richTextBoxStatistica.AppendText(final);
-        }
-
-        private void listBoxProgramariViitoare_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listBoxProgramariViitoare.SelectedItem != null)
-            {
-                textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedIndex, _user.ID);
-            }
-        }  
+        } 
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void listBoxProgramariViitoare_Click(object sender, EventArgs e)
+        {
+            if (listBoxProgramariViitoare.SelectedItem != null)
+            {
+                textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedItem.ToString(), _user.ID);
+            }
         }
     }
 }
