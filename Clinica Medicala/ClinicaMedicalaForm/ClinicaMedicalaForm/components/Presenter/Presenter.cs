@@ -1,4 +1,22 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        IPresenter.cs                                            *
+ *  Copyright:   (c) 2025, ourClinic                                      *
+ *  E-mail:      ourClinic@medic.ro                                       *
+ *  Description: MVP (Model-View-Presenter), Presenter - intermediar      *
+ *               intre Model si View. Contine logica de prezentare        *
+ *               si coordoneaza fluxul de date si interactiunile.         *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -148,13 +166,13 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             return _model.PreviewIstoricMedical(nrFisa);
         }
-        public string PreviewIstoricProgramari(string programare, int userID)
+        public string PreviewIstoricProgramari(int nrProgramare,int userID)
         {
-            return _model.PreviewIstoricProgramari(programare, userID);
+            return _model.PreviewIstoricProgramari(nrProgramare, userID);
         }
-        public string PreviewCereriProgramari(string programare, int userID)
+        public string PreviewCereriProgramari(int nrProgramare, int userID)
         {
-            return _model.PreviewCereriProgramari(programare, userID);
+            return _model.PreviewCereriProgramari(nrProgramare, userID);
         }
         public IUser GetUser(int userID)
         {

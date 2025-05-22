@@ -1,4 +1,21 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        IPresenter.cs                                            *
+ *  Copyright:   (c) 2025, ourClinic                                      *
+ *  E-mail:      ourClinic@medic.ro                                       *
+ *  Description: Interfata care defineste un element de tip presenter     *
+ *               din Model-View-Presenter.                                *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,8 +44,8 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         IUser InsertUserCommand(List<string> data);
         void AdaugareFisaMedicala(List<string> dateFisaMedicala);
         string PreviewIstoricMedical(int nrFisa);
-        string PreviewIstoricProgramari(string programare, int userID);
-        string PreviewCereriProgramari(string programare, int userID);
+        string PreviewIstoricProgramari(int nrProgramare,int userID);
+        string PreviewCereriProgramari(int nrProgramare,int userID);
         IUser GetUser(int userID);
     }
 }
