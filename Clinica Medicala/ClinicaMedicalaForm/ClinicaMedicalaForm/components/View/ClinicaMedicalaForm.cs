@@ -38,6 +38,8 @@ namespace ClinicaMedicalaForm
             // in caz de e nevoie de facut ceva cand se creeaza Form
             textBoxParola.UseSystemPasswordChar = true;
             _model = new Model();
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void buttonCreareFisaMedicala_Click(object sender, EventArgs e)
@@ -539,6 +541,11 @@ namespace ClinicaMedicalaForm
             {
                 textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedIndex, _user.ID);
             }
+        }  
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
