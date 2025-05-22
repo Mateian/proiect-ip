@@ -41,7 +41,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         void AdaugareFisaMedicala(List<string> datePacient);
         List<FisaMedicala> PreluareIstoricMedical(int userID);
         string PreviewIstoricMedical(int nrFisa);
-        string PreviewIstoricProgramari(int nrProgramare, int userID);
+        string PreviewIstoricProgramari(string programare, int userID);
         void AdaugaDoctor(Doctor doctor);
         void DeletePacient(int id);
         void StergeUser(int id);
@@ -50,6 +50,6 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         bool CheckUserExists(List<string> data);
         IUser InsertUserCommand(List<string> data);
         IUser GetUser(int userID);
-        string PreviewCereriProgramari(int nrProgramare, int userID);
+        string PreviewCereriProgramari(string programare, int userID);
     }
 }

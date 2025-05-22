@@ -231,7 +231,7 @@ namespace ClinicaMedicalaForm
         {
             if (listBoxPacientIstoricProgramari.SelectedItem != null)
             {
-                textBoxPreviewFiles.Text = _presenter.PreviewIstoricProgramari(listBoxPacientIstoricProgramari.SelectedIndex,_user.ID);
+                textBoxPreviewFiles.Text = _presenter.PreviewIstoricProgramari(listBoxPacientIstoricProgramari.SelectedItem.ToString(), _user.ID);
             }
         }
         private void buttonProgramare_Click(object sender, EventArgs e)
@@ -559,7 +559,7 @@ namespace ClinicaMedicalaForm
         {
             if (listBoxProgramariViitoare.SelectedItem != null)
             {
-                textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedIndex, _user.ID);
+                textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedItem.ToString(), _user.ID);
             }
         }  
 

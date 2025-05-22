@@ -202,7 +202,6 @@ namespace ClinicaMedicalaForm.components.Model
                 }
             }
         }
-
         public IUser VerificaAutentificare(string username, string parola)
         {
             foreach (IUser user in _users)
@@ -322,13 +321,22 @@ namespace ClinicaMedicalaForm.components.Model
             FisaMedicala fisa = _fiseMedicale[nrFisa];
             return fisa.GeneratePreview();
         }
-        public string PreviewIstoricProgramari(int nrProgramare,int userID)
+        public string PreviewIstoricProgramari(string programare, int userID)
         {
             try
             {
-                IUser user = GetUser(userID);
-                Programare programare = user.GetProgramare(nrProgramare);
-                return programare.GeneratePreview();
+                string[] allInfo = programare.Split(',');
+                string data = allInfo[0];
+                int pacientID = userID;
+                string specializare = allInfo[2].Replace(" Specialitatea: ", "");
+                string valabilitate = allInfo[3].Replace(" Valabilitatea: ", "").Replace("\n", "");
+                foreach (Programare p in _programari)
+                {
+                    if (p.Data == data && p.PacientID == pacientID && p.Specializare == specializare && p.Valabilitate == valabilitate)
+                    {
+                        return p.GeneratePreview();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -336,16 +344,26 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return "";
         }
-        public string PreviewCereriProgramari(int nrProgramare, int userID)
+        public string PreviewCereriProgramari(string programare, int userID)
         {
-            IUser user = GetUser(userID);
-            if (user != null)
+            try
             {
-                Programare programare = user.GetProgramare(nrProgramare + 1);
-                if (programare != null)
+                string[] allInfo = programare.Split(',');
+                string data = allInfo[0];
+                int pacientID = userID;
+                string specializare = allInfo[2].Replace(" Specialitatea: ", "");
+                string valabilitate = allInfo[3].Replace(" Valabilitatea: ", "").Replace("\n", "");
+                foreach (Programare p in _programari)
                 {
-                    return programare.GeneratePreview();
+                    if (p.Data == data && p.PacientID == pacientID && p.Specializare == specializare && p.Valabilitate == valabilitate)
+                    {
+                        return p.GeneratePreview();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Object null exception", 201, ex);
             }
             return "";
         }
