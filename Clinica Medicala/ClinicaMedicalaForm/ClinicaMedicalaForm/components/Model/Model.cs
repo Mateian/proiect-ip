@@ -452,5 +452,9 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return null;
         }
+        public void UpdateListBox()
+        {
+
+        }
     }
 }
