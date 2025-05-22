@@ -73,6 +73,7 @@
     <Compile Include="components\Model\Medical\Programare.cs" />
     <Compile Include="components\Model\Medical\Reteta.cs" />
     <Compile Include="components\Model\Model.cs" />
+    <Compile Include="components\Model\NoDoctorExeption.cs" />
     <Compile Include="components\Model\Users\Administrator.cs" />
     <Compile Include="components\Model\Users\Asistent.cs" />
     <Compile Include="components\Model\Users\Doctor.cs" />

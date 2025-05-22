@@ -22,6 +22,10 @@ namespace ClinicaMedicalaForm
 
         public ProgramareForm(string doctorNume, string doctorPrenume)
         {
+            if(doctorNume == null || doctorPrenume == null)
+            {
+                throw new NoDoctorExeption("Doctorul nu este disponibil!");
+            }
             _doctorNume = doctorNume;
             _doctorPrenume = doctorPrenume;
             InitializeComponent();
@@ -43,29 +47,29 @@ namespace ClinicaMedicalaForm
             this.labelDoctor.AutoSize = true;
             this.labelDoctor.Location = new System.Drawing.Point(12, 46);
             this.labelDoctor.Name = "labelDoctor";
-            this.labelDoctor.Size = new System.Drawing.Size(27, 16);
+            this.labelDoctor.Size = new System.Drawing.Size(125, 16);
             this.labelDoctor.TabIndex = 0;
-            this.labelDoctor.Text = "Dr. ";
+            this.labelDoctor.Text = "Sunteți Înscris la Dr. ";
             // 
             // textBoxData
             // 
-            this.textBoxData.Location = new System.Drawing.Point(53, 123);
+            this.textBoxData.Location = new System.Drawing.Point(148, 154);
             this.textBoxData.Name = "textBoxData";
             this.textBoxData.Size = new System.Drawing.Size(100, 22);
             this.textBoxData.TabIndex = 1;
             // 
             // textBoxSpecializare
             // 
-            this.textBoxSpecializare.Location = new System.Drawing.Point(53, 175);
+            this.textBoxSpecializare.Location = new System.Drawing.Point(148, 226);
             this.textBoxSpecializare.Name = "textBoxSpecializare";
             this.textBoxSpecializare.Size = new System.Drawing.Size(100, 22);
             this.textBoxSpecializare.TabIndex = 2;
             // 
             // buttonProgramare
             // 
-            this.buttonProgramare.Location = new System.Drawing.Point(53, 230);
+            this.buttonProgramare.Location = new System.Drawing.Point(148, 281);
             this.buttonProgramare.Name = "buttonProgramare";
-            this.buttonProgramare.Size = new System.Drawing.Size(100, 23);
+            this.buttonProgramare.Size = new System.Drawing.Size(100, 28);
             this.buttonProgramare.TabIndex = 3;
             this.buttonProgramare.Text = "Programare";
             this.buttonProgramare.UseVisualStyleBackColor = true;
@@ -74,7 +78,7 @@ namespace ClinicaMedicalaForm
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 104);
+            this.label1.Location = new System.Drawing.Point(145, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 4;
@@ -83,7 +87,7 @@ namespace ClinicaMedicalaForm
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 156);
+            this.label2.Location = new System.Drawing.Point(145, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 5;
@@ -92,7 +96,7 @@ namespace ClinicaMedicalaForm
             // ProgramareForm
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(209, 321);
+            this.ClientSize = new System.Drawing.Size(468, 490);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonProgramare);

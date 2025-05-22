@@ -193,19 +193,30 @@ namespace ClinicaMedicalaForm
                 textBoxPreviewFiles.Text = _model.PreviewIstoric(listBoxIstoricMedical.SelectedIndex);
             }
         }
-
+        
         private void buttonProgramare_Click(object sender, EventArgs e)
         {
             Pacient pacient = (Pacient)_user;
-            ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
-            if(programareForm.ShowDialog() == DialogResult.OK)
+            try
             {
-                Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
-                listBoxProgramariViitoare.Items.Add(nouaProgramare.ToString());
-                listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
-                // trebuie inserata si in baza de date
-                _presenter.AdaugaProgramareViitoare(nouaProgramare);
-                listBoxComenzi.Items.Add($"Cerere programare pentru [{pacient.ToString()}].");
+                if(pacient.Doctor == null)
+                {
+                    throw new NoDoctorExeption("Nu aveti doctor!");
+                }
+                ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
+                if (programareForm.ShowDialog() == DialogResult.OK)
+                {
+                    Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
+                    listBoxProgramariViitoare.Items.Add(nouaProgramare.ToString());
+                    listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
+                    // trebuie inserata si in baza de date
+                    _presenter.AdaugaProgramareViitoare(nouaProgramare);
+                    listBoxComenzi.Items.Add($"Cerere programare pentru [{pacient.ToString()}].");
+                }
+            }
+            catch (NoDoctorExeption ex)
+            {
+                MessageBox.Show("Nu sunteți înscris la niciun doctor.\nVă rog să vă prezentați la cabinet pentru a discuta și a vă înscrie la un doctor!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
