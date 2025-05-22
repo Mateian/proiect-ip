@@ -170,8 +170,12 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return null;
         }
-        public void AdaugaProgramareViitoare(Programare programare)
+        public void AdaugaProgramareViitoare(int id, Programare programare)
         {
+            Pacient pacient = _users.FirstOrDefault(p => p.ID == id) as Pacient;
+            _users.Remove(pacient);
+            pacient.SetProgramare(programare);
+            _users.Add(pacient);
             Programari.Add(programare);
             string tableName = "Programari";
             string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
@@ -257,6 +261,19 @@ namespace ClinicaMedicalaForm.components.Model
             if (user != null)
             {
                 Programare programare = user.GetProgramare(nrProgramare);
+                if (programare != null)
+                {
+                    return programare.GeneratePreview();
+                }
+            }
+            return "";
+        }
+        public string PreviewCereriProgramari(int nrProgramare, int userID)
+        {
+            IUser user = GetUser(userID);
+            if (user != null)
+            {
+                Programare programare = user.GetProgramare(nrProgramare + 1);
                 if (programare != null)
                 {
                     return programare.GeneratePreview();

@@ -16,7 +16,7 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         List<IUser> GetDoctori();
         List<Programare> GetProgramariDoctor(int id);
         List<Programare> GetProgramariIstoric(int pacientID);
-        void AdaugaProgramareViitoare(Programare programare);
+        void AdaugaProgramareViitoare(int ID, Programare programare);
         List<Programare> GetCereriProgramari(int pacientID);
         void AdaugaPacient(int id, Pacient pacient);
         Pacient DeletePacient(string v);
@@ -28,6 +28,7 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         void AdaugareFisaMedicala(List<string> dateFisaMedicala);
         string PreviewIstoricMedical(int nrFisa);
         string PreviewIstoricProgramari(int nrProgramare,int userID);
+        string PreviewCereriProgramari(int nrProgramare,int userID);
         IUser GetUser(int userID);
     }
 }
