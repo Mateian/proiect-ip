@@ -1,22 +1,4 @@
-﻿/**************************************************************************
- *                                                                        *
- *  File:        ClinicaMedicalaForm.cs                                   *
- *  Copyright:   (c) 2025, ourClinic                                      *
- *  E-mail:      ourClinic@medic.ro                                       *
- *  Description: MVP (Model-View-Presenter), View - interfata             *
- *               utilizatorului (UI). Afiseaza datele si captureaza       *
- *               interactiunile utilizatorului.                           *
- *                                                                        *
- *  This program is free software; you can redistribute it and/or modify  *
- *  it under the terms of the GNU General Public License as published by  *
- *  the Free Software Foundation. This program is distributed in the      *
- *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
- *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
- *  PURPOSE. See the GNU General Public License for more details.         *
- *                                                                        *
- **************************************************************************/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,7 +115,6 @@ namespace ClinicaMedicalaForm
                     tabControlUser.TabPages.Add(tabPageDoctor);
                     tabControlUser.SelectTab("tabPageDoctor");
                     tabControlUser.Visible = true;
-
 
                     listBoxDoctorPacienti.Items.Clear();
                     listBoxListaProgramari.Items.Clear();

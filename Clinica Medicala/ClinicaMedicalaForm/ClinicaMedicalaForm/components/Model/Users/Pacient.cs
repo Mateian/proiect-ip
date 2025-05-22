@@ -1,26 +1,8 @@
-﻿/**************************************************************************
- *                                                                        *
- *  File:        Pacient.cs                                               *
- *  Copyright:   (c) 2025, ourClinic                                      *
- *  E-mail:      ourClinic@medic.ro                                       *
- *  Description: Clasa folosita pentru memorarea si gestionarea           *
- *               informatiilor unui utilizator de tip Pacient.            *
- *                                                                        *
- *  This program is free software; you can redistribute it and/or modify  *
- *  it under the terms of the GNU General Public License as published by  *
- *  the Free Software Foundation. This program is distributed in the      *
- *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
- *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
- *  PURPOSE. See the GNU General Public License for more details.         *
- *                                                                        *
- **************************************************************************/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Medical;
 
 namespace ClinicaMedicalaForm.components.Model
@@ -62,18 +44,11 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public Programare GetProgramare(int index)
         {
-            try
+            if (_programari != null && index >= 0 && index < _programari.Count)
             {
-                if (index >= 0 && index < _programari.Count)
-                {
-                    return _programari[index];
-                }
-                return null;
+                return _programari[index];
             }
-            catch (Exception ex)
-            {
-                throw new MasterExceptionHandler("Array object null", 200, ex);
-            }
+            return null;
         }
     }
 }
