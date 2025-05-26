@@ -44,8 +44,8 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         IUser InsertUserCommand(List<string> data);
         void AdaugareFisaMedicala(List<string> dateFisaMedicala);
         string PreviewIstoricMedical(int nrFisa);
-        string PreviewIstoricProgramari(int nrProgramare,int userID);
-        string PreviewCereriProgramari(int nrProgramare,int userID);
+        string PreviewIstoricProgramari(string programare, int userID);
+        string PreviewCereriProgramari(string programare, int userID);
         IUser GetUser(int userID);
     }
 }
