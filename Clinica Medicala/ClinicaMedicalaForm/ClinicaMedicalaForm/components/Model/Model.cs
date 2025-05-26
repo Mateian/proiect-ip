@@ -111,15 +111,15 @@ namespace ClinicaMedicalaForm.components.Model
                 _doctori = new List<IUser>();
                 foreach (IUser user in _users)
                 {
-                    if (user.Rol == "Doctor")
+                    if (user!=null && user.Rol == "Doctor")
                     {
                         _doctori.Add(user);
                     }
                 }
             }
-            catch (Exception e)
+            catch (NullReferenceException ex)
             {
-                throw new MasterExceptionHandler("Array object null", 200,e);
+                throw new MasterExceptionHandler("Array object null", 200,ex);
             }
         }
         public void CitirePacienti()
