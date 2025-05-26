@@ -76,6 +76,7 @@
     <Compile Include="components\Model\Users\Doctor.cs" />
     <Compile Include="components\Model\Interfaces\IUser.cs" />
     <Compile Include="components\Model\Users\Pacient.cs" />
+    <Compile Include="components\Observer\Observe.cs" />
     <Compile Include="components\Presenter\Interfaces\IPresenter.cs" />
     <Compile Include="components\Presenter\Presenter.cs" />
     <Compile Include="components\View\AdaugaPacientForm.cs">

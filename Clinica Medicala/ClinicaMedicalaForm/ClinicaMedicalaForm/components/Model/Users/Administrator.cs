@@ -16,6 +16,7 @@
  **************************************************************************/
 
 using ClinicaMedicalaForm.components.Model.Medical;
+using ClinicaMedicalaForm.components.Observer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,8 @@ namespace ClinicaMedicalaForm.components.Model.Users
     {
         private string _nume, _prenume, _email, _username, _parola;
         private int _id;
+
+        private Observe _obs;
         public string Prenume => _prenume;
         public string Nume => _nume;
         public string Rol => "Administrator";
@@ -36,13 +39,15 @@ namespace ClinicaMedicalaForm.components.Model.Users
         public string Username => _username;
         public string Parola => _parola;
 
-        public Administrator(int ID, string username, string parola, string nume, string prenume)
+        public Administrator(int ID, string username, string parola, string nume, string prenume,Observe obs)
         {
             this._id = ID;
             this._username = username;
             this._parola = parola;
             this._nume = nume;
             this._prenume = prenume;
+
+            this._obs = obs;
         }
         override public string ToString()
         {
@@ -57,6 +62,11 @@ namespace ClinicaMedicalaForm.components.Model.Users
         public Programare GetProgramare(int index)
         {
             throw new NotImplementedException();
+        }
+        public void NotifyObs(string s)
+        {
+            if (_obs != null)
+                _obs.Update("USERNAME " + Nume + " " + Prenume + "(ID=" + _id + ")" + ": " + s);
         }
     }
 }

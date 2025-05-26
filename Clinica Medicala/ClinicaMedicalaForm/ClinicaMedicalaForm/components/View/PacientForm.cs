@@ -16,6 +16,7 @@
  **************************************************************************/
 
 using ClinicaMedicalaForm.components.Model;
+using ClinicaMedicalaForm.components.Observer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -162,7 +163,9 @@ namespace ClinicaMedicalaForm.components.View
                 MessageBox.Show("Numele/Prenumele trebuie sa contina doar litere!");
                 return;
             }
-            PacientNou = new Pacient(1 /*DEFAULT VALUE*/, textBoxUsername.Text, textBoxParola.Text, textBoxNume.Text, textBoxPrenume.Text);
+            Observe o = new Observe();
+            PacientNou = new Pacient(1 /*DEFAULT VALUE*/, textBoxUsername.Text, textBoxParola.Text, textBoxNume.Text, textBoxPrenume.Text, o);
+            PacientNou.NotifyObs("NEW USER CREATED");
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

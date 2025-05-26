@@ -162,6 +162,13 @@ namespace ClinicaMedicalaForm
 
                     labelWelcomeText.Text += "Adm. " + _user.Nume + " " + _user.Prenume + ".";
 
+                    listBoxComenzi.Items.Clear();
+
+                    foreach (string s in _model.GetObserverInfo())
+                    {
+                        listBoxComenzi.Items.Add(s);
+                    }
+
                     List<IUser> doctori = _presenter.GetDoctori();
                     foreach (var dr in doctori)
                     {
@@ -172,10 +179,7 @@ namespace ClinicaMedicalaForm
                             listBoxAdminPacienti.Items.Add("--"+pacient.ToString());
                         }
                     }
-                }
-                else if(_user.Rol == "Asistent")
-                {
-                    labelWelcomeText.Text += "Asist. " + _user.Nume + " " + _user.Prenume + ".";
+
                 }
             }
             else
@@ -186,6 +190,7 @@ namespace ClinicaMedicalaForm
         }
         private void buttonDeconectare_Click(object sender, EventArgs e)
         {
+            _user.NotifyObs("DISCONNECTED");
             groupBoxAdministrator.Visible = false;
             labelWelcomeText.Visible = false;
             tabControlUser.Visible = false;
@@ -274,7 +279,8 @@ namespace ClinicaMedicalaForm
 
                     listBoxListaProgramari.Items.Remove(stringProgramare);
                     listBoxListaProgramari.Items.Add(newProgramare.ToString());
-                    listBoxComenzi.Items.Add($"Adaugare programare [{programare.ToString()}].");
+                    //listBoxComenzi.Items.Add($"Adaugare programare [{programare.ToString()}].");
+                    _user.NotifyObs("APPOINTMENT VALIDATED");
                 }
                 else
                 {
@@ -319,7 +325,8 @@ namespace ClinicaMedicalaForm
                         return;
                     }
                     listBoxDoctorPacienti.Items.Add(pacient.ToString());
-                    listBoxComenzi.Items.Add($"Adaugare pacient [{pacient.ToString()}].");
+                    //listBoxComenzi.Items.Add($"Adaugare pacient [{pacient.ToString()}].");
+                    _user.NotifyObs("PACIENT ADDED TO DOCTOR");
                 }
             }
         }
@@ -335,7 +342,7 @@ namespace ClinicaMedicalaForm
                     if (doctorSters != null)
                     {
                         listBoxComenzi.Items.Add($"Stergere doctor [{doctorSters.ToString()}].");
-                        _presenter.StergeUser(doctorSters.ID);
+                        _presenter.StergeUser(doctorSters.ID);//comanda de salvat
                     }
                     Doctor doctorNou = form.DoctorNou;
                     if (doctorNou != null)
@@ -350,7 +357,7 @@ namespace ClinicaMedicalaForm
                             MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        _presenter.AdaugaDoctor(doctorNou);
+                        _presenter.AdaugaDoctor(doctorNou);//comanda de salvat
                         listBoxComenzi.Items.Add($"Adaugare doctor [{doctorNou.ToString()}].");
                     }
 
@@ -384,7 +391,7 @@ namespace ClinicaMedicalaForm
                     if (pacientSters != null)
                     {
                         listBoxComenzi.Items.Add($"Stergere pacient [{pacientSters.ToString()}].");
-                        _presenter.StergeUser(pacientSters.ID);
+                        _presenter.StergeUser(pacientSters.ID);//comanda de salvat
                     }
                     Pacient pacientNou = form.PacientNou;
                     if (pacientNou != null)
@@ -403,7 +410,7 @@ namespace ClinicaMedicalaForm
                         {
                             try
                             {
-                                _ = _presenter.InsertUserCommand(date);
+                                _ = _presenter.InsertUserCommand(date);//comanda de salvat
                                 listBoxComenzi.Items.Add($"Adaugare pacient [{pacientNou.Nume + " " + pacientNou.Prenume}].");
                             }
                             catch (Exception ex)
@@ -477,6 +484,7 @@ namespace ClinicaMedicalaForm
                     try
                     {
                         _user = _presenter.InsertUserCommand(date);
+                        _user.NotifyObs("USER CREATED");
                         listBoxComenzi.Items.Add($"Creare user nou [{textBoxCreateLastName.Text + " " + textBoxCreateFirstName.Text}].");
                     }
                     catch (Exception ex)
@@ -529,8 +537,14 @@ namespace ClinicaMedicalaForm
 
         private void buttonStatistica_Click(object sender, EventArgs e)
         {
-            listBoxComenzi.Items.Add($"Verificare statistica.");
-            int admini = 0, asisteni = 0, doctori = 0, pacienti = 0; 
+            //listBoxComenzi.Items.Add($"Verificare statistica.");
+            int admini = 0, asisteni = 0, doctori = 0, pacienti = 0;
+            _user.NotifyObs("SHOW STATISTIC");
+            listBoxComenzi.Items.Clear();
+            foreach (string s in _model.GetObserverInfo())
+            {
+                listBoxComenzi.Items.Add(s);
+            }
             richTextBoxStatistica.Text = "";
             List<IUser> users = _model.Utilizatori;
             richTextBoxStatistica.AppendText("Administratorii:\n");

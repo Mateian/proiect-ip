@@ -21,12 +21,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicaMedicalaForm.components.Model.Users;
+using ClinicaMedicalaForm.components.Observer;
 
 namespace ClinicaMedicalaForm.components.Model.Factory
 {
     public class UserFactory
     {
-        public IUser CreateUser(string[] infoArray)
+        public IUser CreateUser(string[] infoArray,Observe obs)
         {
             int.TryParse(infoArray[0], out int ID);
             string rol = infoArray[1];
@@ -38,11 +39,11 @@ namespace ClinicaMedicalaForm.components.Model.Factory
             switch(rol)
             {
                 case "Administrator":
-                    return new Administrator(ID, username, parola, nume, prenume);
+                    return new Administrator(ID, username, parola, nume, prenume, obs);
                 case "Pacient":
-                    return new Pacient(ID, username, parola, nume, prenume);
+                    return new Pacient(ID, username, parola, nume, prenume, obs);
                 case "Doctor":
-                    return new Doctor(ID, username, parola, nume, prenume);
+                    return new Doctor(ID, username, parola, nume, prenume, obs);
             }
             return null;
         }

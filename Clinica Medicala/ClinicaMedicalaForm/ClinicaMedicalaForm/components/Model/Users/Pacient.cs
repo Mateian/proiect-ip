@@ -22,6 +22,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Medical;
+using ClinicaMedicalaForm.components.Observer;
 
 namespace ClinicaMedicalaForm.components.Model
 {
@@ -29,6 +30,8 @@ namespace ClinicaMedicalaForm.components.Model
     {
         private string _nume, _prenume, _email, _username, _parola, _gen;
         private int _id;
+
+        private Observe _obs;
 
         private List<Programare> _programari;
         private DateTime _dataNastere;
@@ -42,13 +45,15 @@ namespace ClinicaMedicalaForm.components.Model
 
         public string Prenume => _prenume;
 
-        public Pacient(int ID, string username, string parola, string nume, string prenume)
+        public Pacient(int ID, string username, string parola, string nume, string prenume, Observe obs)
         {
             this._id = ID;
             this._username = username;
             this._parola = parola;
             this._nume = nume;
             this._prenume = prenume;
+
+            this._obs = obs;
         }
         override public string ToString()
         {
@@ -74,6 +79,18 @@ namespace ClinicaMedicalaForm.components.Model
             {
                 throw new MasterExceptionHandler("Array object null", 200, ex);
             }
+        }
+        public void CreeazaProgramare(Programare programare)
+        {
+            if (_programari == null)
+                _programari = new List<Programare>();
+            _programari.Add(programare);
+            _obs.Update("USERNAME "+Nume+" "+Prenume+"(ID=" + _id +")"+ ": Pacient made appointment - " + programare.ToString());
+        }
+        public void NotifyObs(string s)
+        {
+            if(_obs!=null)
+                _obs.Update("USERNAME " + Nume + " " + Prenume + "(ID=" + _id + ")" + ": " + s);
         }
     }
 }

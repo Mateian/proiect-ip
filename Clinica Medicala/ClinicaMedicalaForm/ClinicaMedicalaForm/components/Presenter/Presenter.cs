@@ -71,8 +71,7 @@ namespace ClinicaMedicalaForm.components.Presenter
 
             return pacientiDoctor;
         }
-        //List<> GetProgramari(int doctotID);
-        //List<> GetPacienti(int doctotID);
+
         public List<Programare> GetProgramariDoctor(int doctorID)
         {
             List<Programare> l = new List<Programare>();

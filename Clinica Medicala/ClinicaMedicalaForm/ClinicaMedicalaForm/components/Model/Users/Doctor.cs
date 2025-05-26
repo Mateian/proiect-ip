@@ -22,6 +22,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.Model.Users;
+using ClinicaMedicalaForm.components.Observer;
 
 namespace ClinicaMedicalaForm.components.Model
 {
@@ -30,6 +31,9 @@ namespace ClinicaMedicalaForm.components.Model
         private string _nume, _prenume, _email, _username, _parola;
         private int _id;
         private List<Programare> _programari;
+
+        private Observe _obs;
+
         public int ID => _id;
         public string Rol => "Doctor";
         public string Specializare { get; set; }
@@ -38,13 +42,15 @@ namespace ClinicaMedicalaForm.components.Model
         public string Username => _username;
 
         public string Parola => _parola;
-        public Doctor(int id, string username, string parola, string nume, string prenume)
+        public Doctor(int id, string username, string parola, string nume, string prenume, Observe obs)
         {
             _id = id;
             _username = username;
             _parola = parola;
             _nume = nume;
             _prenume = prenume;
+
+            this._obs = obs;
         }
 
         override public string ToString()
@@ -59,6 +65,7 @@ namespace ClinicaMedicalaForm.components.Model
                 _programari = new List<Programare>();
             }
             _programari.Add(programare);
+            _obs.Update("USERNAME " + Nume + " " + Prenume + "(ID=" + _id + ")" + ": Doctor made appointment - " + programare.ToString());
         }
 
         public Programare GetProgramare(int index)
@@ -68,6 +75,11 @@ namespace ClinicaMedicalaForm.components.Model
                 return _programari[index];
             }
             return null;
+        }
+        public void NotifyObs(string s)
+        {
+            if (_obs != null)
+                _obs.Update("USERNAME " + Nume + " " + Prenume + "(ID=" + _id + ")" + ": " + s);
         }
     }
 }

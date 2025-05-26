@@ -116,6 +116,7 @@ namespace ClinicaMedicalaForm.components.View
             if(form.ShowDialog() == DialogResult.OK)
             {
                 DoctorNou = form.DoctorNou;
+                DoctorNou.NotifyObs("NEW DOCTOR CREATED");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

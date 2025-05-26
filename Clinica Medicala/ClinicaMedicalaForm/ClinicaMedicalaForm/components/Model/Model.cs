@@ -28,6 +28,7 @@ using ClinicaMedicalaForm.components.Model.Factory;
 using ClinicaMedicalaForm.components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.Model.Users;
+using ClinicaMedicalaForm.components.Observer;
 using FisaMedicalaForm;
 
 
@@ -43,6 +44,7 @@ namespace ClinicaMedicalaForm.components.Model
         private List<IUser> _users;
         private List<IUser> _pacienti;
         private List<IUser> _doctori;
+        private List<Observe> _observers;
         public List<IUser> Utilizatori => _users;
         public List<Programare> Programari => _programari;
         public List<IUser> Doctori => _doctori;
@@ -54,6 +56,7 @@ namespace ClinicaMedicalaForm.components.Model
             string dataSource = "Data Source=" + location + ";Version=3;";
 
             _databaseManager = new DatabaseManager(dataSource);
+            _observers = new List<Observe>();//aici poate fii modificat sa fie dinamic, 1000 de users maxim
         }
         public void AdaugareFisaMedicala(List<string> dateFisaMedicala)
         {
@@ -66,6 +69,11 @@ namespace ClinicaMedicalaForm.components.Model
                 throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
+        public DatabaseManager GetDatabaseManager()
+        {
+            return _databaseManager;
+        }
+
         public List<IUser> CitireUtilizatori()
         {
             _userFactory = new UserFactory();
@@ -87,8 +95,9 @@ namespace ClinicaMedicalaForm.components.Model
                         object value = reader.GetValue(i);
                         infoArray[k++] = value.ToString();
                     }
-
-                    _users.Add(_userFactory.CreateUser(infoArray));
+                    Observe o = new Observe();
+                    _users.Add(_userFactory.CreateUser(infoArray,o));//add observer
+                    _observers.Add(o);
                 }
             }
             catch(Exception e)
@@ -202,12 +211,23 @@ namespace ClinicaMedicalaForm.components.Model
                 }
             }
         }
+        public List<string> GetObserverInfo()
+        {
+            List<string> info = new List<string>();
+            foreach(Observe o in _observers)
+            {
+                foreach(string s in o.GetUpdates())
+                    info.Add(s);
+            }
+            return info;
+        }
         public IUser VerificaAutentificare(string username, string parola)
         {
             foreach (IUser user in _users)
             {
                 if (user.Username == username && user.Parola == parola)
                 {
+                    user.NotifyObs("CONNECTED SUCCESFULY");
                     return user;
                 }
             }
@@ -221,11 +241,18 @@ namespace ClinicaMedicalaForm.components.Model
                 string tableName = "Programari";
                 string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
                    "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-                Pacient pacient = _users.FirstOrDefault(p => p.ID == id) as Pacient;
-                _users.Remove(pacient);
-                pacient.SetProgramare(programare);
-                _users.Add(pacient);
-                Programari.Add(programare);
+                //Pacient pacient = _users.FirstOrDefault(p => p.ID == id) as Pacient;
+                //_users.Remove(pacient);              
+                //pacient.SetProgramare(programare);
+                //_users.Add(pacient);
+                foreach (IUser user in _users)
+                {
+                    if(user.ID==id)
+                    {
+                        (user as Pacient).CreeazaProgramare(programare);
+                        break;
+                    }
+                }
                 var parameters = new Dictionary<string, object>
                 {
                     { "@PacientID", programare.PacientID },
@@ -235,30 +262,6 @@ namespace ClinicaMedicalaForm.components.Model
                     { "@Valabilitate", programare.Valabilitate }
                 };
 
-                _databaseManager.ExecuteNonQuery(query, parameters);
-            }
-            catch (Exception ex)
-            {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
-            }
-        }
-        public void AdaugaProgramare(Programare programare)
-        {
-            Programari.Add(programare);
-            string tableName = "Programari";
-            string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
-               "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-
-            var parameters = new Dictionary<string, object>
-            {
-                { "@PacientID", programare.PacientID },
-                { "@DoctorID", programare.DoctorID },
-                { "@Date", programare.Data },
-                { "@Specializare", programare.Specializare },
-                { "@Valabilitate", programare.Valabilitate }
-            };
-            try
-            {
                 _databaseManager.ExecuteNonQuery(query, parameters);
             }
             catch (Exception ex)
@@ -497,7 +500,9 @@ namespace ClinicaMedicalaForm.components.Model
                         while (reader.Read())
                         {
                             string id = reader["ID"].ToString();
-                            Doctor doctorNou = new Doctor(int.Parse(id), doctor.Username, doctor.Parola, doctor.Nume, doctor.Prenume);
+                            Observe o=new Observe();
+                            Doctor doctorNou = new Doctor(int.Parse(id), doctor.Username, doctor.Parola, doctor.Nume, doctor.Prenume,o);
+                            _observers.Add(o);
                             Doctori.Add(doctorNou);
                             Utilizatori.Add(doctorNou);
                         }
@@ -572,7 +577,9 @@ namespace ClinicaMedicalaForm.components.Model
                 }
                 else
                 {
-                    Pacient pacient = new Pacient(id, data[0], data[1], data[2], data[3]);
+                    Observe observe = new Observe();
+                    Pacient pacient = new Pacient(id, data[0], data[1], data[2], data[3], observe);
+                    _observers.Add(observe);
                     _users.Add(pacient);
                     _pacienti.Add(pacient);
                     return pacient;

@@ -35,5 +35,6 @@ namespace ClinicaMedicalaForm.components.Model
         string ToString();
         void SetProgramare(Programare programare);
         Programare GetProgramare(int index);
+        void NotifyObs(string s);
     }
 }

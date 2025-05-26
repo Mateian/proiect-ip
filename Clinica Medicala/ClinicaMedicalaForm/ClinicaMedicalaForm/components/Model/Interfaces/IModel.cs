@@ -31,7 +31,6 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         List<IUser> Doctori { get; }
         List<Programare> Programari { get; }
         List<IUser> Utilizatori {  get; }
-
         List<IUser> CitireUtilizatori();
         IUser VerificaAutentificare(string username, string parola);
         void CitireProgramari();
@@ -51,5 +50,7 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         IUser InsertUserCommand(List<string> data);
         IUser GetUser(int userID);
         string PreviewCereriProgramari(string programare, int userID);
+        DatabaseManager GetDatabaseManager();
+        List<string> GetObserverInfo();
     }
 }
