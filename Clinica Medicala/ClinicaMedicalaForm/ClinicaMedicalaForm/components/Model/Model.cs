@@ -193,10 +193,11 @@ namespace ClinicaMedicalaForm.components.Model
                         object value = reader.GetValue(i);
                         infoArray[k++] = value.ToString();
                     }
-                    int pacID, docID;
+                    int pacID, docID, id;
+                    int.TryParse(infoArray[0], out id);
                     int.TryParse(infoArray[1], out pacID);
                     int.TryParse(infoArray[2], out docID);
-                    _programari.Add(new Programare(pacID, docID, infoArray[3], infoArray[4], infoArray[5]));
+                    _programari.Add(new Programare(id, pacID, docID, infoArray[3], infoArray[4], infoArray[5]));
                 }
             }
             catch (Exception e)
@@ -523,7 +524,7 @@ namespace ClinicaMedicalaForm.components.Model
         {
             try
             {
-                Programare newProg = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
+                Programare newProg = new Programare(programare.ID, programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
                 Programari.Add(newProg);
                 Programari.Remove(programare);
                 string tableName = "Programari";
@@ -606,6 +607,27 @@ namespace ClinicaMedicalaForm.components.Model
             catch (Exception ex)
             {
                 throw new MasterExceptionHandler("Array object null", 200, ex);
+            }
+        }
+
+        public void DeleteAppointment(string programareString)
+        {
+            try
+            {
+                Programare programare = _programari.FirstOrDefault(p => p.ToString() == programareString);
+                _programari.Remove(programare);
+
+                string tableName = "Programari";
+                string query = $"DELETE FROM {tableName} WHERE ID = @ID";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@ID", programare.ID}
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
     }

@@ -177,5 +177,10 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             return _model.GetUser(userID);
         }
+
+        public void StergeProgramare(string programareString)
+        {
+            _model.DeleteAppointment(programareString);
+        }
     }
 }

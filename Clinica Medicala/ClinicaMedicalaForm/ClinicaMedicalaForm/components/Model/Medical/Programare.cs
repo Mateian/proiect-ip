@@ -26,16 +26,18 @@ namespace ClinicaMedicalaForm.components.Model.Medical
 {
     public class Programare
     {
-        private int _pacientID, _doctorID;
+        private int _pacientID, _doctorID, _id;
         private string _specializare, _data, _valabilitate;
 
+        public int ID => _id;
         public int PacientID => _pacientID;
         public int DoctorID => _doctorID;
         public string Specializare => _specializare;
         public string Data => _data;
         public string Valabilitate => _valabilitate;
-        public Programare(int pacientID, int doctorID, string date, string spec, string valabilitate)
+        public Programare(int ID, int pacientID, int doctorID, string date, string spec, string valabilitate)
         {
+            this._id = ID;
             this._pacientID = pacientID;
             this._doctorID = doctorID;
             this._specializare = spec;
@@ -44,7 +46,7 @@ namespace ClinicaMedicalaForm.components.Model.Medical
         }
         public override string ToString()
         {
-            return Data.ToString() + ", Pacientul: " + PacientID + ", Specialitatea: " + Specializare + ", Valabilitatea: " + Valabilitate + "\n";
+            return ID + " " + Data.ToString() + ", Pacientul: " + PacientID + ", Specialitatea: " + Specializare + ", Valabilitatea: " + Valabilitate + "\n";
         }
         public string GeneratePreview()
         {

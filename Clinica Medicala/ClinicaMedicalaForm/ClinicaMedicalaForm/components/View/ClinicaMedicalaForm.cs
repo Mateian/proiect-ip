@@ -250,7 +250,8 @@ namespace ClinicaMedicalaForm
                 ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
                 if (programareForm.ShowDialog() == DialogResult.OK)
                 {
-                    Programare nouaProgramare = new Programare(_user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
+                    int nextId = _model.Programari.Any() ? _model.Programari.Max(p => p.ID) + 1 : 1;
+                    Programare nouaProgramare = new Programare(nextId, _user.ID, pacient.Doctor.ID, programareForm.Data, programareForm.Specializare, "In curs de validare");
                     listBoxProgramariViitoare.Items.Add(nouaProgramare.ToString());
                     listBoxPacientIstoricProgramari.Items.Add(nouaProgramare.ToString());
                     // trebuie inserata si in baza de date
@@ -272,10 +273,9 @@ namespace ClinicaMedicalaForm
                 Programare programare = _model.Programari.FirstOrDefault(p => p.ToString() == stringProgramare);
                 if(programare.Valabilitate == "In curs de validare")
                 {
-                    Programare newProgramare = new Programare(programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
+                    Programare newProgramare = new Programare(programare.ID, programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
                     _presenter.ValidareProgramare(programare);
                     _model.Programari.Remove(programare);
-                    _model.Programari.Add(newProgramare);
 
                     listBoxListaProgramari.Items.Remove(stringProgramare);
                     listBoxListaProgramari.Items.Add(newProgramare.ToString());
@@ -599,8 +599,22 @@ namespace ClinicaMedicalaForm
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            if(MessageBox.Show("Sunteti sigur ca doriti sa parasiti aplicatia?", "Parasire aplicatie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
+        private void listBoxListaProgramari_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBoxListaProgramari.SelectedItem != null)
+            {
+                if (MessageBox.Show("Sunteti sigur ca vreti sa stergeti aceasta programare?", "Stergere programare", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    _presenter.StergeProgramare(listBoxListaProgramari.SelectedItem.ToString());
+                    listBoxListaProgramari.Items.Remove(listBoxListaProgramari.SelectedItem);
+                }
+            }
+        }
     }
 }
