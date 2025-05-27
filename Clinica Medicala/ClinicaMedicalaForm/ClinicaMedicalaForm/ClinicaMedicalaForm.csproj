@@ -36,23 +36,60 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DatabaseManager">
+      <HintPath>components\Model\DatabaseManager\DatabaseManager.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Interfaces">
+      <HintPath>components\Model\Interfaces\Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="IPresenter">
+      <HintPath>components\Presenter\Interfaces\IPresenter.dll</HintPath>
+    </Reference>
+    <Reference Include="IView">
+      <HintPath>components\View\Interfaces\IView.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterExeptionHandler">
+      <HintPath>components\Model\Exceptions\MasterExeptionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Medical">
+      <HintPath>components\Model\Medical\Medical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Sqlite, Version=9.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.9.0.5\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Model">
+      <HintPath>components\Model\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Observer">
+      <HintPath>components\Observer\Observer.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenter">
+      <HintPath>components\Presenter\Presenter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.EF6, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.119.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SQLite.Linq, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.119.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,22 +100,14 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UserFactory">
+      <HintPath>components\Model\Factory\UserFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Users">
+      <HintPath>components\Model\Users\Users.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="components\Model\DatabaseManager\DatabaseManager.cs" />
-    <Compile Include="components\Model\Exceptions\MasterExceptionHandler.cs" />
-    <Compile Include="components\Model\Factory\UserFactory.cs" />
-    <Compile Include="components\Model\Interfaces\IModel.cs" />
-    <Compile Include="components\Model\Medical\FisaMedicala.cs" />
-    <Compile Include="components\Model\Medical\Programare.cs" />
-    <Compile Include="components\Model\Model.cs" />
-    <Compile Include="components\Model\Users\Administrator.cs" />
-    <Compile Include="components\Model\Users\Doctor.cs" />
-    <Compile Include="components\Model\Interfaces\IUser.cs" />
-    <Compile Include="components\Model\Users\Pacient.cs" />
-    <Compile Include="components\Observer\Observe.cs" />
-    <Compile Include="components\Presenter\Interfaces\IPresenter.cs" />
-    <Compile Include="components\Presenter\Presenter.cs" />
     <Compile Include="components\View\AdaugaPacientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,7 +132,6 @@
     <Compile Include="components\View\GestioneazaPacientiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="components\View\Interfaces\IView.cs" />
     <Compile Include="components\View\PacientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,7 +194,17 @@
     <Content Include="data\users.txt" />
     <Content Include="images\logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="components\Model\DatabaseManager\" />
+    <Folder Include="components\Model\Exceptions\" />
+    <Folder Include="components\Model\Factory\" />
+    <Folder Include="components\Model\Interfaces\" />
+    <Folder Include="components\Model\Medical\" />
+    <Folder Include="components\Model\Users\" />
+    <Folder Include="components\Observer\" />
+    <Folder Include="components\Presenter\Interfaces\" />
+    <Folder Include="components\View\Interfaces\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

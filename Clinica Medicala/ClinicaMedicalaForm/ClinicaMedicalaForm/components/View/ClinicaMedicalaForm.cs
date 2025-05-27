@@ -18,25 +18,17 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClinicaMedicalaForm.components.Model;
-using ClinicaMedicalaForm.components.Model.Interfaces;
-using ClinicaMedicalaForm.components.Presenter;
-using ClinicaMedicalaForm.components.Presenter.Interfaces;
-using ClinicaMedicalaForm.components.View.Interfaces;
-using FisaMedicalaForm;
-using System.Data.SQLite;
-
-using ClinicaMedicalaForm.components.Model.Medical;
+using components.ModelClass;
+using components.Model.Interfaces;
+using components.Presenter.Interfaces;
+using components.View.Interfaces;
+using components.Model.Medical;
 using ClinicaMedicalaForm.components.View;
-using ClinicaMedicalaForm.components.Model.Exceptions;
+using components.Model.Exceptions;
+using components.Model.Users;
 
 namespace ClinicaMedicalaForm
 {

@@ -15,13 +15,12 @@
  *                                                                        *
  **************************************************************************/
 
-using ClinicaMedicalaForm.components.Model;
+using components.Model.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using components.Model.Users;
 
 namespace ClinicaMedicalaForm.components.View
 {

@@ -17,10 +17,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClinicaMedicalaForm.components.Model;
+using components.Model.Users;
+using components.Model.Interfaces;
 
 namespace ClinicaMedicalaForm.components.View
 {
