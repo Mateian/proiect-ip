@@ -29,6 +29,7 @@ namespace ClinicaMedicalaForm.components.View
         private ComboBox comboBoxPacienti;
         private Label label1;
         private Button buttonAdauga;
+
         private List<IUser> _utilizatori;
         public IUser Pacient { get; set; }
 

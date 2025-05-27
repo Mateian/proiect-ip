@@ -206,7 +206,6 @@
             this.tabControlUser.Size = new System.Drawing.Size(949, 638);
             this.tabControlUser.TabIndex = 0;
             this.tabControlUser.Visible = false;
-            this.tabControlUser.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControlUser_Selecting);
             // 
             // tabPagePacient
             // 

@@ -36,11 +36,6 @@ namespace ClinicaMedicalaForm.components.Model
             _connection = new SQLiteConnection(_connectionString);
         }
 
-        private SQLiteConnection GetConnection()
-        {
-            return _connection;
-        }
-
         public SQLiteDataReader ExecuteSelectQuery(string query)
         {
             OpenConnection();
