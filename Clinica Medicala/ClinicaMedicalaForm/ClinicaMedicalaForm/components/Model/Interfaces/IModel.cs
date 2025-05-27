@@ -54,5 +54,6 @@ namespace ClinicaMedicalaForm.components.Model.Interfaces
         List<string> GetObserverInfo();
         void DeleteAppointment(string programareString);
         void NevalidareProgramare(Programare programare);
+        string PreviewProgramariDoctor(string v, int iD);
     }
 }

@@ -324,6 +324,7 @@
             this.listBoxPacientIstoricProgramari.Size = new System.Drawing.Size(263, 196);
             this.listBoxPacientIstoricProgramari.TabIndex = 4;
             this.listBoxPacientIstoricProgramari.Click += new System.EventHandler(this.listBoxPacientIstoricProgramari_Click);
+            this.listBoxPacientIstoricProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxPacientIstoricProgramari_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -428,6 +429,7 @@
             this.listBoxListaProgramari.Name = "listBoxListaProgramari";
             this.listBoxListaProgramari.Size = new System.Drawing.Size(531, 228);
             this.listBoxListaProgramari.TabIndex = 3;
+            this.listBoxListaProgramari.SelectedIndexChanged += new System.EventHandler(this.listBoxListaProgramari_SelectedIndexChanged);
             this.listBoxListaProgramari.DoubleClick += new System.EventHandler(this.listBoxListaProgramari_DoubleClick);
             this.listBoxListaProgramari.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listBoxListaProgramari_KeyUp);
             // 
@@ -692,7 +694,7 @@
             this.appToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.appToolStripMenuItem.Name = "appToolStripMenuItem";
-            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 26);
+            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.appToolStripMenuItem.Text = "App";
             // 
             // exitToolStripMenuItem

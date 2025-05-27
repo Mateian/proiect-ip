@@ -305,7 +305,8 @@ namespace ClinicaMedicalaForm.components.Model
             try
             {
                 string[] allInfo = programare.Split(',');
-                string data = allInfo[0];
+                string id = allInfo[0].Split(' ')[0];
+                string data = allInfo[0].Split(' ')[1];
                 int pacientID = userID;
                 string specializare = allInfo[2].Replace(" Specialitatea: ", "");
                 string valabilitate = allInfo[3].Replace(" Valabilitatea: ", "").Replace("\n", "");
@@ -323,12 +324,39 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return "";
         }
+        public string PreviewProgramariDoctor(string programare, int userID)
+        {
+            try
+            {
+                string[] allInfo = programare.Split(',');
+                string id = allInfo[0].Split(' ')[0];
+                string data = allInfo[0].Split(' ')[1];
+                string pacientIDString = allInfo[1].Split(' ')[2];
+                int pacientID;
+                int.TryParse(pacientIDString, out pacientID);
+                string specializare = allInfo[2].Replace(" Specialitatea: ", "");
+                string valabilitate = allInfo[3].Replace(" Valabilitatea: ", "").Replace("\n", "");
+                foreach (Programare p in _programari)
+                {
+                    if (p.Data == data && p.PacientID == pacientID && p.Specializare == specializare && p.Valabilitate == valabilitate)
+                    {
+                        return p.GeneratePreview();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Object null exception", 201, ex);
+            }
+            return "";
+        }
         public string PreviewCereriProgramari(string programare, int userID)
         {
             try
             {
                 string[] allInfo = programare.Split(',');
-                string data = allInfo[0];
+                string id = allInfo[0].Split(' ')[0];
+                string data = allInfo[0].Split(' ')[1];
                 int pacientID = userID;
                 string specializare = allInfo[2].Replace(" Specialitatea: ", "");
                 string valabilitate = allInfo[3].Replace(" Valabilitatea: ", "").Replace("\n", "");
