@@ -33,7 +33,7 @@ using ClinicaMedicalaForm.components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
 using FisaMedicalaForm;
 using System.Data.SQLite;
-using static FisaMedicalaForm.FisaMedicalaForm;
+
 using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.View;
 using ClinicaMedicalaForm.components.Model.Exceptions;
