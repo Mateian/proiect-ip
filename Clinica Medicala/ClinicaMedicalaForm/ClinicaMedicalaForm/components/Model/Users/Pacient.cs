@@ -28,13 +28,12 @@ namespace ClinicaMedicalaForm.components.Model
 {
     public class Pacient : IUser
     {
-        private string _nume, _prenume, _email, _username, _parola, _gen;
+        private string _nume, _prenume, _username, _parola;
         private int _id;
 
         private Observe _obs;
 
         private List<Programare> _programari;
-        private DateTime _dataNastere;
         public int ID => _id;
         public Doctor Doctor {  get; set; }
         public string Rol => "Pacient";
@@ -57,7 +56,7 @@ namespace ClinicaMedicalaForm.components.Model
         }
         override public string ToString()
         {
-            return $"{ID} {_nume} {_prenume} ({_username}) {Rol} {_email} {_dataNastere}";
+            return $"{ID} {_nume} {_prenume} ({_username}) {Rol}";
         }
         public void SetProgramare(Programare programare)
         {

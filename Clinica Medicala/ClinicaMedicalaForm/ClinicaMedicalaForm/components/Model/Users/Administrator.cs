@@ -30,7 +30,7 @@ namespace ClinicaMedicalaForm.components.Model.Users
 {
     public class Administrator : IUser
     {
-        private string _nume, _prenume, _email, _username, _parola;
+        private string _nume, _prenume, _username, _parola;
         private int _id;
 
         private Observe _obs;
@@ -53,7 +53,7 @@ namespace ClinicaMedicalaForm.components.Model.Users
         }
         override public string ToString()
         {
-            return $"{ID} {_nume} {_prenume} {_email}";
+            return $"{ID} {_nume} {_prenume}";
         }
 
         public void SetProgramare(Programare programare)

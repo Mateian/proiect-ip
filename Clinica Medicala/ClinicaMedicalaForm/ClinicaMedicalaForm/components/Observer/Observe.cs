@@ -38,6 +38,5 @@ namespace ClinicaMedicalaForm.components.Observer
                 _updates.Add(message);
         }
         public List<string> GetUpdates() { return _updates; }
-
     }
 }

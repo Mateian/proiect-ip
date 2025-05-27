@@ -37,7 +37,6 @@ namespace ClinicaMedicalaForm.components.Model
     public class Model : IModel
     {
         private UserFactory _userFactory;
-        private SQLiteConnection _connection;
         private List<Programare> _programari;
         private List<FisaMedicala> _fiseMedicale;
         private DatabaseManager _databaseManager;
@@ -692,7 +691,6 @@ namespace ClinicaMedicalaForm.components.Model
                 return null;
             }
         }
-
         public void DeleteAppointment(string programareString)
         {
             try
