@@ -20,9 +20,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClinicaMedicalaForm.components.Model.Medical;
+using components.Model.Medical;
 using ClinicaMedicalaForm.components.Model.Users;
-using ClinicaMedicalaForm.components.Observer;
+using Observer;
 
 namespace ClinicaMedicalaForm.components.Model
 {

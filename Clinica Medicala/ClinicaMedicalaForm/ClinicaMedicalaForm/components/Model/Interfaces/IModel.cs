@@ -21,7 +21,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClinicaMedicalaForm.components.Model.Medical;
+using components.Model.Medical;
 
 namespace ClinicaMedicalaForm.components.Model.Interfaces
 {

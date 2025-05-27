@@ -15,7 +15,7 @@
  **************************************************************************/
 
 using ClinicaMedicalaForm.components.Model;
-using ClinicaMedicalaForm.components.Observer;
+using Observer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

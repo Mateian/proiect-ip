@@ -21,7 +21,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicaMedicalaForm.components.Model.Users;
-using ClinicaMedicalaForm.components.Observer;
+using Observer;
 
 namespace ClinicaMedicalaForm.components.Model.Factory
 {

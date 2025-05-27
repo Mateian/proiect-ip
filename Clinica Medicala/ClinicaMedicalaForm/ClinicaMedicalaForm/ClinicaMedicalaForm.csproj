@@ -42,6 +42,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Medical">
+      <HintPath>components\Model\Medical\Medical.dll</HintPath>
+    </Reference>
+    <Reference Include="Observer">
+      <HintPath>components\Observer\Observer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -69,14 +75,11 @@
     <Compile Include="components\Model\Exceptions\MasterExceptionHandler.cs" />
     <Compile Include="components\Model\Factory\UserFactory.cs" />
     <Compile Include="components\Model\Interfaces\IModel.cs" />
-    <Compile Include="components\Model\Medical\FisaMedicala.cs" />
-    <Compile Include="components\Model\Medical\Programare.cs" />
     <Compile Include="components\Model\Model.cs" />
     <Compile Include="components\Model\Users\Administrator.cs" />
     <Compile Include="components\Model\Users\Doctor.cs" />
     <Compile Include="components\Model\Interfaces\IUser.cs" />
     <Compile Include="components\Model\Users\Pacient.cs" />
-    <Compile Include="components\Observer\Observe.cs" />
     <Compile Include="components\Presenter\Interfaces\IPresenter.cs" />
     <Compile Include="components\Presenter\Presenter.cs" />
     <Compile Include="components\View\AdaugaPacientForm.cs">
@@ -166,7 +169,10 @@
     <Content Include="data\users.txt" />
     <Content Include="images\logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="components\Model\Medical\" />
+    <Folder Include="components\Observer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -16,8 +16,8 @@
  **************************************************************************/
 
 using ClinicaMedicalaForm.components.Model.Exceptions;
-using ClinicaMedicalaForm.components.Model.Medical;
-using ClinicaMedicalaForm.components.Observer;
+using components.Model.Medical;
+using Observer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

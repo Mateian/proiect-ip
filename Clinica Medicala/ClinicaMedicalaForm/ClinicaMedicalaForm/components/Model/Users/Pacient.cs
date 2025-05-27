@@ -21,8 +21,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicaMedicalaForm.components.Model.Exceptions;
-using ClinicaMedicalaForm.components.Model.Medical;
-using ClinicaMedicalaForm.components.Observer;
+using components.Model.Medical;
+using Observer;
 
 namespace ClinicaMedicalaForm.components.Model
 {

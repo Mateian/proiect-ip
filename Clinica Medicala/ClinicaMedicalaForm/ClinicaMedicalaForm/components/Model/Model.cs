@@ -20,16 +20,11 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Factory;
 using ClinicaMedicalaForm.components.Model.Interfaces;
-using ClinicaMedicalaForm.components.Model.Medical;
-using ClinicaMedicalaForm.components.Model.Users;
-using ClinicaMedicalaForm.components.Observer;
-using FisaMedicalaForm;
+using components.Model.Medical;
+using Observer;
 
 
 namespace ClinicaMedicalaForm.components.Model
@@ -40,7 +35,6 @@ namespace ClinicaMedicalaForm.components.Model
     public class Model : IModel
     {
         private UserFactory _userFactory;
-        private SQLiteConnection _connection;
         private List<Programare> _programari;
         private List<FisaMedicala> _fiseMedicale;
         private DatabaseManager _databaseManager;
