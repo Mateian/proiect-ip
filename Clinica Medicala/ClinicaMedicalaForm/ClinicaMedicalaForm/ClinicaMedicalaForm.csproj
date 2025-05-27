@@ -91,6 +91,12 @@
     <Compile Include="components\View\DoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="components\View\FisaMedicalaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="components\View\FisaMedicalaForm.Designer.cs">
+      <DependentUpon>FisaMedicalaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\View\GestioneazaDoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="components\View\DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="components\View\FisaMedicalaForm.resx">
+      <DependentUpon>FisaMedicalaForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="components\View\GestioneazaDoctorForm.resx">
       <DependentUpon>GestioneazaDoctorForm.cs</DependentUpon>
@@ -155,12 +165,6 @@
     <Content Include="components\Resources\ErrorLog.txt" />
     <Content Include="data\users.txt" />
     <Content Include="images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FisaMedicalaForm\FisaMedicalaForm.csproj">
-      <Project>{6166b46a-4adc-469a-8f3a-2917750ccb50}</Project>
-      <Name>FisaMedicalaForm</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

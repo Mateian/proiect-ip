@@ -1,0 +1,965 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a1bb3faa2636d92d4662c78ce2bf42003"><param name="Name" value="AdaugaDoctor(Doctor doctor)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a1bb3faa2636d92d4662c78ce2bf42003"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a90a0a8b2a6398bfae86034d8345ffd34"><param name="Name" value="AdaugaDoctor(Doctor doctor)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a90a0a8b2a6398bfae86034d8345ffd34"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ab469e53a5e279f848839469aae967ee3"><param name="Name" value="AdaugaPacient(int doctorID, Pacient pacient)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ab469e53a5e279f848839469aae967ee3"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a347210a49ac702219a4c0e61b9c2e909"><param name="Name" value="AdaugaPacient(int doctorID, Pacient pacient)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a347210a49ac702219a4c0e61b9c2e909"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html#a436ba4a27ef373390c380c705b620cdf"><param name="Name" value="AdaugaPacientForm(List&lt; IUser &gt; utilizatori)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a71222ea27be65cbf896ed8c61d945ad1"><param name="Name" value="AdaugaProgramareViitoare(int id, Programare programare)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#ac465901450051a32597800ea0e35800d"><param name="Name" value="AdaugaProgramareViitoare(int ID, Programare programare)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a277089465b3cdd5316759134eb4afec6"><param name="Name" value="AdaugareFisaMedicala(List&lt; string &gt; dateFisaMedicala)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a277089465b3cdd5316759134eb4afec6"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a8f163d4135b66f3ae17215794afca937"><param name="Name" value="AdaugareFisaMedicala(List&lt; string &gt; dateFisaMedicala)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a8f163d4135b66f3ae17215794afca937"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a469693830fd74f86c5e735d6d12ec286"><param name="Name" value="Administrator(int ID, string username, string parola, string nume, string prenume, Observe obs)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a72d288d17b225526b3ce0276a8ce5e4f"><param name="Name" value="CheckUserExists(List&lt; string &gt; data)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a72d288d17b225526b3ce0276a8ce5e4f"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45c091f59f56f92e0585a52a35a83f2c"><param name="Name" value="CheckUserExists(List&lt; string &gt; data)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45c091f59f56f92e0585a52a35a83f2c"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#aa82c21ef478394876dcda0728920a16e"><param name="Name" value="CheckUserExists(List&lt; string &gt; data)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#aa82c21ef478394876dcda0728920a16e"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ac4c8c465924efbefaa22859088c6e7b0"><param name="Name" value="CitireDoctori()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ae886663a9b3bbd1eaffabe4022e24c77"><param name="Name" value="CitirePacienti()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45b1802becd95d7731e3fd8e2d381fc7"><param name="Name" value="CitireProgramari()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a1f94a9ccc35ab035d9dfd6b6a4d84172"><param name="Name" value="CitireUtilizatori()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#a64d6860e7b26c49ee505abb6fbf079ee"><param name="Name" value="ClinicaMedicalaForm()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#a64d6860e7b26c49ee505abb6fbf079ee"><param name="Name" value="ClinicaMedicalaForm()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#ac27a48d6d9d868a98e4965b52d9eaaba"><param name="Name" value="Dispose(bool disposing)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#aaf5f63d4de8c0d196453ca53a793d3d7"><param name="Name" value="InitForm()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#a6ba38f2aac13af2179775236b966b1bd"><param name="Name" value="SetModel(IModel model)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#a9e6e1da42c62c45aa99b04840592fbd8"><param name="Name" value="SetPresenter(IPresenter presenter)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components.html"><param name="Name" value="ClinicaMedicalaForm::components"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a72d288d17b225526b3ce0276a8ce5e4f"><param name="Name" value="CheckUserExists(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a3359cc62a4735045c3500b231670e0f7"><param name="Name" value="DatabaseManager(string connectionString)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a0d7dcc02acb5cdb80ee1438239ba5a94"><param name="Name" value="ExecuteNonQuery(string query, Dictionary&lt; string, object &gt; parameters)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a7cd12c1b9ab430480d0fe813fafd1260"><param name="Name" value="ExecuteSelectQuery(string query)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a10ab5507679058f98f07bab1c1417e0d"><param name="Name" value="InsertCommand(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a7746ea9d7197c66affd14062f05dc46d"><param name="Name" value="InsertUserCommand(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a93f964dcd18c0827036073663754fda5"><param name="Name" value="Doctor(int id, string username, string parola, string nume, string prenume, Observe obs)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a221ea9b57b598bb5e6fc52449c606a5d"><param name="Name" value="GetProgramare(int index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a73313fa93c61eb33587abd848d20b53b"><param name="Name" value="ID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#ad2be911e22d0e0b8307704215df9ec8e"><param name="Name" value="NotifyObs(string s)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a10cd4c82a006f03e2819f992caa7c74f"><param name="Name" value="Nume"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a2cbd255571d932f644c22d729a601651"><param name="Name" value="Parola"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a9da51e818b62979f0d41deb1461d46f1"><param name="Name" value="Prenume"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a8a5003722cf6c3543eabf2515ffe09e5"><param name="Name" value="Rol"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#afc56dcae4439ccafc9d1f00445ef5c3d"><param name="Name" value="SetProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a530a168bd55dbc01003624066c27e87d"><param name="Name" value="Specializare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a3d7fe615f3f6d762932e0b2a453e2e31"><param name="Name" value="ToString()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a709c4e39738890973fe63a7a104b9e36"><param name="Name" value="Username"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Exceptions"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Exceptions::MasterExceptionHandler"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Exceptions::MasterExceptionHandler"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html#ae5b85a97c78f3e719751594194fb4b2d"><param name="Name" value="MasterExceptionHandler()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Exceptions::MasterExceptionHandler"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html#addb604c11af042b1dbdfadd7f2be2d43"><param name="Name" value="MasterExceptionHandler(string message, int err_code, Exception inner)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_model_1_1_factory.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Factory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_factory_1_1_user_factory.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Factory::UserFactory"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_factory_1_1_user_factory.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Factory::UserFactory"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_factory_1_1_user_factory.html#adb27ac0d104f1f394240466b565bd2ee"><param name="Name" value="CreateUser(string[] infoArray, Observe obs)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Interfaces"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Interfaces::IModel"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::IUser"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_model_1_1_medical.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::FisaMedicala"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::FisaMedicala"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#ae84aee02bd2af4ee948fd173ec274b3d"><param name="Name" value="FisaMedicala(string nume, string prenume, string data, string motiv, string diagnostic, string tratament, string numeMedic, string examenClinic, string recomandari, string investigatii)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::FisaMedicala"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#aaa6d7359b1f301a97d1bd0adc69e2500"><param name="Name" value="GeneratePreview()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::FisaMedicala"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#ae1df4029193d1ccc81a2c829b213d78e"><param name="Name" value="ToString()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a7fe15beff89e4dbd2922d5ef1127fb7f"><param name="Name" value="Data"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a9e4ac0e84c22d90b4b6c5914acde347b"><param name="Name" value="DoctorID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#ae86775e391bf2e4f7cdeabbb6760c50e"><param name="Name" value="GeneratePreview()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a828984e0ccc1e981cb0f7ba806553153"><param name="Name" value="ID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a53e22cd39eede3e2e344371069309877"><param name="Name" value="PacientID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#aad7608c7c33c7168efe4f07e9933871b"><param name="Name" value="Programare(int ID, int pacientID, int doctorID, string date, string spec, string valabilitate)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a921ee4f4cabba76b4fb703007abc24f0"><param name="Name" value="Specializare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a84b45b429f5132b3c261a9d5f8b80a88"><param name="Name" value="ToString()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a84b0a1fd7ce37b73633dbb787f4b8dba"><param name="Name" value="Valabilitate"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a1bb3faa2636d92d4662c78ce2bf42003"><param name="Name" value="AdaugaDoctor(Doctor doctor)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ab469e53a5e279f848839469aae967ee3"><param name="Name" value="AdaugaPacient(int doctorID, Pacient pacient)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a71222ea27be65cbf896ed8c61d945ad1"><param name="Name" value="AdaugaProgramareViitoare(int id, Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a277089465b3cdd5316759134eb4afec6"><param name="Name" value="AdaugareFisaMedicala(List&lt; string &gt; dateFisaMedicala)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45c091f59f56f92e0585a52a35a83f2c"><param name="Name" value="CheckUserExists(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ac4c8c465924efbefaa22859088c6e7b0"><param name="Name" value="CitireDoctori()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ae886663a9b3bbd1eaffabe4022e24c77"><param name="Name" value="CitirePacienti()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45b1802becd95d7731e3fd8e2d381fc7"><param name="Name" value="CitireProgramari()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a1f94a9ccc35ab035d9dfd6b6a4d84172"><param name="Name" value="CitireUtilizatori()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a19fc067a6ce358e9f6582ddd695e502f"><param name="Name" value="DeleteAppointment(string programareString)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ad0b718c12a7db50f5cf6008c685898fa"><param name="Name" value="DeleteDoctor(int id)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8150534ff4dd0aa5eaa9d14d9b1af073"><param name="Name" value="DeletePacient(int id)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a926090710f71d02f444b72caffa98fa9"><param name="Name" value="DeletePacientPerm(int id)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a4755e7f58282cdf69e2a95444b9e3694"><param name="Name" value="Doctori"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a3327d09f282c67730d86e5c954a4705c"><param name="Name" value="GetDatabaseManager()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a6c9a31923a7e9a0d5a0b9543c9a74927"><param name="Name" value="GetObserverInfo()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8fa66acadee851c99adb2127fa7514a2"><param name="Name" value="GetUser(int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a67662896cc62ae9ccf5b9bd91eae735c"><param name="Name" value="InsertUserCommand(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a231057c8accadd8ed92fb74b70f19864"><param name="Name" value="Model()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a181402ae6efa1f592b079d9955de5947"><param name="Name" value="NevalidareProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#aa2968abda9b2ebcc4fdfb3e11ded4f08"><param name="Name" value="Pacienti"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a76f3c3efb74c5dfc66584242bdb308ae"><param name="Name" value="PreluareIstoricMedical(int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8b970e34234f1b0c54ec3c60c84c0454"><param name="Name" value="PreviewCereriProgramari(string programare, int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a7b8531bede71cd74513f944b83280236"><param name="Name" value="PreviewIstoricMedical(int nrFisa)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a0932610a79fadb17a9037535df9acd40"><param name="Name" value="PreviewIstoricProgramari(string programare, int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a9899e503bcd6b965f6d8e838aa900a42"><param name="Name" value="PreviewProgramariDoctor(string programare, int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45fdc0d153ee9ce1467d00b5c7da842b"><param name="Name" value="Programari"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a0d8cef8da9dbe5c4c5f52de7105a9955"><param name="Name" value="StergeUser(int id)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a2e675fca410cb106a73c0f827704b01c"><param name="Name" value="Utilizatori"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a4640192ef09d22a18007f8870090ce20"><param name="Name" value="ValidareProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a658e5bcad7f938e5eff6769228b9a874"><param name="Name" value="VerificaAutentificare(string username, string parola)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a7fe8280f2bc1d70cf9d186ca13a74c2d"><param name="Name" value="CreeazaProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a14a58ca4a4d44e91800a596d0df5bb83"><param name="Name" value="Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a1d0c3ef68a095f750c5c191cab15e22d"><param name="Name" value="GetProgramare(int index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#abfecaa6ff62b485de84119eee9de4abc"><param name="Name" value="ID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a4afa879230962f9cbd7e260898af7a4e"><param name="Name" value="NotifyObs(string s)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a6b7fab4f45bebf8f96a499e70a53ea29"><param name="Name" value="Nume"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#ad37a6b2f25fb79e1ed7be67a6198e702"><param name="Name" value="Pacient(int ID, string username, string parola, string nume, string prenume, Observe obs)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a0776f8e8a2f34466d2bb9c1edd642a41"><param name="Name" value="Parola"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a02016e5c8f4ee4513a3b96c6ce3e8af5"><param name="Name" value="Prenume"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#aa38050b2553a1b05c268b8e724b9f518"><param name="Name" value="Rol"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#ab8f63881e1b2a13b5fb2ac2c9d216d56"><param name="Name" value="SetProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a5edfa704bea4e549b64b38146f0ba480"><param name="Name" value="ToString()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a50fbeec868eb42eceae3ee450c374316"><param name="Name" value="Username"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_model_1_1_users.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a469693830fd74f86c5e735d6d12ec286"><param name="Name" value="Administrator(int ID, string username, string parola, string nume, string prenume, Observe obs)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ae806c55bcf68d7b014273ab24c8a0c3d"><param name="Name" value="GetProgramare(int index)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab007431d39b81713aedd96b2f381b612"><param name="Name" value="ID"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab7e7b6510e38aacbf7c78ad3d1d80768"><param name="Name" value="NotifyObs(string s)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a1094e31901d55933484ce3755ab81889"><param name="Name" value="Nume"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a8bc85073feaaf726d6c95e8cc26dc8ec"><param name="Name" value="Parola"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a68ab9f4687d8f29cb4e895a03e0ca78a"><param name="Name" value="Prenume"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a8227092c0aedb7a6a855722d0b4445af"><param name="Name" value="Rol"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a3b4146477664598ff546b5aeb42391db"><param name="Name" value="SetProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab91ab16540e3ad968fbac672111ae69e"><param name="Name" value="ToString()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#afc4f5997c9da00510b7a5cab88be7f5d"><param name="Name" value="Username"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_observer.html"><param name="Name" value="ClinicaMedicalaForm::components::Observer"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html"><param name="Name" value="ClinicaMedicalaForm::components::Observer::Observe"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html"><param name="Name" value="ClinicaMedicalaForm::components::Observer::Observe"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html#a50d650f4cf33ec2d978fc97643cf93e6"><param name="Name" value="GetUpdates()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html"><param name="Name" value="ClinicaMedicalaForm::components::Observer::Observe"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html#abd8dd4ac6c8f0121c8b2f3a34e447fdf"><param name="Name" value="Observe()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html"><param name="Name" value="ClinicaMedicalaForm::components::Observer::Observe"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html#a1c9e97d12911a485b6eb3f50967d147c"><param name="Name" value="Update(string message)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Interfaces"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Interfaces::IPresenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a90a0a8b2a6398bfae86034d8345ffd34"><param name="Name" value="AdaugaDoctor(Doctor doctor)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a347210a49ac702219a4c0e61b9c2e909"><param name="Name" value="AdaugaPacient(int doctorID, Pacient pacient)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#ac465901450051a32597800ea0e35800d"><param name="Name" value="AdaugaProgramareViitoare(int ID, Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a8f163d4135b66f3ae17215794afca937"><param name="Name" value="AdaugareFisaMedicala(List&lt; string &gt; dateFisaMedicala)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#aa82c21ef478394876dcda0728920a16e"><param name="Name" value="CheckUserExists(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a163c7d60aca31efd4d1f4adc396b8894"><param name="Name" value="DeletePacient(string pacientString)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a1c210814728ae583fa6682014f2896b6"><param name="Name" value="GetCereriProgramari(int pacientID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a57b536e86ddb735d3ef0005a19c2c07b"><param name="Name" value="GetDoctori()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a7b29cd55aa6f443e6de64e891461bf35"><param name="Name" value="GetPacienti(int doctorID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a5cdbfbf4f11780cc8058976120ab37fc"><param name="Name" value="GetProgramariDoctor(int doctorID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a0339c8119b553db31523666a65e91620"><param name="Name" value="GetProgramariIstoric(int pacientID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a714b1b03cfd0de0ada50c2ed884b0385"><param name="Name" value="GetUser(int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#acc64fbdf989517c13467e7361d9e513f"><param name="Name" value="Init()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a68b6c7998b6983dde25592acdd37e309"><param name="Name" value="InsertUserCommand(List&lt; string &gt; data)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#ab33755af6fb99c796ffd6655e769618b"><param name="Name" value="NevalidareProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#aac36306273b084fabd2803f9c428a0ca"><param name="Name" value="Presenter(IView view, IModel model)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#abc044f15e80ea3ba970ab98681c747e8"><param name="Name" value="PreviewCereriProgramari(string programare, int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a38d91aeb5c7ed1532bb2b99e29189d64"><param name="Name" value="PreviewIstoricMedical(int nrFisa)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a70143cf6a1b04093d46dc1c1b2afee58"><param name="Name" value="PreviewIstoricProgramari(string programare, int userID)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a85106d8001f5a58d16d78e49bf34001a"><param name="Name" value="PreviewProgramariDoctor(string v, int iD)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a2745a04f24349bd3088f1a9ae66ee52c"><param name="Name" value="StergeProgramare(string programareString)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a0e7081859955845206330f2f04dac29e"><param name="Name" value="StergeUser(int id)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a37e07800bbc6f120c8c4826fe0d9e8d3"><param name="Name" value="ValidareProgramare(Programare programare)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a07d115700db550d7787ffae1ffdd2cbf"><param name="Name" value="VerificaAutentificare(string username, string parola)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_view.html"><param name="Name" value="ClinicaMedicalaForm::components::View"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::AdaugaPacientForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::AdaugaPacientForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html#a436ba4a27ef373390c380c705b620cdf"><param name="Name" value="AdaugaPacientForm(List&lt; IUser &gt; utilizatori)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::AdaugaPacientForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html#af2a8d0e4e55031d6c5b451d614cc58d8"><param name="Name" value="Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::DoctorForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::DoctorForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html#a4f73d90cbc4490458733d364c19f8de0"><param name="Name" value="DoctorForm()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::DoctorForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html#a02cca87281f8019bfdb7861eef0bf82b"><param name="Name" value="DoctorNou"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaDoctorForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaDoctorForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#a30fafe4a74a48fa3bfee17561d02de8e"><param name="Name" value="DoctorNou"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaDoctorForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#abf07f1365cc2bac526aee002a3b7ae26"><param name="Name" value="GestioneazaDoctorForm(List&lt; IUser &gt; doctori)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaDoctorForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#a99bab9cbc4ba58ac56ea7d68783be560"><param name="Name" value="SelectedDoctorId"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaPacientiForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaPacientiForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a1cab12afd6a50c57f1c96532d0e527ba"><param name="Name" value="GestioneazaPacientiForm(List&lt; IUser &gt; pacienti)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaPacientiForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a310abcea7576d863fa7b168223bd437e"><param name="Name" value="Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaPacientiForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a867ff017bade6e179a2d2874339ce43b"><param name="Name" value="PacientNou"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1components_1_1_view_1_1_interfaces.html"><param name="Name" value="ClinicaMedicalaForm::components::View::Interfaces"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_clinica_medicala_form_1_1components_1_1_view_1_1_interfaces_1_1_i_view.html"><param name="Name" value="ClinicaMedicalaForm::components::View::Interfaces::IView"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::PacientForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::PacientForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html#a6e13901bd979c81c2e160840c936aefa"><param name="Name" value="PacientForm()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html"><param name="Name" value="ClinicaMedicalaForm::components::View::PacientForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html#ad30f151828e3c386b5041ffa4628ea6f"><param name="Name" value="PacientNou"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html"><param name="Name" value="ClinicaMedicalaForm::ProgramareForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html"><param name="Name" value="ClinicaMedicalaForm::ProgramareForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#ac62217d336f7a62f2acf36a5de30cf69"><param name="Name" value="Data"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html"><param name="Name" value="ClinicaMedicalaForm::ProgramareForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#a9b92de8f30f74b4cbb5bd5deb262228d"><param name="Name" value="ProgramareForm(string doctorNume, string doctorPrenume)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html"><param name="Name" value="ClinicaMedicalaForm::ProgramareForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#a05ca72ec8b819ff73db3d9eb33acd541"><param name="Name" value="Specializare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_clinica_medicala_form_1_1_properties.html"><param name="Name" value="ClinicaMedicalaForm::Properties"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_factory_1_1_user_factory.html#adb27ac0d104f1f394240466b565bd2ee"><param name="Name" value="CreateUser(string[] infoArray, Observe obs)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a7fe8280f2bc1d70cf9d186ca13a74c2d"><param name="Name" value="CreeazaProgramare(Programare programare)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a7fe15beff89e4dbd2922d5ef1127fb7f"><param name="Name" value="Data"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a7fe15beff89e4dbd2922d5ef1127fb7f"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#ac62217d336f7a62f2acf36a5de30cf69"><param name="Name" value="Data"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#ac62217d336f7a62f2acf36a5de30cf69"><param name="Name" value="ClinicaMedicalaForm::ProgramareForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a3359cc62a4735045c3500b231670e0f7"><param name="Name" value="DatabaseManager(string connectionString)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#acd385b1bd1351ea5cf84e8b41e8490c1"><param name="Name" value="datePacient"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a19fc067a6ce358e9f6582ddd695e502f"><param name="Name" value="DeleteAppointment(string programareString)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#ad0b718c12a7db50f5cf6008c685898fa"><param name="Name" value="DeleteDoctor(int id)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8150534ff4dd0aa5eaa9d14d9b1af073"><param name="Name" value="DeletePacient(int id)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a163c7d60aca31efd4d1f4adc396b8894"><param name="Name" value="DeletePacient(string pacientString)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a926090710f71d02f444b72caffa98fa9"><param name="Name" value="DeletePacientPerm(int id)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#ac27a48d6d9d868a98e4965b52d9eaaba"><param name="Name" value="Dispose(bool disposing)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#ac27a48d6d9d868a98e4965b52d9eaaba"><param name="Name" value="ClinicaMedicalaForm::ClinicaMedicalaForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#ac57cc316e7129de981f62d38a65fe660"><param name="Name" value="Dispose(bool disposing)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#ac57cc316e7129de981f62d38a65fe660"><param name="Name" value="FisaMedicalaForm::FisaMedicalaForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a93f964dcd18c0827036073663754fda5"><param name="Name" value="Doctor(int id, string username, string parola, string nume, string prenume, Observe obs)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a14a58ca4a4d44e91800a596d0df5bb83"><param name="Name" value="Doctor"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html#a4f73d90cbc4490458733d364c19f8de0"><param name="Name" value="DoctorForm()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a4755e7f58282cdf69e2a95444b9e3694"><param name="Name" value="Doctori"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a9e4ac0e84c22d90b4b6c5914acde347b"><param name="Name" value="DoctorID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html#a02cca87281f8019bfdb7861eef0bf82b"><param name="Name" value="DoctorNou"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_doctor_form.html#a02cca87281f8019bfdb7861eef0bf82b"><param name="Name" value="ClinicaMedicalaForm::components::View::DoctorForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#a30fafe4a74a48fa3bfee17561d02de8e"><param name="Name" value="DoctorNou"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#a30fafe4a74a48fa3bfee17561d02de8e"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaDoctorForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a0d7dcc02acb5cdb80ee1438239ba5a94"><param name="Name" value="ExecuteNonQuery(string query, Dictionary&lt; string, object &gt; parameters)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a7cd12c1b9ab430480d0fe813fafd1260"><param name="Name" value="ExecuteSelectQuery(string query)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#ae84aee02bd2af4ee948fd173ec274b3d"><param name="Name" value="FisaMedicala(string nume, string prenume, string data, string motiv, string diagnostic, string tratament, string numeMedic, string examenClinic, string recomandari, string investigatii)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_fisa_medicala_form.html"><param name="Name" value="FisaMedicalaForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#ae29e18bd93db0c6feeb7d4d62f4ec1e2"><param name="Name" value="FisaMedicalaForm()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html"><param name="Name" value="FisaMedicalaForm::FisaMedicalaForm"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html"><param name="Name" value="FisaMedicalaForm::FisaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#acd385b1bd1351ea5cf84e8b41e8490c1"><param name="Name" value="datePacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html"><param name="Name" value="FisaMedicalaForm::FisaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#ac57cc316e7129de981f62d38a65fe660"><param name="Name" value="Dispose(bool disposing)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html"><param name="Name" value="FisaMedicalaForm::FisaMedicalaForm"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_fisa_medicala_form_1_1_fisa_medicala_form.html#ae29e18bd93db0c6feeb7d4d62f4ec1e2"><param name="Name" value="FisaMedicalaForm()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#aaa6d7359b1f301a97d1bd0adc69e2500"><param name="Name" value="GeneratePreview()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#aaa6d7359b1f301a97d1bd0adc69e2500"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::FisaMedicala"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#ae86775e391bf2e4f7cdeabbb6760c50e"><param name="Name" value="GeneratePreview()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#ae86775e391bf2e4f7cdeabbb6760c50e"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#abf07f1365cc2bac526aee002a3b7ae26"><param name="Name" value="GestioneazaDoctorForm(List&lt; IUser &gt; doctori)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a1cab12afd6a50c57f1c96532d0e527ba"><param name="Name" value="GestioneazaPacientiForm(List&lt; IUser &gt; pacienti)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a1c210814728ae583fa6682014f2896b6"><param name="Name" value="GetCereriProgramari(int pacientID)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a3327d09f282c67730d86e5c954a4705c"><param name="Name" value="GetDatabaseManager()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a57b536e86ddb735d3ef0005a19c2c07b"><param name="Name" value="GetDoctori()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a6c9a31923a7e9a0d5a0b9543c9a74927"><param name="Name" value="GetObserverInfo()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a7b29cd55aa6f443e6de64e891461bf35"><param name="Name" value="GetPacienti(int doctorID)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a221ea9b57b598bb5e6fc52449c606a5d"><param name="Name" value="GetProgramare(int index)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a221ea9b57b598bb5e6fc52449c606a5d"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a1d0c3ef68a095f750c5c191cab15e22d"><param name="Name" value="GetProgramare(int index)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a1d0c3ef68a095f750c5c191cab15e22d"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ae806c55bcf68d7b014273ab24c8a0c3d"><param name="Name" value="GetProgramare(int index)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ae806c55bcf68d7b014273ab24c8a0c3d"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a5cdbfbf4f11780cc8058976120ab37fc"><param name="Name" value="GetProgramariDoctor(int doctorID)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a0339c8119b553db31523666a65e91620"><param name="Name" value="GetProgramariIstoric(int pacientID)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html#a50d650f4cf33ec2d978fc97643cf93e6"><param name="Name" value="GetUpdates()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8fa66acadee851c99adb2127fa7514a2"><param name="Name" value="GetUser(int userID)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8fa66acadee851c99adb2127fa7514a2"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a714b1b03cfd0de0ada50c2ed884b0385"><param name="Name" value="GetUser(int userID)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a714b1b03cfd0de0ada50c2ed884b0385"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a73313fa93c61eb33587abd848d20b53b"><param name="Name" value="ID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a73313fa93c61eb33587abd848d20b53b"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a828984e0ccc1e981cb0f7ba806553153"><param name="Name" value="ID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a828984e0ccc1e981cb0f7ba806553153"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#abfecaa6ff62b485de84119eee9de4abc"><param name="Name" value="ID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#abfecaa6ff62b485de84119eee9de4abc"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab007431d39b81713aedd96b2f381b612"><param name="Name" value="ID"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab007431d39b81713aedd96b2f381b612"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#acc64fbdf989517c13467e7361d9e513f"><param name="Name" value="Init()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#aaf5f63d4de8c0d196453ca53a793d3d7"><param name="Name" value="InitForm()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a10ab5507679058f98f07bab1c1417e0d"><param name="Name" value="InsertCommand(List&lt; string &gt; data)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a7746ea9d7197c66affd14062f05dc46d"><param name="Name" value="InsertUserCommand(List&lt; string &gt; data)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager.html#a7746ea9d7197c66affd14062f05dc46d"><param name="Name" value="ClinicaMedicalaForm::components::Model::DatabaseManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a67662896cc62ae9ccf5b9bd91eae735c"><param name="Name" value="InsertUserCommand(List&lt; string &gt; data)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a67662896cc62ae9ccf5b9bd91eae735c"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a68b6c7998b6983dde25592acdd37e309"><param name="Name" value="InsertUserCommand(List&lt; string &gt; data)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a68b6c7998b6983dde25592acdd37e309"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html#ae5b85a97c78f3e719751594194fb4b2d"><param name="Name" value="MasterExceptionHandler()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_exceptions_1_1_master_exception_handler.html#addb604c11af042b1dbdfadd7f2be2d43"><param name="Name" value="MasterExceptionHandler(string message, int err_code, Exception inner)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a231057c8accadd8ed92fb74b70f19864"><param name="Name" value="Model()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a181402ae6efa1f592b079d9955de5947"><param name="Name" value="NevalidareProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a181402ae6efa1f592b079d9955de5947"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#ab33755af6fb99c796ffd6655e769618b"><param name="Name" value="NevalidareProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#ab33755af6fb99c796ffd6655e769618b"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#ad2be911e22d0e0b8307704215df9ec8e"><param name="Name" value="NotifyObs(string s)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#ad2be911e22d0e0b8307704215df9ec8e"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a4afa879230962f9cbd7e260898af7a4e"><param name="Name" value="NotifyObs(string s)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a4afa879230962f9cbd7e260898af7a4e"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab7e7b6510e38aacbf7c78ad3d1d80768"><param name="Name" value="NotifyObs(string s)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab7e7b6510e38aacbf7c78ad3d1d80768"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a10cd4c82a006f03e2819f992caa7c74f"><param name="Name" value="Nume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a10cd4c82a006f03e2819f992caa7c74f"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a6b7fab4f45bebf8f96a499e70a53ea29"><param name="Name" value="Nume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a6b7fab4f45bebf8f96a499e70a53ea29"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a1094e31901d55933484ce3755ab81889"><param name="Name" value="Nume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a1094e31901d55933484ce3755ab81889"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html#abd8dd4ac6c8f0121c8b2f3a34e447fdf"><param name="Name" value="Observe()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#ad37a6b2f25fb79e1ed7be67a6198e702"><param name="Name" value="Pacient(int ID, string username, string parola, string nume, string prenume, Observe obs)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html#af2a8d0e4e55031d6c5b451d614cc58d8"><param name="Name" value="Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_adauga_pacient_form.html#af2a8d0e4e55031d6c5b451d614cc58d8"><param name="Name" value="ClinicaMedicalaForm::components::View::AdaugaPacientForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a310abcea7576d863fa7b168223bd437e"><param name="Name" value="Pacient"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a310abcea7576d863fa7b168223bd437e"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaPacientiForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html#a6e13901bd979c81c2e160840c936aefa"><param name="Name" value="PacientForm()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#aa2968abda9b2ebcc4fdfb3e11ded4f08"><param name="Name" value="Pacienti"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a53e22cd39eede3e2e344371069309877"><param name="Name" value="PacientID"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a867ff017bade6e179a2d2874339ce43b"><param name="Name" value="PacientNou"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_pacienti_form.html#a867ff017bade6e179a2d2874339ce43b"><param name="Name" value="ClinicaMedicalaForm::components::View::GestioneazaPacientiForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html#ad30f151828e3c386b5041ffa4628ea6f"><param name="Name" value="PacientNou"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_pacient_form.html#ad30f151828e3c386b5041ffa4628ea6f"><param name="Name" value="ClinicaMedicalaForm::components::View::PacientForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a2cbd255571d932f644c22d729a601651"><param name="Name" value="Parola"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a2cbd255571d932f644c22d729a601651"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a0776f8e8a2f34466d2bb9c1edd642a41"><param name="Name" value="Parola"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a0776f8e8a2f34466d2bb9c1edd642a41"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a8bc85073feaaf726d6c95e8cc26dc8ec"><param name="Name" value="Parola"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a8bc85073feaaf726d6c95e8cc26dc8ec"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a76f3c3efb74c5dfc66584242bdb308ae"><param name="Name" value="PreluareIstoricMedical(int userID)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a9da51e818b62979f0d41deb1461d46f1"><param name="Name" value="Prenume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a9da51e818b62979f0d41deb1461d46f1"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a02016e5c8f4ee4513a3b96c6ce3e8af5"><param name="Name" value="Prenume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a02016e5c8f4ee4513a3b96c6ce3e8af5"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a68ab9f4687d8f29cb4e895a03e0ca78a"><param name="Name" value="Prenume"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a68ab9f4687d8f29cb4e895a03e0ca78a"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#aac36306273b084fabd2803f9c428a0ca"><param name="Name" value="Presenter(IView view, IModel model)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8b970e34234f1b0c54ec3c60c84c0454"><param name="Name" value="PreviewCereriProgramari(string programare, int userID)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a8b970e34234f1b0c54ec3c60c84c0454"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#abc044f15e80ea3ba970ab98681c747e8"><param name="Name" value="PreviewCereriProgramari(string programare, int userID)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#abc044f15e80ea3ba970ab98681c747e8"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a7b8531bede71cd74513f944b83280236"><param name="Name" value="PreviewIstoricMedical(int nrFisa)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a7b8531bede71cd74513f944b83280236"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a38d91aeb5c7ed1532bb2b99e29189d64"><param name="Name" value="PreviewIstoricMedical(int nrFisa)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a38d91aeb5c7ed1532bb2b99e29189d64"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a0932610a79fadb17a9037535df9acd40"><param name="Name" value="PreviewIstoricProgramari(string programare, int userID)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a0932610a79fadb17a9037535df9acd40"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a70143cf6a1b04093d46dc1c1b2afee58"><param name="Name" value="PreviewIstoricProgramari(string programare, int userID)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a70143cf6a1b04093d46dc1c1b2afee58"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a9899e503bcd6b965f6d8e838aa900a42"><param name="Name" value="PreviewProgramariDoctor(string programare, int userID)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a85106d8001f5a58d16d78e49bf34001a"><param name="Name" value="PreviewProgramariDoctor(string v, int iD)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#aad7608c7c33c7168efe4f07e9933871b"><param name="Name" value="Programare(int ID, int pacientID, int doctorID, string date, string spec, string valabilitate)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#a9b92de8f30f74b4cbb5bd5deb262228d"><param name="Name" value="ProgramareForm(string doctorNume, string doctorPrenume)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a45fdc0d153ee9ce1467d00b5c7da842b"><param name="Name" value="Programari"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a8a5003722cf6c3543eabf2515ffe09e5"><param name="Name" value="Rol"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a8a5003722cf6c3543eabf2515ffe09e5"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#aa38050b2553a1b05c268b8e724b9f518"><param name="Name" value="Rol"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#aa38050b2553a1b05c268b8e724b9f518"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a8227092c0aedb7a6a855722d0b4445af"><param name="Name" value="Rol"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a8227092c0aedb7a6a855722d0b4445af"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_view_1_1_gestioneaza_doctor_form.html#a99bab9cbc4ba58ac56ea7d68783be560"><param name="Name" value="SelectedDoctorId"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#a6ba38f2aac13af2179775236b966b1bd"><param name="Name" value="SetModel(IModel model)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_clinica_medicala_form.html#a9e6e1da42c62c45aa99b04840592fbd8"><param name="Name" value="SetPresenter(IPresenter presenter)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#afc56dcae4439ccafc9d1f00445ef5c3d"><param name="Name" value="SetProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#afc56dcae4439ccafc9d1f00445ef5c3d"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#ab8f63881e1b2a13b5fb2ac2c9d216d56"><param name="Name" value="SetProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#ab8f63881e1b2a13b5fb2ac2c9d216d56"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a3b4146477664598ff546b5aeb42391db"><param name="Name" value="SetProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#a3b4146477664598ff546b5aeb42391db"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a530a168bd55dbc01003624066c27e87d"><param name="Name" value="Specializare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a530a168bd55dbc01003624066c27e87d"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a921ee4f4cabba76b4fb703007abc24f0"><param name="Name" value="Specializare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a921ee4f4cabba76b4fb703007abc24f0"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#a05ca72ec8b819ff73db3d9eb33acd541"><param name="Name" value="Specializare"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1_programare_form.html#a05ca72ec8b819ff73db3d9eb33acd541"><param name="Name" value="ClinicaMedicalaForm::ProgramareForm"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a2745a04f24349bd3088f1a9ae66ee52c"><param name="Name" value="StergeProgramare(string programareString)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a0d8cef8da9dbe5c4c5f52de7105a9955"><param name="Name" value="StergeUser(int id)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a0d8cef8da9dbe5c4c5f52de7105a9955"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a0e7081859955845206330f2f04dac29e"><param name="Name" value="StergeUser(int id)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a0e7081859955845206330f2f04dac29e"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a3d7fe615f3f6d762932e0b2a453e2e31"><param name="Name" value="ToString()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a3d7fe615f3f6d762932e0b2a453e2e31"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#ae1df4029193d1ccc81a2c829b213d78e"><param name="Name" value="ToString()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala.html#ae1df4029193d1ccc81a2c829b213d78e"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::FisaMedicala"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a84b45b429f5132b3c261a9d5f8b80a88"><param name="Name" value="ToString()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a84b45b429f5132b3c261a9d5f8b80a88"><param name="Name" value="ClinicaMedicalaForm::components::Model::Medical::Programare"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a5edfa704bea4e549b64b38146f0ba480"><param name="Name" value="ToString()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a5edfa704bea4e549b64b38146f0ba480"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab91ab16540e3ad968fbac672111ae69e"><param name="Name" value="ToString()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#ab91ab16540e3ad968fbac672111ae69e"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe.html#a1c9e97d12911a485b6eb3f50967d147c"><param name="Name" value="Update(string message)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a709c4e39738890973fe63a7a104b9e36"><param name="Name" value="Username"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor.html#a709c4e39738890973fe63a7a104b9e36"><param name="Name" value="ClinicaMedicalaForm::components::Model::Doctor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a50fbeec868eb42eceae3ee450c374316"><param name="Name" value="Username"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient.html#a50fbeec868eb42eceae3ee450c374316"><param name="Name" value="ClinicaMedicalaForm::components::Model::Pacient"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#afc4f5997c9da00510b7a5cab88be7f5d"><param name="Name" value="Username"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator.html#afc4f5997c9da00510b7a5cab88be7f5d"><param name="Name" value="ClinicaMedicalaForm::components::Model::Users::Administrator"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a2e675fca410cb106a73c0f827704b01c"><param name="Name" value="Utilizatori"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare.html#a84b0a1fd7ce37b73633dbb787f4b8dba"><param name="Name" value="Valabilitate"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a4640192ef09d22a18007f8870090ce20"><param name="Name" value="ValidareProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a4640192ef09d22a18007f8870090ce20"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a37e07800bbc6f120c8c4826fe0d9e8d3"><param name="Name" value="ValidareProgramare(Programare programare)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a37e07800bbc6f120c8c4826fe0d9e8d3"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a658e5bcad7f938e5eff6769228b9a874"><param name="Name" value="VerificaAutentificare(string username, string parola)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_model_1_1_model.html#a658e5bcad7f938e5eff6769228b9a874"><param name="Name" value="ClinicaMedicalaForm::components::Model::Model"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a07d115700db550d7787ffae1ffdd2cbf"><param name="Name" value="VerificaAutentificare(string username, string parola)"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter.html#a07d115700db550d7787ffae1ffdd2cbf"><param name="Name" value="ClinicaMedicalaForm::components::Presenter::Presenter"></OBJECT>
+  </UL>
+</UL>
+</BODY>
+</HTML>

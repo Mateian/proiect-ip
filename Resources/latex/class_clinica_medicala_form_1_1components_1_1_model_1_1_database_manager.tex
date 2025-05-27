@@ -1,0 +1,137 @@
+\doxysection{Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager Class Reference}
+\hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager}{}\label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+
+
+Clasa pentru crearea unui manager al bazei de date.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a3359cc62a4735045c3500b231670e0f7}{Database\+Manager}} (string connection\+String)
+\begin{DoxyCompactList}\small\item\em Constructorul clasei pentru configurarea managerului de baze de date. \end{DoxyCompactList}\item 
+SQLite\+Data\+Reader \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a7cd12c1b9ab430480d0fe813fafd1260}{Execute\+Select\+Query}} (string query)
+\begin{DoxyCompactList}\small\item\em Metoda folosita pentru executarea unei comenzi de tipul SELECT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a0d7dcc02acb5cdb80ee1438239ba5a94}{Execute\+Non\+Query}} (string query, Dictionary$<$ string, object $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Metoda folosita pentru executarea unei comenzi SQL care nu returneaza nimic (DELETE FROM, INSERT etc). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a10ab5507679058f98f07bab1c1417e0d}{Insert\+Command}} (List$<$ string $>$ data)
+\begin{DoxyCompactList}\small\item\em Metoda folosita pentru inserarea datelor unei fise medicale. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a7746ea9d7197c66affd14062f05dc46d}{Insert\+User\+Command}} (List$<$ string $>$ data)
+\begin{DoxyCompactList}\small\item\em Metoda folosita pentru inserarea unui utilizator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a72d288d17b225526b3ce0276a8ce5e4f}{Check\+User\+Exists}} (List$<$ string $>$ data)
+\begin{DoxyCompactList}\small\item\em Metoda care verifica daca exista un utilizator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clasa pentru crearea unui manager al bazei de date. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a3359cc62a4735045c3500b231670e0f7}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\index{DatabaseManager@{DatabaseManager}!ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{DatabaseManager()}{DatabaseManager()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a3359cc62a4735045c3500b231670e0f7} 
+Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager.\+Database\+Manager (\begin{DoxyParamCaption}\item[{string}]{connection\+String}{}\end{DoxyParamCaption})}
+
+
+
+Constructorul clasei pentru configurarea managerului de baze de date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection\+String} & String folosit pentru conectarea la baza de date.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a72d288d17b225526b3ce0276a8ce5e4f}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}!CheckUserExists@{CheckUserExists}}
+\index{CheckUserExists@{CheckUserExists}!ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{CheckUserExists()}{CheckUserExists()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a72d288d17b225526b3ce0276a8ce5e4f} 
+bool Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager.\+Check\+User\+Exists (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Metoda care verifica daca exista un utilizator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Lista de stringuri formata din username si parola.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a0d7dcc02acb5cdb80ee1438239ba5a94}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}!ExecuteNonQuery@{ExecuteNonQuery}}
+\index{ExecuteNonQuery@{ExecuteNonQuery}!ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ExecuteNonQuery()}{ExecuteNonQuery()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a0d7dcc02acb5cdb80ee1438239ba5a94} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager.\+Execute\+Non\+Query (\begin{DoxyParamCaption}\item[{string}]{query}{, }\item[{Dictionary$<$ string, object $>$}]{parameters}{}\end{DoxyParamCaption})}
+
+
+
+Metoda folosita pentru executarea unei comenzi SQL care nu returneaza nimic (DELETE FROM, INSERT etc). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query-\/ul care se va executa.\\
+\hline
+{\em parameters} & Parametrii stringului query identificati dupa perechi de tip string-\/object.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a7cd12c1b9ab430480d0fe813fafd1260}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}!ExecuteSelectQuery@{ExecuteSelectQuery}}
+\index{ExecuteSelectQuery@{ExecuteSelectQuery}!ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ExecuteSelectQuery()}{ExecuteSelectQuery()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a7cd12c1b9ab430480d0fe813fafd1260} 
+SQLite\+Data\+Reader Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager.\+Execute\+Select\+Query (\begin{DoxyParamCaption}\item[{string}]{query}{}\end{DoxyParamCaption})}
+
+
+
+Metoda folosita pentru executarea unei comenzi de tipul SELECT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & Query-\/ul care se va executa.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returneaza readerul care contine rezultatul in urma interogarii.
+\end{DoxyReturn}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a10ab5507679058f98f07bab1c1417e0d}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}!InsertCommand@{InsertCommand}}
+\index{InsertCommand@{InsertCommand}!ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{InsertCommand()}{InsertCommand()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a10ab5507679058f98f07bab1c1417e0d} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager.\+Insert\+Command (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Metoda folosita pentru inserarea datelor unei fise medicale. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Lista cu stringuri care contine datele de pe fisa medicala.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a7746ea9d7197c66affd14062f05dc46d}\index{ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}!InsertUserCommand@{InsertUserCommand}}
+\index{InsertUserCommand@{InsertUserCommand}!ClinicaMedicalaForm.components.Model.DatabaseManager@{ClinicaMedicalaForm.components.Model.DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{InsertUserCommand()}{InsertUserCommand()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager_a7746ea9d7197c66affd14062f05dc46d} 
+int Clinica\+Medicala\+Form.\+components.\+Model.\+Database\+Manager.\+Insert\+User\+Command (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Metoda folosita pentru inserarea unui utilizator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Lista de stringuri cu datele utilizatorului dorit a fi introdus.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+IP/\+Proiect/\+Git\+Hub/proiect-\/ip/\+Clinica Medicala/\+Clinica\+Medicala\+Form/\+Clinica\+Medicala\+Form/components/\+Model/\+Database\+Manager/Database\+Manager.\+cs\end{DoxyCompactItemize}

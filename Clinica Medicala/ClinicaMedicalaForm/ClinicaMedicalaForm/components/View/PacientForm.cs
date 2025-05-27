@@ -27,8 +27,13 @@ using System.Windows.Forms;
 
 namespace ClinicaMedicalaForm.components.View
 {
+    /// <summary>
+    /// Formular utilizat pentru introducerea datelor unui pacient nou.
+    /// Verifica validitatea datelor si creeaza un obiect Pacient la confirmare.
+    /// </summary>
     class PacientForm : Form
     {
+        // Elemente create de VS
         private Button buttonAdauga;
         private Label label4;
         private Label label3;
@@ -39,8 +44,15 @@ namespace ClinicaMedicalaForm.components.View
         private TextBox textBoxParola;
         private TextBox textBoxUsername;
 
+
+        /// <summary>
+        /// Obiectul pacient creat in urma completarii formularului.
+        /// </summary>
         public Pacient PacientNou { get; private set; }
 
+        /// <summary>
+        /// Constructor fara parametri, initializeaza componentele UI.
+        /// </summary>
         public PacientForm()
         {
             InitializeComponent();
@@ -150,6 +162,7 @@ namespace ClinicaMedicalaForm.components.View
 
         }
 
+        // Callback-uri
         private void buttonAdauga_Click(object sender, EventArgs e)
         {
             if (textBoxUsername.Text == "" || textBoxParola.Text == "" || textBoxNume.Text == "" || textBoxPrenume.Text == "")

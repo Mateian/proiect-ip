@@ -25,6 +25,9 @@ using ClinicaMedicalaForm.components.Presenter.Interfaces;
 
 namespace ClinicaMedicalaForm.components.View.Interfaces
 {
+    /// <summary>
+    /// Interfata care defineste un obiect de tip View.
+    /// </summary>
     public interface IView
     {
         void SetModel(IModel model);

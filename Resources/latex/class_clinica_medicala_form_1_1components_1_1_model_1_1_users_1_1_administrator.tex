@@ -1,0 +1,244 @@
+\doxysection{Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator Class Reference}
+\hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{}\label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+
+
+Clasa care defineste un utilizator de tip \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{Administrator}.  
+
+
+Inheritance diagram for Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a469693830fd74f86c5e735d6d12ec286}{Administrator}} (int \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab007431d39b81713aedd96b2f381b612}{ID}}, string username, string parola, string nume, string prenume, \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe}{Observe}} obs)
+\begin{DoxyCompactList}\small\item\em Constructor pentru initializarea unui administrator. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab91ab16540e3ad968fbac672111ae69e}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returneaza o reprezentare sub forma de string a obiectului \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{Administrator}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a3b4146477664598ff546b5aeb42391db}{Set\+Programare}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\begin{DoxyCompactList}\small\item\em Metoda nepermisa pentru administratori -\/ acestia nu pot avea programari. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ae806c55bcf68d7b014273ab24c8a0c3d}{Get\+Programare}} (int index)
+\begin{DoxyCompactList}\small\item\em Metoda nepermisa pentru administratori -\/ acestia nu au programari. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab7e7b6510e38aacbf7c78ad3d1d80768}{Notify\+Obs}} (string s)
+\begin{DoxyCompactList}\small\item\em Trimite un mesaj de notificare catre obervator, daca este disponibil. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a68ab9f4687d8f29cb4e895a03e0ca78a}{Prenume}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Prenumele administratorului. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a1094e31901d55933484ce3755ab81889}{Nume}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Numele administratorului. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a8227092c0aedb7a6a855722d0b4445af}{Rol}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rolul utilizatorului (\doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{Administrator}). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab007431d39b81713aedd96b2f381b612}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em ID-\/ul administratorului. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_afc4f5997c9da00510b7a5cab88be7f5d}{Username}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Numele de utilizator. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a8bc85073feaaf726d6c95e8cc26dc8ec}{Parola}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Parola asociata contului. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clasa care defineste un utilizator de tip \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{Administrator}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a469693830fd74f86c5e735d6d12ec286}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!Administrator@{Administrator}}
+\index{Administrator@{Administrator}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{Administrator()}{Administrator()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a469693830fd74f86c5e735d6d12ec286} 
+Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Administrator (\begin{DoxyParamCaption}\item[{int}]{ID}{, }\item[{string}]{username}{, }\item[{string}]{parola}{, }\item[{string}]{nume}{, }\item[{string}]{prenume}{, }\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_observer_1_1_observe}{Observe}}}]{obs}{}\end{DoxyParamCaption})}
+
+
+
+Constructor pentru initializarea unui administrator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID administrator.\\
+\hline
+{\em username} & Nume utilizator administrator.\\
+\hline
+{\em parola} & Parola administrator.\\
+\hline
+{\em nume} & Nume administrator.\\
+\hline
+{\em prenume} & Prenume administrator.\\
+\hline
+{\em obs} & Referinta catre un observer pentru notificari.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ae806c55bcf68d7b014273ab24c8a0c3d}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!GetProgramare@{GetProgramare}}
+\index{GetProgramare@{GetProgramare}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{GetProgramare()}{GetProgramare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ae806c55bcf68d7b014273ab24c8a0c3d} 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Get\+Programare (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Metoda nepermisa pentru administratori -\/ acestia nu au programari. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Indexul programarii (ignorata).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare} goala de tip fallback.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab7e7b6510e38aacbf7c78ad3d1d80768}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!NotifyObs@{NotifyObs}}
+\index{NotifyObs@{NotifyObs}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{NotifyObs()}{NotifyObs()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab7e7b6510e38aacbf7c78ad3d1d80768} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Notify\+Obs (\begin{DoxyParamCaption}\item[{string}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Trimite un mesaj de notificare catre obervator, daca este disponibil. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a3b4146477664598ff546b5aeb42391db}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!SetProgramare@{SetProgramare}}
+\index{SetProgramare@{SetProgramare}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{SetProgramare()}{SetProgramare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a3b4146477664598ff546b5aeb42391db} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Set\+Programare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Metoda nepermisa pentru administratori -\/ acestia nu pot avea programari. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em programare} & Obiect de tip \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare} (ignorata).\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab91ab16540e3ad968fbac672111ae69e}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!ToString@{ToString}}
+\index{ToString@{ToString}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab91ab16540e3ad968fbac672111ae69e} 
+override string Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returneaza o reprezentare sub forma de string a obiectului \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{Administrator}. 
+
+\begin{DoxyReturn}{Returns}
+String cu ID-\/ul, numele si prenumele.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab007431d39b81713aedd96b2f381b612}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!ID@{ID}}
+\index{ID@{ID}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_ab007431d39b81713aedd96b2f381b612} 
+int Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+ID\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+ID-\/ul administratorului. 
+
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a1094e31901d55933484ce3755ab81889}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!Nume@{Nume}}
+\index{Nume@{Nume}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{Nume}{Nume}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a1094e31901d55933484ce3755ab81889} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Nume\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Numele administratorului. 
+
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a8bc85073feaaf726d6c95e8cc26dc8ec}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!Parola@{Parola}}
+\index{Parola@{Parola}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{Parola}{Parola}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a8bc85073feaaf726d6c95e8cc26dc8ec} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Parola\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Parola asociata contului. 
+
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a68ab9f4687d8f29cb4e895a03e0ca78a}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!Prenume@{Prenume}}
+\index{Prenume@{Prenume}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{Prenume}{Prenume}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a68ab9f4687d8f29cb4e895a03e0ca78a} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Prenume\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Prenumele administratorului. 
+
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a8227092c0aedb7a6a855722d0b4445af}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!Rol@{Rol}}
+\index{Rol@{Rol}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{Rol}{Rol}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_a8227092c0aedb7a6a855722d0b4445af} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Rol\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Rolul utilizatorului (\doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator}{Administrator}). 
+
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_afc4f5997c9da00510b7a5cab88be7f5d}\index{ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}!Username@{Username}}
+\index{Username@{Username}!ClinicaMedicalaForm.components.Model.Users.Administrator@{ClinicaMedicalaForm.components.Model.Users.Administrator}}
+\doxysubsubsection{\texorpdfstring{Username}{Username}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_model_1_1_users_1_1_administrator_afc4f5997c9da00510b7a5cab88be7f5d} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Users.\+Administrator.\+Username\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Numele de utilizator. 
+
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{Clinica\+Medicala\+Form.\+components.\+Model.\+IUser}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+IP/\+Proiect/\+Git\+Hub/proiect-\/ip/\+Clinica Medicala/\+Clinica\+Medicala\+Form/\+Clinica\+Medicala\+Form/components/\+Model/\+Users/Administrator.\+cs\end{DoxyCompactItemize}

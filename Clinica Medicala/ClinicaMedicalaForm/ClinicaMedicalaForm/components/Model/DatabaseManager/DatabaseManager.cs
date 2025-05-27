@@ -25,32 +25,51 @@ using System.Threading.Tasks;
 
 namespace ClinicaMedicalaForm.components.Model
 {
+    /// <summary>
+    /// Clasa pentru crearea unui manager al bazei de date
+    /// </summary>
     public class DatabaseManager
     {
         private string _connectionString;
         private SQLiteConnection _connection;
 
+        /// <summary>
+        /// Constructorul clasei pentru configurarea managerului de baze de date
+        /// </summary>
+        /// <param name="connectionString">String folosit pentru conectarea la baza de date.</param>
         public DatabaseManager(string connectionString)
         {
             _connectionString = connectionString;
             _connection = new SQLiteConnection(_connectionString);
         }
 
+        /// <summary>
+        /// Metoda folosita pentru executarea unei comenzi de tipul SELECT.
+        /// </summary>
+        /// <param name="query">Query-ul care se va executa.</param>
+        /// <returns>Returneaza readerul care contine rezultatul in urma interogarii.</returns>
         public SQLiteDataReader ExecuteSelectQuery(string query)
         {
             OpenConnection();
 
             var command = new SQLiteCommand(query, _connection);
-            var reader = command.ExecuteReader();
+            var reader = command.ExecuteReader(); // Reader-ul trebui inchis de apelant
 
             return reader;
         }
 
+        /// <summary>
+        /// Metoda folosita pentru executarea unei comenzi SQL care nu returneaza nimic (DELETE FROM, INSERT etc).
+        /// </summary>
+        /// <param name="query">Query-ul care se va executa.</param>
+        /// <param name="parameters">Parametrii stringului query identificati dupa perechi de tip string-object.</param>
         public void ExecuteNonQuery(string query, Dictionary<string, object> parameters)
         {
             OpenConnection();
 
             var command = new SQLiteCommand(query, _connection);
+            
+            // Adauga parametrii la query
             foreach (var param in parameters)
             {
                 command.Parameters.AddWithValue(param.Key, param.Value ?? DBNull.Value);
@@ -58,8 +77,12 @@ namespace ClinicaMedicalaForm.components.Model
 
             command.ExecuteNonQuery();
 
-            CloseConnection();
+            CloseConnection(); // Inchide imediat conexiunea dupa executie
         }
+
+        /// <summary>
+        /// Metoda folosita pentru inchiderea conexiunii cu baza de date.
+        /// </summary>
         private void CloseConnection()
         {
             if (_connection.State == System.Data.ConnectionState.Open)
@@ -68,6 +91,9 @@ namespace ClinicaMedicalaForm.components.Model
             }
         }
 
+        /// <summary>
+        /// Metoda folosita pentru pornirea conexiunii cu baza de date.
+        /// </summary>
         private void OpenConnection()
         {
             if (_connection.State == System.Data.ConnectionState.Closed)
@@ -75,6 +101,11 @@ namespace ClinicaMedicalaForm.components.Model
                 _connection.Open();
             }
         }
+
+        /// <summary>
+        /// Metoda folosita pentru inserarea datelor unei fise medicale.
+        /// </summary>
+        /// <param name="data">Lista cu stringuri care contine datele de pe fisa medicala.</param>
         public void InsertCommand(List<string> data)
         {
             OpenConnection();
@@ -90,6 +121,7 @@ namespace ClinicaMedicalaForm.components.Model
             )";
             using (var command = new SQLiteCommand(query, _connection))
             {
+                // Mapare simpla de parametri la coloane
                 command.Parameters.AddWithValue("@NUMEPACIENT", data[0]);
                 command.Parameters.AddWithValue("@DATANASTERII", data[2]);
                 command.Parameters.AddWithValue("@ADRESA", data[4]);
@@ -108,6 +140,12 @@ namespace ClinicaMedicalaForm.components.Model
                 command.ExecuteNonQuery();
             }
         }
+
+        /// <summary>
+        /// Metoda folosita pentru inserarea unui utilizator.
+        /// </summary>
+        /// <param name="data">Lista de stringuri cu datele utilizatorului dorit a fi introdus.</param>
+        /// <returns></returns>
         public int InsertUserCommand(List<string> data)
         {
             OpenConnection();
@@ -138,8 +176,14 @@ namespace ClinicaMedicalaForm.components.Model
                     return id;
                 }
             }
-            return -1;
+            return -1; // In caz ca nu a gasit utilizatorul
         }
+
+        /// <summary>
+        /// Metoda care verifica daca exista un utilizator.
+        /// </summary>
+        /// <param name="data">Lista de stringuri formata din username si parola.</param>
+        /// <returns></returns>
         public bool CheckUserExists(List<string> data)
         {
             OpenConnection();
@@ -151,7 +195,7 @@ namespace ClinicaMedicalaForm.components.Model
                 var count = (long)command.ExecuteScalar();
                 if(count > 0)
                 {
-                    return true;
+                    return true; // daca exista user
                 }
                 else
                 {
