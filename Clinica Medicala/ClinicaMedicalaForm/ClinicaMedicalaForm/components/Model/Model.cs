@@ -305,7 +305,6 @@ namespace ClinicaMedicalaForm.components.Model
             try
             {
                 string[] allInfo = programare.Split(',');
-                string id = allInfo[0].Split(' ')[0];
                 string data = allInfo[0].Split(' ')[1];
                 int pacientID = userID;
                 string specializare = allInfo[2].Replace(" Specialitatea: ", "");
