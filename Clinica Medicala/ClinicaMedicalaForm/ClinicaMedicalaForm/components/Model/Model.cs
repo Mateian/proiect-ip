@@ -17,14 +17,14 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data.SQLite;
 using System.IO;
 using System.Linq;
-using ClinicaMedicalaForm.components.Model.Exceptions;
+using components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Factory;
 using ClinicaMedicalaForm.components.Model.Interfaces;
 using components.Model.Medical;
 using Observer;
+using components.Model.Database;
 
 
 namespace ClinicaMedicalaForm.components.Model

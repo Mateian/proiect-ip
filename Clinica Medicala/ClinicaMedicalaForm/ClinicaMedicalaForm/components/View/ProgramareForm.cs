@@ -16,13 +16,8 @@
  **************************************************************************/
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClinicaMedicalaForm.components.Model.Exceptions;
-using ClinicaMedicalaForm.components.View.Interfaces;
+using components.Model.Exceptions;
 
 namespace ClinicaMedicalaForm
 {

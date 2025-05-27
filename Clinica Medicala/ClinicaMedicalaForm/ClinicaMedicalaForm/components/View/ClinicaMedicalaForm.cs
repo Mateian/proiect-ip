@@ -27,7 +27,7 @@ using ClinicaMedicalaForm.components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
 using components.Model.Medical;
 using ClinicaMedicalaForm.components.View;
-using ClinicaMedicalaForm.components.Model.Exceptions;
+using components.Model.Exceptions;
 
 namespace ClinicaMedicalaForm
 {

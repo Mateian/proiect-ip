@@ -15,13 +15,9 @@
  *                                                                        *
  **************************************************************************/
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using components.Model.Medical;
+using components.Model.Database;
 
 namespace ClinicaMedicalaForm.components.Model.Interfaces
 {

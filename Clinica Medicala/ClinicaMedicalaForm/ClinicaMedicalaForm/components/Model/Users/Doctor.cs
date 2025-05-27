@@ -15,13 +15,8 @@
  *                                                                        *
  **************************************************************************/
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using components.Model.Medical;
-using ClinicaMedicalaForm.components.Model.Users;
 using Observer;
 
 namespace ClinicaMedicalaForm.components.Model
