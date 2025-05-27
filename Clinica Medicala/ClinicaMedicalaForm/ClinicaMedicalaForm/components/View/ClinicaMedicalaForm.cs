@@ -23,7 +23,7 @@ using System.Linq;
 using System.Windows.Forms;
 using ClinicaMedicalaForm.components.Model;
 using components.Model.Interfaces;
-using ClinicaMedicalaForm.components.Presenter.Interfaces;
+using components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
 using components.Model.Medical;
 using ClinicaMedicalaForm.components.View;

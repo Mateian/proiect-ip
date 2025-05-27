@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using components.Model.Interfaces;
 using components.Model.Medical;
-using ClinicaMedicalaForm.components.Presenter.Interfaces;
+using components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
 using components.Model.Users;
 

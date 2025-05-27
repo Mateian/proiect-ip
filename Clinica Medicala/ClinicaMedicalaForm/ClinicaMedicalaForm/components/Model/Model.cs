@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using components.Model.Exceptions;
-using ClinicaMedicalaForm.components.Model.Factory;
+using components.Model.Factory;
 using components.Model.Interfaces;
 using components.Model.Medical;
 using Observer;
