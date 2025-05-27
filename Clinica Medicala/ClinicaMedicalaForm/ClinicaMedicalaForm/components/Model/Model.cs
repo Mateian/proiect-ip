@@ -66,7 +66,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+                new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
         public DatabaseManager GetDatabaseManager()
@@ -80,9 +80,9 @@ namespace ClinicaMedicalaForm.components.Model
             _users = new List<IUser>();
             string tableName = "Users";
             string query = $"SELECT * FROM {tableName};";
-            var reader = _databaseManager.ExecuteSelectQuery(query);
             try
             {
+                var reader = _databaseManager.ExecuteSelectQuery(query);
                 while (reader.Read())
                 {
                     int k = 0;
@@ -102,14 +102,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch(Exception e)
             {
-                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
-            }
-            finally
-            {
-                if (reader != null && !reader.IsClosed)
-                {
-                    reader.Close();
-                }
+                new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
             }
             return _users;
         }
@@ -118,6 +111,8 @@ namespace ClinicaMedicalaForm.components.Model
             try
             {
                 _doctori = new List<IUser>();
+                if (_users == null)
+                    throw new Exception("object null");
                 foreach (IUser user in _users)
                 {
                     if (user!=null && user.Rol == "Doctor")
@@ -126,9 +121,9 @@ namespace ClinicaMedicalaForm.components.Model
                     }
                 }
             }
-            catch (NullReferenceException ex)
+            catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Array object null", 200,ex);
+                new MasterExceptionHandler("Array object null", 200,ex);
             }
         }
         public void CitirePacienti()
@@ -137,9 +132,9 @@ namespace ClinicaMedicalaForm.components.Model
 
             string tableName = "Pacienti";
             string query = $"SELECT * FROM {tableName};";
-            var reader = _databaseManager.ExecuteSelectQuery(query);
             try
             {
+                var reader = _databaseManager.ExecuteSelectQuery(query);
                 while (reader.Read())
                 {
                     int ID = reader.GetInt32(0);
@@ -166,21 +161,14 @@ namespace ClinicaMedicalaForm.components.Model
             {
                 new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
             }
-            finally
-            {
-                if (reader != null && !reader.IsClosed)
-                {
-                    reader.Close();
-                }
-            }
         }
         public void CitireProgramari()
         {
             string tableName = "Programari";
             _programari = new List<Programare>();
-            var reader = _databaseManager.ExecuteSelectQuery($"SELECT * FROM {tableName};");
             try
             {
+                var reader = _databaseManager.ExecuteSelectQuery($"SELECT * FROM {tableName};");
                 while (reader.Read())
                 {
                     int k = 0;
@@ -201,14 +189,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception e)
             {
-                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
-            }
-            finally
-            {
-                if (reader != null && !reader.IsClosed)
-                {
-                    reader.Close();
-                }
+                new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
             }
         }
         public List<string> GetObserverInfo()
@@ -262,7 +243,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+                new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
         public List<FisaMedicala> PreluareIstoricMedical(int userID)
@@ -309,7 +290,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, ex);
+                new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, ex);
             }
             return _fiseMedicale;
         }
@@ -338,7 +319,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Object null exception", 201, ex);
+                new MasterExceptionHandler("Object null exception", 201, ex);
             }
             return "";
         }
@@ -361,7 +342,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Object null exception", 201, ex);
+                new MasterExceptionHandler("Object null exception", 201, ex);
             }
             return "";
         }
@@ -395,7 +376,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
         public void DeletePacientPerm(int id)
@@ -428,7 +409,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
         public void DeleteDoctor(int id)
@@ -461,7 +442,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
         public void StergeUser(int id)
@@ -501,7 +482,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+                new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
         public void AdaugaDoctor(Doctor doctor)
@@ -539,12 +520,12 @@ namespace ClinicaMedicalaForm.components.Model
                 }
                 catch (Exception ex)
                 {
-                    throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, ex);
+                    new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, ex);
                 }
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+                new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
 
         }
@@ -583,12 +564,12 @@ namespace ClinicaMedicalaForm.components.Model
                 }
                 catch (Exception ex)
                 {
-                    throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                    new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
                 }
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+                new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
         public void NevalidareProgramare(Programare programare)
@@ -626,12 +607,12 @@ namespace ClinicaMedicalaForm.components.Model
                 }
                 catch (Exception ex)
                 {
-                    throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                    new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
                 }
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+                new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
         public bool CheckUserExists(List<string> data)
@@ -645,7 +626,8 @@ namespace ClinicaMedicalaForm.components.Model
                 int id = _databaseManager.InsertUserCommand(data);
                 if (id < 0)
                 {
-                    throw new MasterExceptionHandler("Eroare user id!", 300, null);
+                    new MasterExceptionHandler("Eroare user id!", 300, null);
+                    return null;
                 }
                 else
                 {
@@ -659,7 +641,8 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Array object null", 200, ex);
+                new MasterExceptionHandler("Array object null", 200, ex);
+                return null;
             }
         }
         public IUser GetUser(int userID)
@@ -677,7 +660,8 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Array object null", 200, ex);
+                new MasterExceptionHandler("Array object null", 200, ex);
+                return null;
             }
         }
 
@@ -698,7 +682,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception ex)
             {
-                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
     }

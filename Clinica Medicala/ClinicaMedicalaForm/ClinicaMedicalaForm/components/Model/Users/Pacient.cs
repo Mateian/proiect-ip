@@ -69,6 +69,7 @@ namespace ClinicaMedicalaForm.components.Model
         {
             try
             {
+                _programari = null;
                 if (index >= 0 && index < _programari.Count)
                 {
                     return _programari[index];

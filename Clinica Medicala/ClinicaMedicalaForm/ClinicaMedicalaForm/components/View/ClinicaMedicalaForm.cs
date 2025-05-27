@@ -241,12 +241,13 @@ namespace ClinicaMedicalaForm
         private void buttonProgramare_Click(object sender, EventArgs e)
         {
             Pacient pacient = (Pacient)_user;
+
+            if (pacient.Doctor == null)
+            {
+                new MasterExceptionHandler("Nu aveti doctor!", 401, null);
+            }
             try
             {
-                if (pacient.Doctor == null)
-                {
-                    throw new MasterExceptionHandler("Nu aveti doctor!", 401, null);
-                }
                 ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
                 if (programareForm.ShowDialog() == DialogResult.OK)
                 {
@@ -261,7 +262,7 @@ namespace ClinicaMedicalaForm
             }
             catch (Exception ex)
             {
-                return;
+                new MasterExceptionHandler("Object null exception", 200, null);
             }
         }
 
@@ -333,111 +334,97 @@ namespace ClinicaMedicalaForm
 
         private void buttonGestioneazaDoctori_Click(object sender, EventArgs e)
         {
-            try
+            GestioneazaDoctorForm form = new GestioneazaDoctorForm(_presenter.GetDoctori());
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                GestioneazaDoctorForm form = new GestioneazaDoctorForm(_presenter.GetDoctori());
-                if (form.ShowDialog() == DialogResult.OK)
+                IUser doctorSters = form.SelectedDoctorId;
+                if (doctorSters != null)
                 {
-                    IUser doctorSters = form.SelectedDoctorId;
-                    if (doctorSters != null)
+                    listBoxComenzi.Items.Add($"Stergere doctor [{doctorSters.ToString()}].");
+                    _presenter.StergeUser(doctorSters.ID);//comanda de salvat
+                }
+                Doctor doctorNou = form.DoctorNou;
+                if (doctorNou != null)
+                {
+                    List<string> date = new List<string>();
+                    date.Add(doctorNou.Username);
+                    date.Add(doctorNou.Parola);
+                    date.Add(doctorNou.Nume);
+                    date.Add(doctorNou.Prenume);
+                    if (_presenter.CheckUserExists(date))
                     {
-                        listBoxComenzi.Items.Add($"Stergere doctor [{doctorSters.ToString()}].");
-                        _presenter.StergeUser(doctorSters.ID);//comanda de salvat
+                        MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-                    Doctor doctorNou = form.DoctorNou;
-                    if (doctorNou != null)
-                    {
-                        List<string> date = new List<string>();
-                        date.Add(doctorNou.Username);
-                        date.Add(doctorNou.Parola);
-                        date.Add(doctorNou.Nume);
-                        date.Add(doctorNou.Prenume);
-                        if (_presenter.CheckUserExists(date))
-                        {
-                            MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                        _presenter.AdaugaDoctor(doctorNou);//comanda de salvat
-                        listBoxComenzi.Items.Add($"Adaugare doctor [{doctorNou.ToString()}].");
-                    }
+                    _presenter.AdaugaDoctor(doctorNou);//comanda de salvat
+                    listBoxComenzi.Items.Add($"Adaugare doctor [{doctorNou.ToString()}].");
+                }
 
-                    // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
-                    listBoxAdminPacienti.Items.Clear();
-                    List<IUser> doctori = _presenter.GetDoctori();
-                    foreach (var dr in doctori)
+                // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
+                listBoxAdminPacienti.Items.Clear();
+                List<IUser> doctori = _presenter.GetDoctori();
+                foreach (var dr in doctori)
+                {
+                    listBoxAdminPacienti.Items.Add(dr.ToString());
+                    List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
+                    foreach (var pacient in pacientiDoctor)
                     {
-                        listBoxAdminPacienti.Items.Add(dr.ToString());
-                        List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
-                        foreach (var pacient in pacientiDoctor)
-                        {
-                            listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
-                        }
+                        listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                return;
             }
         }
         private void buttonGestioneazaPacienti_Click(object sender, EventArgs e)
         {
-            try
+            GestioneazaPacientiForm form = new GestioneazaPacientiForm(_model.Utilizatori);
+            if (form.ShowDialog() == DialogResult.OK)
             {
-                GestioneazaPacientiForm form = new GestioneazaPacientiForm(_model.Utilizatori);
-                if (form.ShowDialog() == DialogResult.OK)
+                IUser pacientSters = form.Pacient;
+                if (pacientSters != null)
                 {
-                    IUser pacientSters = form.Pacient;
-                    if (pacientSters != null)
+                    listBoxComenzi.Items.Add($"Stergere pacient [{pacientSters.ToString()}].");
+                    _presenter.StergeUser(pacientSters.ID);//comanda de salvat
+                }
+                Pacient pacientNou = form.PacientNou;
+                if (pacientNou != null)
+                {
+                    List<string> date = new List<string>();
+                    date.Add(pacientNou.Username);
+                    date.Add(pacientNou.Parola);
+                    date.Add(pacientNou.Nume);
+                    date.Add(pacientNou.Prenume);
+                    if (_presenter.CheckUserExists(date))
                     {
-                        listBoxComenzi.Items.Add($"Stergere pacient [{pacientSters.ToString()}].");
-                        _presenter.StergeUser(pacientSters.ID);//comanda de salvat
+                        MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-                    Pacient pacientNou = form.PacientNou;
-                    if (pacientNou != null)
+                    else
                     {
-                        List<string> date = new List<string>();
-                        date.Add(pacientNou.Username);
-                        date.Add(pacientNou.Parola);
-                        date.Add(pacientNou.Nume);
-                        date.Add(pacientNou.Prenume);
-                        if (_presenter.CheckUserExists(date))
+                        try
                         {
-                            MessageBox.Show("Cont deja existent!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            _ = _presenter.InsertUserCommand(date);//comanda de salvat
+                            listBoxComenzi.Items.Add($"Adaugare pacient [{pacientNou.Nume + " " + pacientNou.Prenume}].");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
-                        }
-                        else
-                        {
-                            try
-                            {
-                                _ = _presenter.InsertUserCommand(date);//comanda de salvat
-                                listBoxComenzi.Items.Add($"Adaugare pacient [{pacientNou.Nume + " " + pacientNou.Prenume}].");
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show(ex.Message, "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                return;
-                            }
-                        }
-                    }
-
-                    // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
-                    listBoxAdminPacienti.Items.Clear();
-                    List<IUser> doctori = _presenter.GetDoctori();
-                    foreach (var dr in doctori)
-                    {
-                        listBoxAdminPacienti.Items.Add(dr.ToString());
-                        List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
-                        foreach (var pacient in pacientiDoctor)
-                        {
-                            listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                return;
+
+                // Pentru a da refresh la listBox-ul de sub butoanele de gestionare
+                listBoxAdminPacienti.Items.Clear();
+                List<IUser> doctori = _presenter.GetDoctori();
+                foreach (var dr in doctori)
+                {
+                    listBoxAdminPacienti.Items.Add(dr.ToString());
+                    List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
+                    foreach (var pacient in pacientiDoctor)
+                    {
+                        listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
+                    }
+                }
             }
         }
 

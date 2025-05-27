@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,18 +54,48 @@ namespace ClinicaMedicalaForm.components.Model.Exceptions
         private void UserIDHandle(string message, Exception inner)
         {
             MessageBox.Show(message, "Warning - Check error log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string filePath = Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ErrorLog.txt";
+
+            using (StreamWriter writer = new StreamWriter(filePath, append: false))
+            {
+                writer.WriteLine(inner.Message);
+            }
         }
         private void ObjectNullHandle(string message, Exception inner)
         {
-            MessageBox.Show(message, "Warning",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Warning - Check error log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string filePath = Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ErrorLog.txt";
+
+            using (StreamWriter writer = new StreamWriter(filePath, append: false))
+            {
+                if (inner != null)
+                    writer.WriteLine(inner.Message);
+                else
+                    writer.WriteLine(message);
+            }
         }
         private void SQLExceptionHandle(string message, Exception inner)
         {
-            MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Warning - Check error log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string filePath = Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ErrorLog.txt";
+
+            using (StreamWriter writer = new StreamWriter(filePath, append: false))
+            {
+                writer.WriteLine(inner.Message);
+            }
         }
         private void UserRelatedException(string message, Exception inner)
         {
-            MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Warning - Check error log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            string filePath = Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ErrorLog.txt";
+
+            using (StreamWriter writer = new StreamWriter(filePath, append: false))
+            {
+                if (inner != null)
+                    writer.WriteLine(inner.Message);
+                else
+                    writer.WriteLine(message);
+            }
         }
     }
 }
