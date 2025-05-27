@@ -16,8 +16,9 @@
  **************************************************************************/
 
 using System.Collections.Generic;
-using ClinicaMedicalaForm.components.Model;
 using components.Model.Medical;
+using components.Model.Users;
+using components.Model.Interfaces;
 
 namespace ClinicaMedicalaForm.components.Presenter.Interfaces
 {

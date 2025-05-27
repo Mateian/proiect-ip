@@ -15,8 +15,9 @@
  *                                                                        *
  **************************************************************************/
 
-using ClinicaMedicalaForm.components.Model.Users;
+using components.Model.Users;
 using Observer;
+using components.Model.Interfaces;
 
 namespace ClinicaMedicalaForm.components.Model.Factory
 {

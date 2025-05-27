@@ -18,7 +18,7 @@
 using System;
 using System.Windows.Forms;
 using ClinicaMedicalaForm.components.Model;
-using ClinicaMedicalaForm.components.Model.Interfaces;
+using components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Presenter;
 using ClinicaMedicalaForm.components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;

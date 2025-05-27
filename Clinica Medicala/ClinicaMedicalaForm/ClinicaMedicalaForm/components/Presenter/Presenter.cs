@@ -18,11 +18,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using ClinicaMedicalaForm.components.Model;
-using ClinicaMedicalaForm.components.Model.Interfaces;
+using components.Model.Interfaces;
 using components.Model.Medical;
 using ClinicaMedicalaForm.components.Presenter.Interfaces;
 using ClinicaMedicalaForm.components.View.Interfaces;
+using components.Model.Users;
 
 namespace ClinicaMedicalaForm.components.Presenter
 {

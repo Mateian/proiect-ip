@@ -15,7 +15,7 @@
  *                                                                        *
  **************************************************************************/
 
-using ClinicaMedicalaForm.components.Model.Interfaces;
+using components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Presenter.Interfaces;
 
 namespace ClinicaMedicalaForm.components.View.Interfaces

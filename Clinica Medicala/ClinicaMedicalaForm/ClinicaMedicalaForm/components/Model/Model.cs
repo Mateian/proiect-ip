@@ -21,10 +21,11 @@ using System.IO;
 using System.Linq;
 using components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Factory;
-using ClinicaMedicalaForm.components.Model.Interfaces;
+using components.Model.Interfaces;
 using components.Model.Medical;
 using Observer;
 using components.Model.Database;
+using components.Model.Users;
 
 
 namespace ClinicaMedicalaForm.components.Model
