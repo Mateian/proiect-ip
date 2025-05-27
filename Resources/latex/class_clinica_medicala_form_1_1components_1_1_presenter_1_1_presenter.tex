@@ -1,0 +1,563 @@
+\doxysection{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter Class Reference}
+\hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}{}\label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+
+
+Clasa \doxylink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}{Presenter} -\/ parte a pattern-\/ului MVP. Face legatura intre \doxylink{namespace_clinica_medicala_form_1_1components_1_1_view}{View} si \doxylink{namespace_clinica_medicala_form_1_1components_1_1_model}{Model}, contine logica de prezentare si gestioneaza datele.  
+
+
+Inheritance diagram for Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_aac36306273b084fabd2803f9c428a0ca}{Presenter}} (\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_view_1_1_interfaces_1_1_i_view}{IView}} view, \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model}{IModel}} model)
+\begin{DoxyCompactList}\small\item\em Constructor pentru \doxylink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}{Presenter}. Initializeaza referintele catre \doxylink{namespace_clinica_medicala_form_1_1components_1_1_view}{View} si \doxylink{namespace_clinica_medicala_form_1_1components_1_1_model}{Model}, apoi initializeaza datele. \end{DoxyCompactList}\item 
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_acc64fbdf989517c13467e7361d9e513f}\label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_acc64fbdf989517c13467e7361d9e513f} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initializeaza datele din \doxylink{namespace_clinica_medicala_form_1_1components_1_1_model}{Model}. Incarca utilizatorii, programarile, doctorii si pacientii. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a07d115700db550d7787ffae1ffdd2cbf}{Verifica\+Autentificare}} (string username, string parola)
+\begin{DoxyCompactList}\small\item\em Verifica autentificarea unui utilizator dupa username si parola. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a7b29cd55aa6f443e6de64e891461bf35}{Get\+Pacienti}} (int doctor\+ID)
+\begin{DoxyCompactList}\small\item\em Obtine lista pacientilor unui doctor dupa ID-\/ul doctorului. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a5cdbfbf4f11780cc8058976120ab37fc}{Get\+Programari\+Doctor}} (int doctor\+ID)
+\begin{DoxyCompactList}\small\item\em Obtine lista programarilor pentru un doctor, dupa ID-\/ul doctorului. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a57b536e86ddb735d3ef0005a19c2c07b}{Get\+Doctori}} ()
+\begin{DoxyCompactList}\small\item\em Obtine lista tuturor doctorilor. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a0339c8119b553db31523666a65e91620}{Get\+Programari\+Istoric}} (int pacient\+ID)
+\begin{DoxyCompactList}\small\item\em Obtine istoricul programarilor nevalabile ale unui pacient. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a1c210814728ae583fa6682014f2896b6}{Get\+Cereri\+Programari}} (int pacient\+ID)
+\begin{DoxyCompactList}\small\item\em Obtine lista cererilor de programari valide sau in curs de validare pentru un pacient. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_ac465901450051a32597800ea0e35800d}{Adauga\+Programare\+Viitoare}} (int ID, \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\begin{DoxyCompactList}\small\item\em Adauga o programare viitoare pentru un anumit utilizator (pacient). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient}{Pacient}} \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a163c7d60aca31efd4d1f4adc396b8894}{Delete\+Pacient}} (string pacient\+String)
+\begin{DoxyCompactList}\small\item\em Sterge un pacient dupa un string care contine ID-\/ul pacientului. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a347210a49ac702219a4c0e61b9c2e909}{Adauga\+Pacient}} (int doctor\+ID, \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient}{Pacient}} pacient)
+\begin{DoxyCompactList}\small\item\em Adauga un pacient unui doctor specificat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a0e7081859955845206330f2f04dac29e}{Sterge\+User}} (int id)
+\begin{DoxyCompactList}\small\item\em Sterge un utilizator dupa ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a90a0a8b2a6398bfae86034d8345ffd34}{Adauga\+Doctor}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor}{Doctor}} doctor)
+\begin{DoxyCompactList}\small\item\em Adauga un doctor nou in sistem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a37e07800bbc6f120c8c4826fe0d9e8d3}{Validare\+Programare}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\begin{DoxyCompactList}\small\item\em Marcheaza o programare ca fiind validata. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_aa82c21ef478394876dcda0728920a16e}{Check\+User\+Exists}} (List$<$ string $>$ data)
+\begin{DoxyCompactList}\small\item\em Verifica daca un utilizator exista in baza de date, dupa o lista de date. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a68b6c7998b6983dde25592acdd37e309}{Insert\+User\+Command}} (List$<$ string $>$ data)
+\begin{DoxyCompactList}\small\item\em Insereaza un utilizator nou in baza de date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a8f163d4135b66f3ae17215794afca937}{Adaugare\+Fisa\+Medicala}} (List$<$ string $>$ date\+Fisa\+Medicala)
+\begin{DoxyCompactList}\small\item\em Adauga o fisa medicala noua. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a38d91aeb5c7ed1532bb2b99e29189d64}{Preview\+Istoric\+Medical}} (int nr\+Fisa)
+\begin{DoxyCompactList}\small\item\em Returneaza o previzualizare a istoricului medical pentru o fisa medicala data. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a70143cf6a1b04093d46dc1c1b2afee58}{Preview\+Istoric\+Programari}} (string programare, int user\+ID)
+\begin{DoxyCompactList}\small\item\em Returneaza o previzualizare a istoricului programarilor pentru un utilizator. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_abc044f15e80ea3ba970ab98681c747e8}{Preview\+Cereri\+Programari}} (string programare, int user\+ID)
+\begin{DoxyCompactList}\small\item\em Returneaza o previzualizare a cererilor de programari pentru un utilizator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a714b1b03cfd0de0ada50c2ed884b0385}{Get\+User}} (int user\+ID)
+\begin{DoxyCompactList}\small\item\em Returneaza utilizatorul cu ID-\/ul specificat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a2745a04f24349bd3088f1a9ae66ee52c}{Sterge\+Programare}} (string programare\+String)
+\begin{DoxyCompactList}\small\item\em Sterge o programare identificata printr-\/un string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_ab33755af6fb99c796ffd6655e769618b}{Nevalidare\+Programare}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\begin{DoxyCompactList}\small\item\em Marcheaza o programare ca nevalidata. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a85106d8001f5a58d16d78e49bf34001a}{Preview\+Programari\+Doctor}} (string v, int iD)
+\begin{DoxyCompactList}\small\item\em Returneaza o previzualizare a programarilor unui doctor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clasa \doxylink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}{Presenter} -\/ parte a pattern-\/ului MVP. Face legatura intre \doxylink{namespace_clinica_medicala_form_1_1components_1_1_view}{View} si \doxylink{namespace_clinica_medicala_form_1_1components_1_1_model}{Model}, contine logica de prezentare si gestioneaza datele. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_aac36306273b084fabd2803f9c428a0ca}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!Presenter@{Presenter}}
+\index{Presenter@{Presenter}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{Presenter()}{Presenter()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_aac36306273b084fabd2803f9c428a0ca} 
+Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_view_1_1_interfaces_1_1_i_view}{IView}}}]{view}{, }\item[{\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model}{IModel}}}]{model}{}\end{DoxyParamCaption})}
+
+
+
+Constructor pentru \doxylink{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter}{Presenter}. Initializeaza referintele catre \doxylink{namespace_clinica_medicala_form_1_1components_1_1_view}{View} si \doxylink{namespace_clinica_medicala_form_1_1components_1_1_model}{Model}, apoi initializeaza datele. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & Interfata view-\/ului\\
+\hline
+{\em model} & Interfata modelului\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a90a0a8b2a6398bfae86034d8345ffd34}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!AdaugaDoctor@{AdaugaDoctor}}
+\index{AdaugaDoctor@{AdaugaDoctor}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{AdaugaDoctor()}{AdaugaDoctor()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a90a0a8b2a6398bfae86034d8345ffd34} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Adauga\+Doctor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor}{Doctor}}}]{doctor}{}\end{DoxyParamCaption})}
+
+
+
+Adauga un doctor nou in sistem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doctor} & Doctorul de adaugat\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a347210a49ac702219a4c0e61b9c2e909}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!AdaugaPacient@{AdaugaPacient}}
+\index{AdaugaPacient@{AdaugaPacient}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{AdaugaPacient()}{AdaugaPacient()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a347210a49ac702219a4c0e61b9c2e909} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Adauga\+Pacient (\begin{DoxyParamCaption}\item[{int}]{doctor\+ID}{, }\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient}{Pacient}}}]{pacient}{}\end{DoxyParamCaption})}
+
+
+
+Adauga un pacient unui doctor specificat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doctor\+ID} & ID-\/ul doctorului\\
+\hline
+{\em pacient} & Pacientul de adaugat\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_ac465901450051a32597800ea0e35800d}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!AdaugaProgramareViitoare@{AdaugaProgramareViitoare}}
+\index{AdaugaProgramareViitoare@{AdaugaProgramareViitoare}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{AdaugaProgramareViitoare()}{AdaugaProgramareViitoare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_ac465901450051a32597800ea0e35800d} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Adauga\+Programare\+Viitoare (\begin{DoxyParamCaption}\item[{int}]{ID}{, }\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Adauga o programare viitoare pentru un anumit utilizator (pacient). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & ID-\/ul utilizatorului\\
+\hline
+{\em programare} & Programarea de adaugat\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a8f163d4135b66f3ae17215794afca937}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!AdaugareFisaMedicala@{AdaugareFisaMedicala}}
+\index{AdaugareFisaMedicala@{AdaugareFisaMedicala}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{AdaugareFisaMedicala()}{AdaugareFisaMedicala()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a8f163d4135b66f3ae17215794afca937} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Adaugare\+Fisa\+Medicala (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{date\+Fisa\+Medicala}{}\end{DoxyParamCaption})}
+
+
+
+Adauga o fisa medicala noua. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Fisa\+Medicala} & Lista cu datele fisei medicale\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_aa82c21ef478394876dcda0728920a16e}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!CheckUserExists@{CheckUserExists}}
+\index{CheckUserExists@{CheckUserExists}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{CheckUserExists()}{CheckUserExists()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_aa82c21ef478394876dcda0728920a16e} 
+bool Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Check\+User\+Exists (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Verifica daca un utilizator exista in baza de date, dupa o lista de date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Lista cu datele utilizatorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true daca utilizatorul exista, false altfel
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a163c7d60aca31efd4d1f4adc396b8894}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!DeletePacient@{DeletePacient}}
+\index{DeletePacient@{DeletePacient}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{DeletePacient()}{DeletePacient()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a163c7d60aca31efd4d1f4adc396b8894} 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient}{Pacient}} Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Delete\+Pacient (\begin{DoxyParamCaption}\item[{string}]{pacient\+String}{}\end{DoxyParamCaption})}
+
+
+
+Sterge un pacient dupa un string care contine ID-\/ul pacientului. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacient\+String} & String ce contine ID-\/ul pacientului la inceput\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pacientul sters sau null daca nu a fost gasit
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a1c210814728ae583fa6682014f2896b6}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!GetCereriProgramari@{GetCereriProgramari}}
+\index{GetCereriProgramari@{GetCereriProgramari}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetCereriProgramari()}{GetCereriProgramari()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a1c210814728ae583fa6682014f2896b6} 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Get\+Cereri\+Programari (\begin{DoxyParamCaption}\item[{int}]{pacient\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Obtine lista cererilor de programari valide sau in curs de validare pentru un pacient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacient\+ID} & ID-\/ul pacientului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista cererilor cu valabilitate "{}\+In curs de validare"{} sau "{}\+Valabila"{}
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a57b536e86ddb735d3ef0005a19c2c07b}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!GetDoctori@{GetDoctori}}
+\index{GetDoctori@{GetDoctori}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetDoctori()}{GetDoctori()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a57b536e86ddb735d3ef0005a19c2c07b} 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Get\+Doctori (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Obtine lista tuturor doctorilor. 
+
+\begin{DoxyReturn}{Returns}
+Lista tuturor utilizatorilor cu rol \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor}{Doctor}
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a7b29cd55aa6f443e6de64e891461bf35}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!GetPacienti@{GetPacienti}}
+\index{GetPacienti@{GetPacienti}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetPacienti()}{GetPacienti()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a7b29cd55aa6f443e6de64e891461bf35} 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Get\+Pacienti (\begin{DoxyParamCaption}\item[{int}]{doctor\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Obtine lista pacientilor unui doctor dupa ID-\/ul doctorului. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doctor\+ID} & ID-\/ul doctorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de utilizatori care sunt pacienti ai doctorului
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a5cdbfbf4f11780cc8058976120ab37fc}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!GetProgramariDoctor@{GetProgramariDoctor}}
+\index{GetProgramariDoctor@{GetProgramariDoctor}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetProgramariDoctor()}{GetProgramariDoctor()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a5cdbfbf4f11780cc8058976120ab37fc} 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Get\+Programari\+Doctor (\begin{DoxyParamCaption}\item[{int}]{doctor\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Obtine lista programarilor pentru un doctor, dupa ID-\/ul doctorului. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doctor\+ID} & ID-\/ul doctorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de programari ale doctorului
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a0339c8119b553db31523666a65e91620}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!GetProgramariIstoric@{GetProgramariIstoric}}
+\index{GetProgramariIstoric@{GetProgramariIstoric}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetProgramariIstoric()}{GetProgramariIstoric()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a0339c8119b553db31523666a65e91620} 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Get\+Programari\+Istoric (\begin{DoxyParamCaption}\item[{int}]{pacient\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Obtine istoricul programarilor nevalabile ale unui pacient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pacient\+ID} & ID-\/ul pacientului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista programarilor cu valabilitate "{}\+Nevalabila"{}
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a714b1b03cfd0de0ada50c2ed884b0385}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!GetUser@{GetUser}}
+\index{GetUser@{GetUser}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{GetUser()}{GetUser()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a714b1b03cfd0de0ada50c2ed884b0385} 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Get\+User (\begin{DoxyParamCaption}\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Returneaza utilizatorul cu ID-\/ul specificat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+ID} & ID-\/ul utilizatorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Obiectul \doxylink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser} corespunzator
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a68b6c7998b6983dde25592acdd37e309}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!InsertUserCommand@{InsertUserCommand}}
+\index{InsertUserCommand@{InsertUserCommand}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{InsertUserCommand()}{InsertUserCommand()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a68b6c7998b6983dde25592acdd37e309} 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Insert\+User\+Command (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Insereaza un utilizator nou in baza de date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Lista cu datele utilizatorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Utilizatorul creat, sau null in caz de eroare
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_ab33755af6fb99c796ffd6655e769618b}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!NevalidareProgramare@{NevalidareProgramare}}
+\index{NevalidareProgramare@{NevalidareProgramare}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{NevalidareProgramare()}{NevalidareProgramare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_ab33755af6fb99c796ffd6655e769618b} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Nevalidare\+Programare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Marcheaza o programare ca nevalidata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em programare} & Programarea de nevalidat\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_abc044f15e80ea3ba970ab98681c747e8}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!PreviewCereriProgramari@{PreviewCereriProgramari}}
+\index{PreviewCereriProgramari@{PreviewCereriProgramari}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{PreviewCereriProgramari()}{PreviewCereriProgramari()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_abc044f15e80ea3ba970ab98681c747e8} 
+string Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Preview\+Cereri\+Programari (\begin{DoxyParamCaption}\item[{string}]{programare}{, }\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Returneaza o previzualizare a cererilor de programari pentru un utilizator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em programare} & Detalii programare (string)\\
+\hline
+{\em user\+ID} & ID-\/ul utilizatorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String cu cererile de programari
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a38d91aeb5c7ed1532bb2b99e29189d64}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!PreviewIstoricMedical@{PreviewIstoricMedical}}
+\index{PreviewIstoricMedical@{PreviewIstoricMedical}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{PreviewIstoricMedical()}{PreviewIstoricMedical()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a38d91aeb5c7ed1532bb2b99e29189d64} 
+string Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Preview\+Istoric\+Medical (\begin{DoxyParamCaption}\item[{int}]{nr\+Fisa}{}\end{DoxyParamCaption})}
+
+
+
+Returneaza o previzualizare a istoricului medical pentru o fisa medicala data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr\+Fisa} & Numarul fisei medicale\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String cu istoricul medical
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a70143cf6a1b04093d46dc1c1b2afee58}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!PreviewIstoricProgramari@{PreviewIstoricProgramari}}
+\index{PreviewIstoricProgramari@{PreviewIstoricProgramari}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{PreviewIstoricProgramari()}{PreviewIstoricProgramari()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a70143cf6a1b04093d46dc1c1b2afee58} 
+string Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Preview\+Istoric\+Programari (\begin{DoxyParamCaption}\item[{string}]{programare}{, }\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Returneaza o previzualizare a istoricului programarilor pentru un utilizator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em programare} & Detalii programare (string)\\
+\hline
+{\em user\+ID} & ID-\/ul utilizatorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String cu istoricul programarilor
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a85106d8001f5a58d16d78e49bf34001a}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!PreviewProgramariDoctor@{PreviewProgramariDoctor}}
+\index{PreviewProgramariDoctor@{PreviewProgramariDoctor}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{PreviewProgramariDoctor()}{PreviewProgramariDoctor()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a85106d8001f5a58d16d78e49bf34001a} 
+string Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Preview\+Programari\+Doctor (\begin{DoxyParamCaption}\item[{string}]{v}{, }\item[{int}]{iD}{}\end{DoxyParamCaption})}
+
+
+
+Returneaza o previzualizare a programarilor unui doctor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Detalii suplimentare pentru previzualizare (string)\\
+\hline
+{\em iD} & ID-\/ul doctorului\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String cu programarile doctorului
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a2745a04f24349bd3088f1a9ae66ee52c}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!StergeProgramare@{StergeProgramare}}
+\index{StergeProgramare@{StergeProgramare}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{StergeProgramare()}{StergeProgramare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a2745a04f24349bd3088f1a9ae66ee52c} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Sterge\+Programare (\begin{DoxyParamCaption}\item[{string}]{programare\+String}{}\end{DoxyParamCaption})}
+
+
+
+Sterge o programare identificata printr-\/un string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em programare\+String} & String ce contine detalii despre programare\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a0e7081859955845206330f2f04dac29e}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!StergeUser@{StergeUser}}
+\index{StergeUser@{StergeUser}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{StergeUser()}{StergeUser()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a0e7081859955845206330f2f04dac29e} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Sterge\+User (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sterge un utilizator dupa ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID-\/ul utilizatorului de sters\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a37e07800bbc6f120c8c4826fe0d9e8d3}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!ValidareProgramare@{ValidareProgramare}}
+\index{ValidareProgramare@{ValidareProgramare}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{ValidareProgramare()}{ValidareProgramare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a37e07800bbc6f120c8c4826fe0d9e8d3} 
+void Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Validare\+Programare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Marcheaza o programare ca fiind validata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em programare} & Programarea care trebuie validata\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+\Hypertarget{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a07d115700db550d7787ffae1ffdd2cbf}\index{ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}!VerificaAutentificare@{VerificaAutentificare}}
+\index{VerificaAutentificare@{VerificaAutentificare}!ClinicaMedicalaForm.components.Presenter.Presenter@{ClinicaMedicalaForm.components.Presenter.Presenter}}
+\doxysubsubsection{\texorpdfstring{VerificaAutentificare()}{VerificaAutentificare()}}
+{\footnotesize\ttfamily \label{class_clinica_medicala_form_1_1components_1_1_presenter_1_1_presenter_a07d115700db550d7787ffae1ffdd2cbf} 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} Clinica\+Medicala\+Form.\+components.\+Presenter.\+Presenter.\+Verifica\+Autentificare (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{parola}{}\end{DoxyParamCaption})}
+
+
+
+Verifica autentificarea unui utilizator dupa username si parola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & Numele de utilizator\\
+\hline
+{\em parola} & Parola\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Obiectul \doxylink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser} corespunzator daca autentificarea este valida, altfel null
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_presenter_1_1_interfaces_1_1_i_presenter}{Clinica\+Medicala\+Form.\+components.\+Presenter.\+Interfaces.\+IPresenter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+IP/\+Proiect/\+Git\+Hub/proiect-\/ip/\+Clinica Medicala/\+Clinica\+Medicala\+Form/\+Clinica\+Medicala\+Form/components/\+Presenter/Presenter.\+cs\end{DoxyCompactItemize}
