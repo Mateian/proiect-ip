@@ -1,0 +1,369 @@
+\doxysection{Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel Interface Reference}
+\hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model}{}\label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+
+
+Interfata care descrie un obiect de tip \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model}{Model}.  
+
+
+Inheritance diagram for Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a1e675c1fdbe21c11c40812c4d81f744d}{Citire\+Utilizatori}} ()
+\item 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a4b24c16a38394fb8c9d99b55a1fb5119}{Verifica\+Autentificare}} (string username, string parola)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a6cc626286e0fa8a4ccb93d7f74a36032}{Citire\+Programari}} ()
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a6e4937942fd2e89a674a5e66b85f1e5d}{Citire\+Pacienti}} ()
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a69d3a73ddaa3e969b9043be95cceca48}{Citire\+Doctori}} ()
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a944c4ad5b2495bf8a2bb81621d9c0523}{Adauga\+Programare\+Viitoare}} (int id, \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac50ce646cda4f10d8ac4dbaf3c363856}{Adaugare\+Fisa\+Medicala}} (List$<$ string $>$ date\+Pacient)
+\item 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala}{Fisa\+Medicala}} $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a40136c1a477e5cd7e9a0d49025b7f886}{Preluare\+Istoric\+Medical}} (int user\+ID)
+\item 
+string \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a4edf9c0e03c426433d17fb145485625e}{Preview\+Istoric\+Medical}} (int nr\+Fisa)
+\item 
+string \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a5c34133130790003355d1fce87a234ce}{Preview\+Istoric\+Programari}} (string programare, int user\+ID)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a0ede6804708a5764668e2164d5057f13}{Adauga\+Doctor}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor}{Doctor}} doctor)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_afd0a0f4ecd1484cb3de9e801d04b2f65}{Delete\+Pacient}} (int id)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_aa02db36e03422f1192e8bcf58539f406}{Sterge\+User}} (int id)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a70c8a1e70b64acf18c93645aa984df41}{Adauga\+Pacient}} (int id, \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient}{Pacient}} pacient)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac30a2d5ed06574c6755e20bd545f0292}{Validare\+Programare}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\item 
+bool \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_aa00f632c522814898dd141766f12e002}{Check\+User\+Exists}} (List$<$ string $>$ data)
+\item 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ad8fa7271d51a74a3cbc70a957b879594}{Insert\+User\+Command}} (List$<$ string $>$ data)
+\item 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a64f66a17c51d0fffd160ae16ff24c0ec}{Get\+User}} (int user\+ID)
+\item 
+string \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac7e1837b04aa452bfe81cdff6056a5ef}{Preview\+Cereri\+Programari}} (string programare, int user\+ID)
+\item 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager}{Database\+Manager}} \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a853fa4e5798355d72228913a009fc3b1}{Get\+Database\+Manager}} ()
+\item 
+List$<$ string $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ab821a8ff0e6f7a3c8d8f3a1ff4c3c10f}{Get\+Observer\+Info}} ()
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a285bd74002d1f8bc05478536aeff77c9}{Delete\+Appointment}} (string programare\+String)
+\item 
+void \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_afb7e91522d382a9d0275e25fea2d3761}{Nevalidare\+Programare}} (\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} programare)
+\item 
+string \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8e942009de5f3c1ba25714351ec4426d}{Preview\+Programari\+Doctor}} (string v, int iD)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8ea9605f08ee00e51d0fa797068882dc}{Pacienti}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a58e83bcb80b69414d134cc9b4670f96c}{Doctori}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}} $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8d286e73fd836a579b865ac307b712e4}{Programari}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_abb9eb8b9e07e0758a6b6f9443d254cd0}{Utilizatori}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfata care descrie un obiect de tip \doxylink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model}{Model}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a0ede6804708a5764668e2164d5057f13}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!AdaugaDoctor@{AdaugaDoctor}}
+\index{AdaugaDoctor@{AdaugaDoctor}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{AdaugaDoctor()}{AdaugaDoctor()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a0ede6804708a5764668e2164d5057f13} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Adauga\+Doctor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_doctor}{Doctor}}}]{doctor}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a1bb3faa2636d92d4662c78ce2bf42003}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a70c8a1e70b64acf18c93645aa984df41}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!AdaugaPacient@{AdaugaPacient}}
+\index{AdaugaPacient@{AdaugaPacient}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{AdaugaPacient()}{AdaugaPacient()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a70c8a1e70b64acf18c93645aa984df41} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Adauga\+Pacient (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_pacient}{Pacient}}}]{pacient}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_ab469e53a5e279f848839469aae967ee3}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a944c4ad5b2495bf8a2bb81621d9c0523}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!AdaugaProgramareViitoare@{AdaugaProgramareViitoare}}
+\index{AdaugaProgramareViitoare@{AdaugaProgramareViitoare}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{AdaugaProgramareViitoare()}{AdaugaProgramareViitoare()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a944c4ad5b2495bf8a2bb81621d9c0523} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Adauga\+Programare\+Viitoare (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a71222ea27be65cbf896ed8c61d945ad1}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac50ce646cda4f10d8ac4dbaf3c363856}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!AdaugareFisaMedicala@{AdaugareFisaMedicala}}
+\index{AdaugareFisaMedicala@{AdaugareFisaMedicala}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{AdaugareFisaMedicala()}{AdaugareFisaMedicala()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac50ce646cda4f10d8ac4dbaf3c363856} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Adaugare\+Fisa\+Medicala (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{date\+Pacient}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a277089465b3cdd5316759134eb4afec6}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_aa00f632c522814898dd141766f12e002}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!CheckUserExists@{CheckUserExists}}
+\index{CheckUserExists@{CheckUserExists}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{CheckUserExists()}{CheckUserExists()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_aa00f632c522814898dd141766f12e002} 
+bool Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Check\+User\+Exists (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a45c091f59f56f92e0585a52a35a83f2c}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a69d3a73ddaa3e969b9043be95cceca48}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!CitireDoctori@{CitireDoctori}}
+\index{CitireDoctori@{CitireDoctori}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{CitireDoctori()}{CitireDoctori()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a69d3a73ddaa3e969b9043be95cceca48} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Citire\+Doctori (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_ac4c8c465924efbefaa22859088c6e7b0}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a6e4937942fd2e89a674a5e66b85f1e5d}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!CitirePacienti@{CitirePacienti}}
+\index{CitirePacienti@{CitirePacienti}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{CitirePacienti()}{CitirePacienti()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a6e4937942fd2e89a674a5e66b85f1e5d} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Citire\+Pacienti (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_ae886663a9b3bbd1eaffabe4022e24c77}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a6cc626286e0fa8a4ccb93d7f74a36032}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!CitireProgramari@{CitireProgramari}}
+\index{CitireProgramari@{CitireProgramari}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{CitireProgramari()}{CitireProgramari()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a6cc626286e0fa8a4ccb93d7f74a36032} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Citire\+Programari (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a45b1802becd95d7731e3fd8e2d381fc7}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a1e675c1fdbe21c11c40812c4d81f744d}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!CitireUtilizatori@{CitireUtilizatori}}
+\index{CitireUtilizatori@{CitireUtilizatori}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{CitireUtilizatori()}{CitireUtilizatori()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a1e675c1fdbe21c11c40812c4d81f744d} 
+List$<$ \mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} $>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Citire\+Utilizatori (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a1f94a9ccc35ab035d9dfd6b6a4d84172}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a285bd74002d1f8bc05478536aeff77c9}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!DeleteAppointment@{DeleteAppointment}}
+\index{DeleteAppointment@{DeleteAppointment}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{DeleteAppointment()}{DeleteAppointment()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a285bd74002d1f8bc05478536aeff77c9} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Delete\+Appointment (\begin{DoxyParamCaption}\item[{string}]{programare\+String}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a19fc067a6ce358e9f6582ddd695e502f}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_afd0a0f4ecd1484cb3de9e801d04b2f65}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!DeletePacient@{DeletePacient}}
+\index{DeletePacient@{DeletePacient}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{DeletePacient()}{DeletePacient()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_afd0a0f4ecd1484cb3de9e801d04b2f65} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Delete\+Pacient (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a8150534ff4dd0aa5eaa9d14d9b1af073}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a853fa4e5798355d72228913a009fc3b1}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!GetDatabaseManager@{GetDatabaseManager}}
+\index{GetDatabaseManager@{GetDatabaseManager}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{GetDatabaseManager()}{GetDatabaseManager()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a853fa4e5798355d72228913a009fc3b1} 
+\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_database_manager}{Database\+Manager}} Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Get\+Database\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a3327d09f282c67730d86e5c954a4705c}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ab821a8ff0e6f7a3c8d8f3a1ff4c3c10f}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!GetObserverInfo@{GetObserverInfo}}
+\index{GetObserverInfo@{GetObserverInfo}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{GetObserverInfo()}{GetObserverInfo()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ab821a8ff0e6f7a3c8d8f3a1ff4c3c10f} 
+List$<$ string $>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Get\+Observer\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a6c9a31923a7e9a0d5a0b9543c9a74927}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a64f66a17c51d0fffd160ae16ff24c0ec}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!GetUser@{GetUser}}
+\index{GetUser@{GetUser}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{GetUser()}{GetUser()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a64f66a17c51d0fffd160ae16ff24c0ec} 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Get\+User (\begin{DoxyParamCaption}\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a8fa66acadee851c99adb2127fa7514a2}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ad8fa7271d51a74a3cbc70a957b879594}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!InsertUserCommand@{InsertUserCommand}}
+\index{InsertUserCommand@{InsertUserCommand}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{InsertUserCommand()}{InsertUserCommand()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ad8fa7271d51a74a3cbc70a957b879594} 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Insert\+User\+Command (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a67662896cc62ae9ccf5b9bd91eae735c}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_afb7e91522d382a9d0275e25fea2d3761}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!NevalidareProgramare@{NevalidareProgramare}}
+\index{NevalidareProgramare@{NevalidareProgramare}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{NevalidareProgramare()}{NevalidareProgramare()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_afb7e91522d382a9d0275e25fea2d3761} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Nevalidare\+Programare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a181402ae6efa1f592b079d9955de5947}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a40136c1a477e5cd7e9a0d49025b7f886}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!PreluareIstoricMedical@{PreluareIstoricMedical}}
+\index{PreluareIstoricMedical@{PreluareIstoricMedical}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{PreluareIstoricMedical()}{PreluareIstoricMedical()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a40136c1a477e5cd7e9a0d49025b7f886} 
+List$<$ \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_fisa_medicala}{Fisa\+Medicala}} $>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Preluare\+Istoric\+Medical (\begin{DoxyParamCaption}\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a76f3c3efb74c5dfc66584242bdb308ae}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac7e1837b04aa452bfe81cdff6056a5ef}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!PreviewCereriProgramari@{PreviewCereriProgramari}}
+\index{PreviewCereriProgramari@{PreviewCereriProgramari}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{PreviewCereriProgramari()}{PreviewCereriProgramari()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac7e1837b04aa452bfe81cdff6056a5ef} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Preview\+Cereri\+Programari (\begin{DoxyParamCaption}\item[{string}]{programare}{, }\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a8b970e34234f1b0c54ec3c60c84c0454}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a4edf9c0e03c426433d17fb145485625e}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!PreviewIstoricMedical@{PreviewIstoricMedical}}
+\index{PreviewIstoricMedical@{PreviewIstoricMedical}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{PreviewIstoricMedical()}{PreviewIstoricMedical()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a4edf9c0e03c426433d17fb145485625e} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Preview\+Istoric\+Medical (\begin{DoxyParamCaption}\item[{int}]{nr\+Fisa}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a7b8531bede71cd74513f944b83280236}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a5c34133130790003355d1fce87a234ce}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!PreviewIstoricProgramari@{PreviewIstoricProgramari}}
+\index{PreviewIstoricProgramari@{PreviewIstoricProgramari}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{PreviewIstoricProgramari()}{PreviewIstoricProgramari()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a5c34133130790003355d1fce87a234ce} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Preview\+Istoric\+Programari (\begin{DoxyParamCaption}\item[{string}]{programare}{, }\item[{int}]{user\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a0932610a79fadb17a9037535df9acd40}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8e942009de5f3c1ba25714351ec4426d}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!PreviewProgramariDoctor@{PreviewProgramariDoctor}}
+\index{PreviewProgramariDoctor@{PreviewProgramariDoctor}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{PreviewProgramariDoctor()}{PreviewProgramariDoctor()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8e942009de5f3c1ba25714351ec4426d} 
+string Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Preview\+Programari\+Doctor (\begin{DoxyParamCaption}\item[{string}]{v}{, }\item[{int}]{iD}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a9899e503bcd6b965f6d8e838aa900a42}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_aa02db36e03422f1192e8bcf58539f406}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!StergeUser@{StergeUser}}
+\index{StergeUser@{StergeUser}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{StergeUser()}{StergeUser()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_aa02db36e03422f1192e8bcf58539f406} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Sterge\+User (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a0d8cef8da9dbe5c4c5f52de7105a9955}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac30a2d5ed06574c6755e20bd545f0292}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!ValidareProgramare@{ValidareProgramare}}
+\index{ValidareProgramare@{ValidareProgramare}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{ValidareProgramare()}{ValidareProgramare()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_ac30a2d5ed06574c6755e20bd545f0292} 
+void Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Validare\+Programare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}}]{programare}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a4640192ef09d22a18007f8870090ce20}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a4b24c16a38394fb8c9d99b55a1fb5119}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!VerificaAutentificare@{VerificaAutentificare}}
+\index{VerificaAutentificare@{VerificaAutentificare}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{VerificaAutentificare()}{VerificaAutentificare()}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a4b24c16a38394fb8c9d99b55a1fb5119} 
+\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}} Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Verifica\+Autentificare (\begin{DoxyParamCaption}\item[{string}]{username}{, }\item[{string}]{parola}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a658e5bcad7f938e5eff6769228b9a874}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a58e83bcb80b69414d134cc9b4670f96c}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!Doctori@{Doctori}}
+\index{Doctori@{Doctori}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{Doctori}{Doctori}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a58e83bcb80b69414d134cc9b4670f96c} 
+List$<$\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}}$>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Doctori\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a4755e7f58282cdf69e2a95444b9e3694}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8ea9605f08ee00e51d0fa797068882dc}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!Pacienti@{Pacienti}}
+\index{Pacienti@{Pacienti}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{Pacienti}{Pacienti}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8ea9605f08ee00e51d0fa797068882dc} 
+List$<$\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}}$>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Pacienti\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_aa2968abda9b2ebcc4fdfb3e11ded4f08}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8d286e73fd836a579b865ac307b712e4}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!Programari@{Programari}}
+\index{Programari@{Programari}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{Programari}{Programari}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_a8d286e73fd836a579b865ac307b712e4} 
+List$<$\mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_medical_1_1_programare}{Programare}}$>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Programari\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a45fdc0d153ee9ce1467d00b5c7da842b}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+\Hypertarget{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_abb9eb8b9e07e0758a6b6f9443d254cd0}\index{ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}!Utilizatori@{Utilizatori}}
+\index{Utilizatori@{Utilizatori}!ClinicaMedicalaForm.components.Model.Interfaces.IModel@{ClinicaMedicalaForm.components.Model.Interfaces.IModel}}
+\doxysubsubsection{\texorpdfstring{Utilizatori}{Utilizatori}}
+{\footnotesize\ttfamily \label{interface_clinica_medicala_form_1_1components_1_1_model_1_1_interfaces_1_1_i_model_abb9eb8b9e07e0758a6b6f9443d254cd0} 
+List$<$\mbox{\hyperlink{interface_clinica_medicala_form_1_1components_1_1_model_1_1_i_user}{IUser}}$>$ Clinica\+Medicala\+Form.\+components.\+Model.\+Interfaces.\+IModel.\+Utilizatori\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_clinica_medicala_form_1_1components_1_1_model_1_1_model_a2e675fca410cb106a73c0f827704b01c}{Clinica\+Medicala\+Form.\+components.\+Model.\+Model}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+IP/\+Proiect/\+Git\+Hub/proiect-\/ip/\+Clinica Medicala/\+Clinica\+Medicala\+Form/\+Clinica\+Medicala\+Form/components/\+Model/\+Interfaces/IModel.\+cs\end{DoxyCompactItemize}
