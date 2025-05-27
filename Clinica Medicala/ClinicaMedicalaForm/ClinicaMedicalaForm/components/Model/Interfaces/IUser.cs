@@ -24,6 +24,9 @@ using System.Threading.Tasks;
 
 namespace ClinicaMedicalaForm.components.Model
 {
+    /// <summary>
+    /// Intefata care descrie un obiect de tip User.
+    /// </summary>
     public interface IUser
     {
         int ID { get; }

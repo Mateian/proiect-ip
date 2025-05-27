@@ -29,17 +29,28 @@ namespace ClinicaMedicalaForm.components.View
         private ComboBox comboBoxPacienti;
         private Label label1;
         private Button buttonAdauga;
-
+        
         private List<IUser> _utilizatori;
+
+        /// <summary>
+        /// Pacientul selectat din formular
+        /// </summary>
         public IUser Pacient { get; set; }
 
+        /// <summary>
+        /// Constructor care primeste lista de utilizatori si initializeaza formularul
+        /// </summary>
+        /// <param name="utilizatori">Lista de utilizatori (IUser)</param>
         public AdaugaPacientForm(List<IUser> utilizatori)
         {
             _utilizatori = utilizatori;
             InitializeComponent();
             InitForm();
-        } 
+        }
 
+        /// <summary>
+        /// Initializeaza continutul formularului, populand ComboBox-ul cu pacientii din lista
+        /// </summary>
         void InitForm()
         {
             foreach (IUser utilizator in _utilizatori)
@@ -99,6 +110,7 @@ namespace ClinicaMedicalaForm.components.View
 
         }
 
+        // Calback-uri
         private void buttonAdauga_Click(object sender, EventArgs e)
         {
             int id;

@@ -25,22 +25,44 @@ using System.Windows.Forms;
 
 namespace ClinicaMedicalaForm.components.View
 {
+    /// <summary>
+    /// Formular utilizat de administrator pentru gestionarea listei de doctori.
+    /// Permite adaugarea si stergerea doctorilor din lista.
+    /// </summary>
     class GestioneazaDoctorForm : Form
     {
+        // Elemente create de VS
         private ListBox listBoxGestionareDoctor;
         private Button buttonStergeDoctor;
         private Button buttonAdaugaDoctor;
         private GroupBox groupBox1;
 
         private List<IUser> _doctori;
+
+        /// <summary>
+        /// Doctorul selectat pentru stergere.
+        /// </summary>
         public IUser SelectedDoctorId { get; private set; }
+
+        /// <summary>
+        /// Doctorul nou creat prin formularul de adaugare.
+        /// </summary>
         public Doctor DoctorNou { get; private set; }
+
+        /// <summary>
+        /// Constructor care primeste lista de doctori pentru gestionare.
+        /// </summary>
+        /// <param name="doctori">Lista doctorilor existenti.</param>
         public GestioneazaDoctorForm(List<IUser> doctori)
         {
             _doctori = doctori;
             InitializeComponent();
             InitForm();
         }
+
+        /// <summary>
+        /// Initializeaza continutul listei afisate in ListBox.
+        /// </summary>
         private void InitForm()
         {
             listBoxGestionareDoctor.Items.Clear();
@@ -49,6 +71,7 @@ namespace ClinicaMedicalaForm.components.View
                 listBoxGestionareDoctor.Items.Add(dr.ToString());
             }
         }
+
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -110,6 +133,7 @@ namespace ClinicaMedicalaForm.components.View
 
         }
 
+        // Callback-uri
         private void buttonAdaugaDoctor_Click(object sender, EventArgs e)
         {
             DoctorForm form = new DoctorForm();

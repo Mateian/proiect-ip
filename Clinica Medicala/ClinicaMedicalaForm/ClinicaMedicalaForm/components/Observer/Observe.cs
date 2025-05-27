@@ -25,19 +25,39 @@ using ClinicaMedicalaForm.components.Model;
 
 namespace ClinicaMedicalaForm.components.Observer
 {
+    /// <summary>
+    /// Clasa Observe reprezinta un observer simplu care tine o lista cu toate 
+    /// actualizarile (notificarile) primite de un utilizator.
+    /// </summary>
     public class Observe
     {
+        // Lista de mesaje de update primite.
         private List<string> _updates;
+
+        /// <summary>
+        /// Constructorul clasei Initializeaza lista de update-uri.
+        /// </summary>
         public Observe()
         {
             _updates = new List<string>();
         }
+
+        /// <summary>
+        /// Adauga un mesaj nou in lista de notificari.
+        /// </summary>
+        /// <param name="message">Mesajul notificarii care trebuie adaugat.</param>
         public void Update(string message)
         {
             if(_updates!=null)
                 _updates.Add(message);
         }
-        public List<string> GetUpdates() { return _updates; }
 
+
+        /// <summary>
+        /// Returneaza lista tuturor mesajelor de update primite.
+        /// Aceasta lista este doar pentru citire, pentru a preveni modificari externe.
+        /// </summary>
+        /// <returns>Lista cu mesajele de update..</returns>
+        public List<string> GetUpdates() { return _updates; }
     }
 }

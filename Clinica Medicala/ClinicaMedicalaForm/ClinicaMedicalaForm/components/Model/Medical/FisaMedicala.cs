@@ -23,9 +23,27 @@ using System.Threading.Tasks;
 
 namespace ClinicaMedicalaForm.components.Model.Medical
 {
+    /// <summary>
+    /// CLasa care contine datele unei fise medicale.
+    /// </summary>
     public class FisaMedicala
     {
+        // Campuri private care stocheaza datele fisei medicale
         private string _nume, _prenume, _dataConsultatie, _motiv, _diagnostic,_tratament,_numeMedic,_examenClinic,_recomandari,_investigatiiRecomandate;
+        
+        /// <summary>
+        /// Constructor pentru initializare completa a unei fise medicale.
+        /// </summary>
+        /// <param name="nume">Numele pacientului.</param>
+        /// <param name="prenume">Prenumele pacientului.</param>
+        /// <param name="data">Data consultatiei.</param>
+        /// <param name="motiv">Motivul consultatiei.</param>
+        /// <param name="diagnostic">Diagnostic prezumtiv sau final.</param>
+        /// <param name="tratament">Tratamentul prescris.</param>
+        /// <param name="numeMedic">Numele medicului curant.</param>
+        /// <param name="examenClinic">Rezultatul examenului clinic.</param>
+        /// <param name="recomandari">Recomandari suplimentare.</param>
+        /// <param name="investigatii">Investigatii recomandate.</param>
         public FisaMedicala(string nume,string prenume,string data,string motiv,string diagnostic,string tratament,string numeMedic,string examenClinic, string recomandari,string investigatii ) 
         { 
             _nume = nume;
@@ -39,10 +57,20 @@ namespace ClinicaMedicalaForm.components.Model.Medical
             _recomandari = recomandari;
             _investigatiiRecomandate = investigatii;
         }
+
+        /// <summary>
+        /// Suprascrie metoda ToString pentru a returna un rezumat simplu al fisei medicale
+        /// </summary>
+        /// <returns>Rezumat cu data consultatiei, motivul, diagnosticul si tratamentul.</returns>
         public override string ToString()
         {
             return _dataConsultatie + " " + _motiv + " " + _diagnostic + " " + _tratament;
         }
+
+        /// <summary>
+        /// Genereaza un text de previzualizare cu toate informatiile relevante ale fisei medicale.
+        /// </summary>
+        /// <returns>String formatat cu detaliile fisei medicale.</returns>
         public string GeneratePreview()
         {
             //Generare preview pentru fisa medicala

@@ -26,11 +26,13 @@ using ClinicaMedicalaForm.components.View.Interfaces;
 
 namespace ClinicaMedicalaForm
 {
+    /// <summary>
+    /// Formular folosit pentru crearea unei programari la un doctor specificat.
+    /// Clientul introduce data si specializarea pentru programare.
+    /// </summary>
     public partial class ProgramareForm : Form
     {
-        private string _doctorNume, _doctorPrenume;
-        public string Data { get; set; }
-        public string Specializare { get; set; }
+        // Elemente create de VS
         private TextBox textBoxData;
         private TextBox textBoxSpecializare;
         private Button buttonProgramare;
@@ -38,6 +40,24 @@ namespace ClinicaMedicalaForm
         private Label label2;
         private Label labelDoctor;
 
+        private string _doctorNume, _doctorPrenume;
+
+        /// <summary>
+        /// Data programarii introduse de utilizator.
+        /// </summary>
+        public string Data { get; set; }
+
+        /// <summary>
+        /// Specializarea asociata programarii.
+        /// </summary>
+        public string Specializare { get; set; }
+
+        /// <summary>
+        /// Constructorul formularului primeste numele si prenumele doctorului.
+        /// Arunca o exceptie daca acestea sunt nule.
+        /// </summary>
+        /// <param name="doctorNume">Numele doctorului</param>
+        /// <param name="doctorPrenume">Prenumele doctorului</param>
         public ProgramareForm(string doctorNume, string doctorPrenume)
         {
             if(doctorNume == null || doctorPrenume == null)
@@ -127,6 +147,7 @@ namespace ClinicaMedicalaForm
 
         }
 
+        // Callback-uri
         private void buttonProgramare_Click(object sender, EventArgs e)
         {
             Data = textBoxData.Text;

@@ -25,6 +25,9 @@ using ClinicaMedicalaForm.components.Model.Medical;
 
 namespace ClinicaMedicalaForm.components.Model.Interfaces
 {
+    /// <summary>
+    /// Interfata care descrie un obiect de tip Model.
+    /// </summary>
     public interface IModel
     {
         List<IUser> Pacienti { get; }

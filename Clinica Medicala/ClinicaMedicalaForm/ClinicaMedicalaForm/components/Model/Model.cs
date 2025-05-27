@@ -34,6 +34,9 @@ using FisaMedicalaForm;
 
 namespace ClinicaMedicalaForm.components.Model
 {
+    /// <summary>
+    /// Clasa Model - gestiunea datelor si logica aplicatiei in arhitectura MVP.
+    /// </summary>
     public class Model : IModel
     {
         private UserFactory _userFactory;
@@ -45,19 +48,45 @@ namespace ClinicaMedicalaForm.components.Model
         private List<IUser> _pacienti;
         private List<IUser> _doctori;
         private List<Observe> _observers;
+
+        /// <summary>
+        /// Lista tuturor utilizatorilor.
+        /// </summary>
         public List<IUser> Utilizatori => _users;
+
+
+        /// <summary>
+        /// Lista tuturor programarilor.
+        /// </summary>
         public List<Programare> Programari => _programari;
+
+        /// <summary>
+        /// Lista tuturor doctorilor.
+        /// </summary>
         public List<IUser> Doctori => _doctori;
+
+        /// <summary>
+        /// Lista tuturor pacientilor.
+        /// </summary>
         public List<IUser> Pacienti => _pacienti;
 
+        /// <summary>
+        /// Constructorul clasei Model.
+        /// Initializeaza conexiunea cu baza de date si lista observatorilor.
+        /// </summary>
         public Model()
         {
             string location = Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ClinicaMedicalaDB.db";
             string dataSource = "Data Source=" + location + ";Version=3;";
 
             _databaseManager = new DatabaseManager(dataSource);
-            _observers = new List<Observe>();//aici poate fii modificat sa fie dinamic, 1000 de users maxim
+            _observers = new List<Observe>(); // Aici poate fi modificat sa fie dinamic, 1000 de users maxim
         }
+
+        /// <summary>
+        /// Adauga o fisa medicala in baza de date.
+        /// </summary>
+        /// <param name="dateFisaMedicala">Lista cu datele fisei medicale.</param>
         public void AdaugareFisaMedicala(List<string> dateFisaMedicala)
         {
             try
@@ -69,11 +98,20 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
+
+        /// <summary>
+        /// Returneaza obiectul DatabaseManager pentru gestionarea bazei de date.
+        /// </summary>
+        /// <returns>Obiect DatabaseManager</returns>
         public DatabaseManager GetDatabaseManager()
         {
             return _databaseManager;
         }
 
+        /// <summary>
+        /// Citeste utilizatorii din baza de date si ii creeaza folosind UserFactory.
+        /// </summary>
+        /// <returns>Lista cu toti utilizatorii.</returns>
         public List<IUser> CitireUtilizatori()
         {
             _userFactory = new UserFactory();
@@ -87,7 +125,7 @@ namespace ClinicaMedicalaForm.components.Model
                 {
                     int k = 0;
 
-                    // trebuie pusa exceptie aici la new string[6] (daca nu sunt 6, ce face?)
+                    // Parsarea informatiilor si crearea utilizatorilor
                     string[] infoArray = new string[6];
                     for (int i = 0; i < reader.FieldCount; i++)
                     {
@@ -96,7 +134,7 @@ namespace ClinicaMedicalaForm.components.Model
                         infoArray[k++] = value.ToString();
                     }
                     Observe o = new Observe();
-                    _users.Add(_userFactory.CreateUser(infoArray,o));//add observer
+                    _users.Add(_userFactory.CreateUser(infoArray,o)); // add observer
                     _observers.Add(o);
                 }
             }
@@ -106,8 +144,13 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _users;
         }
+
+        /// <summary>
+        /// Filtreaza si stocheaza doar utilizatorii cu rolul "Doctor".
+        /// </summary>
         public void CitireDoctori()
         {
+            // Se parcurg utilizatorii si se cauta cei cu rol de doctor
             try
             {
                 _doctori = new List<IUser>();
@@ -126,8 +169,14 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Array object null", 200,ex);
             }
         }
+
+
+        /// <summary>
+        /// Citeste pacientii si le asociaza doctorii corespunzatori.
+        /// </summary>
         public void CitirePacienti()
         {
+            // Se pargurg utilizatorii si se cauta cei cu rol de pacient.
             _pacienti = new List<IUser>();
 
             string tableName = "Pacienti";
@@ -144,6 +193,10 @@ namespace ClinicaMedicalaForm.components.Model
                     var pacientUser = _users.FirstOrDefault(u => u.ID == pacientID && u.Rol == "Pacient");
                     var doctorUser = _doctori.FirstOrDefault(d => d.ID == doctorID);
 
+                    // Fiecare utilizator cu rolul de pacient va fi introdus
+                    // in lista de pacienti si la parcurgerea fiecarui pacient
+                    // se va specifica doctorul citit din baza de date
+                    // in legatura din tabelul cu Pacienti
                     if (pacientUser != null && doctorUser != null)
                     {
                         Pacient pacient = pacientUser as Pacient;
@@ -162,8 +215,14 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
             }
         }
+
+
+        /// <summary>
+        /// Citeste programarile din baza de date si le incarca in lista.
+        /// </summary>
         public void CitireProgramari()
         {
+            // Citire programari din baza de date si adaugare in lista
             string tableName = "Programari";
             _programari = new List<Programare>();
             try
@@ -192,8 +251,15 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
             }
         }
+
+
+        /// <summary>
+        /// Returneaza toate actualizarile inregistrate de observatori.
+        /// </summary>
+        /// <returns>Lista de mesaje de update.</returns>
         public List<string> GetObserverInfo()
         {
+            // Preluarea informatiilor unui observator.
             List<string> info = new List<string>();
             foreach(Observe o in _observers)
             {
@@ -202,6 +268,13 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return info;
         }
+
+        /// <summary>
+        /// Verifica autentificarea utilizatorului dupa username si parola.
+        /// </summary>
+        /// <param name="username">Username-ul introdus.</param>
+        /// <param name="parola">Parola introdusa.</param>
+        /// <returns>Utilizatorul daca exista si datele sunt corecte, altfel null.</returns>
         public IUser VerificaAutentificare(string username, string parola)
         {
             foreach (IUser user in _users)
@@ -214,10 +287,17 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return null;
         }
+
+        /// <summary>
+        /// Adauga o programare viitoare pentru un pacient si actualizeaza baza de date.
+        /// </summary>
+        /// <param name="id">ID-ul pacientului.</param>
+        /// <param name="programare">Programarea de adaugat.</param>
         public void AdaugaProgramareViitoare(int id, Programare programare)
         {
             try
             {
+                // Se cauta pacientul cu programarea si ii se creeaza o programare
                 Programari.Add(programare);
                 string tableName = "Programari";
                 string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
@@ -246,6 +326,12 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
+
+        /// <summary>
+        /// Genereaza un preview textual pentru o fisa medicala selectata dupa index.
+        /// </summary>
+        /// <param name="nrFisa">Indexul fisei medicale in lista.</param>
+        /// <returns>Textul de preview al fisei medicale.</returns>
         public List<FisaMedicala> PreluareIstoricMedical(int userID)
         {
             _fiseMedicale = new List<FisaMedicala>();
@@ -267,7 +353,7 @@ namespace ClinicaMedicalaForm.components.Model
                 if (!string.IsNullOrEmpty(numeComplet))
                 {
                     query = $"SELECT DataConsult, NumeMedic,ExamenClinic,DiagnosticPrezumtiv,Recomandari,InvestigatiiRecomandate,TratamentPrescris,Motiv FROM FisaMedicalaDB WHERE NumePacient = '{numeComplet}'";
-                    using (var reader = _databaseManager.ExecuteSelectQuery(query))//se selecteaza toate fisele cu numele persoanei din tabelul FisaMedicalaDB
+                    using (var reader = _databaseManager.ExecuteSelectQuery(query)) // se selecteaza toate fisele cu numele persoanei din tabelul FisaMedicalaDB
                     {
                         while (reader.Read())
                         {
@@ -294,12 +380,25 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return _fiseMedicale;
         }
+
+        /// <summary>
+        /// Functie de vizualizare a istoricului medical.
+        /// </summary>
+        /// <param name="nrFisa">Numarul fisei medicale.</param>
+        /// <returns></returns>
         public string PreviewIstoricMedical(int nrFisa)
         {
             //Se selecteaza fisa cu nrFisa corespunzator si se apeleaza functia de generare a textului
             FisaMedicala fisa = _fiseMedicale[nrFisa];
             return fisa.GeneratePreview();
         }
+
+        /// <summary>
+        /// Genereaza un preview al unei programari pe baza unui string si userID.
+        /// </summary>
+        /// <param name="programare">String care contine detaliile programarii.</param>
+        /// <param name="userID">ID-ul pacientului.</param>
+        /// <returns>Textul de preview al programarii sau string gol daca nu este gasita.</returns>
         public string PreviewIstoricProgramari(string programare, int userID)
         {
             try
@@ -323,6 +422,13 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return "";
         }
+
+        /// <summary>
+        /// Genereaza preview pentru programarile unui doctor, pe baza stringului si userID.
+        /// </summary>
+        /// <param name="programare">String cu detalii despre programare.</param>
+        /// <param name="userID">ID-ul doctorului.</param>
+        /// <returns>Preview text sau string gol daca nu gaseste programarea.</returns>
         public string PreviewProgramariDoctor(string programare, int userID)
         {
             try
@@ -349,6 +455,13 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return "";
         }
+
+        /// <summary>
+        /// Genereaza preview pentru cererile de programari ale unui pacient.
+        /// </summary>
+        /// <param name="programare">String cu detalii programare.</param>
+        /// <param name="userID">ID-ul pacientului.</param>
+        /// <returns>Textul de preview sau string gol.</returns>
         public string PreviewCereriProgramari(string programare, int userID)
         {
             try
@@ -373,13 +486,18 @@ namespace ClinicaMedicalaForm.components.Model
             }
             return "";
         }
+
+        /// <summary>
+        /// Sterge un pacient din memorie si din baza de date, stergand legatura cu doctorul.
+        /// </summary>
+        /// <param name="id">ID-ul pacientului.</param>
         public void DeletePacient(int id)
         {
             foreach (var user in _users)
             {
                 if(user.ID == id)
                 {
-                    (user as Pacient).Doctor = null;
+                    (user as Pacient).Doctor = null; // cast
                 }
             }
             _pacienti.Remove((Pacient)_users.FirstOrDefault(u => u.ID == id));
@@ -406,6 +524,12 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
+
+
+        /// <summary>
+        /// Sterge definitiv un pacient si toate datele asociate din baza de date si memorie.
+        /// </summary>
+        /// <param name="id">ID-ul pacientului.</param>
         public void DeletePacientPerm(int id)
         {
             try
@@ -439,6 +563,11 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
+
+        /// <summary>
+        /// Sterge un doctor si toate datele asociate din memorie si baza de date.
+        /// </summary>
+        /// <param name="id">ID-ul doctorului.</param>
         public void DeleteDoctor(int id)
         {
             try
@@ -472,6 +601,11 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
             }
         }
+
+        /// <summary>
+        /// Sterge un utilizator dupa ID, apeland metoda corespunzatoare in functie de rol.
+        /// </summary>
+        /// <param name="id">ID-ul utilizatorului.</param>
         public void StergeUser(int id)
         {
             foreach(IUser user in _users)
@@ -488,6 +622,13 @@ namespace ClinicaMedicalaForm.components.Model
                 }
             }
         }
+
+
+        /// <summary>
+        /// Adauga un pacient si il asociaza unui doctor.
+        /// </summary>
+        /// <param name="doctorID">ID-ul doctorului.</param>
+        /// <param name="pacient">Obiectul pacient de adaugat.</param>
         public void AdaugaPacient(int doctorID, Pacient pacient)
         {
             Doctor doctor = (Doctor)_users.FirstOrDefault(u => u.ID == doctorID);
@@ -512,6 +653,11 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
+
+        /// <summary>
+        /// Adauga un doctor in baza de date si actualizeaza listele interne.
+        /// </summary>
+        /// <param name="doctor">Obiectul doctor de adaugat.</param>
         public void AdaugaDoctor(Doctor doctor)
         {
             try
@@ -556,6 +702,11 @@ namespace ClinicaMedicalaForm.components.Model
             }
 
         }
+
+        /// <summary>
+        /// Marcheaza o programare ca validata (valabila) si actualizeaza baza de date.
+        /// </summary>
+        /// <param name="programare">Programarea care se valideaza.</param>
         public void ValidareProgramare(Programare programare)
         {
             try
@@ -599,6 +750,11 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
+
+        /// <summary>
+        /// Marcheaza o programare ca nevalidata (nevalabila) si actualizeaza baza de date.
+        /// </summary>
+        /// <param name="programare">Programarea care se nevalideaza.</param>
         public void NevalidareProgramare(Programare programare)
         {
             try
@@ -642,10 +798,23 @@ namespace ClinicaMedicalaForm.components.Model
                 new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
             }
         }
+
+
+        /// <summary>
+        /// Verifica daca un utilizator exista in baza de date.
+        /// </summary>
+        /// <param name="data">Lista de date pentru verificare.</param>
+        /// <returns>True daca exista, false altfel.</returns>
         public bool CheckUserExists(List<string> data)
         {
             return _databaseManager.CheckUserExists(data);
         }
+
+        /// <summary>
+        /// Insereaza un utilizator in baza de date si actualizeaza listele interne.
+        /// </summary>
+        /// <param name="data">Lista de date pentru utilizator.</param>
+        /// <returns>Utilizatorul creat sau null in caz de eroare.</returns>
         public IUser InsertUserCommand(List<string> data)
         {
             try
@@ -672,6 +841,13 @@ namespace ClinicaMedicalaForm.components.Model
                 return null;
             }
         }
+
+
+        /// <summary>
+        /// Returneaza utilizatorul dupa ID.
+        /// </summary>
+        /// <param name="userID">ID-ul utilizatorului.</param>
+        /// <returns>Utilizatorul gasit sau null.</returns>
         public IUser GetUser(int userID)
         {
             try
@@ -692,6 +868,11 @@ namespace ClinicaMedicalaForm.components.Model
             }
         }
 
+
+        /// <summary>
+        /// Sterge o programare pe baza stringului sau de identificare.
+        /// </summary>
+        /// <param name="programareString">Stringul de identificare a programarii.</param>
         public void DeleteAppointment(string programareString)
         {
             try
