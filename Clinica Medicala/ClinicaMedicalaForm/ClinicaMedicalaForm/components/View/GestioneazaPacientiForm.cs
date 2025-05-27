@@ -25,8 +25,13 @@ using System.Windows.Forms;
 
 namespace ClinicaMedicalaForm.components.View
 {
+    /// <summary>
+    /// Formular utilizat de administrator pentru gestionarea listei de pacienti.
+    /// Permite adaugarea si stergerea pacientilor din lista.
+    /// </summary>
     class GestioneazaPacientiForm : Form
     {
+        // Elemente create de VS
         private ListBox listBoxPacienti;
         private Button buttonSterge;
         private Button buttonAdauga;
@@ -34,9 +39,23 @@ namespace ClinicaMedicalaForm.components.View
 
         private List<IUser> _users;
         private List<IUser> _pacienti;
-       
+
+
+        /// <summary>
+        /// Pacientul selectat pentru stergere.
+        /// </summary>
         public IUser Pacient { get; private set; }
+
+        /// <summary>
+        /// Pacientul nou creat prin formularul de adaugare.
+        /// </summary>
         public Pacient PacientNou { get; private set; }
+
+        /// <summary>
+        /// Constructor care primeste lista de utilizatori si filtreaza pacientii.
+        /// </summary>
+        /// <param name="pacienti">Lista de utilizatori (doctori, pacienti etc.)</param>
+
         public GestioneazaPacientiForm(List<IUser> pacienti)
         {
             _users = pacienti;
@@ -45,6 +64,9 @@ namespace ClinicaMedicalaForm.components.View
             InitForm();
         }
 
+        /// <summary>
+        /// Initializeaza lista de pacienti afisata in ListBox.
+        /// </summary>
         private void InitForm()
         {
             foreach(var pacient in _users)
@@ -116,6 +138,7 @@ namespace ClinicaMedicalaForm.components.View
 
         }
 
+        // Callback-uri
         private void buttonAdauga_Click(object sender, EventArgs e)
         {
             PacientForm form = new PacientForm();

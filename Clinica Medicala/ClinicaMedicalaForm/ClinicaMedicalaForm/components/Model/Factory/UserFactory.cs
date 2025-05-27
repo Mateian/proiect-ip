@@ -25,10 +25,23 @@ using ClinicaMedicalaForm.components.Observer;
 
 namespace ClinicaMedicalaForm.components.Model.Factory
 {
+    /// <summary>
+    /// Clasa UserFactory are rolul de a crea obiecte de tip
+    /// utilizator (Administrator, Pacient, Doctor) pe baza
+    /// unui qarray de informatii.
+    /// </summary>
     public class UserFactory
     {
+        /// <summary>
+        /// Creeaza un obiect utilizator in functie de rolul specificat in infoArray.
+        /// </summary>
+        /// <param name="infoArray">Array de stringuri care contine detalii despre utilizator:
+        /// [0] ID, [1] Rol, [2] Username, [3] Parola, [4] Nume, [5] Prenume.</param>
+        /// <param name="obs">Observerul ce urmeaza a fi atasat utilizatorului.</param>
+        /// <returns>Un obiect care implementeaza interfata IUser sau null daca rolul nu este recunoscut..</returns>
         public IUser CreateUser(string[] infoArray,Observe obs)
         {
+            // Parsarea datelor din vectorul de stringuri
             int.TryParse(infoArray[0], out int ID);
             string rol = infoArray[1];
             string username = infoArray[2];
@@ -36,6 +49,7 @@ namespace ClinicaMedicalaForm.components.Model.Factory
             string nume = infoArray[4];
             string prenume = infoArray[5];
 
+            // Crearea unei instante in functie de rol
             switch(rol)
             {
                 case "Administrator":
@@ -45,7 +59,8 @@ namespace ClinicaMedicalaForm.components.Model.Factory
                 case "Doctor":
                     return new Doctor(ID, username, parola, nume, prenume, obs);
             }
-            return null;
+
+            return null; // In cazul in care nu se recunoaste rolul
         }
     }
 }

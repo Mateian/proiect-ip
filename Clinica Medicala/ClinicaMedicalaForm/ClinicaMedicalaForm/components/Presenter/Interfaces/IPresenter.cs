@@ -26,6 +26,9 @@ using ClinicaMedicalaForm.components.Model.Medical;
 
 namespace ClinicaMedicalaForm.components.Presenter.Interfaces
 {
+    /// <summary>
+    /// Interfata care defineste un obiect de tip Presenter.
+    /// </summary>
     public interface IPresenter
     {
         IUser VerificaAutentificare(string username, string parola);

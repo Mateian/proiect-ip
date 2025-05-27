@@ -26,8 +26,13 @@ using System.Windows.Forms;
 
 namespace ClinicaMedicalaForm.components.View
 {
+    /// <summary>
+    /// Formular pentru adaugarea unui doctor nou in aplicatie.
+    /// Colecteaza datele necesare si valideaza input-ul utilizatorului.
+    /// </summary>
     class DoctorForm : Form
     {
+        // Elemente interfata create de VS
         private TextBox textBoxUsername;
         private TextBox textBoxParola;
         private TextBox textBoxNume;
@@ -38,11 +43,19 @@ namespace ClinicaMedicalaForm.components.View
         private Label label4;
         private Button buttonAdaugaDoctor;
 
+        /// <summary>
+        /// Doctorul creat pe baza datelor introduse in formular.
+        /// </summary>
         public Doctor DoctorNou { get; private set; }
+
+        /// <summary>
+        /// Constructorul formularului initializeaza componentele UI.
+        /// </summary>
         public DoctorForm()
         {
             InitializeComponent();
         }
+
         private void InitializeComponent()
         {
             this.textBoxUsername = new System.Windows.Forms.TextBox();
@@ -148,6 +161,7 @@ namespace ClinicaMedicalaForm.components.View
 
         }
 
+        // Callback-uri
         private void buttonAdaugaDoctor_Click(object sender, EventArgs e)
         {
             if (textBoxUsername.Text == "" || textBoxParola.Text == "" || textBoxNume.Text == "" || textBoxPrenume.Text == "")

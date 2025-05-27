@@ -40,11 +40,19 @@ using ClinicaMedicalaForm.components.Model.Exceptions;
 
 namespace ClinicaMedicalaForm
 {
+    /// <summary>
+    /// Clasa principala a aplicatiei care implementeaza interfata IView.
+    /// Gestioneaza interactiunea cu utilizatorul si comunica cu Presenter-ul.
+    /// </summary>
     public partial class ClinicaMedicalaForm : Form, IView
     {
         private IPresenter _presenter;
         private IModel _model;
         private IUser _user;
+
+        /// <summary>
+        /// Constructorul clasei, initializeaza componentele si formularul.
+        /// </summary>
         public ClinicaMedicalaForm()
         {
             InitializeComponent();
@@ -52,6 +60,9 @@ namespace ClinicaMedicalaForm
             this.AcceptButton = buttonAutentificare;
         }
 
+        /// <summary>
+        /// Initializeaza setarile formularului la lansare.
+        /// </summary>
         public void InitForm()
         {
             // in caz de e nevoie de facut ceva cand se creeaza Form
@@ -60,6 +71,26 @@ namespace ClinicaMedicalaForm
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
+
+        /// <summary>
+        /// Seteaza modelul aplicatiei.
+        /// </summary>
+        /// <param name="model">Instanta modelului</param>
+        public void SetModel(IModel model)
+        {
+            _model = model;
+        }
+
+        /// <summary>
+        /// Seteaza presenter-ul aplicatiei.
+        /// </summary>
+        /// <param name="presenter">Instanta presenter-ului</param>
+        public void SetPresenter(IPresenter presenter)
+        {
+            _presenter = presenter;
+        }
+
+        // Callback-uri
         private void buttonCreareFisaMedicala_Click(object sender, EventArgs e)
         {
             FisaMedicalaForm.FisaMedicalaForm fisaMedicala = new FisaMedicalaForm.FisaMedicalaForm();
@@ -77,9 +108,9 @@ namespace ClinicaMedicalaForm
             string parola = textBoxParola.Text;
             _user = _presenter.VerificaAutentificare(username, parola);
 
-
-
-            if (_user != null)//val cat mai mica sa nu incurce cu nimica
+            // Se gestioneaza interfata in functie de utilizator - fiecarui rol
+            // ii va fi afisat panelul sau
+            if (_user != null) // val cat mai mica sa nu incurce cu nimica
             {
                 buttonDeconectare.Visible = true;
                 groupBoxAutentificare.Enabled = false;
@@ -87,12 +118,13 @@ namespace ClinicaMedicalaForm
                 labelWelcomeText.Visible = true;
                 tabControlUser.TabPages.Clear();
 
-                if (_user.Rol == "Pacient")//_user
+                if (_user.Rol == "Pacient") // _user
                 {
                     tabControlUser.TabPages.Add(tabPagePacient);
                     tabControlUser.SelectTab("tabPagePacient");
                     tabControlUser.Visible = true;
 
+                    // Stergere date anterioare pentru incarcarea celor noi
                     listBoxPacientIstoricProgramari.Items.Clear();
                     listBoxProgramariViitoare.Items.Clear();
                     listBoxIstoricMedical.Items.Clear();
@@ -135,6 +167,7 @@ namespace ClinicaMedicalaForm
                     tabControlUser.Visible = true;
 
 
+                    // Stergere date anterioare pentru incarcarea celor noi
                     listBoxDoctorPacienti.Items.Clear();
                     listBoxListaProgramari.Items.Clear();
 
@@ -158,6 +191,7 @@ namespace ClinicaMedicalaForm
                     tabControlUser.Visible = true;
                     groupBoxAdministrator.Visible = true;
 
+                    // Stergere date anterioare pentru incarcarea celor noi
                     listBoxAdminPacienti.Items.Clear();
 
                     labelWelcomeText.Text += "Adm. " + _user.Nume + " " + _user.Prenume + ".";
@@ -188,6 +222,7 @@ namespace ClinicaMedicalaForm
                 MessageBox.Show("Nu exista utilizatori cu datele introduse.", "Atentie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         private void buttonDeconectare_Click(object sender, EventArgs e)
         {
             _user.NotifyObs("DISCONNECTED");
@@ -200,16 +235,6 @@ namespace ClinicaMedicalaForm
             buttonDeconectare.Visible = false;
             groupBoxAutentificare.Enabled = true;
             textBoxPreviewFiles.Clear();
-        }
-
-        public void SetModel(IModel model)
-        {
-            _model = model;
-        }
-
-        public void SetPresenter(IPresenter presenter)
-        {
-            _presenter = presenter;
         }
 
         private void listBoxIstoricMedical_Click(object sender, EventArgs e)
@@ -287,6 +312,7 @@ namespace ClinicaMedicalaForm
                     Pacient id = _presenter.DeletePacient(listBoxDoctorPacienti.SelectedItem.ToString());
                     listBoxDoctorPacienti.Items.Remove(listBoxDoctorPacienti.SelectedItem);
 
+                    // Stergere date anterioare pentru incarcarea celor noi
                     listBoxListaProgramari.Items.Clear();
 
                     foreach (var programareDoctor in _presenter.GetProgramariDoctor(_user.ID))
@@ -319,7 +345,6 @@ namespace ClinicaMedicalaForm
                 }
             }
         }
-
         private void buttonGestioneazaDoctori_Click(object sender, EventArgs e)
         {
             GestioneazaDoctorForm form = new GestioneazaDoctorForm(_presenter.GetDoctori());
@@ -362,6 +387,7 @@ namespace ClinicaMedicalaForm
                 }
             }
         }
+
         private void buttonGestioneazaPacienti_Click(object sender, EventArgs e)
         {
             GestioneazaPacientiForm form = new GestioneazaPacientiForm(_model.Utilizatori);
