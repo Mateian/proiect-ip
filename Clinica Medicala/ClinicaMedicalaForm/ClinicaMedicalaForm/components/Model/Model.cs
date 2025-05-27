@@ -372,6 +372,39 @@ namespace ClinicaMedicalaForm.components.Model
         }
         public void DeletePacient(int id)
         {
+            foreach (var user in _users)
+            {
+                if(user.ID == id)
+                {
+                    (user as Pacient).Doctor = null;
+                }
+            }
+            _pacienti.Remove((Pacient)_users.FirstOrDefault(u => u.ID == id));
+            try
+            {
+                Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
+                _pacienti.Remove(pacient);
+                _users.Remove(pacient);
+                List<Programare> programariPacientDeSters = _programari.FindAll(p => p.PacientID == pacient.ID);
+                foreach (var aux in programariPacientDeSters)
+                {
+                    _programari.Remove(aux);
+                }
+                string tableName = "Pacienti";
+                string query = $"DELETE FROM {tableName} WHERE PacientID = @ID";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@ID", id }
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+            }
+        }
+        public void DeletePacientPerm(int id)
+        {
             try
             {
                 Pacient pacient = (Pacient)_users.FirstOrDefault(u => u.ID == id);
@@ -525,6 +558,49 @@ namespace ClinicaMedicalaForm.components.Model
             try
             {
                 Programare newProg = new Programare(programare.ID, programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
+                Programari.Add(newProg);
+                Programari.Remove(programare);
+                string tableName = "Programari";
+                string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
+                   "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
+
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@PacientID", newProg.PacientID },
+                    { "@DoctorID", newProg.DoctorID },
+                    { "@Date", newProg.Data },
+                    { "@Specializare", newProg.Specializare },
+                    { "@Valabilitate", newProg.Valabilitate }
+                };
+                _databaseManager.ExecuteNonQuery(query, parameters);
+                try
+                {
+                    tableName = "Programari";
+                    query = $"DELETE FROM {tableName} WHERE PacientID = @PacientID AND DoctorID = @DoctorID and Date = @Data AND Valabilitate = @Valabilitate";
+                    parameters = new Dictionary<string, object>
+                    {
+                        { "@PacientID", programare.PacientID },
+                        { "@DoctorID", programare.DoctorID },
+                        { "@Data", programare.Data },
+                        { "@Valabilitate", programare.Valabilitate }
+                    };
+                    _databaseManager.ExecuteNonQuery(query, parameters);
+                }
+                catch (Exception ex)
+                {
+                    throw new MasterExceptionHandler("Eroare la stergerea din baza de date", 102, ex);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new MasterExceptionHandler("Eroare la introducerea in baza de date", 101, ex);
+            }
+        }
+        public void NevalidareProgramare(Programare programare)
+        {
+            try
+            {
+                Programare newProg = new Programare(programare.ID, programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Nevalabila");
                 Programari.Add(newProg);
                 Programari.Remove(programare);
                 string tableName = "Programari";

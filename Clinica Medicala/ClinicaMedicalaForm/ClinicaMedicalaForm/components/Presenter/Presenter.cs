@@ -99,7 +99,7 @@ namespace ClinicaMedicalaForm.components.Presenter
             List<Programare> l = new List<Programare>();
             foreach (Programare p in _model.Programari)
             {
-                if (p.PacientID == pacientID && p.Valabilitate == "Valabila")
+                if (p.PacientID == pacientID && p.Valabilitate == "Nevalabila")
                 {
                     l.Add(p);
                 }
@@ -181,6 +181,10 @@ namespace ClinicaMedicalaForm.components.Presenter
         public void StergeProgramare(string programareString)
         {
             _model.DeleteAppointment(programareString);
+        }
+        public void NevalidareProgramare(Programare programare)
+        {
+            _model.NevalidareProgramare(programare);
         }
     }
 }

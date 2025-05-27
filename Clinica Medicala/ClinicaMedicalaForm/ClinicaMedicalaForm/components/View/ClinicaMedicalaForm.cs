@@ -77,8 +77,8 @@ namespace ClinicaMedicalaForm
             string parola = textBoxParola.Text;
             _user = _presenter.VerificaAutentificare(username, parola);
 
-            
-            
+
+
             if (_user != null)//val cat mai mica sa nu incurce cu nimica
             {
                 buttonDeconectare.Visible = true;
@@ -101,11 +101,11 @@ namespace ClinicaMedicalaForm
 
                     List<Programare> programariIstoric = _presenter.GetProgramariIstoric(_user.ID);
 
-                    foreach(Programare programare in programariIstoric)
+                    foreach (Programare programare in programariIstoric)
                     {
                         listBoxPacientIstoricProgramari.Items.Add(programare.ToString());
                         IUser user = _presenter.GetUser(_user.ID);
-                        if(user != null)
+                        if (user != null)
                         {
                             user.SetProgramare(programare);
                         }
@@ -128,7 +128,7 @@ namespace ClinicaMedicalaForm
                         listBoxIstoricMedical.Items.Add(fisa.ToString());
                     }
                 }
-                else if(_user.Rol == "Doctor")
+                else if (_user.Rol == "Doctor")
                 {
                     tabControlUser.TabPages.Add(tabPageDoctor);
                     tabControlUser.SelectTab("tabPageDoctor");
@@ -141,17 +141,17 @@ namespace ClinicaMedicalaForm
                     labelWelcomeText.Text += "Dr. " + _user.Nume + " " + _user.Prenume + ".";
 
                     List<IUser> pacientiDoctor = _presenter.GetPacienti(_user.ID);
-                    foreach(var pacient in pacientiDoctor)
+                    foreach (var pacient in pacientiDoctor)
                     {
                         listBoxDoctorPacienti.Items.Add(pacient.ToString());
                     }
-                    List <Programare> l=_presenter.GetProgramariDoctor(_user.ID);
+                    List<Programare> l = _presenter.GetProgramariDoctor(_user.ID);
                     foreach (Programare p in l)
                     {
                         listBoxListaProgramari.Items.Add(p.ToString());
                     }
                 }
-                else if(_user.Rol == "Administrator")
+                else if (_user.Rol == "Administrator")
                 {
                     tabControlUser.TabPages.Add(tabPageAdmin);
                     tabControlUser.SelectTab("tabPageAdmin");
@@ -176,7 +176,7 @@ namespace ClinicaMedicalaForm
                         List<IUser> pacientiDoctor = _presenter.GetPacienti(dr.ID);
                         foreach (var pacient in pacientiDoctor)
                         {
-                            listBoxAdminPacienti.Items.Add("--"+pacient.ToString());
+                            listBoxAdminPacienti.Items.Add("--" + pacient.ToString());
                         }
                     }
 
@@ -185,7 +185,7 @@ namespace ClinicaMedicalaForm
             else
             {
                 groupBoxAdministrator.Visible = false;
-                MessageBox.Show("No _user that matches these credentials found.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nu exista utilizatori cu datele introduse.", "Atentie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void buttonDeconectare_Click(object sender, EventArgs e)
@@ -201,7 +201,7 @@ namespace ClinicaMedicalaForm
             groupBoxAutentificare.Enabled = true;
             textBoxPreviewFiles.Clear();
         }
-        
+
         public void SetModel(IModel model)
         {
             _model = model;
@@ -226,7 +226,7 @@ namespace ClinicaMedicalaForm
 
         private void listBoxIstoricMedical_Click(object sender, EventArgs e)
         {
-            if(listBoxIstoricMedical.SelectedItem!=null)//in functie de ce fisa este selectata va afisa in casuta detaliile
+            if (listBoxIstoricMedical.SelectedItem != null)//in functie de ce fisa este selectata va afisa in casuta detaliile
             {
                 textBoxPreviewFiles.Text = _presenter.PreviewIstoricMedical(listBoxIstoricMedical.SelectedIndex);
             }
@@ -243,9 +243,9 @@ namespace ClinicaMedicalaForm
             Pacient pacient = (Pacient)_user;
             try
             {
-                if(pacient.Doctor == null)
+                if (pacient.Doctor == null)
                 {
-                    throw new MasterExceptionHandler("Nu aveti doctor!",401,null);
+                    throw new MasterExceptionHandler("Nu aveti doctor!", 401, null);
                 }
                 ProgramareForm programareForm = new ProgramareForm(pacient.Doctor.Nume, pacient.Doctor.Prenume);
                 if (programareForm.ShowDialog() == DialogResult.OK)
@@ -267,11 +267,11 @@ namespace ClinicaMedicalaForm
 
         private void buttonAdaugareProgramare_Click(object sender, EventArgs e)
         {
-            if(listBoxListaProgramari.SelectedItem != null)
+            if (listBoxListaProgramari.SelectedItem != null)
             {
                 string stringProgramare = listBoxListaProgramari.SelectedItem.ToString();
                 Programare programare = _model.Programari.FirstOrDefault(p => p.ToString() == stringProgramare);
-                if(programare.Valabilitate == "In curs de validare")
+                if (programare.Valabilitate == "In curs de validare")
                 {
                     Programare newProgramare = new Programare(programare.ID, programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Valabila");
                     _presenter.ValidareProgramare(programare);
@@ -291,7 +291,7 @@ namespace ClinicaMedicalaForm
 
         private void listBoxDoctorPacienti_DoubleClick(object sender, EventArgs e)
         {
-            if(listBoxDoctorPacienti.SelectedItem != null)
+            if (listBoxDoctorPacienti.SelectedItem != null)
             {
                 if (MessageBox.Show("Sunteti sigur ca vreti sa stergeti acest pacient?", "Stergere pacient", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -300,7 +300,7 @@ namespace ClinicaMedicalaForm
 
                     listBoxListaProgramari.Items.Clear();
 
-                    foreach(var programareDoctor in _presenter.GetProgramariDoctor(_user.ID))
+                    foreach (var programareDoctor in _presenter.GetProgramariDoctor(_user.ID))
                     {
                         listBoxListaProgramari.Items.Add(programareDoctor.ToString());
                     }
@@ -311,7 +311,7 @@ namespace ClinicaMedicalaForm
         private void buttonAdaugaPacient_Click(object sender, EventArgs e)
         {
             AdaugaPacientForm form = new AdaugaPacientForm(_model.Utilizatori);
-            if(form.ShowDialog() == DialogResult.OK)
+            if (form.ShowDialog() == DialogResult.OK)
             {
                 Pacient pacient = (Pacient)form.Pacient;
                 if (pacient != null)
@@ -435,7 +435,7 @@ namespace ClinicaMedicalaForm
                     }
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return;
             }
@@ -462,9 +462,14 @@ namespace ClinicaMedicalaForm
 
         private void buttonCreateSubmit_Click(object sender, EventArgs e)
         {
-            if(textBoxCreatePassword.Text != textBoxCreateCheckPassword.Text)
+            if (textBoxCreatePassword.Text != textBoxCreateCheckPassword.Text)
             {
                 MessageBox.Show("Parolele nu sunt identice!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (textBoxCreateUser.Text == "" || textBoxCreateFirstName.Text == "" || textBoxCreateLastName.Text == "" || textBoxCreatePassword.Text == "" || textBoxCreateCheckPassword.Text == "")
+            {
+                MessageBox.Show("Introduceti date in toate casutele.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -484,6 +489,7 @@ namespace ClinicaMedicalaForm
                     try
                     {
                         _user = _presenter.InsertUserCommand(date);
+                        MessageBox.Show("Cont creat!", "Creare cont", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         _user.NotifyObs("USER CREATED");
                         listBoxComenzi.Items.Add($"Creare user nou [{textBoxCreateLastName.Text + " " + textBoxCreateFirstName.Text}].");
                     }
@@ -493,45 +499,6 @@ namespace ClinicaMedicalaForm
                         return;
                     }
                 }
-            }
-            buttonDeconectare.Visible = true;
-            groupBoxCreateAcc.Visible = false;
-            groupBoxAutentificare.Visible = true;
-            groupBoxAutentificare.Enabled = false;
-            textBoxNumeUtilizator.Text = textBoxCreateUser.Text;
-            textBoxParola.Text = textBoxCreatePassword.Text;
-            textBoxCreateUser.Clear();
-            textBoxCreatePassword.Clear();
-            textBoxCreateCheckPassword.Clear();
-            textBoxCreateFirstName.Clear();
-            textBoxCreateLastName.Clear();
-            labelWelcomeText.Text = "Bine ai venit, ";
-            labelWelcomeText.Visible = true;
-            listBoxPacientIstoricProgramari.Items.Clear();
-            listBoxProgramariViitoare.Items.Clear();
-            listBoxIstoricMedical.Items.Clear();
-            labelWelcomeText.Text += _user.Nume + " " + _user.Prenume + ".";
-            tabControlUser.Visible = true;
-            tabPagePacient.Visible = true;
-            tabPageDoctor.Visible = false;
-            tabControlUser.SelectTab("tabPagePacient");
-
-            List<Programare> programariIstoric = _presenter.GetProgramariIstoric(_user.ID);
-            foreach (Programare programare in programariIstoric)
-            {
-                listBoxPacientIstoricProgramari.Items.Add(programare.ToString());
-            }
-
-            List<Programare> cereriProgramare = _presenter.GetCereriProgramari(_user.ID);
-            foreach (Programare programare in cereriProgramare)
-            {
-                listBoxProgramariViitoare.Items.Add(programare.ToString());
-            }
-
-            List<FisaMedicala> fisaMedicalaIstoric = _model.PreluareIstoricMedical(_user.ID);
-            foreach (FisaMedicala fisa in fisaMedicalaIstoric)
-            {
-                listBoxIstoricMedical.Items.Add(fisa.ToString());
             }
         }
 
@@ -548,10 +515,10 @@ namespace ClinicaMedicalaForm
             richTextBoxStatistica.Text = "";
             List<IUser> users = _model.Utilizatori;
             richTextBoxStatistica.AppendText("Administratorii:\n");
-            foreach(IUser user in users)
+            foreach (IUser user in users)
             {
-                if(user.Rol == "Administrator") 
-                { 
+                if (user.Rol == "Administrator")
+                {
                     richTextBoxStatistica.AppendText(user.ToString() + "\n");
                     admini++;
                 }
@@ -583,9 +550,9 @@ namespace ClinicaMedicalaForm
                     pacienti++;
                 }
             }
-            string final = $"\nInformatii finale:\nIn total sunt {admini+asisteni+doctori} angajati in spital.\n" +
+            string final = $"\nInformatii finale:\nIn total sunt {admini + asisteni + doctori} angajati in spital.\n" +
                            $"Acestia au grija de {pacienti} pacienti.\n" +
-                           $"Un doctor are in medie grija de {pacienti/doctori} pacienti.";
+                           $"Un doctor are in medie grija de {pacienti / doctori} pacienti.";
             richTextBoxStatistica.AppendText(final);
         }
 
@@ -595,11 +562,11 @@ namespace ClinicaMedicalaForm
             {
                 textBoxPreviewFiles.Text = _presenter.PreviewCereriProgramari(listBoxProgramariViitoare.SelectedItem.ToString(), _user.ID);
             }
-        }  
+        }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Sunteti sigur ca doriti sa parasiti aplicatia?", "Parasire aplicatie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Sunteti sigur ca doriti sa parasiti aplicatia?", "Parasire aplicatie", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
@@ -615,6 +582,42 @@ namespace ClinicaMedicalaForm
                     listBoxListaProgramari.Items.Remove(listBoxListaProgramari.SelectedItem);
                 }
             }
+        }
+
+        private void listBoxListaProgramari_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (listBoxListaProgramari.SelectedItem != null)
+                {
+                    if(MessageBox.Show("Doriti sa invalidati aceasta programare?", "Programare", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string stringProgramare = listBoxListaProgramari.SelectedItem.ToString();
+                        Programare programare = _model.Programari.FirstOrDefault(p => p.ToString() == stringProgramare);
+                        if (programare.Valabilitate == "Valabila")
+                        {
+                            Programare newProgramare = new Programare(programare.ID, programare.PacientID, programare.DoctorID, programare.Data, programare.Specializare, "Nevalabila");
+                            _presenter.NevalidareProgramare(programare);
+                            _model.Programari.Remove(programare);
+
+                            listBoxListaProgramari.Items.Remove(stringProgramare);
+                            listBoxListaProgramari.Items.Add(newProgramare.ToString());
+                            //listBoxComenzi.Items.Add($"Adaugare programare [{programare.ToString()}].");
+                            _user.NotifyObs("APPOINTMENT INVALIDATED");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Trebuie sa fie Valabila pentru a deveni nevalabila.");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void helpToolStripMenuItemHelp_Click(object sender, EventArgs e)
+        {
+            // trebuie un try catch
+            System.Diagnostics.Process.Start(Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ourClinicHelp.chm");
         }
     }
 }

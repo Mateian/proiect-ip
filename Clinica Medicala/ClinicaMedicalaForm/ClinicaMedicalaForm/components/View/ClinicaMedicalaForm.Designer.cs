@@ -429,6 +429,7 @@
             this.listBoxListaProgramari.Size = new System.Drawing.Size(531, 228);
             this.listBoxListaProgramari.TabIndex = 3;
             this.listBoxListaProgramari.DoubleClick += new System.EventHandler(this.listBoxListaProgramari_DoubleClick);
+            this.listBoxListaProgramari.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listBoxListaProgramari_KeyUp);
             // 
             // groupBox3
             // 
@@ -691,7 +692,7 @@
             this.appToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.appToolStripMenuItem.Name = "appToolStripMenuItem";
-            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.appToolStripMenuItem.Size = new System.Drawing.Size(51, 26);
             this.appToolStripMenuItem.Text = "App";
             // 
             // exitToolStripMenuItem
@@ -706,6 +707,7 @@
             this.helpToolStripMenuItemHelp.Name = "helpToolStripMenuItemHelp";
             this.helpToolStripMenuItemHelp.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItemHelp.Text = "Help";
+            this.helpToolStripMenuItemHelp.Click += new System.EventHandler(this.helpToolStripMenuItemHelp_Click);
             // 
             // labelWelcomeText
             // 
@@ -875,9 +877,9 @@
             this.Controls.Add(this.tabControlUser);
             this.Controls.Add(this.groupBox13);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBoxCreateAcc);
             this.Controls.Add(this.groupBoxAutentificare);
             this.Controls.Add(this.groupBoxAdministrator);
+            this.Controls.Add(this.groupBoxCreateAcc);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ClinicaMedicalaForm";

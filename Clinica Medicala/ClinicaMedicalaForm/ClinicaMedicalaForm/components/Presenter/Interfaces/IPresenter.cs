@@ -48,5 +48,6 @@ namespace ClinicaMedicalaForm.components.Presenter.Interfaces
         string PreviewCereriProgramari(string programare, int userID);
         IUser GetUser(int userID);
         void StergeProgramare(string v);
+        void NevalidareProgramare(Programare v);
     }
 }
