@@ -51,6 +51,9 @@
     <Reference Include="IPresenter">
       <HintPath>components\Presenter\Interfaces\IPresenter.dll</HintPath>
     </Reference>
+    <Reference Include="IView">
+      <HintPath>components\View\Interfaces\IView.dll</HintPath>
+    </Reference>
     <Reference Include="MasterExeptionHandler">
       <HintPath>components\Model\Exceptions\MasterExeptionHandler.dll</HintPath>
     </Reference>
@@ -60,8 +63,14 @@
     <Reference Include="Microsoft.Data.Sqlite, Version=9.0.5.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Sqlite.Core.9.0.5\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
     </Reference>
+    <Reference Include="Model">
+      <HintPath>components\Model\Model.dll</HintPath>
+    </Reference>
     <Reference Include="Observer">
       <HintPath>components\Observer\Observer.dll</HintPath>
+    </Reference>
+    <Reference Include="Presenter">
+      <HintPath>components\Presenter\Presenter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -99,8 +108,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="components\Model\Model.cs" />
-    <Compile Include="components\Presenter\Presenter.cs" />
     <Compile Include="components\View\AdaugaPacientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +132,6 @@
     <Compile Include="components\View\GestioneazaPacientiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="components\View\Interfaces\IView.cs" />
     <Compile Include="components\View\PacientForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,7 @@
     <Folder Include="components\Model\Users\" />
     <Folder Include="components\Observer\" />
     <Folder Include="components\Presenter\Interfaces\" />
+    <Folder Include="components\View\Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

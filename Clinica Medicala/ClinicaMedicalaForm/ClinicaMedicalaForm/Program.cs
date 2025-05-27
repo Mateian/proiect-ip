@@ -17,11 +17,11 @@
 
 using System;
 using System.Windows.Forms;
-using ClinicaMedicalaForm.components.Model;
+using components.ModelClass;
 using components.Model.Interfaces;
 using ClinicaMedicalaForm.components.Presenter;
 using components.Presenter.Interfaces;
-using ClinicaMedicalaForm.components.View.Interfaces;
+using components.View.Interfaces;
 
 namespace ClinicaMedicalaForm
 {
