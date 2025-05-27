@@ -186,5 +186,10 @@ namespace ClinicaMedicalaForm.components.Presenter
         {
             _model.NevalidareProgramare(programare);
         }
+
+        public string PreviewProgramariDoctor(string v, int iD)
+        {
+            return _model.PreviewProgramariDoctor(v, iD);
+        }
     }
 }

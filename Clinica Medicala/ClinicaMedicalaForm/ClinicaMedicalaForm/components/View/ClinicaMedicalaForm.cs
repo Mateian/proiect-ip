@@ -626,5 +626,21 @@ namespace ClinicaMedicalaForm
                 new MasterExceptionHandler("Error at Help Menu", 401, ex);
             }
         }
+
+        private void listBoxPacientIstoricProgramari_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxPacientIstoricProgramari.SelectedItem != null)
+            {
+                textBoxPreviewFiles.Text = _presenter.PreviewIstoricProgramari(listBoxPacientIstoricProgramari.SelectedItem.ToString(), _user.ID);
+            }
+        }
+
+        private void listBoxListaProgramari_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxListaProgramari.SelectedItem != null)
+            {
+                richTextBoxPreviewFisa.Text = _presenter.PreviewProgramariDoctor(listBoxListaProgramari.SelectedItem.ToString(), _user.ID);
+            }
+        }
     }
 }
