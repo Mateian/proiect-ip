@@ -138,7 +138,6 @@ namespace ClinicaMedicalaForm.components.Model
             string tableName = "Pacienti";
             string query = $"SELECT * FROM {tableName};";
             var reader = _databaseManager.ExecuteSelectQuery(query);
-
             try
             {
                 while (reader.Read())
@@ -165,7 +164,7 @@ namespace ClinicaMedicalaForm.components.Model
             }
             catch (Exception e)
             {
-                throw new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
+                new MasterExceptionHandler("Eroare la deschiderea bazei de date", 100, e);
             }
             finally
             {
@@ -242,10 +241,6 @@ namespace ClinicaMedicalaForm.components.Model
                 string tableName = "Programari";
                 string query = $"INSERT INTO {tableName}(PacientID, DoctorID, Date, Specializare, Valabilitate) " +
                    "VALUES (@PacientID, @DoctorID, @Date, @Specializare, @Valabilitate);";
-                //Pacient pacient = _users.FirstOrDefault(p => p.ID == id) as Pacient;
-                //_users.Remove(pacient);              
-                //pacient.SetProgramare(programare);
-                //_users.Add(pacient);
                 foreach (IUser user in _users)
                 {
                     if(user.ID==id)

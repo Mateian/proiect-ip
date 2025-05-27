@@ -52,7 +52,7 @@ namespace ClinicaMedicalaForm.components.Model.Exceptions
         }
         private void UserIDHandle(string message, Exception inner)
         {
-            MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, "Warning - Check error log", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void ObjectNullHandle(string message, Exception inner)
         {

@@ -617,7 +617,14 @@ namespace ClinicaMedicalaForm
         private void helpToolStripMenuItemHelp_Click(object sender, EventArgs e)
         {
             // trebuie un try catch
-            System.Diagnostics.Process.Start(Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ourClinicHelp.chm");
+            try
+            {
+                System.Diagnostics.Process.Start(Directory.GetCurrentDirectory() + "\\..\\..\\components\\Resources\\ourClinicHelp.chm");
+            }
+            catch (Exception ex) 
+            {
+                new MasterExceptionHandler("Error at Help Menu", 401, ex);
+            }
         }
     }
 }
