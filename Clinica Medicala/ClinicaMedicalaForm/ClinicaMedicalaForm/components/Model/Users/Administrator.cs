@@ -15,6 +15,7 @@
  *                                                                        *
  **************************************************************************/
 
+using ClinicaMedicalaForm.components.Model.Exceptions;
 using ClinicaMedicalaForm.components.Model.Medical;
 using ClinicaMedicalaForm.components.Observer;
 using System;
@@ -22,6 +23,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ClinicaMedicalaForm.components.Model.Users
@@ -56,12 +58,13 @@ namespace ClinicaMedicalaForm.components.Model.Users
 
         public void SetProgramare(Programare programare)
         {
-            throw new NotImplementedException();
+            new MasterExceptionHandler("Administratorul nu poate avea programari!", 400, null);
         }
 
         public Programare GetProgramare(int index)
         {
-            throw new NotImplementedException();
+            new MasterExceptionHandler("Administratorul nu poate avea programari!", 400, null);
+            return new Programare(-1, -1, -1, "", "", "");
         }
         public void NotifyObs(string s)
         {

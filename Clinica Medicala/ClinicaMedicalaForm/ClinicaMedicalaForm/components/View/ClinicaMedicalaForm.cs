@@ -212,18 +212,6 @@ namespace ClinicaMedicalaForm
             _presenter = presenter;
         }
 
-        private void tabControlUser_Selecting(object sender, TabControlCancelEventArgs e)
-        {
-            /*if (_user.Rol == "Pacient" && e.TabPage.Name=="tabPageDoctor")
-            {
-                e.Cancel = true;
-            }
-            if (_user.Rol == "Doctor" && e.TabPage.Name == "tabPagePacient")
-            {
-                e.Cancel = true;
-            }*/
-        }
-
         private void listBoxIstoricMedical_Click(object sender, EventArgs e)
         {
             if (listBoxIstoricMedical.SelectedItem != null)//in functie de ce fisa este selectata va afisa in casuta detaliile

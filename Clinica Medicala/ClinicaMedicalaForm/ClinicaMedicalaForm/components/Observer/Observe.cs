@@ -27,17 +27,17 @@ namespace ClinicaMedicalaForm.components.Observer
 {
     public class Observe
     {
-        private List<string> updates;
+        private List<string> _updates;
         public Observe()
         {
-            updates = new List<string>();
+            _updates = new List<string>();
         }
         public void Update(string message)
         {
-            if(updates!=null)
-                updates.Add(message);
+            if(_updates!=null)
+                _updates.Add(message);
         }
-        public List<string> GetUpdates() { return updates; }
+        public List<string> GetUpdates() { return _updates; }
 
     }
 }
