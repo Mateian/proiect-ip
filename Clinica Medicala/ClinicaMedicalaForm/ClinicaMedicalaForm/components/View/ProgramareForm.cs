@@ -19,7 +19,7 @@ using System;
 using System.Windows.Forms;
 using components.Model.Exceptions;
 
-namespace ClinicaMedicalaForm
+namespace ClinicaMedicalaFormNamespace
 {
     /// <summary>
     /// Formular folosit pentru crearea unei programari la un doctor specificat.

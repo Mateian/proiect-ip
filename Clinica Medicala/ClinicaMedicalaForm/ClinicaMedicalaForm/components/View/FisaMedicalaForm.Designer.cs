@@ -1,4 +1,4 @@
-﻿namespace FisaMedicalaForm
+﻿namespace FisaMedicalaFormNamespace
 {
     partial class FisaMedicalaForm
     {

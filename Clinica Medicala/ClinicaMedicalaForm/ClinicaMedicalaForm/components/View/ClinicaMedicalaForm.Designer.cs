@@ -1,4 +1,4 @@
-﻿namespace ClinicaMedicalaForm
+﻿namespace ClinicaMedicalaFormNamespace
 {
     partial class ClinicaMedicalaForm
     {
