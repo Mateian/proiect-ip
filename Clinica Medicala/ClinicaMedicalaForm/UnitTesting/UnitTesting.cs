@@ -43,8 +43,8 @@ namespace UnitTesting
             Model.Location = Directory.GetCurrentDirectory() + "\\..\\..\\..\\ClinicaMedicalaForm\\components\\Resources\\ClinicaMedicalaDB.db";
             Model m = new Model();
             m.CitireUtilizatori();
-            string expectedString = "2 pacient1 pacient1 (pacient1) Pacient  01-Jan-01 12:00:00 AM";
-            Assert.AreEqual(expectedString, m.GetUser(2).ToString(), "functia nu a parsat corect.");
+            string expectedString = "4 Marin Ioana (pacient1) Pacient  01-Jan-01 12:00:00 AM";
+            Assert.AreEqual(expectedString, m.GetUser(4).ToString(), "functia nu a parsat corect.");
         }
         //Teste pentru clasa Doctor
         [TestMethod]
@@ -71,8 +71,8 @@ namespace UnitTesting
             Model.Location = Directory.GetCurrentDirectory() + "\\..\\..\\..\\ClinicaMedicalaForm\\components\\Resources\\ClinicaMedicalaDB.db";
             Model m = new Model();
             m.CitireUtilizatori();
-            string expectedString = "5 doctor1 doctor1 (doctor1) Doctor  ";
-            Assert.AreEqual(expectedString, m.GetUser(5).ToString(), "functia nu a parsat corect.");
+            string expectedString = "2 Popescu Andrei (doctor1) Doctor  ";
+            Assert.AreEqual(expectedString, m.GetUser(2).ToString(), "functia nu a parsat corect.");
         }
         //Teste pentru clasa Model
         [TestMethod]
@@ -112,7 +112,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestVerificaAutentificare()
         {
-            Pacient p = new Pacient(2, "pacient1", "pacient1", "pacient1", "pacient1", new Observe());
+            Pacient p = new Pacient(4, "pacient1", "pacient1", "Marin", "Ioana", new Observe());
             Model.Location = Directory.GetCurrentDirectory() + "\\..\\..\\..\\ClinicaMedicalaForm\\components\\Resources\\ClinicaMedicalaDB.db";
             Model m = new Model();
             m.CitireUtilizatori();
@@ -127,14 +127,13 @@ namespace UnitTesting
             m.PreluareIstoricMedical(2);
             Assert.IsNotNull(m.PreluareIstoricMedical(2), "Preluarea istoricului medical a esuat.");
         }
-
         [TestMethod]
         public void TestPreviewIstoricMedical()
         {
             Model.Location = Directory.GetCurrentDirectory() + "\\..\\..\\..\\ClinicaMedicalaForm\\components\\Resources\\ClinicaMedicalaDB.db";
             Model m = new Model();
             m.CitireUtilizatori();
-            List<FisaMedicala> l = m.PreluareIstoricMedical(2);
+            List<FisaMedicala> l = m.PreluareIstoricMedical(4);
             Assert.AreEqual(l[0].GeneratePreview(), m.PreviewIstoricMedical(0), "Fisa medicala nu a fost selectata corect.");
         }
         [TestMethod]
@@ -144,9 +143,9 @@ namespace UnitTesting
             Model m = new Model();
             m.CitireUtilizatori();
             m.CitireProgramari();
-            string programare = "70 27.05.2025, Pacientul: 2, Specialitatea: Neurologie, Valabilitatea: Nevalabila\n";
-            string expectedString = "Data programarii: 27.05.2025\r\nSpecializarea: Neurologie\r\nValabilitatea: Nevalabila\r\n\r\n";
-            Assert.AreEqual(expectedString, m.PreviewIstoricProgramari(programare, 2), "Preview-ul nu a fost generat corect.");
+            string programare = "6 18.03.2025, Pacientul: 5, Specialitatea: Neurochirurgie, Valabilitatea: Nevalabila\n";
+            string expectedString = "Data programarii: 18.03.2025\r\nSpecializarea: Neurochirurgie\r\nValabilitatea: Nevalabila\r\n\r\n";
+            Assert.AreEqual(expectedString, m.PreviewIstoricProgramari(programare, 5), "Preview-ul nu a fost generat corect.");
         }
         [TestMethod]
         public void TestGetUser()
@@ -154,8 +153,8 @@ namespace UnitTesting
             Model.Location = Directory.GetCurrentDirectory() + "\\..\\..\\..\\ClinicaMedicalaForm\\components\\Resources\\ClinicaMedicalaDB.db";
             Model m = new Model();
             m.CitireUtilizatori();
-            Pacient p = new Pacient(2, "pacient1", "pacient1", "pacient1", "pacient1", new Observe());
-            Assert.AreEqual(p.ToString(), m.GetUser(2).ToString(), "Utilizatorul nu a fost selectat corect.");
+            Pacient p = new Pacient(4, "pacient1", "pacient1", "Marin", "Ioana", new Observe());
+            Assert.AreEqual(p.ToString(), m.GetUser(4).ToString(), "Utilizatorul nu a fost selectat corect.");
         }
         //Teste pentru clasa presenter
         [TestMethod]
@@ -165,7 +164,7 @@ namespace UnitTesting
             Model m = new Model();
             IView view = new ClinicaMedicalaFormNamespace.ClinicaMedicalaForm();
             IPresenter presenter = new Presenter(view, m);
-            List<IUser> pacienti = presenter.GetPacienti(5);
+            List<IUser> pacienti = presenter.GetPacienti(2);
             Assert.IsTrue(pacienti.Count > 0, "Lista de pacienti nu a fost returnata corect.");
         }
         [TestMethod]
@@ -185,7 +184,7 @@ namespace UnitTesting
             Model m = new Model();
             IView view = new ClinicaMedicalaFormNamespace.ClinicaMedicalaForm();
             IPresenter presenter = new Presenter(view, m);
-            List<Programare> programari = presenter.GetProgramariDoctor(5);
+            List<Programare> programari = presenter.GetProgramariDoctor(2);
             Assert.IsNotNull(programari, "Lista de programari nu a fost returnata corect.");
         }
         [TestMethod]
@@ -195,7 +194,7 @@ namespace UnitTesting
             Model m = new Model();
             IView view = new ClinicaMedicalaFormNamespace.ClinicaMedicalaForm();
             IPresenter presenter = new Presenter(view, m);
-            List<Programare> programari = presenter.GetProgramariIstoric(2);
+            List<Programare> programari = presenter.GetProgramariIstoric(5);
             Assert.IsTrue(programari.Count > 0, "Lista de istoric programari nu a fost returnata corect.");
         }
         [TestMethod]
@@ -205,7 +204,7 @@ namespace UnitTesting
             Model m = new Model();
             IView view = new ClinicaMedicalaFormNamespace.ClinicaMedicalaForm();
             IPresenter presenter = new Presenter(view, m);
-            List<Programare> programari = presenter.GetCereriProgramari(2);
+            List<Programare> programari = presenter.GetCereriProgramari(5);
             Assert.IsTrue(programari.Count > 0, "Lista de cereri programari nu a fost returnata corect.");
         }
         [TestMethod]
@@ -229,8 +228,8 @@ namespace UnitTesting
             Model m = new Model();
             IView view = new ClinicaMedicalaFormNamespace.ClinicaMedicalaForm();
             IPresenter presenter = new Presenter(view, m);
-            string preview = presenter.PreviewProgramariDoctor("70 27.05.2025, Pacientul: 2, Specialitatea: Neurologie, Valabilitatea: Nevalabila\n", 2);
-            string expectedPreview = "Data programarii: 27.05.2025\r\nSpecializarea: Neurologie\r\nValabilitatea: Nevalabila\r\n\r\n";
+            string preview = presenter.PreviewProgramariDoctor("2 10.06.2025, Pacientul: 5, Specialitatea: Psihiatrie, Valabilitatea: In curs de validare\n", 3);
+            string expectedPreview = "Data programarii: 10.06.2025\r\nSpecializarea: Psihiatrie\r\nValabilitatea: In curs de validare\r\n\r\n";
             Assert.AreEqual(expectedPreview,preview,"Preview-ul programarii nu a fost generat corect.");
         }
     }
