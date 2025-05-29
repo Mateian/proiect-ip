@@ -50,6 +50,7 @@ namespace ClinicaMedicalaFormNamespace
             InitializeComponent();
             InitForm();
             this.AcceptButton = buttonAutentificare;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         /// <summary>
