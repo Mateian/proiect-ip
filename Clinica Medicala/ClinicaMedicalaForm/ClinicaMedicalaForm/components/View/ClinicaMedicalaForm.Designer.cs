@@ -377,11 +377,11 @@
             // 
             this.groupBox5.Controls.Add(this.buttonCreareFisaMedicala);
             this.groupBox5.Controls.Add(this.richTextBoxPreviewFisa);
-            this.groupBox5.Location = new System.Drawing.Point(5, 300);
+            this.groupBox5.Location = new System.Drawing.Point(5, 309);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(927, 260);
+            this.groupBox5.Size = new System.Drawing.Size(927, 251);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fisa medicala";
@@ -441,7 +441,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(376, 262);
+            this.groupBox3.Size = new System.Drawing.Size(377, 273);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pacientii mei";
@@ -451,9 +451,9 @@
             this.buttonAdaugaPacient.Location = new System.Drawing.Point(5, 233);
             this.buttonAdaugaPacient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdaugaPacient.Name = "buttonAdaugaPacient";
-            this.buttonAdaugaPacient.Size = new System.Drawing.Size(359, 23);
+            this.buttonAdaugaPacient.Size = new System.Drawing.Size(359, 31);
             this.buttonAdaugaPacient.TabIndex = 2;
-            this.buttonAdaugaPacient.Text = "+";
+            this.buttonAdaugaPacient.Text = "Adauga pacient";
             this.buttonAdaugaPacient.UseVisualStyleBackColor = true;
             this.buttonAdaugaPacient.Click += new System.EventHandler(this.buttonAdaugaPacient_Click);
             // 
