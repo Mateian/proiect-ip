@@ -1,1 +1,1 @@
-Eroare, pacientul are deja un doctor asignat
+Object null exception
