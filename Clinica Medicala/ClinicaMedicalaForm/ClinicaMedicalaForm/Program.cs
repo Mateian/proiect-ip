@@ -23,7 +23,7 @@ using ClinicaMedicalaForm.components.Presenter;
 using components.Presenter.Interfaces;
 using components.View.Interfaces;
 
-namespace ClinicaMedicalaForm
+namespace ClinicaMedicalaFormNamespace
 {
     internal static class Program
     {

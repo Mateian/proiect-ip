@@ -29,8 +29,8 @@ using components.Model.Medical;
 using ClinicaMedicalaForm.components.View;
 using components.Model.Exceptions;
 using components.Model.Users;
-
-namespace ClinicaMedicalaForm
+using FisaMedicalaFormNamespace;
+namespace ClinicaMedicalaFormNamespace
 {
     /// <summary>
     /// Clasa principala a aplicatiei care implementeaza interfata IView.
@@ -50,6 +50,7 @@ namespace ClinicaMedicalaForm
             InitializeComponent();
             InitForm();
             this.AcceptButton = buttonAutentificare;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         /// <summary>
@@ -85,7 +86,7 @@ namespace ClinicaMedicalaForm
         // Callback-uri
         private void buttonCreareFisaMedicala_Click(object sender, EventArgs e)
         {
-            FisaMedicalaForm.FisaMedicalaForm fisaMedicala = new FisaMedicalaForm.FisaMedicalaForm();
+            FisaMedicalaForm fisaMedicala = new FisaMedicalaForm();
             if (fisaMedicala.ShowDialog() == DialogResult.OK)
             {
                 List<string> dateFisaMedicala = fisaMedicala.datePacient;
@@ -332,7 +333,6 @@ namespace ClinicaMedicalaForm
                         return;
                     }
                     listBoxDoctorPacienti.Items.Add(pacient.ToString());
-                    //listBoxComenzi.Items.Add($"Adaugare pacient [{pacient.ToString()}].");
                     _user.NotifyObs("PACIENT ADDED TO DOCTOR");
                 }
             }
@@ -514,15 +514,6 @@ namespace ClinicaMedicalaForm
                 {
                     richTextBoxStatistica.AppendText(user.ToString() + "\n");
                     admini++;
-                }
-            }
-            richTextBoxStatistica.AppendText("\nAsistentii:\n");
-            foreach (IUser user in users)
-            {
-                if (user.Rol == "Asistent")
-                {
-                    richTextBoxStatistica.AppendText(user.ToString() + "\n");
-                    asisteni++;
                 }
             }
             richTextBoxStatistica.AppendText("\nDoctorii:\n");
